@@ -1,0 +1,218 @@
+@import "mixins";
+
+.slide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &__hidden {
+    opacity: 0;
+  }
+
+  &__preview {
+    position: absolute;
+
+    &_default {
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &_vertical {
+      &_next {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        @include phone {
+          top: 4%;
+        }
+      }
+
+      &_next-slide-n {
+        transform: translate(0, 0) !important;
+      }
+
+      &_next-slide-p {
+        transform: translate(-100%, 0) !important;
+      }
+
+    }
+
+    &_horizontal {
+      &_next {
+        //top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+      &_prev {
+        //top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+      }
+    }
+    //top 0.7s ease-in-out,
+    transition:  left 0.7s ease-in-out,  transform 0.7s ease-in-out, opacity .2s ease-in-out .2s;
+    //@include animateSlow(top, left, transform);
+  }
+
+  &__image {
+    position: relative;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    &_anorexy {
+      width: 703px;
+      height: 199px;
+
+      @include phone {
+        width: 220px;
+        height: 120px;
+      }
+
+
+      &_roboto {
+        background-image: url("./words_img/anorexy/anorexy_roboto.svg");
+      }
+
+      &_fence {
+        background-image: url("./words_img/anorexy/anorexy_fence.png");
+      }
+
+      &_palkerson {
+        background-image: url("./words_img/anorexy/anorey_palkerson.png");
+      }
+
+      &_norbert {
+        background-image: url("./words_img/anorexy/anorexy_norbert.svg");
+      }
+
+      &_parmigiano {
+        background-image: url("./words_img/anorexy/anorexy_parmigiano.svg");
+      }
+
+      &_fatum {
+        background-image: url("./words_img/anorexy/anorexy_fatum.png");
+      }
+    }
+
+    &_rage {
+      width: 352px;
+      height: 118px;
+
+      @include phone {
+        width: 150px;
+        height: 80px;
+      }
+
+      &_roboto {
+        background-image: url("./words_img/rage/rage_roboto.svg");
+      }
+
+      &_edwin {
+        background-image: url("./words_img/rage/rage_edwin.png");
+      }
+
+      &_pilar {
+        background-image: url("./words_img/rage/rage_pilar.svg");
+      }
+
+      &_austin {
+        background-image: url("./words_img/rage/rage_austin.svg");
+      }
+
+      &_vast {
+        background-image: url("./words_img/rage/rage_vast.png");
+      }
+
+      &_druk {
+        background-image: url("./words_img/rage/rage_druk.svg");
+      }
+    }
+
+    &_rumble {
+      width: 514px;
+      height: 136px;
+
+      @include phone {
+        width: 200px;
+        height: 80px;
+      }
+
+      &_roboto {
+        background-image: url("./words_img/rumble/rumble_roboto.svg");
+      }
+
+      &_didona {
+        background-image: url("./words_img/rumble/rumble_didona.svg");
+      }
+
+      &_druk {
+        background-image: url("./words_img/rumble/rumble_druk.svg");
+      }
+
+      &_karloff {
+        background-image: url("./words_img/rumble/rumble_karloff.svg");
+      }
+
+      &_cstm {
+        background-image: url("./words_img/rumble/rumble_cstm.svg");
+      }
+
+      &_stag {
+        background-image: url("./words_img/rumble/rumble_stag.svg");
+      }
+    }
+  }
+}
+
+.slide-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.font-description {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &_inactive {
+    opacity: 0;
+  }
+
+  @include phone {
+    //top: 70%;
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  &__name {
+    @include body-md-bold;
+
+    @include phone {
+      @include body-md-bold;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 450px;
+    margin: 8px auto 0;
+
+    text-align: center;
+
+    @include body-md-medium;
+
+
+    @include phone {
+      @include body-md-medium;
+    }
+  }
+
+  @include animate(opacity);
+}

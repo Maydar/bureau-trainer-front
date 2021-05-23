@@ -1,0 +1,196 @@
+@import 'colors';
+@import "mixins";
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 2.4rem;
+
+  @include phone {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  .title-wrapper {
+    position: relative;
+    //position: fixed;
+    //top: 11px;
+    //left: 17px;
+    //
+    //@include phone {
+    //  position: static;
+    //}
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 3.1rem;
+    line-height: 3.2rem;
+  }
+
+  &__lead {
+    font-size: 3.1rem;
+    line-height: 3.4rem;
+    font-weight: 500;
+    margin-top: .8rem;
+  }
+}
+
+.sidebar {
+  @include phone {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @include tablet {
+    max-width: 27.4rem;
+    width: 27.4rem;
+  }
+}
+.covers {
+  position: relative;
+
+  @include phone {
+    margin-top: 4rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @include tablet {
+    margin-top: 0;
+    max-width: 63.4rem;
+    width: 63.4rem;
+    margin-left: 4.1rem;
+  }
+
+  &__second {
+    display: flex;
+    position: relative;
+    left: .6rem;
+    margin-top: 1.66rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @include phone {
+      margin-top: .8rem;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    cursor: pointer;
+    transform-origin: center;
+
+    @include animate(color, transform);
+  }
+
+  &__font-mood {
+    display: block;
+    padding-top: 2.7rem;
+    //height: 22.5rem;
+    width: 62rem;
+    color: $white;
+
+    @include phone {
+      width: 100%;
+    }
+  }
+
+  &__color-mood {
+    vertical-align: top;
+    position: relative;
+    width: 32.8rem;
+    color: $white;
+    flex-shrink: 0;
+
+    top: -.5rem;
+
+    @include phone {
+      flex-shrink: 1;
+      top: 0;
+      width: 100%;
+    }
+
+    @include hover {
+      color: yellow;
+    }
+  }
+
+  &__skeleton {
+    vertical-align: top;
+    position: relative;
+    color: $black;
+    width: 35.6rem;
+    margin-left: .6rem;
+    flex-shrink: 0;
+    top: -.5rem;
+    left: -1.2rem;
+
+    @include phone {
+      flex-shrink: 1;
+      top: 1px;
+      left: -18px;
+      width: 100%;
+    }
+
+    @include hover {
+      color: $white;
+    }
+  }
+
+  &__composition {
+    display: block;
+    position: relative;
+    width: 65.3rem;
+    height: 31.14rem;
+    left: -2.4rem;
+    top: -1.5rem;
+    color: $white;
+
+    @include phone {
+      width: 100%;
+      top: -2px;
+    }
+  }
+}
+
+.copyright {
+  position: fixed;
+  flex-direction: column;
+  bottom: 2rem;
+
+  @include phone {
+    width: 100%;
+    position: relative;
+    margin-top: 56px;
+  }
+
+  &__item {
+    margin-top: 1.2rem;
+
+    @include phone {
+      margin-top: 12px;
+    }
+
+    &_bureau {
+      display: inline-block;
+      cursor: pointer;
+
+      @include phone {
+        width: 100%;
+      }
+
+      @include tablet {
+        width: 22.3rem;
+      }
+    }
+  }
+
+
+}

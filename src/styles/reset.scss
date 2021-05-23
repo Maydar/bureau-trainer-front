@@ -1,0 +1,93 @@
+@import 'mixins';
+
+* {
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  box-sizing: border-box;
+  //user-select: none;
+  outline: none;
+  overscroll-behavior: none;
+  backface-visibility: hidden;
+  font-family: 'Atyp Text', sans-serif;
+}
+
+html {
+  font-size: 6px;
+
+  @include phone {
+    font-size: 6px;
+  }
+
+  @include tablet {
+    font-size: 10px;
+  }
+
+  @include desktop-lg {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.slick-list {
+  margin: 0 -16px;
+}
+.slick-slide > div {
+  padding: 0 16px;
+}
+
+.slick-dots {
+  bottom: -36px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  @include square(auto);
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 12px;
+  padding: 0;
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.slick-dots li {
+}
+
+.slick-dots li button {
+  @include square(12px);
+  background-color: $white;
+  border-radius: 50%;
+  border: 1px solid $interactive;
+}
+
+.slick-dots li.slick-active button {
+  background-color: $interactive;
+}
+
+.slick-dots li button:before {
+  display: none;
+}

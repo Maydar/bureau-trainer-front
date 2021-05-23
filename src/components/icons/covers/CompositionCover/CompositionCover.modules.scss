@@ -1,0 +1,11 @@
+@import "mixins";
+
+.cover-composition {
+  color: #FF4F99;
+
+  @include hover {
+    color: #9C4FFF;
+  }
+
+  @include animate(color);
+}

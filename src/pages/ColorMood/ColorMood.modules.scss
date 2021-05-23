@@ -1,0 +1,109 @@
+@import 'colors';
+@import 'mixins';
+
+.page-edge {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1000;
+}
+
+.content {
+  background-color: transparent;
+
+  &_white {
+    background-color: $white;
+  }
+
+  &_darkred {
+    background-color: $rage-darkred;
+    color: $white;
+  }
+
+  &_yellow {
+    background-color: $rage-yellow;
+  }
+
+  &_green {
+    background-color: $rage-green;
+  }
+
+  &_lightblue {
+    background-color: $rage-lightblue;
+  }
+
+  &_darkgreen {
+    background-color: $rage-darkgreen;
+    color: $white;
+  }
+
+  &_olive {
+    background-color: $happiness-olive;
+  }
+
+  &_darkblue {
+    background-color: $happiness-darkblue;
+    color: $white;
+  }
+
+  &_brown {
+    background-color: $happiness-brown;
+    color: $white;
+  }
+
+  &_orange {
+    background-color: $happiness-orange;
+  }
+
+  &_hackie {
+    background-color: $happiness-darkgreen;
+    color: $white;
+  }
+
+  &_pink {
+    background-color: $disgust-pink;
+  }
+
+  &_mudgreen {
+    background-color:  $disgust-mudgreen;
+    color: $white;
+  }
+
+  &_grey {
+    background-color: $disgust-grey;
+    color: $white;
+  }
+
+  &_sky {
+    background-color: $disgust-sky;
+  }
+
+  &_blue {
+    background-color: $disgust-blue;
+    color: $white;
+  }
+
+  &_fonk {
+    background-color: $sadness-fonk;
+  }
+
+  &_darkbrown {
+    background-color: $sadness-darkbrown;
+    color: $white;
+  }
+
+  &_lightyellow {
+    background-color: $sadness-lightyellow;
+  }
+
+  &_lightgrey {
+    background-color: $sadness-lightgrey;
+  }
+
+  &_acidorange {
+    background-color: $sadness-acidorange;
+  }
+
+  @include animate(background-color);
+}

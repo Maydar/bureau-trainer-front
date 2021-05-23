@@ -1,0 +1,50 @@
+@import "mixins";
+
+.page-edge {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1000;
+}
+
+.task-description {
+  position: absolute;
+  top: 11px;
+  left: 17px;
+
+  z-index: 1000;
+
+  @include phone {
+    top: 8px;
+    left: 8px;
+  }
+}
+
+.page-preview {
+  height: 100%;
+  width: 100%;
+
+  &_white {
+    background-color: #fff;
+  }
+
+  &_yellow {
+    background-color: #FFF27D;
+  }
+
+  &_blue {
+    background-color: #48AFC6;
+  }
+
+  &_black {
+    background-color: #000;
+  }
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

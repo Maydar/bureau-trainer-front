@@ -1,0 +1,464 @@
+@import 'vars';
+@import 'colors';
+@import 'includeMedia';
+
+//size
+$sizes: 'desktop', 'tablet', 'phone', 'iphoneX';
+
+// alias for markup
+@mixin desktop-lg {
+  @include media('>=desktop-lg') {
+    @content;
+  }
+}
+
+@mixin desktop-md {
+  @include media('>=phone', '<desktop-lg') {
+    @content;
+  }
+}
+
+@mixin desktop-md-lg {
+  @include media('>=phone') {
+    @content;
+  }
+}
+
+@mixin desktop-xs {
+  @include media('<phone') {
+    @content;
+  }
+}
+
+// alias for common
+@mixin desktop {
+  @include media('>tablet') {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media('>phone') {
+    @content;
+  }
+}
+
+@mixin phone {
+  @include media('<=phone') {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include phone {
+    @content;
+  }
+}
+
+@mixin layout {
+  padding-left: 2.8rem;
+
+  margin: 0 auto;
+}
+
+//animations
+@mixin hover {
+  @include media('>phone') {
+    &:hover {
+      @content;
+    }
+  }
+
+  &:active {
+    @content;
+  }
+}
+
+@mixin active() {
+  @include desktop {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin selectable() {
+  user-select: text;
+}
+
+@mixin unSelectable() {
+  user-select: none;
+}
+
+@mixin animate($property...) {
+  $animatedProperty: #{''};
+  @if length($property) > 1 {
+    @for $i from 1 through length($property)-1 {
+      $animatedProperty: $animatedProperty
+      nth($property, $i)
+      $transition-normal
+      #{', '};
+    }
+  }
+  transition: $animatedProperty nth($property, length($property))
+  $transition-normal;
+}
+
+@mixin animateSlow($property...) {
+  $animatedProperty: #{''};
+  @if length($property) > 1 {
+    @for $i from 1 through length($property)-1 {
+      $animatedProperty: $animatedProperty
+      nth($property, $i)
+      $transition-slow
+      #{', '};
+    }
+  }
+  transition: $animatedProperty nth($property, length($property))
+  $transition-slow;
+}
+
+@mixin animateExtraSlow($property...) {
+  $animatedProperty: #{''};
+  @if length($property) > 1 {
+    @for $i from 1 through length($property)-1 {
+      $animatedProperty: $animatedProperty
+      nth($property, $i)
+      $transition-extra-slow
+      #{', '};
+    }
+  }
+  transition: $animatedProperty nth($property, length($property))
+  $transition-extra-slow;
+}
+
+@mixin verticalEllipsis($numLine, $height) {
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: $height;
+  display: -webkit-box;
+  -webkit-line-clamp: $numLine;
+  -webkit-box-orient: vertical;
+}
+
+@mixin autoCropText() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin horizontalFlexRow($align) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align;
+}
+
+@mixin image($url, $size: contain) {
+  background: url($url) no-repeat center;
+  background-size: $size;
+}
+
+@mixin square($side) {
+  width: $side;
+  height: $side;
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin upperHover($className) {
+  #{$className}:hover & {
+    @content;
+  }
+}
+
+//placeholder
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+
+// fonts
+@mixin h1-regular {
+  font-size: $h1-size;
+  line-height: $h1-line-height;
+}
+@mixin h1-bold {
+  @include h1-regular;
+  font-weight: 600;
+}
+@mixin h1-medium {
+  @include h1-regular;
+  font-weight: 500;
+}
+
+@mixin h2-regular {
+  font-size: $h2-size;
+  line-height: $h2-line-height;
+}
+@mixin h2-bold {
+  @include h2-regular;
+  font-weight: 600;
+}
+@mixin h2-medium {
+  @include h2-regular;
+  font-weight: 500;
+}
+
+@mixin h3-regular {
+  font-size: $h3-size;
+  line-height: $h3-line-height;
+}
+@mixin h3-bold {
+  @include h3-regular;
+  font-weight: 600;
+}
+@mixin h3-medium {
+  @include h3-regular;
+  font-weight: 500;
+}
+
+@mixin h4-regular {
+  font-size: $h4-size;
+  line-height: $h4-line-height;
+}
+@mixin h4-bold {
+  @include h4-regular;
+  font-weight: 600;
+}
+@mixin h4-medium {
+  @include h4-regular;
+  font-weight: 500;
+}
+
+@mixin h5-regular {
+  font-size: $h5-size;
+  line-height: $h5-line-height;
+  font-weight: 400;
+}
+@mixin h5-bold {
+  @include h5-regular;
+  font-weight: 600;
+}
+@mixin h5-medium {
+  @include h5-regular;
+  font-weight: 500;
+}
+
+@mixin h6-regular {
+  font-size: $h6-size;
+  line-height: $h6-line-height;
+  font-weight: 400;
+}
+@mixin h6-bold {
+  @include h6-regular;
+  font-weight: 600;
+}
+@mixin h6-medium {
+  @include h6-regular;
+  font-weight: 500;
+}
+
+@mixin body-lg-regular {
+  font-size: $body-lg-size;
+  line-height: $body-lg-line-height;
+}
+@mixin body-lg-bold {
+  @include body-lg-regular;
+  font-weight: 700;
+}
+@mixin body-lg-medium {
+  @include body-lg-regular;
+  font-weight: 500;
+}
+
+@mixin body-md-regular {
+  font-size: $body-md-size;
+  line-height: $body-md-line-height;
+}
+@mixin body-md-bold {
+  @include body-md-regular;
+  font-weight: 700;
+}
+@mixin body-md-medium {
+  @include body-md-regular;
+  font-weight: 500;
+}
+
+@mixin body-sm-regular {
+  font-size: $body-sm-size;
+  line-height: $body-sm-line-height;
+}
+@mixin body-sm-bold {
+  @include body-sm-regular;
+  font-weight: 700;
+}
+@mixin body-sm-medium {
+  @include body-sm-regular;
+  font-weight: 500;
+}
+
+@mixin caption-regular {
+  font-size: $caption-size;
+  line-height: $caption-line-height;
+}
+@mixin caption-bold {
+  @include caption-regular;
+  font-weight: 600;
+}
+@mixin caption-medium {
+  @include caption-regular;
+  font-weight: 500;
+}
+
+@mixin title-md {
+  font-size: $title-md-size;
+  line-height: $title-md-line-height;
+}
+
+@mixin title-md-bold {
+  @include title-md;
+
+  font-weight: 600;
+}
+
+@mixin title-lg {
+  font-size: $title-lg-size;
+  line-height: $title-lg-line-height;
+}
+
+@mixin title-lg-bold {
+  @include title-lg;
+
+  font-weight: 600;
+}
+
+@mixin title-xs {
+  font-size: $title-xs-size;
+  line-height: $title-xs-line-height;
+}
+
+@mixin title-xs-bold {
+  @include title-xs;
+
+  font-weight: 600;
+}
+
+
+@mixin width-column-1 {
+  @include desktop-md {
+    width: $column-md-1;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-1;
+  }
+}
+
+@mixin width-column-2 {
+  @include desktop-md {
+    width: $column-md-2;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-2;
+  }
+}
+
+@mixin width-column-3 {
+  @include desktop-md {
+    width: $column-md-3;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-3;
+  }
+}
+
+@mixin width-column-4 {
+  @include desktop-md {
+    width: $column-md-4;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-4;
+  }
+}
+
+@mixin width-column-6 {
+  @include desktop-md {
+    width: $column-md-6;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-6;
+  }
+}
+
+@mixin width-column-7 {
+  @include desktop-md {
+    width: $column-md-7;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-7;
+  }
+}
+
+@mixin width-column-8 {
+  @include desktop-md {
+    width: $column-md-8;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-8;
+  }
+}
+
+@mixin width-column-9 {
+  @include desktop-md {
+    width: $column-md-9;
+  }
+
+  @include desktop-lg {
+    width: $column-lg-9;
+  }
+}
+
+
+@mixin blue-property($property: color) {
+  @include animate($property);
+
+  #{$property}: $interactive;
+
+  @include hover {
+    #{$property}: $interactive-hover;
+  }
+  @include active {
+    #{$property}: $interactive-active;
+  }
+}

@@ -1,0 +1,273 @@
+@import 'mixins';
+@import "colors";
+
+.content {
+  position: relative;
+  height: 100%;
+  min-height: 25rem;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 10rem;
+    width: 45rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: $black;
+    z-index: 999;
+
+    @include phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &_car {
+    height: 16.3rem;
+    width: 36.4rem;
+    background-image: url("./img/car.svg");
+
+    @include phone {
+      height: 121px;
+      width: 270px;
+    }
+
+    &_middle {
+      top: calc(40% - #{8.15rem});
+      left: calc(50% - #{18.2rem});
+
+      &_vertical {
+        top: calc(50% - #{8.15rem});
+      }
+
+      @include phone {
+        top: calc(40% - #{121px/2});
+        left: calc(50% - #{270px/2});
+
+        &_vertical {
+          top: calc(50% - #{121px/2});
+        }
+      }
+    }
+
+    &_top {
+      top: 4%;
+      left: calc(50% - #{18.2rem});
+
+      @include phone {
+        left: calc(50% - #{121px/2});
+      }
+    }
+
+    &_bottom {
+      top: calc(96% - #{16.3rem});
+      left: calc(50% - #{18.2rem});
+
+      @include phone {
+        top: calc(96% - #{121px});
+        left: calc(50% - #{270px/2});
+      }
+    }
+
+    &_left {
+      top: calc(40% - #{8.15rem});
+      left: 2%;
+
+      @include phone {
+        left: 1%;
+        top: calc(40% - #{121px/2});
+      }
+    }
+
+    &_right {
+      top: calc(40% - #{8.15rem});
+      left: calc(98% - #{36.4rem});
+
+      @include phone {
+        top: calc(40% - #{121px/2});
+        left: calc(75% - #{270px/2});
+      }
+    }
+  }
+
+  &_bomb {
+    height: 23.5rem;
+    width: 23.6rem;
+    background-image: url("./img/bomb.svg");
+
+    @include phone {
+      height: 175px;
+      width: 176px;
+    }
+
+
+    &_middle {
+      top: calc(40% - #{11.75rem});
+      left: calc(50% - #{11.8rem});
+
+      &_vertical {
+        top: calc(50% - #{11.75rem});
+      }
+
+      @include phone {
+        top: calc(40% - #{175px/2});
+        left: calc(50% - #{176px/2});
+
+        &_vertical {
+          top: calc(50% - #{175px/2});
+        }
+      }
+    }
+
+    &_top {
+      top: 4%;
+      left: calc(50% - #{11.8rem});
+
+      @include phone {
+        left: calc(50% - #{176px/2});
+      }
+    }
+
+    &_bottom {
+      top: calc(70% - #{11.75rem});
+      left: calc(50% - #{11.8rem});
+
+      @include phone {
+        top: calc(70% - #{175px/2});
+        left: calc(50% - #{176px/2});
+      }
+    }
+
+    &_left {
+      top: calc(40% - #{11.75rem});
+      left: 2%;
+
+      @include phone {
+        top: calc(40% - #{175px/2});
+      }
+    }
+
+    &_right {
+      top: calc(40% - #{11.75rem});
+      left: calc(98% - #{23.6rem});
+
+      @include phone {
+        top: calc(40% - #{175px/2});
+        left: calc(98% - #{176px});
+      }
+    }
+  }
+
+  &_rocket {
+    height: 27rem;
+    width: 15rem;
+    background-image: url("./img/rocket.svg");
+
+    @include phone {
+      height: 200px;
+      width: 110px;
+    }
+
+    &_middle {
+      top: calc(40% - #{13.5rem});
+      left: calc(50% - #{7.5rem});
+
+      &_vertical {
+        top: calc(50% - #{13.5rem});
+      }
+
+      @include phone {
+        top: calc(40% - #{100px});
+        left: calc(50% - #{55px});
+
+        &_vertical {
+          top: calc(50% - #{55px});
+        }
+      }
+    }
+
+    &_top {
+      top: 4%;
+      left: calc(50% - #{7.5rem});
+
+      @include phone {
+        top: 4%;
+        left: calc(50% - #{55px});
+      }
+    }
+
+    &_bottom {
+      top: calc(70% - #{13.5rem});
+      left: calc(50% - #{7.5rem});
+
+      @include phone {
+        top: calc(70% - #{100px});
+        left: calc(50% - #{55px});
+      }
+    }
+
+    &_left {
+      top: calc(40% - #{13.5rem});
+      left: 2%;
+
+      @include phone {
+        top: calc(40% - #{100px});
+      }
+    }
+
+    &_right {
+      top: calc(40% - #{13.5rem});
+      left: calc(98% - #{15rem});
+
+      @include phone {
+        top: calc(40% - #{100px});
+        left: calc(98% - #{110px});
+      }
+    }
+  }
+
+  @include animateSlow(top, left, transform);
+
+}
+
+.range-wrapper {
+  position: absolute;
+  bottom: 19.5rem;
+  width: 27rem;
+  height: 3.5rem;
+
+  &_vertical {
+    height: 27rem;
+    width: 3.5rem;
+    top: 50%;
+    right: 7rem;
+    transform: translateY(-50%);
+  }
+
+  @include phone {
+    bottom: 195px;
+    width: 270px;
+    height: 35px;
+
+    &_vertical {
+      height: 270px;
+      width: 35px;
+      right: 8px;
+    }
+  }
+}
+

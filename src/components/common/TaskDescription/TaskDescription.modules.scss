@@ -1,0 +1,46 @@
+@import 'colors';
+@import 'mixins';
+
+.task-description {
+  position: relative;
+
+  &_white {
+    color: $white;
+  }
+
+  &_black {
+    color: $black;
+  }
+
+  &__title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 29px;
+    color: inherit;
+
+    @include hover {
+      opacity: .8;
+    }
+
+    @include phone {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @include animate(opacity);
+  }
+
+  &__text {
+    @include body-md-medium;
+
+    max-width: 350px;
+
+    color: inherit;
+
+    @include phone {
+      @include body-sm-medium;
+
+      max-width: 280px;
+    }
+  }
+}

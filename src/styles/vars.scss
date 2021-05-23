@@ -1,0 +1,94 @@
+
+//columns-lg-12
+$column-lg-12: 112px;
+$gutter-lg-12: 32px;
+
+$column-lg-1: $column-lg-12;
+$column-lg-2: calc(2 * #{$column-lg-12} + #{$gutter-lg-12});
+$column-lg-3: calc(3 * #{$column-lg-12} + 2 * #{$gutter-lg-12});
+$column-lg-4: calc(4 * #{$column-lg-12} + 3 * #{$gutter-lg-12});
+$column-lg-5: calc(5 * #{$column-lg-12} + 4 * #{$gutter-lg-12});
+$column-lg-6: calc(6 * #{$column-lg-12} + 5 * #{$gutter-lg-12});
+$column-lg-7: calc(7 * #{$column-lg-12} + 6 * #{$gutter-lg-12});
+$column-lg-8: calc(8 * #{$column-lg-12} + 7 * #{$gutter-lg-12});
+$column-lg-9: calc(9 * #{$column-lg-12} + 8 * #{$gutter-lg-12});
+
+//columns-lg-24
+$column-lg-24: 40px;
+$gutter-lg-24: 32px;
+
+//columns-md-12
+$column-md-12: 72px;
+$gutter-md-12: 32px;
+
+$column-md-1: $column-md-12;
+$column-md-2: calc(2 * #{$column-md-12} + #{$gutter-md-12});
+$column-md-3: calc(3 * #{$column-md-12} + 2 * #{$gutter-md-12});
+$column-md-4: calc(4 * #{$column-md-12} + 3 * #{$gutter-md-12});
+$column-md-5: calc(5 * #{$column-md-12} + 4 * #{$gutter-md-12});
+$column-md-6: calc(6 * #{$column-md-12} + 5 * #{$gutter-md-12});
+$column-md-7: calc(7 * #{$column-md-12} + 6 * #{$gutter-md-12});
+$column-md-8: calc(8 * #{$column-md-12} + 7 * #{$gutter-md-12});
+$column-md-9: calc(9 * #{$column-md-12} + 8 * #{$gutter-md-12});
+
+$column-xs: 74px;
+$gutter-xs: 16px;
+
+$column-xs-1: $column-xs;
+$column-xs-2: calc(2 * #{$column-xs} + #{$gutter-xs});
+$column-xs-3: calc(3 * #{$column-xs} + 2 * #{$gutter-xs});
+$column-xs-4: calc(4 * #{$column-xs} + 3 * #{$gutter-xs});
+
+//fonts
+$h1-size: 45px;
+$h2-size: 32px;
+$h3-size: 28px;
+$h4-size: 23px;
+$h5-size: 20px;
+$h6-size: 16px;
+
+$h1-line-height: 56px;
+$h2-line-height: 40px;
+$h3-line-height: 32px;
+$h4-line-height: 28px;
+$h5-line-height: 24px;
+$h6-line-height: 20px;
+
+$body-lg-size: 20px;
+$body-md-size: 16px;
+$body-sm-size: 14px;
+$caption-size: 12px;
+
+$body-lg-line-height: 28px;
+$body-md-line-height: 22px;
+$body-sm-line-height: 20px;
+$caption-line-height: 16px;
+
+// specific sizes
+$title-xs-size: 36px;
+$title-md-size: 60px;
+$title-lg-size: 80px;
+
+$title-xs-line-height: 40px;
+$title-md-line-height: 60px;
+$title-lg-line-height: 80px;
+
+$top-bar-height-lg: 72px;
+$top-bar-height-md: 60px;
+$top-bar-height-xs: 56px;
+
+$layout-max-width-lg: 1696px;
+$layout-max-width-md: 1216px;
+
+//other
+$transition-normal: 0.2s ease-out;
+$transition-slow: .7s ease-in-out;
+$transition-extra-slow: 2s ease-in;
+$shadow-main: 0px 10px 35px #E1E2E7;
+
+$z-index-suggests: 100;
+$z-index-header: 100;
+$z-index-footer: 100;
+$z-index-dropdown-items: 101;
+$z-index-request-buttons: 99;
+$z-index-modal: 1000;

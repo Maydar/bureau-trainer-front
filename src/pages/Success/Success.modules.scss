@@ -1,0 +1,116 @@
+@import "colors";
+@import "mixins";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  background-color: $black;
+
+  &__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+  }
+
+  @include phone {
+    padding: 0 8px;
+  }
+}
+
+.next-message {
+  min-height: 15.6rem;
+  min-width: 82.4rem;
+  width: 70%;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-image: url("./img/next_message.svg");
+
+  @include phone {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.text {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: $white;
+  text-align: center;
+  margin-top: 5.2rem;
+  max-width: 35rem;
+
+  @include phone {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 52px;
+  }
+
+  &_bottom {
+    position: absolute;
+    bottom: 7.2rem;
+
+    @include phone {
+      bottom: 72px;
+    }
+  }
+}
+
+.share-icons {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+
+  @include phone {
+    margin-top: 20px;
+  }
+}
+.share {
+  height: 5.6rem;
+  width: 5.6rem;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  margin-left: 1.8rem;
+
+  @include phone {
+    margin-left: 16px;
+    height: 48px;
+    width: 48px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &_fb {
+    background-image: url("./img/fb.svg");
+  }
+
+  &_it {
+    background-image: url("./img/it.svg");
+  }
+
+  &_tg {
+    background-image: url("./img/tg.svg");
+  }
+
+  &_twitter {
+    background-image: url("./img/twitter.svg");
+  }
+}

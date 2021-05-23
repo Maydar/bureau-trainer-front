@@ -1,0 +1,253 @@
+@import 'colors';
+@import 'mixins';
+
+.content {
+  //display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  //top: 50%;
+  //transform: translateY(-50%);
+
+  &__inner {
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include animateSlow(top, min-height);
+  }
+
+  &_next-slide {
+    .content__inner {
+      position: relative;
+      //top: 5%;
+      //min-height: 0;
+
+      //@include phone {
+      //  top: 8%;
+      //}
+    }
+  }
+
+  &_rage {
+    &_white {
+      background-color: $white;
+    }
+
+    &_darkred {
+      background-color: $rage-darkred;
+      color: $white;
+    }
+
+    &_yellow {
+      background-color: $rage-yellow;
+    }
+
+    &_green {
+      background-color: $rage-green;
+    }
+
+    &_lightblue {
+      background-color: $rage-lightblue;
+    }
+
+    &_darkgreen {
+      background-color: $rage-darkgreen;
+      color: $white;
+    }
+  }
+
+  &_happiness {
+    &_white {
+      background-color: $white;
+    }
+
+    &_olive {
+      background-color: $happiness-olive;
+    }
+
+    &_darkblue {
+      background-color: $happiness-darkblue;
+      color: $white;
+    }
+
+    &_brown {
+      background-color: $happiness-brown;
+      color: $white;
+    }
+
+    &_orange {
+      background-color: $happiness-orange;
+    }
+
+    &_hackie {
+      background-color: $happiness-darkgreen;
+      color: $white;
+    }
+  }
+
+  &_disgust {
+    &_white {
+      background-color: $white;
+    }
+
+    &_pink {
+      background-color: $disgust-pink;
+    }
+
+    &_mudgreen {
+      background-color:  $disgust-mudgreen;
+      color: $white;
+    }
+
+    &_grey {
+      background-color: $disgust-grey;
+      color: $white;
+    }
+
+    &_sky {
+      background-color: $disgust-sky;
+    }
+
+    &_blue {
+      background-color: $disgust-blue;
+      color: $white;
+    }
+  }
+
+  &_sadness {
+    &_white {
+      background-color: $white;
+    }
+
+    &_fonk {
+      background-color: $sadness-fonk;
+    }
+
+    &_darkbrown {
+      background-color: $sadness-darkbrown;
+      color: $white;
+    }
+
+    &_lightyellow {
+      background-color: $sadness-lightyellow;
+    }
+
+    &_lightgrey {
+      background-color: $sadness-lightgrey;
+    }
+
+    &_acidorange {
+      background-color: $sadness-acidorange;
+    }
+  }
+
+  @include animate(background-color);
+}
+
+.word-image {
+  height: 114px;
+  width: 586px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  @include phone {
+    width: 250px;
+    height: 56px;
+  }
+
+  &_rage {
+    background-image: url('./words_img/rage.svg');
+
+    &_white {
+      background-image: url('./words_img/rage_white.svg');
+    }
+  }
+
+  &_happiness {
+    background-image: url('./words_img/happiness.svg');
+
+    &_white {
+      background-image: url('./words_img/happiness_white.svg');
+    }
+  }
+
+  &_sadness {
+    background-image: url('./words_img/sadness.svg');
+
+    &_white {
+      background-image: url('./words_img/sadness_white.svg');
+    }
+  }
+
+  &_disgust {
+    background-image: url('./words_img/disgust.svg');
+
+    &_white {
+      background-image: url('./words_img/disgust_white.svg');
+    }
+  }
+}
+
+.pickers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 56px;
+
+  @include phone {
+    margin-top: 56px;
+  }
+
+  &__item {
+    margin-left: 12px;
+
+    @include phone {
+      margin-left: 12px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.description {
+  margin-top: 32px;
+
+  @include phone {
+    margin-top: 32px;
+    padding: 0 8px;
+  }
+
+  &__font {
+    font-weight: 700;
+    @include body-md-bold;
+
+    margin-top: 32px;
+
+    @include phone {
+      @include body-sm-bold;
+    }
+  }
+
+  &__text {
+    @include body-md-medium;
+    text-align: center;
+    max-width: 450px;
+    height: 60px;
+
+    @include phone {
+      @include body-sm-medium;
+      max-width: 100%;
+    }
+  }
+
+  @include animate(color);
+}

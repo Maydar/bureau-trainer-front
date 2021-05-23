@@ -1,0 +1,32 @@
+@import "./fonts/atyp/stylesheet.css";
+@import "./fonts/montserrat/stylesheet.css";
+@import 'colors';
+@import 'vars';
+@import 'mixins';
+@import 'reset';
+@import 'components/common';
+@import 'components/icons';
+@import 'components/swiper';
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  line-height: 1.2;
+  font-family: 'Atyp Text', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,11 @@
+@import "mixins";
+
+.cover-skeleton {
+  color: #4048FF;
+
+  @include hover {
+    color: #FE551F;
+  }
+
+  @include animate(color);
+}

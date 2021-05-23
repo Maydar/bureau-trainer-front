@@ -1,0 +1,34 @@
+@import "colors";
+@import "mixins";
+
+.cover-font {
+  position: relative;
+
+  .first-letter {
+    color: $white;
+    @include animate(color);
+  }
+  .second-letter {
+    color: $white;
+    @include animate(color);
+  }
+
+  .part_1, .part_2, .part_3 {
+    color: $white;
+    @include animate(color);
+  }
+
+  @include hover {
+    .second-letter {
+      color: #00D83C;
+    }
+
+    .first-letter {
+      color: #FF6389;
+    }
+
+    .part_1, .part_2, .part_3 {
+      color: #FFD600;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import 'colors';
+@import 'mixins';
+
+.picker {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+
+  border-width: 0;
+  border-style: solid;
+  border-color: $white;
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  //rage
+  &_darkred {
+    background-color: $rage-darkred;
+  }
+
+  &_yellow {
+    background-color: $rage-yellow;
+  }
+
+  &_green {
+    background-color: $rage-green;
+  }
+
+  &_lightblue {
+    background-color: $rage-lightblue;
+  }
+
+  &_darkgreen {
+    background-color: $rage-darkgreen;
+  }
+
+  //happiness
+  &_olive {
+    background-color: $happiness-olive;
+    border-color: $black;
+  }
+
+  &_darkblue {
+    background-color: $happiness-darkblue;
+  }
+
+  &_brown {
+    background-color: $happiness-brown;
+  }
+
+  &_orange {
+    background-color: $happiness-orange;
+  }
+
+  &_hackie {
+    background-color: $happiness-darkgreen;
+  }
+
+  &_pink {
+    background-color: $disgust-pink;
+  }
+
+  &_mudgreen {
+    background-color:  $disgust-mudgreen;
+  }
+
+  &_grey {
+    background-color: $disgust-grey;
+  }
+
+  &_sky {
+    background-color: $disgust-sky;
+  }
+
+  &_blue {
+    background-color: $disgust-blue;
+  }
+
+  &_fonk {
+    background-color: $sadness-fonk;
+  }
+
+  &_darkbrown {
+    background-color: $sadness-darkbrown;
+  }
+
+  &_lightyellow {
+    background-color: $sadness-lightyellow;
+  }
+
+  &_lightgrey {
+    background-color: $sadness-lightgrey;
+  }
+
+  &_acidorange {
+    background-color: $sadness-acidorange;
+  }
+
+  @include hover {
+    border-width: 3px;
+  }
+
+  &_selected {
+    border-width: 2px;
+  }
+
+  //@include animate(border-width)
+}

@@ -1,0 +1,47 @@
+@import "mixins";
+
+
+.content {
+  position: absolute;
+  width: 100%;
+  min-height: 40rem;
+  top: 60%;
+  transform: translateY(-50%);
+
+  @include phone {
+    padding: 0 8px;
+  }
+}
+
+.font-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__name {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+
+    @include phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 65rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-top: .8rem;
+
+    @include phone {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 8px;
+      max-width: 100%;
+    }
+  }
+}

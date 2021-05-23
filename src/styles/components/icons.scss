@@ -1,0 +1,95 @@
+@import 'mixins';
+
+.icon {
+  @include absoluteCenter;
+
+  &-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+    &_xxl {
+      @include desktop-xs {
+        @include square(52px);
+      }
+
+      @include desktop-md {
+        @include square(56px);
+      }
+
+      @include desktop-lg {
+        @include square(64px);
+      }
+    }
+
+    &_l {
+      @include desktop-md {
+        @include square(36px);
+      }
+
+      @include desktop-lg {
+        @include square(40px);
+      }
+    }
+
+    &_l-xl {
+      @include desktop-xs {
+        @include square(32px);
+      }
+
+      @include desktop-md {
+        @include square(32px);
+      }
+
+      @include desktop-lg {
+        @include square(40px);
+      }
+    }
+
+    &_xl {
+      @include desktop-xs {
+        @include square(24px);
+      }
+
+      @include desktop-md {
+        @include square(32px);
+      }
+
+      @include desktop-lg {
+        @include square(48px);
+      }
+    }
+
+    &_m {
+      @include desktop-xs {
+        @include square(20px);
+      }
+
+      @include desktop-md {
+        @include square(24px);
+      }
+
+      @include desktop-lg {
+        @include square(32px);
+      }
+    }
+
+    &_mc {
+      @include square(24px);
+    }
+
+    &_s {
+      @include desktop-xs {
+        @include square(20px);
+      }
+
+      @include desktop-md {
+        @include square(20px);
+      }
+
+      @include desktop-lg {
+        @include square(24px);
+      }
+    }
+  }
+}

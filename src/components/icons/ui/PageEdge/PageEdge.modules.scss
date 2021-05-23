@@ -1,0 +1,43 @@
+@import "mixins";
+
+.corner {
+  height: 84px;
+  width: 84px;
+
+  @include phone {
+    height: 72px;
+    width: 72px;
+  }
+}
+
+.under_fonts {
+  fill: #FF9CF5;
+}
+
+.above_fonts {
+  fill: #FFF174;
+}
+
+.under_colors {
+  fill: #FFD600;
+}
+
+.above_colors {
+  fill: #48AFC6;
+}
+
+.under_animals {
+  fill: #1F5DFE;
+}
+
+.above_animals {
+  fill: #00D254;
+}
+
+.under_composition {
+  fill: #00F0FF;
+}
+
+.above_composition {
+  fill: black;
+}

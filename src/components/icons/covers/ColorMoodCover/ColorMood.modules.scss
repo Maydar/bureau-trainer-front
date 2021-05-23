@@ -1,0 +1,33 @@
+@import "mixins";
+
+.covermood {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .covermood-1, .covermood-2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    @include animate(opacity);
+  }
+  .covermood-1 {
+    opacity: 1;
+  }
+  .covermood-2 {
+    opacity: 0;
+  }
+
+  @include hover {
+    .covermood-1 {
+      opacity: 0;
+    }
+
+    .covermood-2 {
+      opacity: 1;
+    }
+  }
+}
