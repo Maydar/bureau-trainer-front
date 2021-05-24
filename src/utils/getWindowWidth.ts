@@ -1,3 +1,4 @@
+// @ts-ignore
 import { windowPixelWidth, WindowWidth } from 'config/settings';
 
 export default (): WindowWidth => {
