@@ -21,7 +21,7 @@ const Greetings: React.FC = () => {
           <div styleName="column">
             <div styleName="section">
               <a href="https://type.today/" styleName="section__title">
-                Шрифты от TYPE TODAY Druk Wide
+                Шрифты от TYPE TODAY
               </a>
               <div styleName="section__items">
                 <div styleName="section__item">
