@@ -6,6 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "npx webpack-dev-server --mode development",
+    "start": "browser-sync start --server \"./public\" --no-ui",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint-fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
     "ts-check": "tsc --skipLibCheck --noEmit --project tsconfig.json"
@@ -34,6 +35,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-react-css-modules": "^5.2.6",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.1",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
@@ -46,7 +48,6 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "file-loader": "^6.0.0",
     "fork-ts-checker-webpack-plugin": "^4.1.1",
-    "copy-webpack-plugin": "^6.1.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
@@ -83,6 +84,7 @@
     "animated-scroll-to": "^2.0.12",
     "array-move": "^2.2.1",
     "axios": "^0.19.2",
+    "browser-sync": "^2.26.14",
     "classnames": "^2.2.6",
     "dayjs": "^1.8.26",
     "konva": "^7.2.5",

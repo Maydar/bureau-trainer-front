@@ -6,11 +6,8 @@ import { observer } from "mobx-react";
 
 import Root from "pages/Root";
 import ScrollToTop from "utils/scrollToTop";
-import { markup } from "utils/markup";
 
 export const App: React.FunctionComponent = () => {
-  const markupFunc = useMemo(() => markup.init(), []);
-
   return (
     <BrowserRouter>
       <Switch>
