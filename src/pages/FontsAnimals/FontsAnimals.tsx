@@ -31,10 +31,34 @@ const FontsAnimals: React.FC = () => {
         <div styleName="content">
           <VerticalSlider>
             <SwiperSlide>
-              {({ isActive, isNext, isPrev }) => (<AnimalSlider isActive={isActive} theme={Theme.bear} />)}
+              {({ isActive, isNext, isPrev }) => (
+                <AnimalSlider
+                  isActive={isActive}
+                  isPrev={isPrev}
+                  isNext={isNext}
+                  theme={Theme.bear}
+                />
+              )}
             </SwiperSlide>
             <SwiperSlide>
-              {({ isActive, isNext, isPrev }) => (<AnimalSlider isActive={isActive} theme={Theme.girafe} />)}
+              {({ isActive, isNext, isPrev }) => (
+                <AnimalSlider
+                  isActive={isActive}
+                  isPrev={isPrev}
+                  isNext={isNext}
+                  theme={Theme.girafe}
+                />
+              )}
+            </SwiperSlide>
+            <SwiperSlide>
+              {({ isActive, isNext, isPrev }) => (
+                <AnimalSlider
+                  isActive={isActive}
+                  isPrev={isPrev}
+                  isNext={isNext}
+                  theme={Theme.girafe}
+                />
+              )}
             </SwiperSlide>
           </VerticalSlider>
         </div>

@@ -2,35 +2,25 @@
 @import 'mixins';
 
 .content {
-  //display: flex;
+  position: relative;
   height: 100%;
   width: 100%;
-  position: relative;
-  //top: 50%;
-  //transform: translateY(-50%);
+
 
   &__inner {
     display: flex;
-    min-height: 100%;
-    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    min-height: 100%;
+    width: 100%;
 
-    @include animateSlow(top, min-height);
+    position: relative;
   }
 
-  &_next-slide {
-    .content__inner {
-      position: relative;
-      //top: 5%;
-      //min-height: 0;
-
-      //@include phone {
-      //  top: 8%;
-      //}
-    }
+  &_prev-slide {
+    position: relative;
+    opacity: 0;
   }
 
   &_rage {
@@ -146,7 +136,7 @@
     }
   }
 
-  @include animate(background-color);
+  @include animate(background-color, opacity);
 }
 
 .word-image {
@@ -250,4 +240,18 @@
   }
 
   @include animate(color);
+}
+
+.ui-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &_hidden {
+    opacity: 1;
+  }
+
+  //@include animate(opacity);
 }

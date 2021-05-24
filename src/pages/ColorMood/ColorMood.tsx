@@ -53,6 +53,7 @@ const ColorMood: React.FC = () => {
                     textColor={textColor}
                     color={pageColor}
                     isNext={isNext}
+                    isPrev={isPrev}
                     setBgColor={(color: Color) =>
                       colorMoodStore.setThemeColor(theme, color)
                     }

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import cn from 'classnames';
+import { SwiperSlide } from 'swiper/react';
 
 import { useLocal } from 'utils/hooks';
 import HorizontalSlider from 'components/common/HorizontalSlider';
@@ -15,14 +16,21 @@ import FontsAnimalStore from '../store';
 type Props = {
   theme: Theme;
   isActive: boolean;
+  isPrev: boolean;
+  isNext: boolean;
 };
 
-const AnimalSlider: React.FC<Props> = ({ theme, isActive }: Props) => {
+const AnimalSlider: React.FC<Props> = ({
+  theme,
+  isActive,
+  isPrev,
+  isNext,
+}: Props) => {
   const fontsAnimalsStore = useLocal(() => new FontsAnimalStore());
+  console.log(theme, isNext, isPrev);
 
-  console.log(fontsAnimalsStore.currentIndex);
   return (
-    <div styleName="content">
+    <div styleName={cn('content', isPrev && !isNext &&'content_hidden')}>
       <HorizontalSlider
         initialSlide={fontsAnimalsStore.currentIndex}
         isActive={isActive}

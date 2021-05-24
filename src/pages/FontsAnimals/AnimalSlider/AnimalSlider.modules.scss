@@ -11,6 +11,12 @@
   @include phone {
     padding: 0 8px;
   }
+
+  &_hidden {
+    opacity: 0;
+  }
+
+  @include animate(opacity);
 }
 
 .font-description {
