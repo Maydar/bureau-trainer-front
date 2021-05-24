@@ -63,6 +63,7 @@ const ColorMood: React.FC = () => {
             </SwiperSlide>
           ))}
         </VerticalSlider>
+        <div className={`swiper-next-el-v swiper-next-el-v_${textColor}`}>другое слово</div>
       </Pager>
     </div>
   );

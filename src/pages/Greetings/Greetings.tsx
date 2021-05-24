@@ -1,11 +1,9 @@
 import * as React from 'react';
-import TaskDescription from 'components/common/TaskDescription/TaskDescription';
 
 import { NavLink } from 'react-router-dom';
 import urls from 'config/urls';
 
 import './Greetings.modules.scss';
-import BureauLogo from 'components/icons/ui/BureauLogo/BureauLogo';
 
 const Greetings: React.FC = () => {
   return (

@@ -181,6 +181,7 @@ const Composition: React.FC = () => {
             )}
           </p>
         </div>
+        <div className={"swiper-next-el-v"}>другая фигура</div>
       </Pager>
     </>
   );

@@ -1,24 +1,27 @@
 import * as React from 'react';
 import { Swiper } from 'swiper/react';
+
 import cn from 'classnames';
 
-import SwiperCore, { Mousewheel } from 'swiper/core';
+import SwiperCore, { Mousewheel, Navigation } from 'swiper/core';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.min.css';
 
-SwiperCore.use([Mousewheel]);
+SwiperCore.use([Mousewheel, Navigation]);
 
 type Props = {
   slideChangeTransitionEnd?: (swiper: any) => void;
   children: React.ReactNode;
   className?: string,
+  nextElClass?: string
 };
 
 export const VerticalSlider: React.FC<Props> = ({
   slideChangeTransitionEnd,
   children,
-  className
+  className,
+  nextElClass
 }: Props) => {
   return (
     <Swiper
@@ -27,6 +30,9 @@ export const VerticalSlider: React.FC<Props> = ({
         sensitivity: 0.1,
       }}
       slidesPerView={"auto"}
+      navigation={{
+        nextEl: nextElClass
+      }}
       speed={700}
       centeredSlides={true}
       loop={true}
@@ -43,6 +49,7 @@ export const VerticalSlider: React.FC<Props> = ({
 
 VerticalSlider.defaultProps = {
   slideChangeTransitionEnd: () => {},
+  nextElClass: ".swiper-next-el-v"
 };
 
 export default React.memo(VerticalSlider);

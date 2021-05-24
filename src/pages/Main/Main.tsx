@@ -53,9 +53,7 @@ const Main: React.FC = () => {
         </div>
         <div styleName="copyright">
           <div styleName="copyright__item">
-            <a styleName="copyright__item_bureau" href="https://bureau.ru">
-              <BureauLogo />
-            </a>
+            <BureauLogo />
           </div>
         </div>
       </div>

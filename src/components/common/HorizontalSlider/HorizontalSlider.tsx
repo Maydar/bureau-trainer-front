@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { observer } from 'mobx-react';
+import SwiperCore, { Navigation } from 'swiper';
 import cn from 'classnames';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 
 type Props = {
   isActive: boolean;
@@ -10,6 +10,8 @@ type Props = {
   children: React.ReactNode;
 };
 
+SwiperCore.use([Navigation]);
+
 export const HorizontalSlider: React.FC<Props> = ({
   isActive,
   initialSlide,
@@ -17,20 +19,28 @@ export const HorizontalSlider: React.FC<Props> = ({
   children
 }) => {
   return (
-    <Swiper
-      className={cn(
-        'swiper-slider swiper-slider_default swiper-container-h',
-        isActive && 'swiper-slider_active'
-      )}
-      slidesPerView={'auto'}
-      speed={700}
-      centeredSlides={true}
-      loop={true}
-      initialSlide={initialSlide}
-      onSlideChange={onSlideChange}
-    >
-      {children}
-    </Swiper>
+    <>
+      <Swiper
+        className={cn(
+          'swiper-slider swiper-slider_default swiper-container-h',
+          isActive && 'swiper-slider_active'
+        )}
+        slidesPerView={'auto'}
+        speed={700}
+        navigation={{
+          nextEl: '.swiper-nav-next',
+          prevEl: '.swiper-nav-prev'
+        }}
+        centeredSlides={true}
+        loop={true}
+        initialSlide={initialSlide}
+        onSlideChange={onSlideChange}
+      >
+        {children}
+      </Swiper>
+      <div className="swiper-nav-prev"/>
+      <div className="swiper-nav-next"/>
+    </>
   );
 };
 
