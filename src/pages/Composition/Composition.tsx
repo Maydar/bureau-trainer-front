@@ -9,7 +9,8 @@ import { SwiperSlide } from 'swiper/react';
 import VerticalSlider from 'components/common/VerticalSlider';
 import { LessonType, nbsp } from 'config/constants';
 import urls from 'config/urls';
-import { useLocal } from 'utils/hooks';
+import { useLocal, useSize } from 'utils/hooks';
+
 import ObjectPage from './ObjectPage';
 import { Orientation, Theme, mapPositionText, Position } from './config';
 
@@ -21,6 +22,7 @@ const STEP = 1;
 const MIN = 0;
 const MAX = 1000;
 
+//todo вынести отсюда
 const getPositionText = (percentage: number, theme: Theme) => {
   if (percentage <= 35) {
     return mapPositionText[theme][Position.topLeft];
@@ -39,12 +41,13 @@ const getPositionText = (percentage: number, theme: Theme) => {
 
 const Composition: React.FC = () => {
   const compositionStore = useLocal(() => new CompositionStore());
+  const { isMobile } = useSize();
 
   const position =
     compositionStore.pages[compositionStore.currentTheme].position;
   const orientation =
     compositionStore.pages[compositionStore.currentTheme].orientation;
-  //todo свайпер перехватывает события мыши
+
   return (
     <>
       <div className="task-description">
@@ -73,8 +76,8 @@ const Composition: React.FC = () => {
                 theme={Theme.car}
                 position={compositionStore.pages[Theme.car].position}
                 orientation={compositionStore.pages[Theme.car].orientation}
-                objectHeight={163}
-                objectWidth={364}
+                objectHeight={isMobile ? 121 : 163}
+                objectWidth={isMobile ? 270 : 364}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -82,8 +85,8 @@ const Composition: React.FC = () => {
                 theme={Theme.bomb}
                 position={compositionStore.pages[Theme.bomb].position}
                 orientation={compositionStore.pages[Theme.bomb].orientation}
-                objectHeight={235}
-                objectWidth={236}
+                objectHeight={isMobile ? 175 : 235}
+                objectWidth={isMobile ? 176 : 236}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -91,8 +94,8 @@ const Composition: React.FC = () => {
                 theme={Theme.rocket}
                 position={compositionStore.pages[Theme.rocket].position}
                 orientation={compositionStore.pages[Theme.rocket].orientation}
-                objectHeight={270}
-                objectWidth={150}
+                objectHeight={isMobile ? 200 : 270}
+                objectWidth={isMobile ? 100 : 150}
               />
             </SwiperSlide>
           </VerticalSlider>
@@ -181,7 +184,7 @@ const Composition: React.FC = () => {
             )}
           </p>
         </div>
-        <div className={"swiper-next-el-v"}>другая фигура</div>
+        <div className={'swiper-next-el-v'}>другая фигура</div>
       </Pager>
     </>
   );
