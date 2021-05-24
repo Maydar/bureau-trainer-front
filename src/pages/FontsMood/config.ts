@@ -12,7 +12,7 @@ export enum Theme {
 
 export enum RageFonts {
   austin = 'austin',
-  //edwin = 'edwin',
+  edwin = 'edwin',
   pilar = 'pilar',
   roboto = 'roboto',
   vast = 'vast',
@@ -53,6 +53,12 @@ export const mapWordData = {
       key: 'vast',
       name: 'Vast',
       description: `Набранное супертонким шрифтом слово выглядит спокойным и${nbsp}расслабленным. Расслабься и${nbsp}ты,${nbsp}бро`,
+    },
+
+    [RageFonts.edwin]: {
+      key: 'edwin',
+      name: 'Eldwin',
+      description: `Никто не${nbsp}злится. Как будто написанное от${nbsp}руки слово ассоциируется с${nbsp}пироженками, детскими книгами и${nbsp}праздником`,
     },
     [RageFonts.druk]: {
       key: 'druk',
@@ -148,8 +154,8 @@ export const mapToArrayWordData = {
   ],
   [Theme.rage]: [
     mapWordData[Theme.rage][RageFonts.roboto],
+    mapWordData[Theme.rage][RageFonts.edwin],
     mapWordData[Theme.rage][RageFonts.druk],
-    //mapWordData[Theme.rage][RageFonts.edwin],
     mapWordData[Theme.rage][RageFonts.vast],
     mapWordData[Theme.rage][RageFonts.pilar],
     mapWordData[Theme.rage][RageFonts.austin],
