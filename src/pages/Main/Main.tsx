@@ -276,8 +276,8 @@ const Main: React.FC = () => {
             Сделано в&nbsp;Школе&nbsp;Бюро&nbsp;Горбунова
           </Link>
         </p>
-        <p className="page-copyright__credits">
-          <Link to={urls.greetings}>Шрифты и&nbsp;иконки</Link>
+        <p className="page-copyright__school">
+          <Link className={"bureau-school-link"} to={urls.greetings}>Шрифты и&nbsp;иконки</Link>
         </p>
       </div>
       <div className="main-page__social">

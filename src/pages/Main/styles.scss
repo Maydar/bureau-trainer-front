@@ -19,7 +19,7 @@ body {
 @media screen and (min-width: 640px) {
     .page-header {
         font-size: 31px;
-        line-height: 34px;   
+        line-height: 34px;
     }
 }
 
@@ -64,7 +64,7 @@ body {
 
 @media screen and (min-width: 640px) {
     .exercise {
-        padding: 34px 9px 0 12px;   
+        padding: 34px 9px 0 12px;
     }
 }
 
@@ -289,8 +289,13 @@ body {
 }
 
 .page-copyright__school {
-    margin-top: 0;
     margin-bottom: 0;
+
+    margin-top: 11px;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .page-copyright__credits {
@@ -303,11 +308,6 @@ body {
     text-decoration: none;
 }
 
-.page-copyright a:not(.bureau-school-link) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-
 .bureau-school-link {
     position: relative;
     padding-right: 0.5em;
@@ -317,9 +317,9 @@ body {
     content: '';
     position: absolute;
     right: 0;
-    top: 50%;
-    width: 0.5em;
-    height: 0.5em;
+    top: 47%;
+    width: 0.4em;
+    height: 0.4em;
     transform: translateY(-30%) rotate(-45deg);
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
