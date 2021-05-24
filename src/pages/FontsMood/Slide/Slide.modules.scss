@@ -74,7 +74,7 @@
 
     &_rage, &_anorexy, &_rumble {
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: bottom;
       background-size: contain;
     }
 
@@ -83,8 +83,8 @@
       height: 127px;
 
       @include phone {
-        width: 220px;
-        height: 120px;
+        width: 250px;
+        height: 150px;
       }
 
       &_roboto {
@@ -119,11 +119,9 @@
       height: 120px;
 
       @include phone {
-        width: 150px;
-        height: 80px;
+        width: 180px;
+        height: 100px;
       }
-
-
 
       &_roboto {
         background-image: url("./words_img/rage/rage_roboto.svg");
@@ -155,8 +153,8 @@
       height: 120px;
 
       @include phone {
-        width: 200px;
-        height: 80px;
+        width: 220px;
+        height: 100px;
       }
 
       &_roboto {
