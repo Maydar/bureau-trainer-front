@@ -19,7 +19,8 @@ const FontsAnimals: React.FC = () => {
     <>
       <div className="task-description">
         <TaskDescription
-          text={`Посмотрите, как${nbsp}шрифт передает внешность и${nbsp}характер слова.`}
+          title={'Упражнение: животные'}
+          text={`Выберите шрифт, который подходит животному.`}
         />
       </div>
       <Pager

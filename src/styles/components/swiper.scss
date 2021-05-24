@@ -29,19 +29,35 @@
 //  }
 //}
 
+.swiper-container-v {
+  .swiper-slide {
+    height: 60%;
+    //height: calc(100% - 104px);
+    border-bottom: 1px solid lightblue;
+    border-left: 1px solid lightblue;
+  }
+}
+
 .swiper-container-h {
   height: 100%;
   .swiper-slide {
-    width: 80%;
+    height: 100%;
+    width: 60%;
+    //width: calc(100% - 34px);
+    border-bottom: 1px solid pink;
+    border-left: 1px solid pink;
+
     //height: auto !important;
   }
 }
 
-.swiper-container-v {
+.swiper-container-composition {
   .swiper-slide {
-    height: 58%;
+    height: 80%;
   }
 }
+
+
 
 
 

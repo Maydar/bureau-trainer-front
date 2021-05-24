@@ -1,6 +1,64 @@
+@import "colors";
+@import "mixins";
+
 .content {
   position: relative;
   height: 100%;
   width: 100%;
   background-color: #48AFC6;
+
+  &__description {
+    position: absolute;
+    top: 82%;
+    width: 450px;
+    text-align: center;
+    color: $black;
+    z-index: 999;
+
+    @include body-md-medium;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include phone {
+      top: 82%;
+      width: 100%;
+      padding: 0 8px;
+
+      @include body-sm-medium;
+    }
+  }
+}
+
+.range-wrapper {
+  position: absolute;
+  top: 65%;
+  width: 270px;
+  height: 35px;
+  z-index: 300;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &_vertical {
+    height: 270px;
+    width: 35px;
+    top: 50%;
+    right: 70px;
+    left: auto;
+    transform: translateY(-50%);
+  }
+
+  @include phone {
+    top: 70%;
+    width: 270px;
+    height: 35px;
+
+
+    &_vertical {
+      height: 270px;
+      width: 35px;
+      right: 8px;
+      top: 50%;
+    }
+  }
 }

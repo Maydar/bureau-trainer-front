@@ -32,9 +32,9 @@ const FontSlider: React.FC<Props> = ({
       <HorizontalSlider
         isActive={isActiveSlider}
         initialSlide={fontsMoodStore.currentIndex}
-        // onSlideChange={(swiper) => {
-        //   fontsMoodStore.setIndex(swiper.activeIndex);
-        // }}
+        onSlideChange={(swiper) => {
+          fontsMoodStore.setIndex(swiper.realIndex);
+        }}
       >
         {mapToArrayWordData[theme].map((wordData) => {
           return (

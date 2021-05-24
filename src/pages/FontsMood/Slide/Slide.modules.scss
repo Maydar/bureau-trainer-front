@@ -1,6 +1,10 @@
 @import "mixins";
 
 .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 100%;
   width: 100%;
@@ -10,31 +14,31 @@
   }
 
   &__preview {
-    position: absolute;
+    //position: absolute;
 
     &_default {
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      //top: 60%;
+      //left: 50%;
+      //transform: translate(-50%, -50%);
     }
 
     &_vertical {
       &_next {
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
+        //top: 0;
+        //left: 50%;
+        //transform: translate(-50%, 0);
 
         @include phone {
-          top: 4%;
+          //top: 4%;
         }
       }
 
       &_next-slide-n {
-        transform: translate(0, 0) !important;
+        //transform: translate(0, 0) !important;
       }
 
       &_next-slide-p {
-        transform: translate(-100%, 0) !important;
+        //transform: translate(-100%, 0) !important;
       }
 
     }
@@ -42,13 +46,13 @@
     &_horizontal {
       &_next {
         //top: 50%;
-        left: 0;
-        transform: translate(0, -50%);
+        //left: 0;
+        //transform: translate(0, -50%);
       }
       &_prev {
         //top: 50%;
-        left: 100%;
-        transform: translate(-100%, -50%);
+        //left: 100%;
+        //transform: translate(-100%, -50%);
       }
     }
     //top 0.7s ease-in-out,
@@ -58,54 +62,69 @@
 
   &__image {
     position: relative;
-    max-width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    max-width: calc(100% - 48px);
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 199px
+    }
+
+    &_rage, &_anorexy, &_rumble {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
 
     &_anorexy {
       width: 703px;
-      height: 199px;
 
-      @include phone {
-        width: 220px;
-        height: 120px;
-      }
-
+      //@include phone {
+      //  width: 220px;
+      //  height: 120px;
+      //}
 
       &_roboto {
         background-image: url("./words_img/anorexy/anorexy_roboto.svg");
+        height: 111px;
       }
 
       &_fence {
         background-image: url("./words_img/anorexy/anorexy_fence.png");
+        height: 79px;
       }
 
       &_palkerson {
         background-image: url("./words_img/anorexy/anorey_palkerson.png");
+        height: 199px;
       }
 
       &_norbert {
         background-image: url("./words_img/anorexy/anorexy_norbert.svg");
+        height: 100px;
       }
 
       &_parmigiano {
         background-image: url("./words_img/anorexy/anorexy_parmigiano.svg");
+        height: 127px;
       }
 
       &_fatum {
         background-image: url("./words_img/anorexy/anorexy_fatum.png");
+        height: 87px;
       }
     }
 
     &_rage {
       width: 352px;
-      height: 118px;
+      height: 120px;
 
-      @include phone {
-        width: 150px;
-        height: 80px;
-      }
+      //@include phone {
+      //  width: 150px;
+      //  height: 80px;
+      //}
 
       &_roboto {
         background-image: url("./words_img/rage/rage_roboto.svg");
@@ -134,12 +153,12 @@
 
     &_rumble {
       width: 514px;
-      height: 136px;
+      height: 120px;
 
-      @include phone {
-        width: 200px;
-        height: 80px;
-      }
+      //@include phone {
+      //  width: 200px;
+      //  height: 80px;
+      //}
 
       &_roboto {
         background-image: url("./words_img/rumble/rumble_roboto.svg");
@@ -175,11 +194,8 @@
 }
 
 .font-description {
-  position: absolute;
   text-align: center;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 48px;
 
   &_inactive {
     opacity: 0;

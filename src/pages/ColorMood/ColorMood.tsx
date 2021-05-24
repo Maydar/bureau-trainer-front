@@ -40,7 +40,7 @@ const ColorMood: React.FC = () => {
       >
         <VerticalSlider
           slideChangeTransitionEnd={(swiper) => {
-            colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.activeIndex])
+            colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex])
             //todo change background on swiper slide
           }}
         >

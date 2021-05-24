@@ -27,7 +27,7 @@ const AnimalSlider: React.FC<Props> = ({ theme, isActive }: Props) => {
         initialSlide={fontsAnimalsStore.currentIndex}
         isActive={isActive}
         onSlideChange={(swiper) => {
-          fontsAnimalsStore.setIndex(swiper.activeIndex);
+          fontsAnimalsStore.setIndex(swiper.realIndex);
         }}
       >
         {mapToArrayWordData[theme].map((wordData) => {

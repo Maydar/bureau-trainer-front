@@ -40,7 +40,7 @@
     @include phone {
       @include body-sm-medium;
 
-      max-width: 280px;
+      max-width: 75%;
     }
   }
 }

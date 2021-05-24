@@ -4,7 +4,7 @@
 .content {
   position: absolute;
   width: 100%;
-  min-height: 40rem;
+  min-height: 400px;
   top: 60%;
   transform: translateY(-50%);
 
@@ -19,28 +19,21 @@
   align-items: center;
 
   &__name {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    font-weight: 700;
+    @include body-md-bold;
 
     @include phone {
-      font-size: 14px;
-      line-height: 20px;
+      @include body-sm-bold;
     }
   }
 
   &__text {
-    max-width: 65rem;
+    max-width: 450px;
     text-align: center;
-    font-size: 1.4rem;
-    line-height: 2rem;
-    font-weight: 500;
-    margin-top: .8rem;
+    @include body-md-medium;
+    margin-top: 8px;
 
     @include phone {
-      font-size: 14px;
-      line-height: 20px;
-      margin-top: 8px;
+      @include body-sm-medium;
       max-width: 100%;
     }
   }

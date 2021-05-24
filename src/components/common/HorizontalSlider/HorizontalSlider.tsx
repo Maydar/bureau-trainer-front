@@ -25,7 +25,7 @@ export const HorizontalSlider: React.FC<Props> = ({
       slidesPerView={'auto'}
       speed={700}
       centeredSlides={true}
-      loop={false}
+      loop={true}
       initialSlide={initialSlide}
       onSlideChange={onSlideChange}
     >

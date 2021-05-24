@@ -41,17 +41,22 @@ const Slide: React.FC<Props> = ({
       <div
         styleName={cn(
           'slide__image',
-          `slide__image_${theme}`,
-          `slide__image_${theme}_${font}`,
-          'slide__preview slide__preview_default',
-
-          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `slide__preview_horizontal_next`,
-          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `slide__preview_horizontal_prev`,
-
-          (isNextSlider && horizontal && slideStates.isNext) && `slide__hidden slide__preview_vertical_next-slide-n`,
-          (isNextSlider && horizontal && slideStates.isPrev) && `slide__hidden slide__preview_vertical_next-slide-p`,
         )}
-      />
+      >
+        <div styleName="slide__image-wrapper">
+          <div styleName={cn(
+            `slide__image_${theme}`,
+            `slide__image_${theme}_${font}`,
+            'slide__preview slide__preview_default',
+
+            (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `slide__preview_horizontal_next`,
+            (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `slide__preview_horizontal_prev`,
+
+            (isNextSlider && horizontal && slideStates.isNext) && `slide__hidden slide__preview_vertical_next-slide-n`,
+            (isNextSlider && horizontal && slideStates.isPrev) && `slide__hidden slide__preview_vertical_next-slide-p`,
+          )}/>
+        </div>
+      </div>
       <div styleName={cn(
         'font-description',
         (isPrevSlider && slideStates.isActive && horizontal && `font-description_inactive`),

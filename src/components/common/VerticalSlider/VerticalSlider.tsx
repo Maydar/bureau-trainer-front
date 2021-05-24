@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Swiper } from 'swiper/react';
+import cn from 'classnames';
 
 import SwiperCore, { Mousewheel } from 'swiper/core';
 
@@ -11,11 +12,13 @@ SwiperCore.use([Mousewheel]);
 type Props = {
   slideChangeTransitionEnd?: (swiper: any) => void;
   children: React.ReactNode;
+  className?: string,
 };
 
 export const VerticalSlider: React.FC<Props> = ({
   slideChangeTransitionEnd,
   children,
+  className
 }: Props) => {
   return (
     <Swiper
@@ -26,8 +29,11 @@ export const VerticalSlider: React.FC<Props> = ({
       slidesPerView={"auto"}
       speed={700}
       centeredSlides={true}
-      loop={false}
-      className="swiper-container-v"
+      loop={true}
+      className={cn(
+        "swiper-container-v",
+        className
+      )}
       onSlideChangeTransitionEnd={slideChangeTransitionEnd}
     >
       {children}
