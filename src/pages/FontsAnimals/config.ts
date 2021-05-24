@@ -30,7 +30,7 @@ export enum TarakanFonts {
   didona = 'didona',
   displace = 'displace',
   norbert = 'norbert',
-  cstm = 'cstm',
+  //cstm = 'cstm',
   vast = 'vast'
 }
 
@@ -97,7 +97,7 @@ export const mapWordData = {
     [ElephantFonts.peace]: {
       key: 'peace',
       name: 'Peace Sans',
-      description: `Ту${hyphen}ту${hyphen}ру! Вот он,${nbsp}большой, толстый, округлый слон. А${nbsp}левая нога у ${nbsp}л»${nbsp}ещё и${nbsp}хобот напоминает`
+      description: `Ту${hyphen}ту${hyphen}ру! Вот он,${nbsp}большой, толстый, округлый слон. А${nbsp}левая нога у ${nbsp}«л»${nbsp}ещё и${nbsp}хобот напоминает`
     },
     [ElephantFonts.norbert]: {
       key: 'norbert',
@@ -138,11 +138,11 @@ export const mapWordData = {
       name: 'Vast',
       description: `Спокойный и${nbsp}дружелюбный шрифт. Как майский жук, который летит там себе в${nbsp}небе и${nbsp}никого не${nbsp}трогает`,
     },
-    [TarakanFonts.cstm]: {
-      key: 'cstm',
-      name: 'CSTM Xprmntl 01',
-      description: `Из${hyphen}за необычных плавных скруглений букв и${nbsp}топорной «к»${nbsp}передается характер слова и${nbsp}появляется ощущение неприязни.`,
-    },
+    // [TarakanFonts.cstm]: {
+    //   key: 'cstm',
+    //   name: 'CSTM Xprmntl 01',
+    //   description: `Из${hyphen}за необычных плавных скруглений букв и${nbsp}топорной «к»${nbsp}передается характер слова и${nbsp}появляется ощущение неприязни.`,
+    // },
   },
   [Theme.girafe]: {
     [GirafeFonts.roboto]: {
@@ -202,7 +202,7 @@ export const mapToArrayWordData = {
     mapWordData[Theme.tarakan][TarakanFonts.displace],
     mapWordData[Theme.tarakan][TarakanFonts.norbert],
     mapWordData[Theme.tarakan][TarakanFonts.vast],
-    mapWordData[Theme.tarakan][TarakanFonts.cstm],
+   // mapWordData[Theme.tarakan][TarakanFonts.cstm],
   ],
   [Theme.elephant]: [
     mapWordData[Theme.elephant][ElephantFonts.roboto],
