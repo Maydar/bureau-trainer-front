@@ -140,19 +140,19 @@ export const mapWordData = {
 export const mapToArrayWordData = {
   [Theme.anorexy]: [
     mapWordData[Theme.anorexy][AnorexyFonts.roboto],
+    mapWordData[Theme.anorexy][AnorexyFonts.norbert],
+    mapWordData[Theme.anorexy][AnorexyFonts.fence],
+    mapWordData[Theme.anorexy][AnorexyFonts.parmigiano],
     mapWordData[Theme.anorexy][AnorexyFonts.faturn],
     mapWordData[Theme.anorexy][AnorexyFonts.palkerson],
-    mapWordData[Theme.anorexy][AnorexyFonts.fence],
-    mapWordData[Theme.anorexy][AnorexyFonts.norbert],
-    mapWordData[Theme.anorexy][AnorexyFonts.parmigiano],
   ],
   [Theme.rage]: [
     mapWordData[Theme.rage][RageFonts.roboto],
-    mapWordData[Theme.rage][RageFonts.austin],
-    //mapWordData[Theme.rage][RageFonts.edwin],
-    mapWordData[Theme.rage][RageFonts.pilar],
-    mapWordData[Theme.rage][RageFonts.vast],
     mapWordData[Theme.rage][RageFonts.druk],
+    //mapWordData[Theme.rage][RageFonts.edwin],
+    mapWordData[Theme.rage][RageFonts.vast],
+    mapWordData[Theme.rage][RageFonts.pilar],
+    mapWordData[Theme.rage][RageFonts.austin],
   ],
   [Theme.rumble]: [
     mapWordData[Theme.rumble][RumbleFonts.roboto],
