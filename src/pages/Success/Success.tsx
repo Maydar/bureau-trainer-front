@@ -3,6 +3,7 @@ import * as React from 'react';
 import TaskDescription from 'components/common/TaskDescription';
 
 import './Success.modules.scss';
+import {FACEBOOK_LINK, SITE_LINK, TWIITER_LINK} from "config/constants";
 
 const Success: React.FC = () => {
   return (
@@ -15,10 +16,10 @@ const Success: React.FC = () => {
         <div styleName="next-message"/>
         <div styleName="text">Покажите упражнения знакомым, студентам или&nbsp;коллегам, если было полезно:</div>
         <div styleName="share-icons">
-          <div styleName="share share_tg"/>
-          <div styleName="share share_twitter"/>
-          <div styleName="share share_fb"/>
-          <div styleName="share share_it"/>
+          <a target={'_blank'} href={`https://telegram.me/share/url?url=${SITE_LINK}`} styleName="share share_tg"/>
+          <a target={'_blank'} href={TWIITER_LINK} styleName="share share_twitter"/>
+          <a target={'_blank'} href={FACEBOOK_LINK} styleName="share share_fb"/>
+          <a target={'_blank'} href={'#'} styleName="share share_it"/>
         </div>
       </div>
       <div styleName="text text_bottom">Напишите, если у&nbsp;вас есть идеи упражнений: <a href="mailto:exercises.design@gmail.com">exercises.design@gmail.com</a></div>

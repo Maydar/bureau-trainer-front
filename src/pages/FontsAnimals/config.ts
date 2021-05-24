@@ -97,7 +97,7 @@ export const mapWordData = {
     [ElephantFonts.peace]: {
       key: 'peace',
       name: 'Peace Sans',
-      description: `Ту${hyphen}ту${hyphen}ру! Вот он,${nbsp}большой, толстый, округлый слон. А${nbsp}левая нога у ${nbsp}«л»${nbsp}ещё и${nbsp}хобот напоминает`
+      description: `Ту${hyphen}ту${hyphen}ру! Вот он,${nbsp}большой, толстый, округлый слон. А${nbsp}левая нога у${nbsp}«л»${nbsp}ещё и${nbsp}хобот напоминает`
     },
     [ElephantFonts.norbert]: {
       key: 'norbert',
