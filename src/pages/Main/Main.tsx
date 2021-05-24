@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import urls from 'config/urls';
 
 import './styles.scss';
+import {shareText, SITE_LINK} from "config/constants";
 
 const Main: React.FC = () => {
   return (
@@ -281,19 +282,19 @@ const Main: React.FC = () => {
       </div>
       <div className="main-page__social">
         <Link
-          to="#"
+          to={`https://telegram.me/share/url?url=${SITE_LINK}`}
           className="main-page__social-link main-page__social-link--telegram"
         >
-          <img src="./img/tg.svg" alt="Telegram" />
+          <img src="/static/tg.svg" alt="Telegram" />
+        </Link>
+        <Link to={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}>
+          <img src="/static/tw.svg" alt="Twitter" />
+        </Link>
+        <Link to={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}>
+          <img src="/static/fb.svg" alt="Facebook" />
         </Link>
         <Link to="#">
-          <img src="./img/tw.svg" alt="Twitter" />
-        </Link>
-        <Link to="#">
-          <img src="./img/fb.svg" alt="Facebook" />
-        </Link>
-        <Link to="#">
-          <img src="./img/inst.svg" alt="Instagram" />
+          <img src="/static/inst.svg" alt="Instagram" />
         </Link>
       </div>
     </div>
