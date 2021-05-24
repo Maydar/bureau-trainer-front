@@ -3,7 +3,7 @@ import * as React from 'react';
 import TaskDescription from 'components/common/TaskDescription';
 
 import './Success.modules.scss';
-import {FACEBOOK_LINK, shareText, SITE_LINK, TWIITER_LINK} from 'config/constants';
+import {shareText, SITE_LINK} from 'config/constants';
 
 const Success: React.FC = () => {
   return (
