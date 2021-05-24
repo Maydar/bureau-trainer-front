@@ -100,7 +100,6 @@ export const mapColorToDescription = {
 };
 
 export const whiteColors = [
-  Color.darkred,
   Color.darkgreen,
   Color.darkbrown,
   Color.darkblue,
