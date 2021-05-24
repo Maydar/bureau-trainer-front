@@ -71,7 +71,7 @@ const FontsAnimals: React.FC = () => {
               )}
             </SwiperSlide>
           </VerticalSlider>
-          <div className={"swiper-next-el-v"}>другое слово</div>
+          <div className={"swiper-next-el-v"}>Дальше</div>
         </div>
 
       </Pager>

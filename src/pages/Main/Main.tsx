@@ -294,24 +294,25 @@ const Main: React.FC = () => {
         <p className="page-copyright__school">
           <Link className={"bureau-school-link"} to={urls.greetings}>Шрифты и&nbsp;иконки</Link>
         </p>
+        <div className="main-page__social">
+          <a
+            href={`https://telegram.me/share/url?url=${SITE_LINK}`}
+            className="main-page__social-link main-page__social-link--telegram"
+          >
+            <img src="/static/tg.svg" alt="Telegram" />
+          </a>
+          <a href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}>
+            <img src="/static/tw.svg" alt="Twitter" />
+          </a>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}>
+            <img src="/static/fb.svg" alt="Facebook" />
+          </a>
+          <a href={'#'}>
+            <img src="/static/inst.svg" alt="Instagram" />
+          </a>
+        </div>
       </div>
-      <div className="main-page__social">
-        <a
-          href={`https://telegram.me/share/url?url=${SITE_LINK}`}
-          className="main-page__social-link main-page__social-link--telegram"
-        >
-          <img src="/static/tg.svg" alt="Telegram" />
-        </a>
-        <a href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}>
-          <img src="/static/tw.svg" alt="Twitter" />
-        </a>
-        <a href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}>
-          <img src="/static/fb.svg" alt="Facebook" />
-        </a>
-        <a href={'#'}>
-          <img src="/static/inst.svg" alt="Instagram" />
-        </a>
-      </div>
+
     </div>
   );
 };

@@ -40,8 +40,7 @@ const ColorMood: React.FC = () => {
       >
         <VerticalSlider
           slideChangeTransitionEnd={(swiper) => {
-            colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex])
-            //todo change background on swiper slide
+            colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex]);
           }}
         >
           {colorMoodStore.pageOrder.map((theme) => (
@@ -63,7 +62,7 @@ const ColorMood: React.FC = () => {
             </SwiperSlide>
           ))}
         </VerticalSlider>
-        <div className={`swiper-next-el-v swiper-next-el-v_${textColor}`}>другое слово</div>
+        <div className={`swiper-next-el-v swiper-next-el-v_${textColor}`}>Дальше</div>
       </Pager>
     </div>
   );

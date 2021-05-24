@@ -203,22 +203,22 @@ $local-yellow: #FFD600;
 .bureau {
   display: inline-block;
   position: relative;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 14px;
+  line-height: 16px;
   color: $white;
   margin-bottom: 38px;
 
   @include mobile {
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
 
 .arrow {
   height: 14px;
-  width: 7px;
+  width: 8px;
   display: inline-block;
   position: relative;
   top: 1px;
@@ -227,7 +227,7 @@ $local-yellow: #FFD600;
 
   @include phone {
     height: 14px;
-    width: 7px;
+    width: 8px;
     top: 1px;
     margin-left: 2px;
   }

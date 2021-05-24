@@ -13,15 +13,19 @@ SwiperCore.use([Mousewheel, Navigation]);
 type Props = {
   slideChangeTransitionEnd?: (swiper: any) => void;
   children: React.ReactNode;
-  className?: string,
-  nextElClass?: string
+  className?: string;
+  nextElClass?: string;
+  beforeTransitionStart?: (swiper: any) => void;
+  onSlideChange?: (swiper: any) => void;
 };
 
 export const VerticalSlider: React.FC<Props> = ({
   slideChangeTransitionEnd,
   children,
+  beforeTransitionStart,
   className,
-  nextElClass
+  onSlideChange,
+  nextElClass,
 }: Props) => {
   return (
     <Swiper
@@ -31,16 +35,15 @@ export const VerticalSlider: React.FC<Props> = ({
       }}
       slidesPerView={1}
       navigation={{
-        nextEl: nextElClass
+        nextEl: nextElClass,
       }}
       speed={700}
       centeredSlides={true}
       loop={true}
-      className={cn(
-        "swiper-container-v",
-        className
-      )}
+      className={cn('swiper-container-v', className)}
       onSlideChangeTransitionEnd={slideChangeTransitionEnd}
+      onSlideChangeTransitionStart={onSlideChange}
+      onBeforeTransitionStart={beforeTransitionStart}
     >
       {children}
     </Swiper>
@@ -49,7 +52,9 @@ export const VerticalSlider: React.FC<Props> = ({
 
 VerticalSlider.defaultProps = {
   slideChangeTransitionEnd: () => {},
-  nextElClass: ".swiper-next-el-v"
+  beforeTransitionStart: () => {},
+  onSlideChange: () => {},
+  nextElClass: '.swiper-next-el-v',
 };
 
 export default React.memo(VerticalSlider);
