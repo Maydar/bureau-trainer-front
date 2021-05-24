@@ -7,6 +7,8 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 
 const buildPath = path.resolve(__dirname, 'public');
 const srcPath = path.resolve(__dirname, 'src');
@@ -149,6 +151,14 @@ module.exports = (opts, args) => {
       new ForkTsCheckerWebpackPlugin(),
       new MiniCssExtractPlugin({
         filename: 'static/css/bundle.[name].[contenthash].css',
+      }),
+      new CopyPlugin({
+        patterns: [
+          { from: 'src/static', to: 'static' },
+        ],
+        options: {
+          concurrency: 100,
+        },
       }),
     ],
 
