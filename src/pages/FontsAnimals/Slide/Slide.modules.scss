@@ -2,10 +2,11 @@
 
 .slide {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   height: 100%;
+  top: 37%;
   min-height: 25rem;
   width: 100%;
 
