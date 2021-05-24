@@ -35,6 +35,7 @@ const AnimalSlider: React.FC<Props> = ({
         onSlideChange={(swiper) => {
           fontsAnimalsStore.setIndex(swiper.realIndex);
         }}
+        navKey={theme}
       >
         {mapToArrayWordData[theme].map((wordData) => {
           return (

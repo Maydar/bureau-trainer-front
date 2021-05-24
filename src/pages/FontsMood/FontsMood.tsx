@@ -36,6 +36,7 @@ const FontsMood: React.FC = () => {
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
+
               />
             )}
           </SwiperSlide>

@@ -47,7 +47,7 @@ export const mapWordData = {
     [RageFonts.pilar]: {
       key: 'pilar',
       name: 'Pilar',
-      description: `Плотные темные буквы могли бы${nbsp}ассоциироваться с${nbsp}гневом, но${nbsp}из${hyphen}за${nbsp}забавных скруглений ощущение сходит на${nbsp}нет  `,
+      description: `Плотные темные буквы могли бы${nbsp}ассоциироваться с${nbsp}гневом, но${nbsp}из${hyphen}за${nbsp}забавных скруглений ощущение сходит на${nbsp}нет`,
     },
     [RageFonts.vast]: {
       key: 'vast',

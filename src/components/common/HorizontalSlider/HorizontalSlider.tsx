@@ -8,6 +8,7 @@ type Props = {
   initialSlide: number;
   onSlideChange?: (swiper: any) => void;
   children: React.ReactNode;
+  navKey: string;
 };
 
 SwiperCore.use([Navigation]);
@@ -16,6 +17,7 @@ export const HorizontalSlider: React.FC<Props> = ({
   isActive,
   initialSlide,
   onSlideChange,
+  navKey,
   children
 }) => {
   return (
@@ -28,8 +30,8 @@ export const HorizontalSlider: React.FC<Props> = ({
         slidesPerView={'auto'}
         speed={700}
         navigation={{
-          nextEl: '.swiper-nav-next',
-          prevEl: '.swiper-nav-prev'
+          nextEl: `.swiper-nav-next_${navKey}`,
+          prevEl: `.swiper-nav-prev_${navKey}`
         }}
         centeredSlides={true}
         loop={true}
@@ -38,8 +40,8 @@ export const HorizontalSlider: React.FC<Props> = ({
       >
         {children}
       </Swiper>
-      <div className="swiper-nav-prev"/>
-      <div className="swiper-nav-next"/>
+      <div className={`swiper-nav-prev swiper-nav-prev_${navKey}`}/>
+      <div className={`swiper-nav-next swiper-nav-next_${navKey}`}/>
     </>
   );
 };

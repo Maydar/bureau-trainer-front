@@ -35,6 +35,7 @@ const FontSlider: React.FC<Props> = ({
         onSlideChange={(swiper) => {
           fontsMoodStore.setIndex(swiper.realIndex);
         }}
+        navKey={theme}
       >
         {mapToArrayWordData[theme].map((wordData) => {
           return (
