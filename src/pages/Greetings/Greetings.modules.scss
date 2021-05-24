@@ -14,11 +14,11 @@ $local-yellow: #FFD600;
   background-color: $black;
 
   &__inner {
-    margin-top: 2rem;
-    margin-bottom: 5.4rem;
+    margin-top: 20px;
+    margin-bottom: 54px;
   }
 
-  padding: 0 1.2rem;
+  padding: 0 12px;
 
   @include phone {
     padding: 0 8px;
@@ -39,9 +39,9 @@ $local-yellow: #FFD600;
   }
 
   @include tablet {
-    margin-top: 3.6rem;
-    font-size: 7.8rem;
-    line-height: 8.2rem;
+    margin-top: 36px;
+    font-size: 78px;
+    line-height: 82px;
   }
 }
 
@@ -55,8 +55,8 @@ $local-yellow: #FFD600;
 }
 
 .column {
-  margin-left: 11.6rem;
-  max-width: 33.2rem;
+  margin-left: 116px;
+  max-width: 332px;
 
   &:first-child {
     margin-left: 0;
@@ -76,9 +76,9 @@ $local-yellow: #FFD600;
 .root-link {
   display: inline-block;
   padding-top: 11px;
-  font-size: 1.9rem;
+  font-size: 19px;
   font-weight: 700;
-  line-height: 2.9rem;
+  line-height: 29px;
   color: $white;
 
   @include hover {
@@ -95,7 +95,7 @@ $local-yellow: #FFD600;
 
 .section {
   position: relative;
-  margin-top: 1.6rem;
+  margin-top: 16px;
 
   &:first-child {
     margin-top: 0;
@@ -103,8 +103,8 @@ $local-yellow: #FFD600;
 
   &__title-without-link {
     position: relative;
-    font-size: 1.9rem;
-    line-height: 2.9rem;
+    font-size: 19px;
+    line-height: 29px;
     font-weight: 700;
     color: $local-yellow;
 
@@ -116,8 +116,8 @@ $local-yellow: #FFD600;
 
   &__title {
     position: relative;
-    font-size: 1.9rem;
-    line-height: 2.9rem;
+    font-size: 19px;
+    line-height: 29px;
     font-weight: 700;
     color: $local-yellow;
 
@@ -139,11 +139,11 @@ $local-yellow: #FFD600;
   }
 
   &__items {
-    margin-top: 1rem;
+    margin-top: 10px;
   }
 
   &__item {
-    margin-top: 1.6rem;
+    margin-top: 16px;
 
     &:first-child {
       margin-top: 0;
@@ -154,8 +154,8 @@ $local-yellow: #FFD600;
     display: inline-block;
     position: relative;
     font-weight: 700;
-    font-size: 1.9rem;
-    line-height: 2.9rem;
+    font-size: 19px;
+    line-height: 29px;
     color: $white;
 
     @include phone {
@@ -178,9 +178,7 @@ $local-yellow: #FFD600;
   }
 
   &__item-text {
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    font-weight: 500;
+    @include body-sm-medium;
     color: $white;
 
     @include phone {
@@ -192,9 +190,9 @@ $local-yellow: #FFD600;
 .bureau {
   display: inline-block;
   position: relative;
-  font-size: 1rem;
+  font-size: 10px;
   font-weight: 500;
-  line-height: 1.3rem;
+  line-height: 13px;
   color: $white;
   margin-bottom: 38px;
 
@@ -206,13 +204,13 @@ $local-yellow: #FFD600;
 
 
 .arrow {
-  height: .8rem;
-  width: .4rem;
+  height: 8px;
+  width: 4px;
   display: inline-block;
   position: relative;
-  top: 0.05rem;
+  top: 1px;
   vertical-align: middle;
-  margin-left: .2rem;
+  margin-left: 2px;
 
   @include phone {
     height: 14px;
