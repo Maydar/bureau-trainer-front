@@ -73,6 +73,7 @@ $local-yellow: #FFD600;
     }
   }
 }
+
 .root-link {
   display: inline-block;
   padding-top: 11px;
@@ -234,4 +235,70 @@ $local-yellow: #FFD600;
   background-image: url("./img/arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+
+.shares {
+  position: absolute;
+  display: flex;
+  bottom: 28px;
+  right: 28px;
+
+  &_desktop {
+    @include phone {
+      display: none;
+    }
+  }
+
+  &_mob {
+    @include phone {
+      position: relative;
+      margin-bottom: 48px;
+      right: auto;
+      bottom: 0;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+
+}
+.share {
+  height: 35px;
+  width: 35px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  margin-left: 10px;
+  cursor: pointer;
+
+  @include hover {
+    transform: scale(0.8);
+  }
+
+  @include animate(transform);
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &_fb {
+    background-image: url("./img/fb.svg");
+  }
+
+  &_it {
+    background-image: url("./img/it.svg");
+  }
+
+  &_tg {
+    background-image: url("./img/tg.svg");
+  }
+
+  &_twitter {
+    background-image: url("./img/twitter.svg");
+  }
 }

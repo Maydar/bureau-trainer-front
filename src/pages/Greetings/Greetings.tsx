@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import urls from 'config/urls';
 
 import './Greetings.modules.scss';
+import {shareText, SITE_LINK} from "config/constants";
 
 const Greetings: React.FC = () => {
   return (
@@ -211,6 +212,42 @@ const Greetings: React.FC = () => {
           Сделано&nbsp;в&nbsp;Школе&nbsp;Бюро&nbsp;Горбунова
           <span styleName="arrow" />
         </a>
+        <div styleName="shares shares_mob">
+          <a
+            target={'_blank'}
+            href={`https://telegram.me/share/url?url=${SITE_LINK}`}
+            styleName="share share_tg"
+          />
+          <a
+            target={'_blank'}
+            href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
+            styleName="share share_twitter"
+          />
+          <a
+            target={'_blank'}
+            href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
+            styleName="share share_fb"
+          />
+          <a target={'_blank'} href={'#'} styleName="share share_it" />
+        </div>
+      </div>
+      <div styleName="shares shares_desktop">
+        <a
+          target={'_blank'}
+          href={`https://telegram.me/share/url?url=${SITE_LINK}`}
+          styleName="share share_tg"
+        />
+        <a
+          target={'_blank'}
+          href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
+          styleName="share share_twitter"
+        />
+        <a
+          target={'_blank'}
+          href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
+          styleName="share share_fb"
+        />
+        <a target={'_blank'} href={'#'} styleName="share share_it" />
       </div>
     </>
   );

@@ -106,5 +106,4 @@ export const whiteColors = [
   Color.hackie,
   Color.mudgreen,
   Color.grey,
-  Color.blue,
 ];
