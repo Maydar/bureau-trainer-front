@@ -5,11 +5,12 @@ import urls from 'config/urls';
 
 type Props = {
   onClick?: () => void;
+  fontsLink?: boolean;
 };
 
 import './BureauLogo.modules.scss';
 
-const BureauLogo: React.FC<Props> = ({ onClick }: Props) => {
+const BureauLogo: React.FC<Props> = ({ onClick, fontsLink }: Props) => {
   return (
     <div onClick={onClick} styleName="content">
       <a
@@ -19,11 +20,17 @@ const BureauLogo: React.FC<Props> = ({ onClick }: Props) => {
         Сделано&nbsp;в&nbsp;Школе&nbsp;Бюро&nbsp;Горбунова
         <span styleName="arrow" />
       </a>
-      <NavLink to={urls.greetings} styleName="content__fonts link">
-        Шрифты и Иконки
-      </NavLink>
+      {
+        fontsLink && <NavLink to={urls.greetings} styleName="content__fonts link">
+          Шрифты и Иконки
+        </NavLink>
+      }
     </div>
   );
 };
+
+BureauLogo.defaultProps = {
+  fontsLink: true
+}
 
 export default React.memo(BureauLogo);

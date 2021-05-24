@@ -1,0 +1,227 @@
+@import "colors";
+@import "mixins";
+
+$local-yellow: #FFD600;
+
+.content {
+  //display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  overflow: auto;
+
+  background-color: $black;
+
+  &__inner {
+    margin-top: 2rem;
+    margin-bottom: 5.4rem;
+  }
+
+  padding: 0 1.2rem;
+
+  @include phone {
+    padding: 0 8px;
+  }
+}
+
+
+.header {
+  color: $local-yellow;
+
+  font-weight: 700;
+
+
+  @include mobile {
+    margin-top: 12px;
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  @include tablet {
+    margin-top: 3.6rem;
+    font-size: 7.8rem;
+    line-height: 8.2rem;
+  }
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.column {
+  margin-left: 11.6rem;
+  max-width: 33.2rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include mobile {
+    margin-left: 0;
+
+    margin-top: 16px;
+    max-width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.root-link {
+  display: inline-block;
+  padding-top: 11px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 2.9rem;
+  color: $white;
+
+  @include hover {
+    opacity: .8;
+  }
+
+  @include phone {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @include animate(opacity);
+}
+
+.section {
+  position: relative;
+  margin-top: 1.6rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &__title-without-link {
+    position: relative;
+    font-size: 1.9rem;
+    line-height: 2.9rem;
+    font-weight: 700;
+    color: $local-yellow;
+
+    @include phone {
+      font-size: 19px;
+      line-height: 29px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 1.9rem;
+    line-height: 2.9rem;
+    font-weight: 700;
+    color: $local-yellow;
+
+    @include phone {
+      font-size: 19px;
+      line-height: 29px;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: " ";
+      height: 1px;
+      width: 100%;
+      background-color: $local-yellow;
+      opacity: .5;
+      bottom: 1px;
+    }
+  }
+
+  &__items {
+    margin-top: 1rem;
+  }
+
+  &__item {
+    margin-top: 1.6rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__item-title {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 2.9rem;
+    color: $white;
+
+    @include phone {
+      font-size: 19px;
+      line-height: 29px;
+    }
+
+    &_link {
+      &::before {
+        display: block;
+        position: absolute;
+        content: " ";
+        height: 1px;
+        width: 100%;
+        background-color: $local-yellow;
+        opacity: .5;
+        bottom: 5px;
+      }
+    }
+  }
+
+  &__item-text {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: $white;
+
+    @include phone {
+      @include body-sm-medium;
+    }
+  }
+}
+
+.bureau {
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+  color: $white;
+  margin-bottom: 38px;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+
+.arrow {
+  height: .8rem;
+  width: .4rem;
+  display: inline-block;
+  position: relative;
+  top: 0.05rem;
+  vertical-align: middle;
+  margin-left: .2rem;
+
+  @include phone {
+    height: 14px;
+    width: 7px;
+    top: 0px;
+    margin-left: 2px;
+  }
+
+  background-image: url("./img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

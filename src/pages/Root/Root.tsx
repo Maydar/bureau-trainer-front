@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
-
-import cn from 'classnames';
+import { Switch, Route } from 'react-router-dom';
 import { observer } from 'mobx-react';
 
 import urls from 'config/urls';
@@ -12,6 +9,7 @@ import ColorMood from 'pages/ColorMood';
 import FontsAnimals from 'pages/FontsAnimals';
 import Composition from 'pages/Composition';
 import Success from 'pages/Success';
+import Greetings from "pages/Greetings";
 
 const Root: React.FC = () => {
   return (
@@ -21,6 +19,7 @@ const Root: React.FC = () => {
       <Route path={urls.animals} component={FontsAnimals} />
       <Route path={urls.composition} component={Composition} />
       <Route path={urls.success} component={Success} />
+      <Route path={urls.greetings} component={Greetings} />
       <Route path={urls.root} component={Main} />
     </Switch>
 

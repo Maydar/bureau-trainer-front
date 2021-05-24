@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import TaskDescription from 'components/common/TaskDescription';
 
-
 import './Success.modules.scss';
 
 const Success: React.FC = () => {
