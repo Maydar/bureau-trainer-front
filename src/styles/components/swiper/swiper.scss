@@ -64,6 +64,7 @@
 
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 
   cursor: pointer;
 
@@ -115,6 +116,7 @@
     background-image: url("~shared/img/slide-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 
     left: 50%;
     top: -16px;
@@ -132,6 +134,7 @@
       background-image: url("~shared/img/slide-arrow_white.svg");
       background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
 
       left: 50%;
       top: -16px;
