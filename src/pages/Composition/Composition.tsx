@@ -39,7 +39,7 @@ const getPositionText = (percentage: number, theme: Theme) => {
 
 const Composition: React.FC = () => {
   const compositionStore = useLocal(() => new CompositionStore());
-  console.log(compositionStore.currentTheme);
+
   const position =
     compositionStore.pages[compositionStore.currentTheme].position;
   const orientation =

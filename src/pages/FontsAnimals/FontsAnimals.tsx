@@ -25,8 +25,8 @@ const FontsAnimals: React.FC = () => {
       </div>
       <Pager
         type={LessonType.animals}
-        nextPage={urls.composition}
-        previewColor="blue"
+        nextPage={urls.colors}
+        previewColor="green"
       >
         <div styleName="content">
           <VerticalSlider>

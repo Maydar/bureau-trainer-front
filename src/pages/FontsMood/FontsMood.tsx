@@ -25,8 +25,8 @@ const FontsMood: React.FC = () => {
       </div>
       <Pager
         type={LessonType.fonts}
-        nextPage={urls.colors}
-        previewColor="white"
+        nextPage={urls.animals}
+        previewColor="yellow"
       >
         <VerticalSlider>
           <SwiperSlide>

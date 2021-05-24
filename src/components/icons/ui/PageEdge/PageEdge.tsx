@@ -1,19 +1,26 @@
 import * as React from 'react';
 import cn from 'classnames';
 
-import {LessonType} from 'config/constants';
+import { LessonType } from 'config/constants';
+
+import urls from 'config/urls';
+
 import './PageEdge.modules.scss';
-import urls from "config/urls";
 
 type Props = {
   onClick?: (e: any) => void;
   to?: string;
   type?: LessonType;
+  hidden: boolean;
 };
 
-const PageEdge: React.FC<Props> = ({ onClick, type, to }: Props) => {
+const PageEdge: React.FC<Props> = ({ onClick, type, to, hidden }: Props) => {
   return (
-    <div className="icon-wrapper" styleName="corner" onClick={onClick}>
+    <div
+      className="icon-wrapper"
+      styleName={cn('corner', hidden && 'corner_hidden')}
+      onClick={onClick}
+    >
       <svg
         width="100%"
         height="100%"

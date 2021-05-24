@@ -31,8 +31,8 @@
 
 .swiper-container-v {
   .swiper-slide {
-    height: 60%;
-    //height: calc(100% - 104px);
+    //height: 60%;
+    height: calc(100% - 104px);
     //border-bottom: 1px solid lightblue;
     //border-left: 1px solid lightblue;
   }
@@ -42,8 +42,8 @@
   height: 100%;
   .swiper-slide {
     height: 100%;
-    width: 60%;
-    //width: calc(100% - 34px);
+    //width: 60%;
+    width: calc(100% - 34px);
     //border-bottom: 1px solid pink;
     //border-left: 1px solid pink;
 

@@ -27,8 +27,6 @@ const AnimalSlider: React.FC<Props> = ({
   isNext,
 }: Props) => {
   const fontsAnimalsStore = useLocal(() => new FontsAnimalStore());
-  console.log(theme, isNext, isPrev);
-
   return (
     <div styleName={cn('content', isPrev && !isNext &&'content_hidden')}>
       <HorizontalSlider

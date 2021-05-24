@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
 import cn from 'classnames';
 import { observer } from 'mobx-react';
 
@@ -21,6 +23,7 @@ const Root: React.FC = () => {
       <Route path={urls.success} component={Success} />
       <Route path={urls.root} component={Main} />
     </Switch>
+
   );
 };
 

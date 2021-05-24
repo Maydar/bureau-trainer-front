@@ -81,10 +81,10 @@
     &_anorexy {
       width: 703px;
 
-      //@include phone {
-      //  width: 220px;
-      //  height: 120px;
-      //}
+      @include phone {
+        width: 220px;
+        height: 120px;
+      }
 
       &_roboto {
         background-image: url("./words_img/anorexy/anorexy_roboto.svg");
@@ -121,10 +121,10 @@
       width: 352px;
       height: 120px;
 
-      //@include phone {
-      //  width: 150px;
-      //  height: 80px;
-      //}
+      @include phone {
+        width: 150px;
+        height: 80px;
+      }
 
       &_roboto {
         background-image: url("./words_img/rage/rage_roboto.svg");
@@ -155,10 +155,10 @@
       width: 514px;
       height: 120px;
 
-      //@include phone {
-      //  width: 200px;
-      //  height: 80px;
-      //}
+      @include phone {
+        width: 200px;
+        height: 80px;
+      }
 
       &_roboto {
         background-image: url("./words_img/rumble/rumble_roboto.svg");

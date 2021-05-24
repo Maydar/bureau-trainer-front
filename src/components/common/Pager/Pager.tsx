@@ -6,13 +6,14 @@ import { useHistory } from 'react-router-dom';
 import useWindowDimensions from 'utils/hooks/useWindowDimensions';
 import PageEdge from 'components/icons/ui/PageEdge/PageEdge';
 import { LessonType } from 'config/constants';
+import {useState} from "react";
 
 type Props = {
   nextPage?: string;
   children: React.ReactNode;
   onFlip?: () => void;
   type?: LessonType;
-  previewColor: 'white' | 'yellow' | 'blue' | 'black';
+  previewColor: 'green' | 'yellow' | 'blue' | 'black';
 };
 
 const Pager: React.FC<Props> = ({
@@ -21,6 +22,7 @@ const Pager: React.FC<Props> = ({
   previewColor,
   type,
 }: Props) => {
+  const [hiddenCorner, setHiddenCorner] = useState(false);
   const book = React.useRef();
   const history = useHistory();
   const { height, width } = useWindowDimensions();
@@ -36,7 +38,7 @@ const Pager: React.FC<Props> = ({
   return (
     <>
       <div className="page-edge">
-        <PageEdge onClick={turnPage} type={type} />
+        <PageEdge onClick={turnPage} type={type} hidden={hiddenCorner}/>
       </div>
       <HTMLFlipBook
         ref={book}
@@ -50,6 +52,11 @@ const Pager: React.FC<Props> = ({
         useMouseEvents={false}
         flippingTime={500}
         onFlip={onFlip}
+        onChangeState={(state: any) => {
+          if (state.data === "flipping") {
+            setHiddenCorner(true);
+          }
+        }}
       >
         <div
           style={{
@@ -69,7 +76,7 @@ const Pager: React.FC<Props> = ({
 };
 
 Pager.defaultProps = {
-  previewColor: 'white',
+  previewColor: 'green',
   type: LessonType.fonts,
 };
 

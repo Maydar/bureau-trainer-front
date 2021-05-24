@@ -35,8 +35,8 @@ const ColorMood: React.FC = () => {
       </div>
       <Pager
         type={LessonType.colors}
-        previewColor="yellow"
-        nextPage={urls.animals}
+        previewColor="blue"
+        nextPage={urls.composition}
       >
         <VerticalSlider
           slideChangeTransitionEnd={(swiper) => {

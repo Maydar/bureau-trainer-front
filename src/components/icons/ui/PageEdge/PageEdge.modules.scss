@@ -8,6 +8,12 @@
     height: 72px;
     width: 72px;
   }
+
+  &_hidden {
+    opacity: 0;
+  }
+
+  @include animate(opacity);
 }
 
 .under_fonts {
