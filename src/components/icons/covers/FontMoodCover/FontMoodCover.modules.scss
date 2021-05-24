@@ -3,32 +3,33 @@
 
 .cover-font {
   position: relative;
+  height: 100%;
+  width: 100%;
 
-  .first-letter {
-    color: $white;
-    @include animate(color);
-  }
-  .second-letter {
-    color: $white;
-    @include animate(color);
+  .cover-font-1, .cover-font-2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    @include animate(opacity);
   }
 
-  .part_1, .part_2, .part_3 {
-    color: $white;
-    @include animate(color);
+  .cover-font-1 {
+    opacity: 1;
+  }
+  .cover-font-2 {
+    opacity: 0;
   }
 
   @include hover {
-    .second-letter {
-      color: #00D83C;
+    .cover-font-1 {
+      opacity: 0;
     }
 
-    .first-letter {
-      color: #FF6389;
-    }
-
-    .part_1, .part_2, .part_3 {
-      color: #FFD600;
+    .cover-font-2 {
+      opacity: 1;
     }
   }
 }

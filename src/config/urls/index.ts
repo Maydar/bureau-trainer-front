@@ -7,6 +7,7 @@ export const urls = {
   animals: `/animals`,
   fonts: `/fonts`,
   success: `/success`,
+  greetings: '/greetings'
 };
 
 export default urls;

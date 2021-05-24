@@ -33,7 +33,6 @@ const Slide: React.FC<Props> = ({
   text
 }: Props) => {
 
-  const vertical = !horizontal;
   return (
     <div styleName={cn(
       'slide'

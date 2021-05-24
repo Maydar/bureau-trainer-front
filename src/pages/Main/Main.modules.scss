@@ -17,20 +17,29 @@
   }
 
   .title-wrapper {
-    position: relative;
-    //position: fixed;
-    //top: 11px;
-    //left: 17px;
-    //
-    //@include phone {
-    //  position: static;
-    //}
+    position: fixed;
+    top: 2.3rem;
+    left: 2.7rem;
+
+    max-width: 27.4rem;
+    width: 27.4rem;
+
+    @include phone {
+      position: static;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__header {
     font-weight: 700;
     font-size: 3.1rem;
     line-height: 3.2rem;
+
+    @include phone {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   &__lead {
@@ -38,6 +47,13 @@
     line-height: 3.4rem;
     font-weight: 500;
     margin-top: .8rem;
+
+    @include phone {
+      margin-top: 8px;
+
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 }
 
@@ -56,7 +72,7 @@
   position: relative;
 
   @include phone {
-    margin-top: 4rem;
+    margin-top: 48px;
     max-width: 100%;
     width: 100%;
   }
@@ -72,7 +88,7 @@
     display: flex;
     position: relative;
     left: .6rem;
-    margin-top: 1.66rem;
+    margin-top: .3rem;
     flex-direction: row;
     flex-wrap: nowrap;
 
@@ -92,8 +108,7 @@
 
   &__font-mood {
     display: block;
-    padding-top: 2.7rem;
-    //height: 22.5rem;
+    height: 22.5rem;
     width: 62rem;
     color: $white;
 
@@ -105,16 +120,15 @@
   &__color-mood {
     vertical-align: top;
     position: relative;
-    width: 32.8rem;
+    width: 33.4rem;
     color: $white;
     flex-shrink: 0;
-
-    top: -.5rem;
+    top: -1.8rem;
 
     @include phone {
       flex-shrink: 1;
       top: 0;
-      width: 100%;
+      width: 106%;
     }
 
     @include hover {
@@ -126,16 +140,16 @@
     vertical-align: top;
     position: relative;
     color: $black;
-    width: 35.6rem;
+    width: 32rem;
     margin-left: .6rem;
     flex-shrink: 0;
-    top: -.5rem;
-    left: -1.2rem;
+    top: -1.8rem;
+    left: -.7rem;
 
     @include phone {
       flex-shrink: 1;
       top: 1px;
-      left: -18px;
+      left: -3px;
       width: 100%;
     }
 
@@ -150,12 +164,12 @@
     width: 65.3rem;
     height: 31.14rem;
     left: -2.4rem;
-    top: -1.5rem;
+    top: -5.7rem;
     color: $white;
 
     @include phone {
       width: 100%;
-      top: -2px;
+      top: -23px;
     }
   }
 }
@@ -168,7 +182,7 @@
   @include phone {
     width: 100%;
     position: relative;
-    margin-top: 56px;
+    margin-top: 32px;
   }
 
   &__item {
@@ -184,10 +198,6 @@
 
       @include phone {
         width: 100%;
-      }
-
-      @include tablet {
-        width: 22.3rem;
       }
     }
   }

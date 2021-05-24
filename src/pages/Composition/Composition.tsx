@@ -109,7 +109,7 @@ const Composition: React.FC = () => {
               max={MAX}
               direction={
                 orientation === Orientation.vertical
-                  ? Direction.Up
+                  ? Direction.Down
                   : Direction.Right
               }
               onChange={(values) => {

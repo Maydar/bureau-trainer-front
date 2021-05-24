@@ -1,11 +1,38 @@
 @import "mixins";
 
 .cover-skeleton {
+  position: relative;
   color: #4048FF;
 
+  .bg {
+    fill: #FFCAC7;
+
+    @include animate(fill);
+  }
+
+  .elephant {
+    fill: #4048FF;
+
+    @include animate(fill);
+  }
+
   @include hover {
-    color: #FE551F;
+    .bg {
+      fill: #4048FF;
+    }
+
+    .elephant {
+      fill: white;
+    }
   }
 
   @include animate(color);
+}
+
+.round {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+
+  background-color: #FFCAC7;
 }

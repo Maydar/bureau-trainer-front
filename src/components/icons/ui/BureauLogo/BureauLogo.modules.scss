@@ -7,15 +7,17 @@
   line-height: 1.3rem;
 
   &__bureau {
+    display: block;
     position: relative;
   }
 
   &__fonts {
+    display: block;
     position: relative;
-    margin-top: 3.2rem;
+    margin-top: 1.2rem;
 
     @include phone {
-      margin-top: 32px;
+      margin-top: 12px;
     }
   }
 
