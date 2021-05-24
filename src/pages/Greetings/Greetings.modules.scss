@@ -258,7 +258,7 @@ $local-yellow: #FFD600;
       bottom: 0;
     }
 
-    @include desktop {
+    @include tablet {
       display: none;
     }
   }
