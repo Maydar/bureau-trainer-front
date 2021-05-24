@@ -272,9 +272,9 @@ const Main: React.FC = () => {
       </div>
       <div className="page-copyright">
         <p className="page-copyright__school">
-          <Link to="https://bureau.ru/school" className="bureau-school-link">
+          <a href="https://bureau.ru/school" className="bureau-school-link">
             Сделано в&nbsp;Школе&nbsp;Бюро&nbsp;Горбунова
-          </Link>
+          </a>
         </p>
         <p className="page-copyright__school">
           <Link className={"bureau-school-link"} to={urls.greetings}>Шрифты и&nbsp;иконки</Link>
