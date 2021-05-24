@@ -27,7 +27,7 @@ export const HorizontalSlider: React.FC<Props> = ({
           'swiper-slider swiper-slider_default swiper-container-h',
           isActive && 'swiper-slider_active'
         )}
-        slidesPerView={'auto'}
+        slidesPerView={1}
         speed={700}
         navigation={{
           nextEl: `.swiper-nav-next_${navKey}`,
