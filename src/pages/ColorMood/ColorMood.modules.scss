@@ -12,6 +12,14 @@
 .content {
   background-color: transparent;
 
+  &__inner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    @include animate(background-color);
+  }
+
   &_white {
     background-color: $white;
   }

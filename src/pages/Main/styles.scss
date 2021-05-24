@@ -1,3 +1,5 @@
+@import "mixins";
+
 body {
     min-width: 320px;
 }
@@ -345,6 +347,11 @@ body {
 .main-page__social a {
     margin-right: 15px;
     text-decoration: none;
+    @include hover {
+        transform: scale(0.8);
+    }
+
+    @include animate(transform);
 }
 
 .main-page__social .main-page__social-link--telegram {

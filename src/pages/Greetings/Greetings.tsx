@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import urls from 'config/urls';
 
 import './Greetings.modules.scss';
-import {shareText, SITE_LINK} from "config/constants";
+import { shareText, SITE_LINK } from 'config/constants';
 
 const Greetings: React.FC = () => {
   return (
@@ -172,21 +172,30 @@ const Greetings: React.FC = () => {
               <p styleName="section__title-without-link">Другие</p>
               <div styleName="section__items">
                 <div styleName="section__item">
-                  <div styleName="section__item-title section__item-title_link">
+                  <a
+                    href="https://yurigordon.com/ru/shop/fonts/mr-palkerson"
+                    styleName="section__item-title section__item-title_link"
+                  >
                     Mr Palkerson
-                  </div>
+                  </a>
                   <div styleName="section__item-text">Юрий Гордон</div>
                 </div>
                 <div styleName="section__item">
-                  <div styleName="section__item-title section__item-title_link">
+                  <a
+                    href="https://thenorthernblock.co.uk/fonts/p/eldwin"
+                    styleName="section__item-title section__item-title_link"
+                  >
                     Eldwin
-                  </div>
+                  </a>
                   <div styleName="section__item-text">The Northern Block</div>
                 </div>
                 <div styleName="section__item">
-                  <div styleName="section__item-title section__item-title_link">
+                  <a
+                    href="https://www.behance.net/gallery/84911751/Misto-Font-Free-(Cyrillic-and-Latin)"
+                    styleName="section__item-title section__item-title_link"
+                  >
                     Misto
-                  </div>
+                  </a>
                   <div styleName="section__item-text">
                     Katerina Korolevtseva
                   </div>
@@ -205,10 +214,7 @@ const Greetings: React.FC = () => {
             </section>
           </div>
         </div>
-        <a
-          href={'https://bureau.ru/school/designers/12/'}
-          styleName="bureau"
-        >
+        <a href={'https://bureau.ru/school/designers/12/'} styleName="bureau">
           Сделано&nbsp;в&nbsp;Школе&nbsp;Бюро&nbsp;Горбунова
           <span styleName="arrow" />
         </a>
