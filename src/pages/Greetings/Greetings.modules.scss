@@ -101,6 +101,18 @@ $local-yellow: #FFD600;
     margin-top: 0;
   }
 
+  &_mobile {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &_desktop {
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__title-without-link {
     position: relative;
     font-size: 19px;

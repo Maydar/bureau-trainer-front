@@ -108,7 +108,7 @@ const Greetings: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div styleName="section">
+            <div styleName="section section_desktop">
               <a href="http://sergeychikin.ru/365/" styleName="section__title">
                 Иконки
               </a>
@@ -192,6 +192,16 @@ const Greetings: React.FC = () => {
                 </div>
               </div>
             </div>
+            <section styleName="section section_mobile">
+              <a href="http://sergeychikin.ru/365/" styleName="section__title">
+                Иконки
+              </a>
+              <div styleName="section__items">
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Сергея Чикина</div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
         <a
