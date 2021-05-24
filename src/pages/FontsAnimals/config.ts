@@ -22,7 +22,7 @@ export enum GirafeFonts {
   austin = 'austin',
   fence = 'fence',
   norbert = 'norbert',
-  venus = 'venus',
+  vast = 'vast',
 }
 
 export enum TarakanFonts {
@@ -166,15 +166,15 @@ export const mapWordData = {
       name: 'Austin',
       description: `Жираф худой и${nbsp}высокий, а${nbsp}этот шрифт толстый и${nbsp}низкий, хотя и${nbsp}очень красивый`,
     },
-    [GirafeFonts.venus]: {
-      key: 'venus',
-      name: 'Venus Rising',
+    [GirafeFonts.vast]: {
+      key: 'vast',
+      name: 'Vast',
       description: `Жираф худ, высок и${nbsp}изящен, а${nbsp}этот шрифт толст, низок и${nbsp}слишком геометричен`,
     },
     [GirafeFonts.fence]: {
       key: 'fence',
       name: 'Fence',
-      description: `Тонкие штрихи — это${nbsp}немного про${nbsp}жирафа, но${nbsp}шрифт слишком широкий и${nbsp}приземистый`,
+      description: `Тонкие штрихи — это${nbsp}немного про жирафа, но${nbsp}шрифт слишком широкий и${nbsp}приземистый`,
     },
   },
 };
@@ -194,7 +194,7 @@ export const mapToArrayWordData = {
     mapWordData[Theme.girafe][GirafeFonts.circe],
     mapWordData[Theme.girafe][GirafeFonts.austin],
     mapWordData[Theme.girafe][GirafeFonts.fence],
-    mapWordData[Theme.girafe][GirafeFonts.venus],
+    mapWordData[Theme.girafe][GirafeFonts.vast],
   ],
   [Theme.tarakan]: [
     mapWordData[Theme.tarakan][TarakanFonts.roboto],

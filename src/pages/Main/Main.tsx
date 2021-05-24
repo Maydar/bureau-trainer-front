@@ -281,21 +281,21 @@ const Main: React.FC = () => {
         </p>
       </div>
       <div className="main-page__social">
-        <Link
-          to={`https://telegram.me/share/url?url=${SITE_LINK}`}
+        <a
+          href={`https://telegram.me/share/url?url=${SITE_LINK}`}
           className="main-page__social-link main-page__social-link--telegram"
         >
           <img src="/static/tg.svg" alt="Telegram" />
-        </Link>
-        <Link to={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}>
+        </a>
+        <a href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}>
           <img src="/static/tw.svg" alt="Twitter" />
-        </Link>
-        <Link to={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}>
+        </a>
+        <a href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}>
           <img src="/static/fb.svg" alt="Facebook" />
-        </Link>
-        <Link to="#">
+        </a>
+        <a href={'#'} >
           <img src="/static/inst.svg" alt="Instagram" />
-        </Link>
+        </a>
       </div>
     </div>
   );
