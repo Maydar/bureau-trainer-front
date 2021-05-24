@@ -214,10 +214,6 @@ const Greetings: React.FC = () => {
             </section>
           </div>
         </div>
-        <a href={'https://bureau.ru/school/designers/12/'} styleName="bureau">
-          Сделано&nbsp;в&nbsp;Школе&nbsp;Бюро&nbsp;Горбунова
-          <span styleName="arrow" />
-        </a>
         <div styleName="shares shares_mob">
           <a
             target={'_blank'}
