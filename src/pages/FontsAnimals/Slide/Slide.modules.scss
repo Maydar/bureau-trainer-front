@@ -1,4 +1,9 @@
+@import "mixins";
+
 .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 100%;
   min-height: 25rem;
@@ -51,8 +56,89 @@
 
     }
   }
+
+  &__tarakan {
+    width: 8rem;
+    height: 9.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("./img/tarakan.svg");
+
+    &_word {
+      width: 48.2rem;
+      height: 11.5rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+
+      &_roboto {
+        background-image: url("./img/tarakan_roboto.svg");
+      }
+
+      &_didona {
+        background-image: url("./img/tarakan_didona.svg");
+      }
+
+      &_displace {
+        background-image: url("./img/tarakan_displace.svg");
+      }
+
+      &_cstm {
+        background-image: url("./img/tarakan_cstm.svg");
+      }
+
+      &_norbert {
+        background-image: url("./img/tarakan_norbert.svg");
+      }
+
+      &_vast {
+        background-image: url("./img/tarakan_vast.png");
+      }
+    }
+  }
+  &__elephant {
+    width: 8rem;
+    height: 9.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("./img/elephant.svg");
+
+    &_word {
+      width: 33rem;
+      height: 20rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+
+      &_roboto {
+        background-image: url("./img/elephant_roboto.svg");
+      }
+
+      &_harry {
+        background-image: url("./img/elephant_harry.png");
+      }
+
+      &_norbert {
+        background-image: url("./img/elephant_norbert.svg");
+      }
+
+      &_normalidad {
+        background-image: url("./img/elephant_normalidad.svg");
+      }
+
+      &_parmigiano {
+        background-image: url("./img/elephant_parmigiano.svg");
+      }
+
+      &_peace {
+        background-image: url("./img/elephant_peace.svg");
+      }
+    }
+  }
   &__bear {
-    width: 80rem;
+    width: 8rem;
     height: 9.5rem;
     background-repeat: no-repeat;
     background-position: center center;
@@ -91,7 +177,32 @@
       }
     }
   }
+}
 
+.font-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 27px;
 
+  &__name {
+    @include body-md-bold;
 
+    @include phone {
+      @include body-sm-bold;
+    }
+  }
+
+  &__text {
+    max-width: 450px;
+    text-align: center;
+    @include body-md-medium;
+    margin-top: 8px;
+
+    @include phone {
+      @include body-sm-medium;
+      padding: 0 8px;
+      max-width: 100%;
+    }
+  }
 }

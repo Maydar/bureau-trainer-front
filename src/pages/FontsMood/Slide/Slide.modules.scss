@@ -227,6 +227,7 @@
 
     @include phone {
       @include body-md-medium;
+      padding: 0 8px;
     }
   }
 

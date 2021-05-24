@@ -56,7 +56,17 @@ const FontsAnimals: React.FC = () => {
                   isActive={isActive}
                   isPrev={isPrev}
                   isNext={isNext}
-                  theme={Theme.girafe}
+                  theme={Theme.tarakan}
+                />
+              )}
+            </SwiperSlide>
+            <SwiperSlide>
+              {({ isActive, isNext, isPrev }) => (
+                <AnimalSlider
+                  isActive={isActive}
+                  isPrev={isPrev}
+                  isNext={isNext}
+                  theme={Theme.elephant}
                 />
               )}
             </SwiperSlide>

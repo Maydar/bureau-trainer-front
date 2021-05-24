@@ -4,9 +4,7 @@
 .content {
   position: absolute;
   width: 100%;
-  min-height: 400px;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 100%;
 
   @include phone {
     padding: 0 8px;
@@ -17,30 +15,4 @@
   }
 
   @include animate(opacity);
-}
-
-.font-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__name {
-    @include body-md-bold;
-
-    @include phone {
-      @include body-sm-bold;
-    }
-  }
-
-  &__text {
-    max-width: 450px;
-    text-align: center;
-    @include body-md-medium;
-    margin-top: 8px;
-
-    @include phone {
-      @include body-sm-medium;
-      max-width: 100%;
-    }
-  }
 }

@@ -32,7 +32,7 @@
 .swiper-container-v {
   .swiper-slide {
     //height: 60%;
-    height: calc(100% - 104px);
+    height: 100%;
     //border-bottom: 1px solid lightblue;
     //border-left: 1px solid lightblue;
   }
@@ -43,7 +43,7 @@
   .swiper-slide {
     height: 100%;
     //width: 60%;
-    width: calc(100% - 34px);
+    width: 100%;
     //border-bottom: 1px solid pink;
     //border-left: 1px solid pink;
 
@@ -68,6 +68,11 @@
   cursor: pointer;
 
   z-index: 100;
+
+  @include phone {
+    height: 20px;
+    width: 6px;
+  }
 }
 
 .swiper-nav-prev {

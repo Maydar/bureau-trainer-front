@@ -28,7 +28,7 @@ const AnimalSlider: React.FC<Props> = ({
 }: Props) => {
   const fontsAnimalsStore = useLocal(() => new FontsAnimalStore());
   return (
-    <div styleName={cn('content', isPrev && !isNext &&'content_hidden')}>
+    <div styleName={cn('content', isPrev && !isNext && 'content_hidden')}>
       <HorizontalSlider
         initialSlide={fontsAnimalsStore.currentIndex}
         isActive={isActive}
@@ -39,22 +39,17 @@ const AnimalSlider: React.FC<Props> = ({
         {mapToArrayWordData[theme].map((wordData) => {
           return (
             <SwiperSlide key={wordData.key}>
-              <Slide key={wordData.key} theme={theme} font={wordData.key} />
+              <Slide
+                key={wordData.key}
+                theme={theme}
+                font={wordData.key}
+                name={wordData.name}
+                description={wordData.description}
+              />
             </SwiperSlide>
           );
         })}
       </HorizontalSlider>
-      <div styleName="font-description">
-        <p styleName="font-description__name">
-          {mapToArrayWordData[theme][fontsAnimalsStore.currentIndex]?.name}
-        </p>
-        <p styleName="font-description__text">
-          {
-            mapToArrayWordData[theme][fontsAnimalsStore.currentIndex]
-              ?.description
-          }
-        </p>
-      </div>
     </div>
   );
 };

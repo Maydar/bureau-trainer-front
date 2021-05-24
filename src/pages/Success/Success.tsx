@@ -13,7 +13,7 @@ const Success: React.FC = () => {
       <div styleName="content">
       <div styleName="content__inner">
         <div styleName="next-message"/>
-        <div styleName="text">Покажите упражнения знакомым, студентам или коллегам, если было полезно</div>
+        <div styleName="text">Покажите упражнения знакомым, студентам или&nbsp;коллегам, если было полезно:</div>
         <div styleName="share-icons">
           <div styleName="share share_tg"/>
           <div styleName="share share_twitter"/>
@@ -21,7 +21,7 @@ const Success: React.FC = () => {
           <div styleName="share share_it"/>
         </div>
       </div>
-      <div styleName="text text_bottom">Напишите, если у вас есть идеи упражнений: exercises.design@gmail.com</div>
+      <div styleName="text text_bottom">Напишите, если у&nbsp;вас есть идеи упражнений: exercises.design@gmail.com</div>
     </div>
     </>)
 };

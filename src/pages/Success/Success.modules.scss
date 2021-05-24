@@ -88,6 +88,14 @@
 
   margin-left: 1.8rem;
 
+  cursor: pointer;
+
+  @include hover {
+    transform: scale(0.8);
+  }
+
+  @include animate(transform);
+
   @include phone {
     margin-left: 16px;
     height: 48px;
