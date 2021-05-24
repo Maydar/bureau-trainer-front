@@ -21,7 +21,7 @@ const Success: React.FC = () => {
           <div styleName="share share_it"/>
         </div>
       </div>
-      <div styleName="text text_bottom">Напишите, если у&nbsp;вас есть идеи упражнений: exercises.design@gmail.com</div>
+      <div styleName="text text_bottom">Напишите, если у&nbsp;вас есть идеи упражнений: <a href="mailto:exercises.design@gmail.com">exercises.design@gmail.com</a></div>
     </div>
     </>)
 };

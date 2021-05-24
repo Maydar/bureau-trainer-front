@@ -178,9 +178,9 @@ const Greetings: React.FC = () => {
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title section__item-title_link">
-                    Mr Palkerson
+                    Eldwin
                   </div>
-                  <div styleName="section__item-text">Юрий Гордон</div>
+                  <div styleName="section__item-text">The Northern Block</div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title section__item-title_link">
