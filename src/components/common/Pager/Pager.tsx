@@ -33,13 +33,30 @@ const Pager: React.FC<Props> = ({
   }, []);
 
   const onFlip = React.useCallback((e) => {
-    history.push(nextPage);
+    setTimeout(() => {
+      history.push(nextPage);
+    }, 100)
   }, []);
 
   return (
     <>
       <div className="page-edge">
         <PageEdge onClick={turnPage} type={type} hidden={hiddenCorner}/>
+      </div>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '100%',
+          width: '100%',
+          opacity: hiddenCorner ? 0 : 1,
+          backgroundColor: "transparent",
+          transition: 'opacity 0.2s ease-in-out',
+          zIndex: 1
+        }}
+      >
+        {children}
       </div>
       <HTMLFlipBook
         ref={book}
@@ -49,9 +66,9 @@ const Pager: React.FC<Props> = ({
         minWidth={width}
         maxWidth={width}
         maxHeight={height}
-        drawShadows={false}
+        drawShadows={true}
         usePortrait={true}
-        maxShadowOpacity={0}
+        maxShadowOpacity={0.1}
         useMouseEvents={false}
         flippingTime={500}
         onFlip={onFlip}
@@ -61,30 +78,17 @@ const Pager: React.FC<Props> = ({
           }
         }}
       >
-        <div style={{
+        {/*className={`page-preview-1 page-preview_${previewColor}`}*/}
+        <div  style={{
           position: 'absolute',
           top: 0,
           left: 0,
           height: '100%',
           width: '100%',
-          backgroundColor: previewColor
         }}/>
         <div className={`page-preview page-preview_${previewColor}`} />
       </HTMLFlipBook>
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          height: '100%',
-          width: '100%',
-          opacity: hiddenCorner ? 0 : 1,
-          backgroundColor: 'transparent',
-          transition: 'opacity 0.2s ease-in-out'
-        }}
-      >
-        {children}
-      </div>
+
     </>
   );
 };

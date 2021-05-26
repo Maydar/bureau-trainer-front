@@ -23,6 +23,7 @@ const FontsMood: React.FC = () => {
           text={`Посмотрите, как${nbsp}шрифты выражают характер и${nbsp}настроение слова`}
         />
       </div>
+      <div styleName="bg"/>
       <Pager
         type={LessonType.fonts}
         nextPage={urls.animals}

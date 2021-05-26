@@ -18,6 +18,8 @@
     width: 100%;
 
     @include animate(background-color);
+
+    //z-index: 1;
   }
 
   &_white {
