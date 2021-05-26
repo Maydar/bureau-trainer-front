@@ -6,7 +6,7 @@ import Pager from 'components/common/Pager';
 
 import TaskDescription from 'components/common/TaskDescription/TaskDescription';
 import VerticalSlider from 'components/common/VerticalSlider';
-import { LessonType, nbsp } from 'config/constants';
+import { LessonType } from 'config/constants';
 import urls from 'config/urls';
 
 import AnimalSlider from './AnimalSlider';
@@ -23,6 +23,7 @@ const FontsAnimals: React.FC = () => {
           text={`Выберите шрифт, который подходит животному.`}
         />
       </div>
+      <div styleName="content_bg"/>
       <Pager
         type={LessonType.animals}
         nextPage={urls.colors}

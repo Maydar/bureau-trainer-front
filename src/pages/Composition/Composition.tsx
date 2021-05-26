@@ -57,6 +57,7 @@ const Composition: React.FC = () => {
           text={`Подвигайте объект на${nbsp}странице и${nbsp}посмотрите, как${nbsp}меняется восприятие.`}
         />
       </div>
+      <div styleName="content_bg"/>
       <Pager
         nextPage={urls.success}
         type={LessonType.composition}
