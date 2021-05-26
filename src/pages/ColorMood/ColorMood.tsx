@@ -27,45 +27,45 @@ const ColorMood: React.FC = () => {
   return (
     <div styleName={`content`}>
       <div styleName={`content__inner content_${pageColor}`}>
-        <div className="task-description">
-          <TaskDescription
-            title="Упражнение: цвет"
-            color={textColor}
-            text={`Почувствуйте, как${nbsp}цвет усиливает характер шрифта и${nbsp}передает настроение слова`}
-          />
-        </div>
-        <Pager
-          type={LessonType.colors}
-          previewColor="blue"
-          nextPage={urls.composition}
-        >
-          <VerticalSlider
-            slideChangeTransitionEnd={(swiper) => {
-              colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex]);
-            }}
-          >
-            {colorMoodStore.pageOrder.map((theme) => (
-              <SwiperSlide key={theme}>
-                {({ isActive, isNext, isPrev }) => {
-                  return (
-                    <ColorPicker
-                      type={theme}
-                      textColor={textColor}
-                      color={pageColor}
-                      isNext={isNext}
-                      isPrev={isPrev}
-                      setBgColor={(color: Color) =>
-                        colorMoodStore.setThemeColor(theme, color)
-                      }
-                    />
-                  );
-                }}
-              </SwiperSlide>
-            ))}
-          </VerticalSlider>
-          <div className={`swiper-next-el-v swiper-next-el-v_${textColor}`}>Дальше</div>
-        </Pager>
       </div>
+      <div className="task-description">
+        <TaskDescription
+          title="Упражнение: цвет"
+          color={textColor}
+          text={`Почувствуйте, как${nbsp}цвет усиливает характер шрифта и${nbsp}передает настроение слова`}
+        />
+      </div>
+      <Pager
+        type={LessonType.colors}
+        previewColor="blue"
+        nextPage={urls.composition}
+      >
+        <VerticalSlider
+          onSlideChange={(swiper) => {
+            colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex]);
+          }}
+        >
+          {colorMoodStore.pageOrder.map((theme) => (
+            <SwiperSlide key={theme}>
+              {({ isActive, isNext, isPrev }) => {
+                return (
+                  <ColorPicker
+                    type={theme}
+                    textColor={textColor}
+                    color={pageColor}
+                    isNext={isNext}
+                    isPrev={isPrev}
+                    setBgColor={(color: Color) =>
+                      colorMoodStore.setThemeColor(theme, color)
+                    }
+                  />
+                );
+              }}
+            </SwiperSlide>
+          ))}
+        </VerticalSlider>
+        <div className={`swiper-next-el-v swiper-next-el-v_${textColor}`}>Дальше</div>
+      </Pager>
     </div>
   );
 };

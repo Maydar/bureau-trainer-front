@@ -20,36 +20,37 @@
   background-size: contain;
 
   &_car {
-    height: 163px;
-    width: 364px;
+    height: 121px;
+    width: 270px;
     background-image: url("./img/car.svg");
 
-    @include phone {
-      height: 121px;
-      width: 270px;
+    @include desktop {
+      height: 163px;
+      width: 364px;
     }
   }
 
   &_bomb {
-    height: 235px;
-    width: 236px;
+    height: 175px;
+    width: 176px;
     background-image: url("./img/bomb.svg");
 
     @include phone {
-      height: 175px;
-      width: 176px;
+      height: 235px;
+      width: 236px;
     }
 
   }
 
   &_rocket {
-    height: 270px;
-    width: 150px;
+    height: 200px;
+    width: 110px;
+
     background-image: url("./img/rocket.svg");
 
     @include phone {
-      height: 200px;
-      width: 110px;
+      height: 270px;
+      width: 150px;
     }
   }
 
