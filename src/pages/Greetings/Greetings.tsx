@@ -111,13 +111,8 @@ const Greetings: React.FC = () => {
             </div>
             <div styleName="section section_desktop">
               <a href="http://sergeychikin.ru/365/" styleName="section__title">
-                Иконки
+                Иконки Сергея Чикина
               </a>
-              <div styleName="section__items">
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Сергея Чикина</div>
-                </div>
-              </div>
             </div>
           </div>
           <div styleName="column">
@@ -204,13 +199,8 @@ const Greetings: React.FC = () => {
             </div>
             <section styleName="section section_mobile">
               <a href="http://sergeychikin.ru/365/" styleName="section__title">
-                Иконки
+                Иконки Сергея Чикина
               </a>
-              <div styleName="section__items">
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Сергея Чикина</div>
-                </div>
-              </div>
             </section>
           </div>
         </div>
