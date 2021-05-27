@@ -6,6 +6,13 @@
   height: 100%;
   width: 100%;
 
+  &_white {
+    color: white;
+  }
+
+  &_black {
+    color: black;
+  }
 
   &__inner {
     display: flex;
@@ -210,10 +217,12 @@
 
 .description {
   margin-top: 32px;
+  width: 450px;
 
   @include phone {
     margin-top: 32px;
     padding: 0 8px;
+    max-width: 100%;
   }
 
   &__font {

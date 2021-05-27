@@ -42,11 +42,8 @@ const getPositionText = (percentage: number, theme: Theme) => {
 const Composition: React.FC = () => {
   const compositionStore = useLocal(() => new CompositionStore());
   const { isMobile } = useSize();
-
   const position =
     compositionStore.pages[compositionStore.currentTheme].position;
-  const orientation =
-    compositionStore.pages[compositionStore.currentTheme].orientation;
 
   return (
     <>
@@ -100,84 +97,6 @@ const Composition: React.FC = () => {
               />
             </SwiperSlide>
           </VerticalSlider>
-          <div
-            styleName={cn(
-              `range-wrapper`,
-              orientation === Orientation.vertical && 'range-wrapper_vertical'
-            )}
-          >
-            <Range
-              values={[position]}
-              step={STEP}
-              min={MIN}
-              max={MAX}
-              direction={
-                orientation === Orientation.vertical
-                  ? Direction.Down
-                  : Direction.Right
-              }
-              onChange={(values) => {
-                compositionStore.setPosition(
-                  compositionStore.currentTheme,
-                  values[0]
-                );
-              }}
-              renderTrack={({ props, children }) => {
-                return (
-                  <div
-                    onMouseDown={props.onMouseDown}
-                    onTouchStart={props.onTouchStart}
-                    style={{
-                      ...props.style,
-                      height:
-                        orientation === Orientation.vertical ? `100%` : `40px`,
-                      width:
-                        orientation === Orientation.vertical ? `40px` : `100%`,
-                      display: 'flex',
-                    }}
-                  >
-                    <div
-                      ref={props.ref}
-                      style={{
-                        height:
-                          orientation === Orientation.vertical ? `100%` : `1px`,
-                        width:
-                          orientation === Orientation.vertical ? `1px` : `100%`,
-                        borderRadius: '1px',
-                        background: getTrackBackground({
-                          values: [position], //objectPageStore.currentPosition],
-                          colors: ['#fff', '#fff'],
-                          min: MIN,
-                          max: MAX,
-                        }),
-                        alignSelf: 'center',
-                      }}
-                    >
-                      {children}
-                    </div>
-                  </div>
-                );
-              }}
-              renderThumb={({ props, isDragged }) => (
-                <div
-                  {...props}
-                  style={{
-                    ...props.style,
-                    height: '35px',
-                    width: '35px',
-                    borderRadius: '50%',
-                    borderWidth: '2px',
-                    borderColor: '#48AFC6',
-                    borderStyle: 'solid',
-                    backgroundColor: '#FFF',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                />
-              )}
-            />
-          </div>
           <p styleName="content__description">
             {getPositionText(
               (position / 1000) * 100,

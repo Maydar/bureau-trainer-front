@@ -44,6 +44,10 @@ export const VerticalSlider: React.FC<Props> = ({
       onSlideChangeTransitionEnd={slideChangeTransitionEnd}
       onSlideChangeTransitionStart={onSlideChange}
       onBeforeTransitionStart={beforeTransitionStart}
+      //preventClicks={true}
+
+      //touchEventsTarget={'wrapper'}
+      //touchMoveStopPropagation={true}
     >
       {children}
     </Swiper>

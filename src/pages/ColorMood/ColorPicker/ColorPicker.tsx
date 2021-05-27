@@ -32,7 +32,8 @@ const ColorPicker: React.FC<Props> = ({
 }: Props) => {
   return (
     <div styleName={cn('content',
-      isPrev && !isNext && `content_prev-slide`
+      isPrev && !isNext && `content_prev-slide`,
+      `content_${textColor}`
     )}>
       <div styleName="content__inner">
         <div
@@ -41,7 +42,7 @@ const ColorPicker: React.FC<Props> = ({
             textColor === 'white' && `word-image_${type}_white`
           )}
         />
-        <div styleName={cn('ui-elements', isPrev && 'ui-elements_hidden')}>
+        <div className="swiper-no-swiping" styleName={cn('ui-elements', isPrev && 'ui-elements_hidden')}>
           <p styleName="description__font">{mapTypeToFont[type]}</p>
           <div styleName="pickers">
             {mapTypeColors[type].map((mapColor) => {

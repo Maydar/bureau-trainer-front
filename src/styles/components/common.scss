@@ -25,12 +25,14 @@
   height: 100%;
   width: 100%;
 
+  @include animateSlow(background-color);
+
   &_green {
     background-color: #00D254;
   }
 
   &_yellow {
-    background-color: #FFF27D;
+    background-color: #FFF174;
   }
 
   &_blue {
@@ -82,4 +84,8 @@
 
 #magazine .turn-page{
   background-color:#ccc;
+}
+
+.hidden {
+  opacity: 0;
 }

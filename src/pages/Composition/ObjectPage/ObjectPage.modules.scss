@@ -58,3 +58,35 @@
 
 }
 
+.range-wrapper {
+  position: absolute;
+  top: 65%;
+  width: 270px;
+  height: 35px;
+  z-index: 300;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &_vertical {
+    height: 270px;
+    width: 35px;
+    top: 50%;
+    right: 70px;
+    left: auto;
+    transform: translateY(-50%);
+  }
+
+  @include phone {
+    top: 70%;
+    width: 270px;
+    height: 35px;
+
+
+    &_vertical {
+      height: 270px;
+      width: 35px;
+      right: 8px;
+      top: 50%;
+    }
+  }
+}

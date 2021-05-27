@@ -37,6 +37,10 @@ export const HorizontalSlider: React.FC<Props> = ({
         loop={true}
         initialSlide={initialSlide}
         onSlideChange={onSlideChange}
+        keyboard={{
+          enabled: true,
+          onlyInViewport: true
+        }}
       >
         {children}
       </Swiper>

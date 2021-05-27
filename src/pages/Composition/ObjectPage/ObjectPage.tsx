@@ -4,22 +4,35 @@ import { observer } from 'mobx-react';
 import { Orientation, Theme } from '../config';
 
 import './ObjectPage.modules.scss';
+import cn from 'classnames';
+import { Direction, getTrackBackground, Range } from 'react-range';
+import {useLocal} from "utils/hooks";
+import CompositionStore from "pages/Composition/store";
 
 type Props = {
   theme: Theme;
   orientation: Orientation;
-  position: number;
+  position?: number;
   objectHeight: number;
   objectWidth: number;
 };
 
+
+const STEP = 1;
+const MIN = 0;
+const MAX = 1000;
+
 const ObjectPage: React.FC<Props> = ({
   theme,
-  orientation,
-  position,
   objectHeight,
   objectWidth,
 }) => {
+  const compositionStore = useLocal(() => new CompositionStore());
+  const position =
+    compositionStore.pages[theme].position;
+  const orientation =
+    compositionStore.pages[theme].orientation;
+
   const isVertical = orientation === Orientation.vertical;
   const positionPercentage = (position / 1000) * 100;
 
@@ -40,6 +53,85 @@ const ObjectPage: React.FC<Props> = ({
         <div
           styleName={`image image_${theme}`}
           style={isVertical ? verticalStylePosition : horizontalStylePosition}
+        />
+      </div>
+
+      <div
+        styleName={cn(
+          `range-wrapper`,
+          orientation === Orientation.vertical && 'range-wrapper_vertical'
+        )}
+        className={"swiper-no-swiping"}
+      >
+        <Range
+          values={[position]}
+          step={STEP}
+          min={MIN}
+          max={MAX}
+          direction={
+            orientation === Orientation.vertical
+              ? Direction.Down
+              : Direction.Right
+          }
+          onChange={(values) => {
+            compositionStore.setPosition(
+              theme,
+              values[0]
+            );
+          }}
+          renderTrack={({ props, children }) => {
+            return (
+              <div
+                onMouseDown={props.onMouseDown}
+                onTouchStart={props.onTouchStart}
+                style={{
+                  ...props.style,
+                  height:
+                    orientation === Orientation.vertical ? `100%` : `40px`,
+                  width: orientation === Orientation.vertical ? `40px` : `100%`,
+                  display: 'flex',
+                }}
+              >
+                <div
+                  ref={props.ref}
+                  style={{
+                    height:
+                      orientation === Orientation.vertical ? `100%` : `1px`,
+                    width:
+                      orientation === Orientation.vertical ? `1px` : `100%`,
+                    borderRadius: '1px',
+                    background: getTrackBackground({
+                      values: [position], //objectPageStore.currentPosition],
+                      colors: ['#fff', '#fff'],
+                      min: MIN,
+                      max: MAX,
+                    }),
+                    alignSelf: 'center',
+                  }}
+                >
+                  {children}
+                </div>
+              </div>
+            );
+          }}
+          renderThumb={({ props, isDragged }) => (
+            <div
+              {...props}
+              style={{
+                ...props.style,
+                height: '35px',
+                width: '35px',
+                borderRadius: '50%',
+                borderWidth: '2px',
+                borderColor: '#48AFC6',
+                borderStyle: 'solid',
+                backgroundColor: '#FFF',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            />
+          )}
         />
       </div>
     </div>

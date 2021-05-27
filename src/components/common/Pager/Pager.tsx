@@ -78,8 +78,8 @@ const Pager: React.FC<Props> = ({
           }
         }}
       >
-        {/*className={`page-preview-1 page-preview_${previewColor}`}*/}
-        <div  style={{
+
+        <div style={{
           position: 'absolute',
           top: 0,
           left: 0,
