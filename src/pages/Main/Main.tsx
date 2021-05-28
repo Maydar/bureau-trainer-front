@@ -126,26 +126,6 @@ const Main: React.FC = () => {
         <p className="page-copyright__school">
           <Link className={"bureau-school-link"} to={urls.greetings}>Шрифты и&nbsp;иконки</Link>
         </p>
-
-        <div className="main-page__social-wrapper">
-          <div className="main-page__social-dsc">
-            Поделиться упражнениями:
-          </div>
-          <div className="main-page__social">
-            <a href={`https://telegram.me/share/url?url=${SITE_LINK}`}>
-              <TG color={"colored"} size={'mc'}/>
-            </a>
-            <a href={`https://vk.com/share.php?url=${SITE_LINK}`}>
-              <VK color={"colored"} size={'mc'}/>
-            </a>
-            <a href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}>
-              <FB color={"colored"} size={'mc'}/>
-            </a>
-            <a href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}>
-              <Twitter color={"colored"} size={'mc'}/>
-            </a>
-          </div>
-        </div>
       </div>
 
     </div>

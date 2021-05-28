@@ -243,7 +243,7 @@ $local-yellow: #FFD600;
 
 .shares {
   position: absolute;
-  display: flex;
+
   bottom: 28px;
   right: 28px;
 
@@ -266,7 +266,21 @@ $local-yellow: #FFD600;
     }
   }
 
+  &__items {
+    display: flex;
+    margin-top: 10px;
+  }
 
+  &__text {
+    color: $white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include phone {
+
+    }
+  }
 }
 .share {
   //height: 35px;
@@ -276,7 +290,7 @@ $local-yellow: #FFD600;
   background-position: center center;
   background-size: contain;
 
-  margin-left: .8vw;
+  margin-left: 9px;
   cursor: pointer;
   text-decoration: none;
 
@@ -288,27 +302,5 @@ $local-yellow: #FFD600;
 
   &:first-child {
     margin-left: 0;
-  }
-
-  &_fb {
-    //background-image: url("./img/fb.svg");
-    margin-left: 0;
-  }
-
-  &_it {
-    //background-image: url("./img/it.svg");
-  }
-
-  &_tg {
-    //background-image: url("./img/tg.svg");
-  }
-
-  &_twitter {
-    background-image: url("./img/twitter.svg");
-    margin-left: 12px;
-
-    @include desktop {
-      margin-left: 1.4vw;
-    }
   }
 }

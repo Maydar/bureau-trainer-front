@@ -210,57 +210,67 @@ const Greetings: React.FC = () => {
           </div>
         </div>
         <div styleName="shares shares_mob">
+          <div styleName="shares__text">
+            Поделиться упражнениями:
+          </div>
+          <div styleName="shares__items">
+            <a
+              target={'_blank'}
+              href={`https://telegram.me/share/url?url=${SITE_LINK}`}
+              styleName="share"
+            >
+              <TG size="mc" color={"colored"}/>
+            </a>
+            <a
+              target={'_blank'}
+              href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
+              styleName="share"
+            >
+              <Twitter size="mc" color={"colored"}/>
+            </a>
+            <a
+              target={'_blank'}
+              href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
+              styleName="share"
+            >
+              <FacebookBlack size="mc" color={"colored"}/>
+            </a>
+            <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName="share">
+              <VK size="mc" color={"colored"}/>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div styleName="shares shares_desktop">
+        <div styleName="shares__text">
+          Поделиться упражнениями:
+        </div>
+        <div styleName="shares__items">
           <a
             target={'_blank'}
             href={`https://telegram.me/share/url?url=${SITE_LINK}`}
             styleName="share"
           >
-            <TG size="mc" color={"black"}/>
+            <TG size="mc" color={"colored"}/>
           </a>
           <a
             target={'_blank'}
             href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
-            styleName="share share_twitter"
+            styleName="share"
           >
-            <Twitter size="mc" color={"black"}/>
+            <Twitter size="mc" color={"colored"}/>
           </a>
           <a
             target={'_blank'}
             href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
             styleName="share"
           >
-            <FacebookBlack size="mc" color={"black"}/>
+            <FacebookBlack size="mc" color={"colored"}/>
           </a>
           <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName="share">
-            <VK size="mc" color={"black"}/>
+            <VK size="mc" color={"colored"}/>
           </a>
         </div>
-      </div>
-      <div styleName="shares shares_desktop">
-        <a
-          target={'_blank'}
-          href={`https://telegram.me/share/url?url=${SITE_LINK}`}
-          styleName="share"
-        >
-          <TG size="mc" color={"black"}/>
-        </a>
-        <a
-          target={'_blank'}
-          href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
-          styleName="share share_twitter"
-        >
-          <Twitter size="mc" color={"black"}/>
-        </a>
-        <a
-          target={'_blank'}
-          href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
-          styleName="share"
-        >
-          <FacebookBlack size="mc" color={"black"}/>
-        </a>
-        <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName="share">
-          <VK size="mc" color={"black"}/>
-        </a>
       </div>
     </>
   );
