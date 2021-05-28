@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import useWindowDimensions from 'utils/hooks/useWindowDimensions';
 import PageEdge from 'components/icons/ui/PageEdge/PageEdge';
 import { LessonType } from 'config/constants';
-import {useState} from "react";
+import { useState } from 'react';
 
 type Props = {
   nextPage?: string;
@@ -29,19 +29,18 @@ const Pager: React.FC<Props> = ({
   const turnPage = React.useCallback((e) => {
     // @ts-ignore
     book.current.pageFlip().flipNext();
-
   }, []);
 
   const onFlip = React.useCallback((e) => {
     setTimeout(() => {
       history.push(nextPage);
-    }, 100)
+    }, 100);
   }, []);
 
   return (
     <>
       <div className="page-edge">
-        <PageEdge onClick={turnPage} type={type} hidden={hiddenCorner}/>
+        <PageEdge onClick={turnPage} type={type} hidden={hiddenCorner} />
       </div>
       <div
         style={{
@@ -51,9 +50,9 @@ const Pager: React.FC<Props> = ({
           height: '100%',
           width: '100%',
           opacity: hiddenCorner ? 0 : 1,
-          backgroundColor: "transparent",
+          backgroundColor: 'transparent',
           transition: 'opacity 0.2s ease-in-out',
-          zIndex: 1
+          zIndex: 1,
         }}
       >
         {children}
@@ -73,22 +72,22 @@ const Pager: React.FC<Props> = ({
         flippingTime={500}
         onFlip={onFlip}
         onChangeState={(state: any) => {
-          if (state.data === "flipping") {
+          if (state.data === 'flipping') {
             setHiddenCorner(true);
           }
         }}
       >
-
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          height: '100%',
-          width: '100%',
-        }}/>
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            height: '100%',
+            width: '100%',
+          }}
+        />
         <div className={`page-preview page-preview_${previewColor}`} />
       </HTMLFlipBook>
-
     </>
   );
 };
