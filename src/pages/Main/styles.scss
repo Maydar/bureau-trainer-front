@@ -368,10 +368,10 @@ body {
   }
 
   @include hover {
-    opacity: .7;
+    transform: scale(.9);
   }
 
-  @include animate(opacity);
+  @include animate(transform);
 }
 
 @media screen and (min-width: 1024px) {
