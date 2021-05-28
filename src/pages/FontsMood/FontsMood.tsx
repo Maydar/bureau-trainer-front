@@ -20,7 +20,7 @@ const FontsMood: React.FC = () => {
       <div className="task-description">
         <TaskDescription
           title={'Упражнение: шрифт'}
-          text={`Посмотрите, как${nbsp}шрифты выражают характер и${nbsp}настроение слова`}
+          text={`Подберите шрифт, который подходит к${nbsp}слову`}
         />
       </div>
       <div styleName="bg"/>
