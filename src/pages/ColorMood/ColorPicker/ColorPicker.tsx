@@ -42,12 +42,12 @@ const ColorPicker: React.FC<Props> = ({
             textColor === 'white' && `word-image_${type}_white`
           )}
         />
-        <div className="swiper-no-swiping" styleName={cn('ui-elements', isPrev && 'ui-elements_hidden')}>
+        <div styleName={cn('ui-elements', isPrev && 'ui-elements_hidden')}>
           <p styleName="description__font">{mapTypeToFont[type]}</p>
           <div styleName="pickers">
             {mapTypeColors[type].map((mapColor) => {
               return (
-                <div key={`${type}_${mapColor}`} styleName="pickers__item">
+                <div className="swiper-no-swiping" key={`${type}_${mapColor}`} styleName="pickers__item">
                   <Picker
                     selected={color === mapColor}
                     color={mapColor}
