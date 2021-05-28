@@ -34,7 +34,7 @@ const Pager: React.FC<Props> = ({
   const onFlip = React.useCallback((e) => {
     setTimeout(() => {
       history.push(nextPage);
-    }, 100);
+    }, 50);
   }, []);
 
   return (
@@ -52,7 +52,7 @@ const Pager: React.FC<Props> = ({
           opacity: hiddenCorner ? 0 : 1,
           backgroundColor: 'transparent',
           transition: 'opacity 0.2s ease-in-out',
-          zIndex: 1,
+          //zIndex: 4,
         }}
       >
         {children}
@@ -61,13 +61,13 @@ const Pager: React.FC<Props> = ({
         ref={book}
         width={width}
         height={height}
-        size="stretch"
+        //size="stretch"
         minWidth={width}
         maxWidth={width}
         maxHeight={height}
-        drawShadows={true}
+        drawShadow={false}
         usePortrait={true}
-        maxShadowOpacity={0.1}
+        //maxShadowOpacity={0}
         useMouseEvents={false}
         flippingTime={500}
         onFlip={onFlip}
@@ -77,15 +77,7 @@ const Pager: React.FC<Props> = ({
           }
         }}
       >
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            height: '100%',
-            width: '100%',
-          }}
-        />
+        <div />
         <div className={`page-preview page-preview_${previewColor}`} />
       </HTMLFlipBook>
     </>
