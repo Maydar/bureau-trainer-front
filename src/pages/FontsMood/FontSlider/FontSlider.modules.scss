@@ -41,6 +41,8 @@
 
     @include phone {
       @include body-md-medium;
+
+      max-width: 320px;
     }
   }
 }

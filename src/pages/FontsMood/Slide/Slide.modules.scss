@@ -224,6 +224,9 @@
 
     @include phone {
       @include body-md-medium;
+      max-width: 320px;
+      margin: 8px auto 0;
+
       padding: 0 8px;
     }
   }

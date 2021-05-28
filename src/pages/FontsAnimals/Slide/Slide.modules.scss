@@ -203,7 +203,7 @@
     @include phone {
       @include body-sm-medium;
       padding: 0 8px;
-      max-width: 100%;
+      max-width: 320px;
     }
   }
 }
