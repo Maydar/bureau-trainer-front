@@ -3,12 +3,12 @@ import { Swiper } from 'swiper/react';
 
 import cn from 'classnames';
 
-import SwiperCore, { Mousewheel, Navigation } from 'swiper/core';
+import SwiperCore, { Mousewheel, Navigation, Keyboard } from 'swiper/core';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.min.css';
 
-SwiperCore.use([Mousewheel, Navigation]);
+SwiperCore.use([Mousewheel, Navigation, Keyboard]);
 
 type Props = {
   slideChangeTransitionEnd?: (swiper: any) => void;
@@ -40,6 +40,10 @@ export const VerticalSlider: React.FC<Props> = ({
       speed={700}
       centeredSlides={true}
       loop={true}
+      keyboard={{
+        enabled: true,
+        onlyInViewport: true
+      }}
       className={cn('swiper-container-v', className)}
       onSlideChangeTransitionEnd={slideChangeTransitionEnd}
       onSlideChangeTransitionStart={onSlideChange}

@@ -62,7 +62,7 @@ export const mapWordData = {
     },
     [RageFonts.druk]: {
       key: 'druk',
-      name: 'Druk',
+      name: 'DRUK',
       description: `О да!${nbsp}Слово выглядит массивным и${nbsp}насупленным, как${nbsp}очень разозлённый человек`,
     },
     [RageFonts.roboto]: {

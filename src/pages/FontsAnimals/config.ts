@@ -58,7 +58,7 @@ export const mapWordData = {
     [BearFonts.amalta]: {
       key: 'amalta',
       name: 'Amalta',
-      description: `О да!${nbsp}Толстые штрихи, непрямоугольные засечки, грубые формы — этот шрифт так${nbsp}ипросится в${nbsp}берлогу`,
+      description: `О да!${nbsp}Толстые штрихи, непрямоугольные засечки, грубые формы — этот шрифт так${nbsp}и${nbsp}просится в${nbsp}берлогу`,
     },
     [BearFonts.misto]: {
       key: 'misto',

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation, Keyboard } from 'swiper';
 import cn from 'classnames';
 import { Swiper } from 'swiper/react';
 
@@ -11,7 +11,7 @@ type Props = {
   navKey: string;
 };
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Keyboard]);
 
 export const HorizontalSlider: React.FC<Props> = ({
   isActive,
