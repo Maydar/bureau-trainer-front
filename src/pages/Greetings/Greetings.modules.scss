@@ -194,7 +194,7 @@ $local-yellow: #FFD600;
   }
 
   &__item-text {
-    @include body-sm-medium;
+    @include body-md-medium;
     color: $white;
 
     @include phone {
