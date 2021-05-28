@@ -20,17 +20,17 @@ body {
 
 @media screen and (min-width: 640px) {
     .page-header {
-        font-size: 31px;
-        line-height: 34px;
+        font-size: 3.1vw;
+        line-height: 3.4vw;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .page-header {
         position: fixed;
-        top: 23px;
-        left: 27px;
-        width: 280px;
+        top: 2.3vw;
+        left: 2.7vw;
+        width: 28vw;
         padding: 0;
     }
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .page-header__subtitle {
-    margin-top: 0;
+    margin-top: 0.31vw;
     margin-bottom: 0;
     font-weight: 500;
 }
@@ -78,7 +78,7 @@ body {
 
 @media screen and (min-width: 1140px) {
     .exercise {
-        padding: 4vw 0 0 340px;
+        padding: 4vw 0 0 34vw;
     }
 }
 
@@ -99,7 +99,7 @@ body {
 
 .exercise__item--font {
     z-index: 4;
-    padding: 13px 8px 0 4px;
+    padding: 13px 26px 0 4px;
     width: 100%;
 }
 
@@ -268,8 +268,8 @@ body {
 
 .page-copyright {
     padding: 96px 25px 31px 9px;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 14px;
 }
 
 @media screen and (min-width: 425px) {
@@ -287,10 +287,13 @@ body {
 @media screen and (min-width: 1024px) {
     .page-copyright {
         position: fixed;
-        bottom: 37px;
-        left: 27px;
-        width: 300px;
+        bottom: 3.7vw;
+        left: 2.7vw;
+        width: 30vw;
         padding: 0;
+
+        font-size: 1.4vw;
+        line-height: 1.4vw;
     }
 }
 
@@ -323,9 +326,9 @@ body {
     content: '';
     position: absolute;
     right: 0;
-    top: 47%;
-    width: 0.4em;
-    height: 0.4em;
+    top: 51%;
+    width: 0.45em;
+    height: 0.45em;
     transform: translateY(-50%) rotate(-45deg);
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
