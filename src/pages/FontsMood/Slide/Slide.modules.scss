@@ -3,11 +3,22 @@
 .slide {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   height: 100%;
   width: 100%;
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    //transform: translateY(-50%);
+
+  }
 
   &__hidden {
     opacity: 0;
@@ -62,7 +73,7 @@
 
   &__image {
     position: relative;
-    max-width: calc(100% - 48px);
+    //max-width: calc(100% - 48px);
 
     &-wrapper {
       display: flex;
@@ -76,6 +87,7 @@
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
+      background-position: center bottom;
     }
 
     &_anorexy {
@@ -98,7 +110,7 @@
 
       &_palkerson {
         background-image: url("./words_img/anorexy/anorey_palkerson.png");
-        height: 199px;
+        //height: 199px;
       }
 
       &_norbert {
@@ -192,7 +204,7 @@
 
 .font-description {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 64px;
 
   &_inactive {
     opacity: 0;

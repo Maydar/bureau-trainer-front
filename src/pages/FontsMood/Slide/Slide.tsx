@@ -34,38 +34,38 @@ const Slide: React.FC<Props> = ({
 }: Props) => {
 
   return (
-    <div styleName={cn(
-      'slide'
-    )}>
-      <div
-        styleName={cn(
-          'slide__image',
-        )}
-      >
+    <div styleName={'slide'}>
+      <div styleName="slide__content">
+        <div
+          styleName={cn(
+            'slide__image',
+          )}
+        >
+          <div styleName={cn(
+            `slide__image_${theme}`,
+            `slide__image_${theme}_${font}`,
+            'slide__preview slide__preview_default',
+
+            (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `slide__preview_horizontal_next`,
+            (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `slide__preview_horizontal_prev`,
+
+            (isNextSlider && horizontal && slideStates.isNext) && `slide__hidden slide__preview_vertical_next-slide-n`,
+            (isNextSlider && horizontal && slideStates.isPrev) && `slide__hidden slide__preview_vertical_next-slide-p`,
+          )}/>
+        </div>
         <div styleName={cn(
-          `slide__image_${theme}`,
-          `slide__image_${theme}_${font}`,
-          'slide__preview slide__preview_default',
-
-          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `slide__preview_horizontal_next`,
-          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `slide__preview_horizontal_prev`,
-
-          (isNextSlider && horizontal && slideStates.isNext) && `slide__hidden slide__preview_vertical_next-slide-n`,
-          (isNextSlider && horizontal && slideStates.isPrev) && `slide__hidden slide__preview_vertical_next-slide-p`,
-        )}/>
-      </div>
-      <div styleName={cn(
-        'font-description',
-        (isPrevSlider && slideStates.isActive && horizontal && `font-description_inactive`),
-        (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `font-description_inactive`,
-        (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `font-description_inactive`,
-      )}>
-        <p styleName="font-description__name">
-          {name}
-        </p>
-        <p styleName="font-description__text">
-          {text}
-        </p>
+          'font-description',
+          (isPrevSlider && slideStates.isActive && horizontal && `font-description_inactive`),
+          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `font-description_inactive`,
+          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `font-description_inactive`,
+        )}>
+          <p styleName="font-description__name">
+            {name}
+          </p>
+          <p styleName="font-description__text">
+            {text}
+          </p>
+        </div>
       </div>
 
     </div>
