@@ -287,6 +287,7 @@ body {
 @media screen and (min-width: 1024px) {
   .page-copyright {
     position: fixed;
+
     bottom: 3.7vw;
     left: 2.7vw;
     width: 30vw;
@@ -313,27 +314,38 @@ body {
 }
 
 .page-copyright a {
+  position: relative;
+  height: 1.4vw;
+  display: inline-block;
   color: #000;
   text-decoration: none;
 }
 
 .bureau-school-link {
   position: relative;
-  padding-right: .9em;
+  padding-right: 1.1vw;
+  @include phone {
+    padding-right: 11px;
+  }
 }
 
-.bureau-school-link::after {
-  content: '';
+.bureau-school-link-icon {
   position: absolute;
   right: 0;
-  top: 52%;
-  width: .8em;
-  height: .7em;
+  top: 49%;
+  width: 1vw;
+  height: 1vw;
   transform: translateY(-50%);
 
   background-image: url("./img/arrow-black.svg");
   background-repeat: no-repeat;
   background-size: contain;
+
+  @include phone {
+    height: 10px;
+    width: 10px;
+    top: 7px;
+  }
 }
 
 .main-page__social-wrapper {

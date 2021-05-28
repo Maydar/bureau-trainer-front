@@ -57,7 +57,7 @@ const ObjectPage: React.FC<Props> = ({
 
   const text = getPositionText(
     (position / 1000) * 100,
-    compositionStore.currentTheme
+    theme
   );
   const verticalStylePosition = {
     left: '50%',
