@@ -37,6 +37,8 @@
 
     color: inherit;
 
+    pointer-events: none;
+
     @include phone {
       @include body-sm-medium;
 

@@ -24,6 +24,8 @@
     color: $black;
     z-index: 999;
 
+    pointer-events: none;
+
     @include body-md-medium;
 
     left: 50%;
