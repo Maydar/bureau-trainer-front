@@ -22,28 +22,9 @@ const STEP = 1;
 const MIN = 0;
 const MAX = 1000;
 
-//todo вынести отсюда
-const getPositionText = (percentage: number, theme: Theme) => {
-  if (percentage <= 35) {
-    return mapPositionText[theme][Position.topLeft];
-  }
-
-  if (percentage > 30 && percentage <= 65) {
-    return mapPositionText[theme][Position.middle];
-  }
-
-  if (percentage > 65) {
-    return mapPositionText[theme][Position.rightBottom];
-  }
-
-  return mapPositionText[theme][Position.topLeft];
-};
-
 const Composition: React.FC = () => {
   const compositionStore = useLocal(() => new CompositionStore());
   const { isMobile } = useSize();
-  const position =
-    compositionStore.pages[compositionStore.currentTheme].position;
 
   return (
     <>
@@ -97,12 +78,6 @@ const Composition: React.FC = () => {
               />
             </SwiperSlide>
           </VerticalSlider>
-          <p styleName="content__description">
-            {getPositionText(
-              (position / 1000) * 100,
-              compositionStore.currentTheme
-            )}
-          </p>
         </div>
         <div className={'swiper-next-el-v'}>Дальше</div>
       </Pager>

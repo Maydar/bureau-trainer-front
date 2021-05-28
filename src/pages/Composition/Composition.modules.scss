@@ -15,30 +15,6 @@
     background-color: #48AFC6;
     //z-index: 1;
   }
-
-  &__description {
-    position: absolute;
-    top: 82%;
-    width: 450px;
-    text-align: center;
-    color: $black;
-    z-index: 999;
-
-    pointer-events: none;
-
-    @include body-md-medium;
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    @include phone {
-      top: 82%;
-      width: 100%;
-      padding: 0 8px;
-
-      @include body-sm-medium;
-    }
-  }
 }
 
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 
-import { Orientation, Theme } from '../config';
+import {mapPositionText, Orientation, Position, Theme} from '../config';
 
 
 import cn from 'classnames';
@@ -24,6 +24,23 @@ const STEP = 1;
 const MIN = 0;
 const MAX = 1000;
 
+//todo вынести отсюда
+const getPositionText = (percentage: number, theme: Theme) => {
+  if (percentage <= 35) {
+    return mapPositionText[theme][Position.topLeft];
+  }
+
+  if (percentage > 30 && percentage <= 65) {
+    return mapPositionText[theme][Position.middle];
+  }
+
+  if (percentage > 65) {
+    return mapPositionText[theme][Position.rightBottom];
+  }
+
+  return mapPositionText[theme][Position.topLeft];
+};
+
 const ObjectPage: React.FC<Props> = ({
   theme,
   objectHeight,
@@ -38,8 +55,10 @@ const ObjectPage: React.FC<Props> = ({
   const isVertical = orientation === Orientation.vertical;
   const positionPercentage = (position / 1000) * 100;
 
-  console.log(objectHeight);
-
+  const text = getPositionText(
+    (position / 1000) * 100,
+    compositionStore.currentTheme
+  );
   const verticalStylePosition = {
     left: '50%',
     top: `calc(${positionPercentage}% - ${(position / 1000) * objectHeight}px)`,
@@ -59,7 +78,6 @@ const ObjectPage: React.FC<Props> = ({
           style={isVertical ? verticalStylePosition : horizontalStylePosition}
         />
       </div>
-
       <div
         styleName={cn(
           `range-wrapper`,
@@ -139,6 +157,9 @@ const ObjectPage: React.FC<Props> = ({
           )}
         />
       </div>
+      <p styleName="content__description">
+        {text}
+      </p>
     </div>
   );
 };
