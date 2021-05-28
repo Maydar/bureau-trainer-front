@@ -5,6 +5,11 @@ import urls from 'config/urls';
 
 import './Greetings.modules.scss';
 import { shareText, SITE_LINK } from 'config/constants';
+import TG from "components/icons/ui/Social/TG/TG";
+import Twitter from "components/icons/ui/Social/Twitter";
+import FB from "components/icons/ui/Social/FB";
+import VK from "components/icons/ui/Social/VK";
+import FacebookBlack from "components/icons/ui/Social/FacebookBlack";
 
 const Greetings: React.FC = () => {
   return (
@@ -208,38 +213,54 @@ const Greetings: React.FC = () => {
           <a
             target={'_blank'}
             href={`https://telegram.me/share/url?url=${SITE_LINK}`}
-            styleName="share share_tg"
-          />
+            styleName="share"
+          >
+            <TG size="mc" color={"black"}/>
+          </a>
           <a
             target={'_blank'}
             href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
-            styleName="share share_twitter"
-          />
+            styleName="share"
+          >
+            <Twitter size="mc" color={"black"}/>
+          </a>
           <a
             target={'_blank'}
             href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
-            styleName="share share_fb"
-          />
-          <a target={'_blank'} href={'#'} styleName="share share_it" />
+            styleName="share"
+          >
+            <FacebookBlack size="mc" color={"black"}/>
+          </a>
+          <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName="share">
+            <VK size="mc" color={"black"}/>
+          </a>
         </div>
       </div>
       <div styleName="shares shares_desktop">
         <a
           target={'_blank'}
           href={`https://telegram.me/share/url?url=${SITE_LINK}`}
-          styleName="share share_tg"
-        />
+          styleName="share"
+        >
+          <TG size="mc" color={"black"}/>
+        </a>
         <a
           target={'_blank'}
           href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
-          styleName="share share_twitter"
-        />
+          styleName="share"
+        >
+          <Twitter size="mc" color={"black"}/>
+        </a>
         <a
           target={'_blank'}
           href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
-          styleName="share share_fb"
-        />
-        <a target={'_blank'} href={'#'} styleName="share share_it" />
+          styleName="share"
+        >
+          <FacebookBlack size="mc" color={"black"}/>
+        </a>
+        <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName="share">
+          <VK size="mc" color={"black"}/>
+        </a>
       </div>
     </>
   );

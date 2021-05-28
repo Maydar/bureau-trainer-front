@@ -1,0 +1,37 @@
+@import "mixins";
+
+$color: #8C3FED;
+
+.icon-vk {
+  position: relative;
+
+  &_colored {
+    .icon__background {
+      fill: $color;
+    }
+
+    .icon__symbol {
+      fill: white;
+    }
+  }
+
+  &_white {
+    .icon__background {
+      fill: white;
+    }
+
+    .icon__symbol {
+      fill: black;
+    }
+  }
+
+  &_black {
+    .icon__background {
+      fill: black;
+    }
+
+    .icon__symbol {
+      fill: white;
+    }
+  }
+}

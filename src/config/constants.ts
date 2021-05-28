@@ -13,4 +13,4 @@ export enum LessonType {
 
 export const shareText = `Посмотрите, как шрифт, цвет и композиция влияют на восприятие и настроение`;
 
-export const SITE_LINK = 'http://design-exercises.ru/';
+export const SITE_LINK = 'https://design-exercises.ru/';

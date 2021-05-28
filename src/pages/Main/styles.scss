@@ -1,128 +1,128 @@
 @import "mixins";
 
 body {
-    min-width: 320px;
+  min-width: 320px;
 }
 
 .main-page {
-    position: relative;
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: 500;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
 
 .page-header {
-    padding: 14px 25px 0 9px;
-    font-size: 19px;
-    line-height: 23px;
+  padding: 14px 25px 0 9px;
+  font-size: 19px;
+  line-height: 23px;
 }
 
 @media screen and (min-width: 640px) {
-    .page-header {
-        font-size: 3.1vw;
-        line-height: 3.4vw;
-    }
+  .page-header {
+    font-size: 3.1vw;
+    line-height: 3.4vw;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .page-header {
-        position: fixed;
-        top: 2.3vw;
-        left: 2.7vw;
-        width: 28vw;
-        padding: 0;
-    }
+  .page-header {
+    position: fixed;
+    top: 2.3vw;
+    left: 2.7vw;
+    width: 28vw;
+    padding: 0;
+  }
 }
 
 .page-header__title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 700;
-    font-size: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: inherit;
 }
 
 .page-header__subtitle {
-    margin-top: 0.31vw;
-    margin-bottom: 0;
-    font-weight: 500;
+  margin-top: 0.31vw;
+  margin-bottom: 0;
+  font-weight: 500;
 }
 
 
 .exercise {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 14px 9px 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 14px 9px 0;
 }
 
 @media screen and (min-width: 425px) {
-    .exercise {
-        padding: 24px 9px 0;
-    }
+  .exercise {
+    padding: 24px 9px 0;
+  }
 }
 
 @media screen and (min-width: 640px) {
-    .exercise {
-        padding: 34px 9px 0 12px;
-    }
+  .exercise {
+    padding: 34px 9px 0 12px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .exercise {
-        padding: 44px 0 0 340px;
-    }
+  .exercise {
+    padding: 44px 0 0 340px;
+  }
 }
 
 @media screen and (min-width: 1140px) {
-    .exercise {
-        padding: 4vw 0 0 34vw;
-    }
+  .exercise {
+    padding: 4vw 0 0 34vw;
+  }
 }
 
 .exercise__item {
-    position: relative;
-    box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .exercise__item svg {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .exercise__link {
-    display: block;
+  display: block;
 }
 
 .exercise__item--font {
-    z-index: 4;
-    padding: 13px 26px 0 4px;
-    width: 100%;
+  z-index: 4;
+  padding: 13px 26px 0 4px;
+  width: 100%;
 }
 
 @media screen and (min-width: 425px) {
-    .exercise__item--font {
-        padding-bottom: 4px;
-    }
+  .exercise__item--font {
+    padding-bottom: 4px;
+  }
 }
 
 @media screen and (min-width: 640px) {
-    .exercise__item--font {
-        padding-bottom: 10px;
-    }
+  .exercise__item--font {
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 1140px) {
-    .exercise__item--font {
-        padding-bottom: 1vw;
-    }
+  .exercise__item--font {
+    padding-bottom: 1vw;
+  }
 }
 
 .exercise__item--font .exercise__link {
-    transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 
 .exercise__item--font svg .letter-sh,
@@ -130,217 +130,224 @@ body {
 .exercise__item--font svg .letter-i,
 .exercise__item--font svg .letter-f,
 .exercise__item--font svg .letter-t {
-    fill: #ffffff;
-    stroke: #ffffff;
+  fill: #ffffff;
+  stroke: #ffffff;
 }
 
 .exercise__item--font svg:hover .letter-sh {
-    fill: #FF6389;
-    stroke: #FF6389;
+  fill: #FF6389;
+  stroke: #FF6389;
 }
 
 .exercise__item--font svg:hover .letter-r {
-    fill: #00D83C;
-    stroke: #00D83C;
+  fill: #00D83C;
+  stroke: #00D83C;
 }
 
 .exercise__item--font svg:hover .letter-i {
-    fill: #FFD600;
-    stroke: #FFD600;
+  fill: #FFD600;
+  stroke: #FFD600;
 }
 
 .exercise__item--font svg:hover .letter-t {
-    fill: #58D7FF;
-    stroke: #58D7FF;
+  fill: #58D7FF;
+  stroke: #58D7FF;
 }
 
 .exercise__item--color {
-    z-index: 3;
-    padding: 9px 0 0 9px;
-    width: 52%;
+  z-index: 3;
+  padding: 9px 0 0 9px;
+  width: 52%;
 }
 
 @media screen and (min-width: 1140px) {
-    .exercise__item--color {
-        padding: 9px 2px 5px 1px;
-    }
+  .exercise__item--color {
+    padding: 9px 2px 5px 1px;
+  }
 }
 
 .exercise__item--color .exercise__link {
-    transform: rotate(-6deg);
+  transform: rotate(-6deg);
 }
 
 .exercise__item--color svg:hover .fig-square {
-    fill: url(#paint2_linear);
+  fill: url(#paint2_linear);
 }
 
 .exercise__item--color svg:hover .fig-color {
-    fill: #000;
+  fill: #000;
 }
 
 .exercise__item--animal {
-    z-index: 1;
-    padding: 5px 0 0 0;
-    width: 48%;
+  z-index: 1;
+  padding: 5px 0 0 0;
+  width: 48%;
 }
 
 .exercise__item--animal .exercise__link {
-    transform: rotate(-27.23deg);
+  transform: rotate(-27.23deg);
 }
 
 .exercise__item--animal svg .fig-circle {
-    fill: #FFCAC7;
-    @include animate(fill);
+  fill: #FFCAC7;
+  @include animate(fill);
 }
 
 .exercise__item--animal svg .fig-animal {
-    fill: #4048FF;
-    @include animate(fill);
+  fill: #4048FF;
+  @include animate(fill);
 }
 
 .exercise__item--animal svg:hover .fig-circle {
-    fill: #4048FF;
+  fill: #4048FF;
 }
 
 .exercise__item--animal svg:hover .fig-animal {
-    fill: #fff;
+  fill: #fff;
 }
 
 .exercise__item--composition {
-    z-index: 2;
-    margin-top: -15px;
-    padding: 0 11px 0 2px;
-    width: 100%;
+  z-index: 2;
+  margin-top: -15px;
+  padding: 0 11px 0 2px;
+  width: 100%;
 }
 
 @media screen and (min-width: 425px) {
-    .exercise__item--composition {
-        margin-top: -19px;
-    }
+  .exercise__item--composition {
+    margin-top: -19px;
+  }
 }
 
 @media screen and (min-width: 640px) {
-    .exercise__item--composition {
-        margin-top: -34px;
-    }
+  .exercise__item--composition {
+    margin-top: -34px;
+  }
 }
 
 @media screen and (min-width: 1140px) {
-    .exercise__item--composition {
-        margin-top: -3.1vw;
-    }
+  .exercise__item--composition {
+    margin-top: -3.1vw;
+  }
 }
 
 .exercise__item--composition .exercise__link {
-    transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
 }
 
 .exercise__item--composition svg .fig-rocket {
-    fill: #FF4F99;
+  fill: #FF4F99;
 
-    @include animate(fill);
+  @include animate(fill);
 }
 
 .exercise__item--composition svg:hover .fig-rocket {
-    fill: #9C4FFF;
+  fill: #9C4FFF;
 }
 
 @media screen and (min-width: 425px) {
-    .exercise__item--composition .exercise__link {
-        transform: rotate(-1.75deg);
-    }
+  .exercise__item--composition .exercise__link {
+    transform: rotate(-1.75deg);
+  }
 }
 
 @media screen and (min-width: 640px) {
-    .exercise__item--composition .exercise__link {
-        transform: rotate(-2.5deg);
-    }
+  .exercise__item--composition .exercise__link {
+    transform: rotate(-2.5deg);
+  }
 }
 
 @media screen and (min-width: 1140px) {
-    .exercise__item--composition .exercise__link {
-        transform: rotate(-3deg);
-    }
+  .exercise__item--composition .exercise__link {
+    transform: rotate(-3deg);
+  }
 }
 
 
 
 
 .page-copyright {
-    padding: 96px 25px 31px 9px;
-    font-size: 14px;
-    line-height: 14px;
+  padding: 96px 25px 31px 9px;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 @media screen and (min-width: 425px) {
-    .page-copyright {
-        padding-top: 91px;
-    }
+  .page-copyright {
+    padding-top: 91px;
+  }
 }
 
 @media screen and (min-width: 640px) {
-    .page-copyright {
-        padding-top: 76px;
-    }
+  .page-copyright {
+    padding-top: 76px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .page-copyright {
-        position: fixed;
-        bottom: 3.7vw;
-        left: 2.7vw;
-        width: 30vw;
-        padding: 0;
+  .page-copyright {
+    position: fixed;
+    bottom: 3.7vw;
+    left: 2.7vw;
+    width: 30vw;
+    padding: 0;
 
-        font-size: 1.4vw;
-        line-height: 1.4vw;
-    }
+    font-size: 1.4vw;
+    line-height: 1.4vw;
+  }
 }
 
 .page-copyright__school {
-    margin-bottom: 0;
+  margin-bottom: 0;
 
-    margin-top: 11px;
+  margin-top: 11px;
 
-    &:first-child {
-        margin-top: 0;
-    }
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .page-copyright__credits {
-    margin-top: 11px;
-    margin-bottom: 0;
+  margin-top: 11px;
+  margin-bottom: 0;
 }
 
 .page-copyright a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .bureau-school-link {
-    position: relative;
-    padding-right: 0.5em;
+  position: relative;
+  padding-right: 0.5em;
 }
 
 .bureau-school-link::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 51%;
-    width: 0.45em;
-    height: 0.45em;
-    transform: translateY(-50%) rotate(-45deg);
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 51%;
+  width: 0.45em;
+  height: 0.45em;
+  transform: translateY(-50%) rotate(-45deg);
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
+.main-page__social-wrapper {
+  padding: 0 2.5vw 0 0;
+  margin-top: 4.2vw;
+}
 .main-page__social {
-    padding: 0 25px 40px 0px;
-    margin-top: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: .4vw;
+  }
 }
 
 //@media screen and (min-width: 1024px) {
@@ -352,39 +359,40 @@ body {
 //}
 
 .main-page__social a {
-    margin-right: 15px;
-    text-decoration: none;
-    @include hover {
-        transform: scale(0.8);
-    }
+  position: relative;
 
-    @include animate(transform);
-}
+  margin-left: 5px;
 
-.main-page__social .main-page__social-link--telegram {
-    margin-right: 18px;
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include hover {
+    opacity: .7;
+  }
+
+  @include animate(opacity);
 }
 
 @media screen and (min-width: 1024px) {
-    .main-page__social a {
-        margin-right: 0;
-        margin-left: 5px;
-    }
+  .main-page__social a {
+    margin-left: 0.5vw;
 
-    .main-page__social .main-page__social-link--telegram {
-        margin-right: 5px;
+    &:first-child {
+      margin-left: 0;
     }
+  }
 }
 
 .main-page__social img {
-    display: inline-flex;
-    width: 19px;
-    height: 17px;
+  display: inline-flex;
+  width: 19px;
+  height: 17px;
 }
 
 @media screen and (min-width: 640px) {
-    .main-page__social img {
-        width: 40px;
-        height: 36px;
-    }
+  .main-page__social img {
+    width: 40px;
+    height: 36px;
+  }
 }

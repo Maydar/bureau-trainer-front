@@ -6,7 +6,8 @@
   &-wrapper {
     position: relative;
     cursor: pointer;
-    display: inline-block;
+    //display: inline-block
+
 
     &_xxl {
       @include desktop-xs {
@@ -62,20 +63,24 @@
 
     &_m {
       @include desktop-xs {
-        @include square(20px);
+        @include square(48px);
       }
 
       @include desktop-md {
-        @include square(24px);
-      }
-
-      @include desktop-lg {
-        @include square(32px);
+        height: 6.4vw;
+        width: 6.8vw;
       }
     }
 
     &_mc {
-      @include square(24px);
+      @include desktop-xs {
+        @include square(48px);
+      }
+
+      @include desktop-md {
+        height: 4.4vw;
+        width: 4.7vw;
+      }
     }
 
     &_s {

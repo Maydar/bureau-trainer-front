@@ -3,11 +3,13 @@ import { observer } from 'mobx-react';
 
 import { Orientation, Theme } from '../config';
 
-import './ObjectPage.modules.scss';
+
 import cn from 'classnames';
 import { Direction, getTrackBackground, Range } from 'react-range';
 import {useLocal} from "utils/hooks";
 import CompositionStore from "pages/Composition/store";
+
+import './ObjectPage.modules.scss';
 
 type Props = {
   theme: Theme;
@@ -35,6 +37,8 @@ const ObjectPage: React.FC<Props> = ({
 
   const isVertical = orientation === Orientation.vertical;
   const positionPercentage = (position / 1000) * 100;
+
+  console.log(objectHeight);
 
   const verticalStylePosition = {
     left: '50%',
@@ -87,9 +91,10 @@ const ObjectPage: React.FC<Props> = ({
                 style={{
                   ...props.style,
                   height:
-                    orientation === Orientation.vertical ? `100%` : `40px`,
-                  width: orientation === Orientation.vertical ? `40px` : `100%`,
+                    orientation === Orientation.vertical ? `100%` : `50px`,
+                  width: orientation === Orientation.vertical ? `50px` : `100%`,
                   display: 'flex',
+                  justifyContent: 'center'
                 }}
               >
                 <div
