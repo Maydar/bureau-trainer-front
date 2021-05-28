@@ -278,6 +278,7 @@ $local-yellow: #FFD600;
 
   margin-left: .8vw;
   cursor: pointer;
+  text-decoration: none;
 
   @include hover {
     transform: scale(0.95);
@@ -290,19 +291,24 @@ $local-yellow: #FFD600;
   }
 
   &_fb {
-    background-image: url("./img/fb.svg");
+    //background-image: url("./img/fb.svg");
+    margin-left: 0;
   }
 
   &_it {
-    background-image: url("./img/it.svg");
+    //background-image: url("./img/it.svg");
   }
 
   &_tg {
-    background-image: url("./img/tg.svg");
+    //background-image: url("./img/tg.svg");
   }
 
   &_twitter {
     background-image: url("./img/twitter.svg");
-    //margin-left: 18px;
+    margin-left: 12px;
+
+    @include desktop {
+      margin-left: 1.4vw;
+    }
   }
 }

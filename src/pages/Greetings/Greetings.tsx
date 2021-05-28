@@ -220,7 +220,7 @@ const Greetings: React.FC = () => {
           <a
             target={'_blank'}
             href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
-            styleName="share"
+            styleName="share share_twitter"
           >
             <Twitter size="mc" color={"black"}/>
           </a>
@@ -247,7 +247,7 @@ const Greetings: React.FC = () => {
         <a
           target={'_blank'}
           href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
-          styleName="share"
+          styleName="share share_twitter"
         >
           <Twitter size="mc" color={"black"}/>
         </a>
