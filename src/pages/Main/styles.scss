@@ -190,12 +190,10 @@ body {
 
 .exercise__item--animal svg .fig-circle {
   fill: #FFCAC7;
-  @include animate(fill);
 }
 
 .exercise__item--animal svg .fig-animal {
   fill: #4048FF;
-  @include animate(fill);
 }
 
 .exercise__item--animal svg:hover .fig-circle {
@@ -237,8 +235,6 @@ body {
 
 .exercise__item--composition svg .fig-rocket {
   fill: #FF4F99;
-
-  @include animate(fill);
 }
 
 .exercise__item--composition svg:hover .fig-rocket {
@@ -384,8 +380,6 @@ body {
   @include hover {
     transform: scale(.9);
   }
-
-  @include animate(transform);
 }
 
 @media screen and (min-width: 1024px) {

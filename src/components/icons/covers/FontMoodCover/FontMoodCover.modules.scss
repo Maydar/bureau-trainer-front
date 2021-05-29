@@ -9,7 +9,6 @@
   .cover-font-1, .cover-font-2 {
     height: 100%;
     width: 100%;
-    @include animate(opacity);
   }
 
   .cover-font-1 {
