@@ -47,7 +47,7 @@ export const mapWordData = {
   [Theme.bear]: {
     [BearFonts.vast]: {
       key: 'vast',
-      name: 'Vast',
+      name: 'VAST',
       description: `Медведь большой, толстый и${nbsp}злой, а${nbsp}тут тоненькие буквы. Какая${hyphen}то цапля, а${nbsp}не${nbsp}медведь`,
     },
     [BearFonts.kudryashev]: {
@@ -57,7 +57,7 @@ export const mapWordData = {
     },
     [BearFonts.amalta]: {
       key: 'amalta',
-      name: 'Amalta',
+      name: 'AMALTA',
       description: `О да!${nbsp}Толстые штрихи, непрямоугольные засечки, грубые формы — этот шрифт так${nbsp}и${nbsp}просится в${nbsp}берлогу`,
     },
     [BearFonts.misto]: {
@@ -101,7 +101,7 @@ export const mapWordData = {
     },
     [ElephantFonts.norbert]: {
       key: 'norbert',
-      name: 'Norbert Schmal',
+      name: 'NORBERT SCHMAL',
       description: `Слон большой и${nbsp}толстый, а${nbsp}шрифт — тонкий и${nbsp}высокий. Не слон`
     },
     [ElephantFonts.normalidad]: {
@@ -125,12 +125,12 @@ export const mapWordData = {
     },
     [TarakanFonts.displace]: {
       key: 'displace',
-      name: 'Displace 2.0',
+      name: 'DISPLACE 2.0',
       description: `Лёгкое ощущение омерзения возникает, верно?`,
     },
     [TarakanFonts.norbert]: {
       key: 'norbert',
-      name: 'Norbert Schmal',
+      name: 'NORBERT SCHMAL',
       description: `Кажется, что${nbsp}буквы сложили из${nbsp}тараканьих усов. Б${hyphen}р${hyphen}р${hyphen}р${hyphen}р`,
     },
     [TarakanFonts.vast]: {
@@ -163,12 +163,12 @@ export const mapWordData = {
     },
     [GirafeFonts.austin]: {
       key: 'austin',
-      name: 'Austin',
+      name: 'AUSTIN',
       description: `Жираф худой и${nbsp}высокий, а${nbsp}этот шрифт толстый и${nbsp}низкий, хотя и${nbsp}очень красивый`,
     },
     [GirafeFonts.vast]: {
       key: 'vast',
-      name: 'Vast',
+      name: 'VAST',
       description: `Жираф худ, высок и${nbsp}изящен, а${nbsp}этот шрифт толст, низок и${nbsp}слишком геометричен`,
     },
     [GirafeFonts.fence]: {

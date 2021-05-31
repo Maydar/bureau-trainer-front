@@ -62,7 +62,6 @@ const FontsMood: React.FC = () => {
             )}
           </SwiperSlide>
         </VerticalSlider>
-        <div className={"swiper-next-el-v"}>Дальше</div>
       </Pager>
     </>
   );

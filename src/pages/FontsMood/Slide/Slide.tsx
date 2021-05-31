@@ -30,44 +30,65 @@ const Slide: React.FC<Props> = ({
   isNextSlider,
   isPrevSlider,
   name,
-  text
+  text,
 }: Props) => {
-
   return (
     <div styleName={'slide'}>
-      <div styleName="slide__content">
+      <div
+        styleName={cn(
+          'slide__content',
+          !(isPrevSlider && isNextSlider) &&
+            horizontal &&
+            slideStates.isNext &&
+            `slide__content_horizontal_next`,
+          !(isPrevSlider && isNextSlider) &&
+            horizontal &&
+            slideStates.isPrev &&
+            `slide__content_horizontal_prev`,
+
+          isNextSlider && slideStates.isActive && 'slide__content_next-active',
+          isPrevSlider && slideStates.isActive && 'slide__content_prev-active',
+
+        )}
+      >
+        <div styleName={cn('slide__image')}>
+          <div
+            styleName={cn(
+              `slide__image_${theme}`,
+              `slide__image_${theme}_${font}`,
+              'slide__preview slide__preview_default',
+              isNextSlider &&
+                horizontal &&
+                slideStates.isNext &&
+                `slide__hidden slide__preview_vertical_next-slide-n`,
+              isNextSlider &&
+                horizontal &&
+                slideStates.isPrev &&
+                `slide__hidden slide__preview_vertical_next-slide-p`
+            )}
+          />
+        </div>
         <div
           styleName={cn(
-            'slide__image',
+            'font-description',
+            isPrevSlider &&
+              slideStates.isActive &&
+              horizontal &&
+              `font-description_inactive`,
+            !(isPrevSlider && isNextSlider) &&
+              horizontal &&
+              slideStates.isNext &&
+              `font-description_inactive`,
+            !(isPrevSlider && isNextSlider) &&
+              horizontal &&
+              slideStates.isPrev &&
+              `font-description_inactive`
           )}
         >
-          <div styleName={cn(
-            `slide__image_${theme}`,
-            `slide__image_${theme}_${font}`,
-            'slide__preview slide__preview_default',
-
-            (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `slide__preview_horizontal_next`,
-            (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `slide__preview_horizontal_prev`,
-
-            (isNextSlider && horizontal && slideStates.isNext) && `slide__hidden slide__preview_vertical_next-slide-n`,
-            (isNextSlider && horizontal && slideStates.isPrev) && `slide__hidden slide__preview_vertical_next-slide-p`,
-          )}/>
-        </div>
-        <div styleName={cn(
-          'font-description',
-          (isPrevSlider && slideStates.isActive && horizontal && `font-description_inactive`),
-          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isNext && `font-description_inactive`,
-          (!(isPrevSlider && isNextSlider)) && horizontal && slideStates.isPrev && `font-description_inactive`,
-        )}>
-          <p styleName="font-description__name">
-            {name}
-          </p>
-          <p styleName="font-description__text">
-            {text}
-          </p>
+          <p styleName="font-description__name">{name}</p>
+          <p styleName="font-description__text">{text}</p>
         </div>
       </div>
-
     </div>
   );
 };

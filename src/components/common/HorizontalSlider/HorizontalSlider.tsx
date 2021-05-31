@@ -27,14 +27,12 @@ export const HorizontalSlider: React.FC<Props> = ({
           'swiper-slider swiper-slider_default swiper-container-h',
           isActive && 'swiper-slider_active'
         )}
-        slidesPerView={1}
+        slidesPerView={'auto'}
         speed={700}
-        navigation={{
-          nextEl: `.swiper-nav-next_${navKey}`,
-          prevEl: `.swiper-nav-prev_${navKey}`
-        }}
         centeredSlides={true}
+        slideToClickedSlide={true}
         loop={true}
+        loopedSlides={2}
         initialSlide={initialSlide}
         onSlideChange={onSlideChange}
         keyboard={{
@@ -44,8 +42,6 @@ export const HorizontalSlider: React.FC<Props> = ({
       >
         {children}
       </Swiper>
-      <div className={`swiper-nav-prev swiper-nav-prev_${navKey}`}/>
-      <div className={`swiper-nav-next swiper-nav-next_${navKey}`}/>
     </>
   );
 };

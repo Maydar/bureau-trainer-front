@@ -11,11 +11,12 @@
 
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
     position: absolute;
     top: 40%;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     @include desktop-xs {
       top: 25%;
@@ -30,6 +31,30 @@
       top: 45%;
     }
 
+    &_horizontal {
+      &_next {
+        left: 0;
+        transform: translateX(0);
+       // background: red;
+      }
+      &_prev {
+        left: calc(100%);
+       // background: blue;
+        transform: translateX(-100%);
+      }
+    }
+
+    &_next-active {
+      top: 0;
+    }
+
+    &_prev-active {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    $time: 0.3s;
+    transition: left $time ease-in-out, top $time ease-in-out, transform $time ease-in-out, opacity $time ease-in-out;
   }
 
   &__hidden {
@@ -46,36 +71,12 @@
     }
 
     &_vertical {
-      &_next {
-        //top: 0;
-        //left: 50%;
-        //transform: translate(-50%, 0);
-
-        @include phone {
-          //top: 4%;
-        }
-      }
-
       &_next-slide-n {
         //transform: translate(0, 0) !important;
       }
 
       &_next-slide-p {
         //transform: translate(-100%, 0) !important;
-      }
-
-    }
-
-    &_horizontal {
-      &_next {
-        //top: 50%;
-        //left: 0;
-        //transform: translate(0, -50%);
-      }
-      &_prev {
-        //top: 50%;
-        //left: 100%;
-        //transform: translate(-100%, -50%);
       }
     }
     //top 0.7s ease-in-out,
@@ -85,7 +86,6 @@
 
   &__image {
     position: relative;
-    //max-width: calc(100% - 48px);
 
     &-wrapper {
       display: flex;
@@ -100,6 +100,7 @@
       background-position: bottom;
       background-size: contain;
       background-position: center bottom;
+      margin: 0 auto;
     }
 
     &_anorexy {

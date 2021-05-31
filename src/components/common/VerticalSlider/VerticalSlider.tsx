@@ -33,7 +33,7 @@ export const VerticalSlider: React.FC<Props> = ({
       mousewheel={{
         sensitivity: 0.1,
       }}
-      slidesPerView={1}
+      slidesPerView={'auto'}
       navigation={{
         nextEl: nextElClass,
       }}

@@ -41,17 +41,17 @@ export const mapWordData = {
   [Theme.rage]: {
     [RageFonts.austin]: {
       key: 'austin',
-      name: 'Austin',
+      name: 'AUSTIN',
       description: `Жирное начертание ассоциируется с${nbsp}гневом, но${nbsp}эту ассоциацию побеждает элегантность форм`,
     },
     [RageFonts.pilar]: {
       key: 'pilar',
-      name: 'Pilar',
+      name: 'PILAR',
       description: `Плотные темные буквы могли бы${nbsp}ассоциироваться с${nbsp}гневом, но${nbsp}из${hyphen}за${nbsp}забавных скруглений ощущение сходит на${nbsp}нет`,
     },
     [RageFonts.vast]: {
       key: 'vast',
-      name: 'Vast',
+      name: 'VAST',
       description: `Набранное супертонким шрифтом слово выглядит спокойным и${nbsp}расслабленным. Расслабься и${nbsp}ты,${nbsp}бро`,
     },
 
@@ -100,7 +100,7 @@ export const mapWordData = {
     },
     [AnorexyFonts.parmigiano]: {
       key: 'parmigiano',
-      name: 'Parmigiano Caption Pro',
+      name: 'PARMIGIANO CAPTION PRO',
       description: `Шрифт слишком правильный и${nbsp}обычный, чтобы${nbsp}напоминать анорексию. Тут у${nbsp}нас просто какой${hyphen}то средний в${nbsp}меру упитанный и${nbsp}аккуратно одетый человечек`,
     },
   },
@@ -125,7 +125,7 @@ export const mapWordData = {
 
     [RumbleFonts.druk]: {
       key: 'druk',
-      name: 'Druk',
+      name: 'DRUK',
       description: `Всё слишком стройно, ровно и${nbsp}упорядоченно. Порядок, а${nbsp}не${nbsp}бардак`,
     },
 
