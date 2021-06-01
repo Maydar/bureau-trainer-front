@@ -68,7 +68,7 @@
     $time: 0.3s;
 
     will-change: transform;
-    transition: left $time ease-in-out, top .7s ease-in-out, transform $time ease-in-out, opacity $time ease-in-out;
+    transition: left $time ease-in-out, transform .7s ease-in-out, opacity $time ease-in-out;
   }
 
   &__hidden {
