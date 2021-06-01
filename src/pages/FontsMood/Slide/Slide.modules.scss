@@ -16,7 +16,7 @@
     top: 40%;
     left: 50%;
 
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateZ(0);
 
     @include desktop-xs {
       top: 25%;
@@ -34,18 +34,30 @@
     &_horizontal {
       &_next {
         left: 0;
-        transform: translateX(0);
+        transform: translateX(0) translateZ(0);
        // background: red;
       }
       &_prev {
         left: calc(100%);
        // background: blue;
-        transform: translateX(-100%);
+        transform: translateX(-100%) translateZ(0);
       }
     }
 
     &_next-active {
-      top: 0;
+      transform: translate(-50%, calc(-40vh + 30px));
+
+      @include desktop-xs {
+        transform: translate(-50%, calc(-25vh + 30px));
+      }
+
+      @include phone {
+        transform: translate(-50%, calc(-35vh + 30px));
+      }
+
+      @include desktop-lg {
+        transform: translate(-50%, calc(-45vh + 30px));
+      }
     }
 
     &_prev-active {
@@ -54,7 +66,9 @@
     }
 
     $time: 0.3s;
-    transition: left $time ease-in-out, top $time ease-in-out, transform $time ease-in-out, opacity $time ease-in-out;
+
+    will-change: transform;
+    transition: left $time ease-in-out, top .7s ease-in-out, transform $time ease-in-out, opacity $time ease-in-out;
   }
 
   &__hidden {
