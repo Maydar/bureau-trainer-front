@@ -20,7 +20,7 @@ const FontsAnimals: React.FC = () => {
       <div className="task-description">
         <TaskDescription
           title={'Упражнение: животные'}
-          text={`Выберите шрифт, который подходит животному.`}
+          text={`Выберите шрифт, который подходит животному`}
         />
       </div>
       <div styleName="content_bg"/>
@@ -72,7 +72,6 @@ const FontsAnimals: React.FC = () => {
               )}
             </SwiperSlide>
           </VerticalSlider>
-          <div className={"swiper-next-el-v"}>Дальше</div>
         </div>
 
       </Pager>

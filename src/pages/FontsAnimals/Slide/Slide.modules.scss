@@ -1,35 +1,82 @@
 @import "mixins";
 
+$time: 0.3s;
+
 .slide {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  //justify-content: center;
   position: relative;
   height: 100%;
-  top: 37%;
-  min-height: 25rem;
   width: 100%;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 37%;
+    min-height: 25rem;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+
+
+    &_horizontal {
+      &_next {
+        left: 0;
+        transform: translateX(0);
+        // background: red;
+      }
+      &_prev {
+        left: calc(100%);
+        // background: blue;
+        transform: translateX(-100%);
+      }
+    }
+
+    &_next-active {
+      top: 0;
+    }
+
+    &_prev-active {
+      bottom: 0;
+      opacity: 0;
+    }
+
+
+    transition: left $time ease-in-out, top $time ease-in-out, transform $time ease-in-out, opacity $time ease-in-out;
+  }
+
+  &__hidden {
+    opacity: 0;
   }
 
   &__girafe {
-    width: 8rem;
-    height: 9.5rem;
+    width: 80px;
+    height: 95px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     background-image: url("./img/girafe_img.svg");
 
+    @include phone {
+      width: 46px;
+      height: 56px;
+    }
+
     &_word {
-      height: 11.5rem;
-      width: 42.9rem;
+      height: 115px;
+      width: 429px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
+
+      @include phone {
+        height: 51px;
+        width: 200px;
+      }
 
       &_roboto {
         background-image: url("./img/giraffe_roboto.svg");
@@ -59,19 +106,29 @@
   }
 
   &__tarakan {
-    width: 8rem;
-    height: 9.5rem;
+    width: 80px;
+    height: 95px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     background-image: url("./img/tarakan.svg");
 
+    @include phone {
+      width: 46px;
+      height: 56px;
+    }
+
     &_word {
-      width: 48.2rem;
-      height: 11.5rem;
+      width: 482px;
+      height: 115px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
+
+      @include phone {
+        height: 51px;
+        width: 200px;
+      }
 
       &_roboto {
         background-image: url("./img/tarakan_roboto.svg");
@@ -99,19 +156,29 @@
     }
   }
   &__elephant {
-    width: 8rem;
-    height: 9.5rem;
+    width: 80px;
+    height: 95px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     background-image: url("./img/elephant.svg");
 
+    @include phone {
+      width: 46px;
+      height: 56px;
+    }
+
     &_word {
-      width: 33rem;
-      height: 10rem;
+      width: 330px;
+      height: 140px;
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
+
+      @include phone {
+        height: 51px;
+        width: 200px;
+      }
 
       &_roboto {
         background-image: url("./img/elephant_roboto.svg");
@@ -139,19 +206,29 @@
     }
   }
   &__bear {
-    width: 8rem;
-    height: 9.5rem;
+    width: 80px;
+    height: 95px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     background-image: url("./img/bear_img.svg");
 
+    @include phone {
+      width: 46px;
+      height: 56px;
+    }
+
     &_word {
-      height: 8rem;
-      width: 37.3rem;
+      height: 111px;
+      width: 438px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
+
+      @include phone {
+        height: 51px;
+        width: 200px;
+      }
 
       &_roboto {
         background-image: url("./img/bear_roboto.svg");
@@ -177,6 +254,14 @@
         background-image: url("./img/bear_amalta.svg");
       }
     }
+  }
+
+  &__theme {
+    &_hidden {
+      opacity: 0;
+      height: 0;
+    }
+    transition: height $time ease-in-out, opacity $time ease-in-out;
   }
 }
 

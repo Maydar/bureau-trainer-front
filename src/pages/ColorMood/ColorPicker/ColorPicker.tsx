@@ -31,11 +31,20 @@ const ColorPicker: React.FC<Props> = ({
   textColor,
 }: Props) => {
   return (
-    <div styleName={cn('content',
-      isPrev && !isNext && `content_prev-slide`,
-      `content_${textColor}`
-    )}>
-      <div styleName="content__inner">
+    <div
+      styleName={cn(
+        'content',
+        `content_${textColor}`,
+        isPrev && !isNext && `content_prev-slide`
+      )}
+    >
+      <div
+        styleName={cn(
+          'content__inner',
+          isNext && 'content__inner_next-active',
+          isPrev && 'content__inner_prev-active'
+        )}
+      >
         <div
           styleName={cn(
             `word-image word-image_${type}`,
@@ -47,7 +56,11 @@ const ColorPicker: React.FC<Props> = ({
           <div styleName="pickers">
             {mapTypeColors[type].map((mapColor) => {
               return (
-                <div className="swiper-no-swiping" key={`${type}_${mapColor}`} styleName="pickers__item">
+                <div
+                  className="swiper-no-swiping"
+                  key={`${type}_${mapColor}`}
+                  styleName="pickers__item"
+                >
                   <Picker
                     selected={color === mapColor}
                     color={mapColor}

@@ -33,38 +33,38 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">Druk Wide</div>
                   <div styleName="section__item-text">
-                    Бёртон Хасебе • Юрий Остроменцкий • Илья Рудерман •
+                    Бёртон&nbsp;Хасебе • Юрий&nbsp;Остроменцкий • Илья&nbsp;Рудерман •
                     Commercial Type
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">STAG</div>
                   <div styleName="section__item-text">
-                    Илья Рудерман • Commercial Type • Кристиан Шварц
+                    Илья&nbsp;Рудерман • Commercial Type • Кристиан&nbsp;Шварц
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">PILAR</div>
                   <div styleName="section__item-text">
-                    Илья Рудерман • Юрий Остроменцкий • CSTM Fonts
+                    Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • CSTM Fonts
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">AUSTIN</div>
                   <div styleName="section__item-text">
-                    Пол Барнс • Commercial Type • Илья Рудерман
+                    Пол&nbsp;Барнс • Commercial Type • Илья&nbsp;Рудерман
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">NORBERT SCHMAL</div>
                   <div styleName="section__item-text">
-                    Филипп Ноймайер, TypeMates
+                    Филипп&nbsp;Ноймайер, TypeMates
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">GIORGIO SANS</div>
                   <div styleName="section__item-text">
-                    Илья Рудерман • Винсент Чан • Кристиан Шварц • Commercial
+                    Илья&nbsp;Рудерман • Винсент&nbsp;Чан • Кристиан&nbsp;Шварц • Commercial
                     Type
                   </div>
                 </div>
@@ -73,98 +73,96 @@ const Greetings: React.FC = () => {
                     PARMIGIANO CAPTION PRO
                   </div>
                   <div styleName="section__item-text">
-                    Илья Рудерман • Рикардо Олоку • Джонатан Пьерини •
-                    Typotheque • Irina Smirnova (cyr) • Irene Vlachou (greek)
+                    Илья&nbsp;Рудерман • Рикардо&nbsp;Олоку • Джонатан&nbsp;Пьерини •
+                    Typotheque • Irina&nbsp;Smirnova&nbsp;(cyr) • Irene&nbsp;Vlachou&nbsp;(greek)
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">CSTM Xprmntl 01</div>
                   <div styleName="section__item-text">
-                    Илья Рудерман • CSTM Fonts • Юрий Остроменцкий
+                    Илья&nbsp;Рудерман • CSTM Fonts • Юрий&nbsp;Остроменцкий
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">NORMALIDAD EXTENDED</div>
                   <div styleName="section__item-text">
-                    CSTM Fonts • Илья Рудерман • Юрий Остроменцкий • Анна
-                    Данилова
+                    CSTM Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">NORMALIDAD EXTENDED</div>
                   <div styleName="section__item-text">
-                    CSTM Fonts • Илья Рудерман • Юрий Остроменцкий • Анна
-                    Данилова
+                    CSTM Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">KARLOFF NEUTRAL</div>
                   <div styleName="section__item-text">
-                    Никола Джурек • Петер Билак • Петер ван Росмален •
-                    Typotheque • Maria Doreuli (cyr&greek)
+                    Никола&nbsp;Джурек • Петер&nbsp;Билак • Петер&nbsp;ван&nbsp;Росмален •
+                    Typotheque • Maria&nbsp;Doreuli&nbsp;(cyr&greek)
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">DISPLACE 2.0</div>
-                  <div styleName="section__item-text">Денис Серебряков</div>
+                  <div styleName="section__item-text">Денис&nbsp;Серебряков</div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">AMALTA</div>
-                  <div styleName="section__item-text">Вера Евстафьева</div>
+                  <div styleName="section__item-text">Вера&nbsp;Евстафьева</div>
                 </div>
               </div>
             </div>
             <div styleName="section section_desktop">
               <a href="http://sergeychikin.ru/365/" styleName="section__title">
-                Иконки Сергея Чикина
+                Иконки Сергея&nbsp;Чикина
               </a>
             </div>
           </div>
           <div styleName="column">
             <div styleName="section">
               <a href="https://www.paratype.ru/" styleName="section__title">
-                от PARATYPE
+                от&nbsp;PARATYPE
               </a>
               <div styleName="section__items">
                 <div styleName="section__item">
                   <div styleName="section__item-title">Kudryashev Display</div>
                   <div styleName="section__item-text">
-                    Ольга Умпелева • Изабелла Чаева • Александра Королькова
+                    Ольга&nbsp;Умпелева • Изабелла&nbsp;Чаева • Александра&nbsp;Королькова
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">VAST</div>
                   <div styleName="section__item-text">
-                    Манвел Шмавонян • Александр Любовенко
+                    Манвел&nbsp;Шмавонян • Александр&nbsp;Любовенко
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Circe Contrast</div>
                   <div styleName="section__item-text">
-                    Александра Королькова • Изабелла Чаева
+                    Александра&nbsp;Королькова • Изабелла&nbsp;Чаева
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Fence</div>
                   <div styleName="section__item-text">
-                    Александра Королькова
+                    Александра&nbsp;Королькова
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Fatum</div>
-                  <div styleName="section__item-text">Светлана Морозова</div>
+                  <div styleName="section__item-text">Светлана&nbsp;Морозова</div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Didona</div>
-                  <div styleName="section__item-text">Владимир Ефимов</div>
+                  <div styleName="section__item-text">Владимир&nbsp;Ефимов</div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Ambidexter</div>
-                  <div styleName="section__item-text">Егор Белозёров</div>
+                  <div styleName="section__item-text">Егор&nbsp;Белозёров</div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Harry plotter</div>
-                  <div styleName="section__item-text">Захар Ящин</div>
+                  <div styleName="section__item-text">Захар&nbsp;Ящин</div>
                 </div>
               </div>
             </div>
@@ -176,9 +174,9 @@ const Greetings: React.FC = () => {
                     href="https://yurigordon.com/ru/shop/fonts/mr-palkerson"
                     styleName="section__item-title section__item-title_link"
                   >
-                    Mr Palkerson
+                    Mr&nbsp;Palkerson
                   </a>
-                  <div styleName="section__item-text">Юрий Гордон</div>
+                  <div styleName="section__item-text">Юрий&nbsp;Гордон</div>
                 </div>
                 <div styleName="section__item">
                   <a
@@ -187,7 +185,7 @@ const Greetings: React.FC = () => {
                   >
                     Eldwin
                   </a>
-                  <div styleName="section__item-text">The Northern Block</div>
+                  <div styleName="section__item-text">The&nbsp;Northern&nbsp;Block</div>
                 </div>
                 <div styleName="section__item">
                   <a
@@ -197,14 +195,14 @@ const Greetings: React.FC = () => {
                     Misto
                   </a>
                   <div styleName="section__item-text">
-                    Katerina Korolevtseva
+                    Katerina&nbsp;Korolevtseva
                   </div>
                 </div>
               </div>
             </div>
             <section styleName="section section_mobile">
               <a href="http://sergeychikin.ru/365/" styleName="section__title">
-                Иконки Сергея Чикина
+                Иконки Сергея&nbsp;Чикина
               </a>
             </section>
           </div>

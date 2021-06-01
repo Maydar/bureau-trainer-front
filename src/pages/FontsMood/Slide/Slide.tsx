@@ -48,7 +48,6 @@ const Slide: React.FC<Props> = ({
 
           isNextSlider && slideStates.isActive && 'slide__content_next-active',
           isPrevSlider && slideStates.isActive && 'slide__content_prev-active',
-
         )}
       >
         <div styleName={cn('slide__image')}>
@@ -60,11 +59,11 @@ const Slide: React.FC<Props> = ({
               isNextSlider &&
                 horizontal &&
                 slideStates.isNext &&
-                `slide__hidden slide__preview_vertical_next-slide-n`,
+                `slide__hidden`,
               isNextSlider &&
                 horizontal &&
                 slideStates.isPrev &&
-                `slide__hidden slide__preview_vertical_next-slide-p`
+                `slide__hidden`
             )}
           />
         </div>

@@ -1,6 +1,8 @@
 @import 'colors';
 @import 'mixins';
 
+$time: 0.3s;
+
 .content {
   position: relative;
   height: 100%;
@@ -19,10 +21,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
-    width: 100%;
 
-    position: relative;
+    position: absolute;
+    top: 37%;
+    min-height: 25rem;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    &_next-active {
+      top: 0;
+    }
+
+    &_prev-active {
+      opacity: 0;
+    }
+
+    transition: top $time ease-in-out, transform $time ease-in-out, opacity $time ease-in-out;
   }
 
   &_prev-slide {

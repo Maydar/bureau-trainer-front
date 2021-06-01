@@ -32,7 +32,7 @@ const Composition: React.FC = () => {
         <TaskDescription
           color="black"
           title={'Упражнение: композиция'}
-          text={`Подвигайте объект на${nbsp}странице и${nbsp}посмотрите, как${nbsp}меняется восприятие.`}
+          text={`Подвигайте объект на${nbsp}странице и${nbsp}посмотрите, как${nbsp}меняется восприятие`}
         />
       </div>
       <div styleName="content_bg"/>

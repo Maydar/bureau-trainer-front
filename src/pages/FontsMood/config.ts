@@ -120,7 +120,7 @@ export const mapWordData = {
     [RumbleFonts.didona]: {
       key: 'didona',
       name: 'Didona',
-      description: `Слишком аккуратно и${nbsp}элегантно. Выглядит как${nbsp}название дома моды «Бардак»`,
+      description: `Слишком аккуратно и${nbsp}элегантно. Выглядит${nbsp}как${nbsp}название дома моды «Бардак»`,
     },
 
     [RumbleFonts.druk]: {

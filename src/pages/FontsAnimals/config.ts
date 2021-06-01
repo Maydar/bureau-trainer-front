@@ -48,7 +48,7 @@ export const mapWordData = {
     [BearFonts.vast]: {
       key: 'vast',
       name: 'VAST',
-      description: `Медведь большой, толстый и${nbsp}злой, а${nbsp}тут тоненькие буквы. Какая${hyphen}то цапля, а${nbsp}не${nbsp}медведь`,
+      description: `Медведь большой, толстый и${nbsp}злой, а${nbsp}тут тоненькие${nbsp}буквы. Какая${hyphen}то цапля, а${nbsp}не${nbsp}медведь`,
     },
     [BearFonts.kudryashev]: {
       key: 'kudryashev',
@@ -153,7 +153,7 @@ export const mapWordData = {
     [GirafeFonts.norbert]: {
       key: 'norbert',
       name: 'Norbert Schmal',
-      description: `Узкий вытянутый шрифт хорошо передает высокий рост и${nbsp}худобу жирафа`,
+      description: `Узкий вытянутый шрифт хорошо передает высокий${nbsp}рост и${nbsp}худобу жирафа`,
     },
     [GirafeFonts.circe]: {
       key: 'circe',

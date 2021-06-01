@@ -26,14 +26,12 @@ const ColorMood: React.FC = () => {
 
   return (
     <div styleName={`content`}>
-      <div styleName={`content__inner content_${pageColor}`}>
-        <div className={`swiper-next-el-v swiper-next-el-v_${textColor}`}>Дальше</div>
-      </div>
+      <div styleName={`content__inner content_${pageColor}`}/>
       <div className="task-description">
         <TaskDescription
           title="Упражнение: цвет"
           color={textColor}
-          text={`Почувствуйте, как${nbsp}цвет усиливает характер шрифта и${nbsp}передает настроение слова`}
+          text={`Подберите к${nbsp}слову цвет, чтобы${nbsp}усилить настроение`}
         />
       </div>
       <Pager
@@ -65,7 +63,6 @@ const ColorMood: React.FC = () => {
             </SwiperSlide>
           ))}
         </VerticalSlider>
-
       </Pager>
     </div>
   );
