@@ -107,9 +107,19 @@
       width: 703px;
       height: 127px;
 
+      &__description {
+        top: calc(127px + 64px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       @include phone {
         width: 200px;
         height: 80px;
+
+        &__description {
+          top: calc(80px + 32px);
+        }
       }
 
       &_roboto {
@@ -143,10 +153,21 @@
       width: 352px;
       height: 120px;
 
+      &__description {
+        top: calc(120px + 64px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       @include phone {
         width: 150px;
         height: 100px;
+
+        &__description {
+          top: calc(100px + 32px);
+        }
       }
+
 
       &_roboto {
         background-image: url("./words_img/rage/rage_roboto.svg");
@@ -177,9 +198,19 @@
       width: 514px;
       height: 120px;
 
+      &__description {
+        top: calc(120px + 64px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       @include phone {
         width: 180px;
         height: 100px;
+
+        &__description {
+          top: calc(100px + 32px);
+        }
       }
 
       &_roboto {
@@ -216,20 +247,24 @@
 }
 
 .font-description {
+  position: absolute;
   text-align: center;
-  margin-top: 64px;
+
 
   &_inactive {
     opacity: 0;
   }
 
   @include phone {
-    //top: 70%;
     width: 100%;
-
-    margin-top: 32px;
+    min-width: 280px;
     padding: 0 8px;
   }
+
+  @include tablet {
+    width: 450px;
+  }
+
 
   &__name {
     @include body-md-bold;

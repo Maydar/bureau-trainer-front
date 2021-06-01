@@ -70,6 +70,7 @@ const Slide: React.FC<Props> = ({
         <div
           styleName={cn(
             'font-description',
+            `slide__image_${theme}__description`,
             isPrevSlider &&
               slideStates.isActive &&
               horizontal &&
