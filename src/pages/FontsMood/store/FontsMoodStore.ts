@@ -2,10 +2,26 @@ import { action, observable } from 'mobx';
 
 export default class FontsMoodStore {
   @observable
-  currentIndex = 0;
+  rageIndex = 0;
+
+  @observable
+  anorexyIndex = 0;
+
+  @observable
+  rumbleIndex = 0;
 
   @action.bound
-  setIndex(idx: number) {
-    this.currentIndex = idx;
+  setRageIndex(idx: number) {
+    this.rageIndex = idx;
+  }
+
+  @action.bound
+  setAnorexyIndex(idx: number) {
+    this.anorexyIndex = idx;
+  }
+
+  @action.bound
+  setRumbleIndex(idx: number) {
+    this.rumbleIndex = idx;
   }
 }

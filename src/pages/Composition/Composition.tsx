@@ -79,7 +79,6 @@ const Composition: React.FC = () => {
             </SwiperSlide>
           </VerticalSlider>
         </div>
-        <div className={'swiper-next-el-v'}>Дальше</div>
       </Pager>
     </>
   );

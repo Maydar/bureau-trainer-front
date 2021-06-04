@@ -7,14 +7,22 @@ import TaskDescription from 'components/common/TaskDescription';
 import Pager from 'components/common/Pager';
 import { LessonType, nbsp } from 'config/constants';
 import urls from 'config/urls';
+import { useLocal } from 'utils/hooks';
+import FontsMoodStore from 'pages/FontsMood/store';
 
 import FontSlider from './FontSlider';
 import { Theme } from './config';
 
 import './FontsMood.modules.scss';
 
-
 const FontsMood: React.FC = () => {
+  const store = useLocal(() => new FontsMoodStore());
+  const refs = {
+    [Theme.rage] : React.useRef(),
+    [Theme.anorexy] : React.useRef(),
+    [Theme.rumble] : React.useRef(),
+
+  };
   return (
     <>
       <div className="task-description">
@@ -23,7 +31,7 @@ const FontsMood: React.FC = () => {
           text={`Подберите шрифт, который подходит к${nbsp}слову`}
         />
       </div>
-      <div styleName="bg"/>
+      <div styleName="bg" />
       <Pager
         type={LessonType.fonts}
         nextPage={urls.animals}
@@ -37,7 +45,9 @@ const FontsMood: React.FC = () => {
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
-
+                currentIndex={store.rageIndex}
+                onChangeIndex={store.setRageIndex}
+                forwardRef={refs[Theme.rage]}
               />
             )}
           </SwiperSlide>
@@ -48,6 +58,9 @@ const FontsMood: React.FC = () => {
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
+                currentIndex={store.anorexyIndex}
+                onChangeIndex={store.setAnorexyIndex}
+                forwardRef={refs[Theme.anorexy]}
               />
             )}
           </SwiperSlide>
@@ -58,6 +71,9 @@ const FontsMood: React.FC = () => {
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
+                currentIndex={store.rumbleIndex}
+                onChangeIndex={store.setRumbleIndex}
+                forwardRef={refs[Theme.rumble]}
               />
             )}
           </SwiperSlide>

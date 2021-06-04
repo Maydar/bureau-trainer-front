@@ -1,7 +1,7 @@
 import * as React from 'react';
 import cn from 'classnames';
 
-import { Theme } from '../config';
+import {AnorexyFonts, mapWordData, RageFonts, RumbleFonts, Theme} from '../config';
 
 import './Slide.modules.scss';
 
@@ -20,6 +20,12 @@ type Props = {
 
   name: string;
   text: string;
+  width: {
+    default: number,
+    mobile: number,
+    tablet: number,
+    desktop: number
+  }
 };
 
 const Slide: React.FC<Props> = ({
@@ -31,46 +37,50 @@ const Slide: React.FC<Props> = ({
   isPrevSlider,
   name,
   text,
+  width
 }: Props) => {
+
   return (
-    <div styleName={'slide'}>
+    <div
+      className="h-frame"
+    >
       <div
+        className="h-frame-wrapper"
         styleName={cn(
           'slide__content',
-          !(isPrevSlider && isNextSlider) &&
-            horizontal &&
-            slideStates.isNext &&
-            `slide__content_horizontal_next`,
-          !(isPrevSlider && isNextSlider) &&
-            horizontal &&
-            slideStates.isPrev &&
-            `slide__content_horizontal_prev`,
-
-          isNextSlider && slideStates.isActive && 'slide__content_next-active',
-          isPrevSlider && slideStates.isActive && 'slide__content_prev-active',
         )}
       >
         <div styleName={cn('slide__image')}>
           <div
+            className={'h-frame-pic'}
             styleName={cn(
               `slide__image_${theme}`,
-              `slide__image_${theme}_${font}`,
-              'slide__preview slide__preview_default',
-              isNextSlider &&
-                horizontal &&
-                slideStates.isNext &&
-                `slide__hidden`,
-              isNextSlider &&
-                horizontal &&
-                slideStates.isPrev &&
-                `slide__hidden`
+              `slide__image_${theme}_${font}`
             )}
+            style={{
+              width: width.default
+            }}
+            data-width-mobile={width.mobile}
+            data-width-tablet={width.tablet}
+            data-width-desktop={width.desktop}
+            // styleName={cn(
+            //   `slide__image_${theme}`,
+            //   `slide__image_${theme}_${font}`,
+            //   isNextSlider &&
+            //     horizontal &&
+            //     slideStates.isNext &&
+            //     `slide__hidden`,
+            //   isNextSlider &&
+            //     horizontal &&
+            //     slideStates.isPrev &&
+            //     `slide__hidden`
+            // )}
           />
         </div>
         <div
+          className={'h-frame-content'}
           styleName={cn(
             'font-description',
-            `slide__image_${theme}__description`,
             isPrevSlider &&
               slideStates.isActive &&
               horizontal &&

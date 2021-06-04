@@ -2,12 +2,12 @@
 
 .slide {
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: relative;
   height: 100%;
-  width: 100%;
+  //width: 100%;
 
 
   &__content {
@@ -67,35 +67,12 @@
 
     $time: 0.3s;
 
-    will-change: transform;
-    transition: left $time ease-in-out, transform .7s ease-in-out, opacity $time ease-in-out;
+    //will-change: transform;
+    //transition: left $time ease-in-out, transform .7s ease-in-out, opacity $time ease-in-out;
   }
 
   &__hidden {
     opacity: 0;
-  }
-
-  &__preview {
-    //position: absolute;
-
-    &_default {
-      //top: 60%;
-      //left: 50%;
-      //transform: translate(-50%, -50%);
-    }
-
-    &_vertical {
-      &_next-slide-n {
-        //transform: translate(0, 0) !important;
-      }
-
-      &_next-slide-p {
-        //transform: translate(-100%, 0) !important;
-      }
-    }
-    //top 0.7s ease-in-out,
-    transition:  left 0.7s ease-in-out,  transform 0.7s ease-in-out, opacity .2s ease-in-out .2s;
-    //@include animateSlow(top, left, transform);
   }
 
   &__image {
@@ -118,22 +95,12 @@
     }
 
     &_anorexy {
-      width: 703px;
+      //width: 703px;
       height: 127px;
 
-      &__description {
-        top: calc(127px + 64px);
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
       @include phone {
-        width: 200px;
+        //width: 200px;
         height: 80px;
-
-        &__description {
-          top: calc(80px + 32px);
-        }
       }
 
       &_roboto {
@@ -164,22 +131,12 @@
     }
 
     &_rage {
-      width: 352px;
+      //width: 352px;
       height: 120px;
 
-      &__description {
-        top: calc(120px + 64px);
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
       @include phone {
-        width: 150px;
+        //width: 150px;
         height: 100px;
-
-        &__description {
-          top: calc(100px + 32px);
-        }
       }
 
 
@@ -209,22 +166,12 @@
     }
 
     &_rumble {
-      width: 514px;
+      //width: 514px;
       height: 120px;
 
-      &__description {
-        top: calc(120px + 64px);
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
       @include phone {
-        width: 180px;
+        //width: 180px;
         height: 100px;
-
-        &__description {
-          top: calc(100px + 32px);
-        }
       }
 
       &_roboto {
@@ -261,8 +208,9 @@
 }
 
 .font-description {
-  position: absolute;
+  //position: absolute;
   text-align: center;
+  margin: 68px auto 0;
 
 
   &_inactive {

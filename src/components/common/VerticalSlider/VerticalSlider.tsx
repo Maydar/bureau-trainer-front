@@ -39,7 +39,6 @@ export const VerticalSlider: React.FC<Props> = ({
       }}
       speed={700}
       centeredSlides={true}
-      loop={true}
       keyboard={{
         enabled: true,
         onlyInViewport: true
@@ -48,10 +47,6 @@ export const VerticalSlider: React.FC<Props> = ({
       onSlideChangeTransitionEnd={slideChangeTransitionEnd}
       onSlideChangeTransitionStart={onSlideChange}
       onBeforeTransitionStart={beforeTransitionStart}
-      //preventClicks={true}
-
-      //touchEventsTarget={'wrapper'}
-      //touchMoveStopPropagation={true}
     >
       {children}
     </Swiper>

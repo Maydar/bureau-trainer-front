@@ -20,17 +20,17 @@ body {
 
 @media screen and (min-width: 640px) {
   .page-header {
-    font-size: 3.1vw;
-    line-height: 3.4vw;
+    font-size: 31px;
+    line-height: 34px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .page-header {
     position: fixed;
-    top: 2.3vw;
-    left: 2.7vw;
-    width: 28vw;
+    top: 23px;
+    left: 27px;
+    width: 280px;
     padding: 0;
   }
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .page-header__subtitle {
-  margin-top: 0.31vw;
+  margin-top: 4px;
   margin-bottom: 0;
   font-weight: 500;
 }
@@ -284,13 +284,13 @@ body {
   .page-copyright {
     position: fixed;
 
-    bottom: 3.7vw;
-    left: 2.7vw;
-    width: 30vw;
+    bottom: 37px;
+    left: 27px;
+    width: 300px;
     padding: 0;
 
-    font-size: 1.4vw;
-    line-height: 1.4vw;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
@@ -311,7 +311,6 @@ body {
 
 .page-copyright a {
   position: relative;
-  height: 1.4vw;
   display: inline-block;
   color: #000;
   text-decoration: none;
@@ -319,7 +318,7 @@ body {
 
 .bureau-school-link {
   position: relative;
-  padding-right: 1.1vw;
+  padding-right: 11px;
   @include phone {
     padding-right: 11px;
   }
@@ -329,8 +328,8 @@ body {
   position: absolute;
   right: 0;
   top: 49%;
-  width: 1vw;
-  height: 1vw;
+  width: 9px;
+  height: 9px;
   transform: translateY(-50%);
 
   background-image: url("./img/arrow-black.svg");
@@ -345,8 +344,8 @@ body {
 }
 
 .main-page__social-wrapper {
-  padding: 0 2.5vw 0 0;
-  margin-top: 4.2vw;
+  padding: 0 25px 0 0;
+  margin-top: 42px;
 }
 .main-page__social {
   margin-top: 4px;
@@ -356,7 +355,7 @@ body {
   justify-content: flex-start;
 
   @media screen and (min-width: 1024px) {
-    margin-top: .4vw;
+    margin-top: 4px;
   }
 }
 
@@ -384,7 +383,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   .main-page__social a {
-    margin-left: 0.5vw;
+    margin-left: 5px;
 
     &:first-child {
       margin-left: 0;

@@ -1,14 +1,10 @@
 import * as React from 'react';
-import { observer } from 'mobx-react';
-import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { useLocal } from 'utils/hooks';
 
 import Slide from '../Slide';
 import { Theme, mapToArrayWordData } from '../config';
-import FontsMoodStore from '../store';
 
+import { setPicWidth, applyHorizontalShift } from './utils';
 import './FontSlider.modules.scss';
 import HorizontalSlider from 'components/common/HorizontalSlider';
 
@@ -17,46 +13,73 @@ type Props = {
   isActive: boolean;
   isNext: boolean;
   isPrev: boolean;
+  currentIndex: number,
+  onChangeIndex: (idx: number) => void;
+  forwardRef?: any,
 };
+
 
 const FontSlider: React.FC<Props> = ({
   theme,
   isActive: isActiveSlider,
   isNext: isNextSlider,
   isPrev: isPrevSlider,
+  currentIndex,
+  onChangeIndex,
+  forwardRef
 }: Props) => {
-  const fontsMoodStore = useLocal(() => new FontsMoodStore());
+  const slides = React.useMemo(() => {
+    return mapToArrayWordData[theme].map((wordData, index) => {
+      return (
+        <SwiperSlide key={wordData.key}>
+          {({ isActive, isNext, isPrev }) => {
+            return (
+              <Slide
+                theme={theme}
+                font={wordData.key}
+                name={wordData.name}
+                text={wordData.description}
+                width={wordData.width}
+                slideStates={{
+                  isActive,
+                  isNext,
+                  isPrev
+                }}
+                isPrevSlider={isPrevSlider}
+                isNextSlider={isNextSlider}
+                horizontal={true}
+              />
+            );
+          }}
+        </SwiperSlide>
+      );
+    })
+  }, [isActiveSlider, currentIndex]);
 
   return (
     <div styleName="content">
       <HorizontalSlider
+        forwardRef={forwardRef}
         isActive={isActiveSlider}
-        initialSlide={fontsMoodStore.currentIndex}
+        initialSlide={currentIndex}
         onSlideChange={(swiper) => {
-          fontsMoodStore.setIndex(swiper.realIndex);
+          onChangeIndex(swiper.realIndex);
         }}
         navKey={theme}
+        onInit={() => {
+          setPicWidth(theme);
+          applyHorizontalShift(theme);
+        }}
+        onResize={() => {
+          setPicWidth(theme);
+          applyHorizontalShift(theme);
+        }}
+        onSlideChangeTransitionStart={() => {
+          applyHorizontalShift(theme);
+        }}
+        className={theme}
       >
-        {mapToArrayWordData[theme].map((wordData) => {
-          return (
-            <SwiperSlide key={wordData.key}>
-              {({ isActive, isNext, isPrev }) => {
-                return (
-                  <Slide
-                    theme={theme}
-                    font={wordData.key}
-                    name={wordData.name}
-                    text={wordData.description}
-                    slideStates={{ isActive, isNext, isPrev }}
-                    isPrevSlider={isPrevSlider}
-                    isNextSlider={isNextSlider}
-                    horizontal={true}
-                  />
-                );
-              }}
-            </SwiperSlide>
-          );
-        })}
+        {slides}
       </HorizontalSlider>
     </div>
   );
@@ -67,4 +90,4 @@ FontSlider.defaultProps = {
   isActive: true,
 };
 
-export default observer(FontSlider);
+export default React.memo(FontSlider);
