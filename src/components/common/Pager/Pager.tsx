@@ -1,12 +1,9 @@
 import * as React from 'react';
 
-import HTMLFlipBook from 'react-pageflip';
 import { useHistory } from 'react-router-dom';
 
-import useWindowDimensions from 'utils/hooks/useWindowDimensions';
-import PageEdge from 'components/icons/ui/PageEdge/PageEdge';
 import { LessonType } from 'config/constants';
-import { useState } from 'react';
+import PageEdge from 'components/icons/ui/PageEdge';
 
 type Props = {
   nextPage?: string;
@@ -14,33 +11,32 @@ type Props = {
   onFlip?: () => void;
   type?: LessonType;
   previewColor: 'green' | 'yellow' | 'blue' | 'black';
+  curveClass: string;
 };
 
 const Pager: React.FC<Props> = ({
   nextPage,
   children,
   previewColor,
+  curveClass,
   type,
 }: Props) => {
-  const [hiddenCorner, setHiddenCorner] = useState(false);
-  const book = React.useRef();
   const history = useHistory();
-  const { height, width } = useWindowDimensions();
-  const turnPage = React.useCallback((e) => {
-    // @ts-ignore
-    book.current.pageFlip().flipNext();
-  }, []);
-
-  const onFlip = React.useCallback((e) => {
+  const turnPage = () => {
     setTimeout(() => {
       history.push(nextPage);
-    }, 50);
-  }, []);
+    }, 1000);
+  };
 
   return (
     <>
       <div className="page-edge">
-        <PageEdge onClick={turnPage} type={type} hidden={hiddenCorner} />
+        <PageEdge
+          onClick={turnPage}
+          type={type}
+          previewColor={previewColor}
+          curveClass={curveClass}
+        />
       </div>
       <div
         style={{
@@ -49,7 +45,6 @@ const Pager: React.FC<Props> = ({
           left: 0,
           height: '100%',
           width: '100%',
-          opacity: hiddenCorner ? 0 : 1,
           backgroundColor: 'transparent',
           transition: 'opacity 0.2s ease-in-out',
           //zIndex: 4,
@@ -57,27 +52,6 @@ const Pager: React.FC<Props> = ({
       >
         {children}
       </div>
-      <HTMLFlipBook
-        ref={book}
-        width={width}
-        height={height}
-        minWidth={width}
-        maxWidth={width}
-        maxHeight={height}
-        drawShadow={false}
-        usePortrait={true}
-        useMouseEvents={false}
-        flippingTime={500}
-        onFlip={onFlip}
-        onChangeState={(state: any) => {
-          if (state.data === 'flipping') {
-            setHiddenCorner(true);
-          }
-        }}
-      >
-        <div />
-        <div className={`page-preview page-preview_${previewColor}`} />
-      </HTMLFlipBook>
     </>
   );
 };

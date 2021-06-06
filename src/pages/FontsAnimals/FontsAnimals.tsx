@@ -28,6 +28,7 @@ const FontsAnimals: React.FC = () => {
         type={LessonType.animals}
         nextPage={urls.colors}
         previewColor="green"
+        curveClass="triangle-curve_animals"
       >
         <div styleName="content">
           <VerticalSlider>

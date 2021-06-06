@@ -38,6 +38,7 @@ const ColorMood: React.FC = () => {
         type={LessonType.colors}
         previewColor="blue"
         nextPage={urls.composition}
+        curveClass={`triangle-curve_colors_${pageColor}`}
       >
         <VerticalSlider
           onSlideChange={(swiper) => {

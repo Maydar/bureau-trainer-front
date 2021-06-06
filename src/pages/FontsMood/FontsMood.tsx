@@ -36,6 +36,7 @@ const FontsMood: React.FC = () => {
         type={LessonType.fonts}
         nextPage={urls.animals}
         previewColor="yellow"
+        curveClass="triangle-curve_fonts"
       >
         <VerticalSlider>
           <SwiperSlide>

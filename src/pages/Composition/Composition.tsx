@@ -40,6 +40,7 @@ const Composition: React.FC = () => {
         nextPage={urls.success}
         type={LessonType.composition}
         previewColor="black"
+        curveClass="triangle-curve_composition"
       >
         <div styleName="content">
           <VerticalSlider

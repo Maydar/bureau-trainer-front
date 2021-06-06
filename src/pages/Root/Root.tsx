@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import { observer } from 'mobx-react';
 
 import urls from 'config/urls';

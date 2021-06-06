@@ -1,0 +1,186 @@
+@import "mixins";
+@import "colors";
+
+.next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84px;
+  height: 84px;
+  transform: scale(1);
+  transition: width ease-in-out 1000ms, height ease-in-out 1000ms, transform ease-in-out 400ms;
+  transform-origin: top right;
+  cursor: pointer;
+
+  @include phone {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.next.hidden {
+  transform: scale(0);
+}
+
+.triangle,
+.cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.triangle-body {
+  &_fonts {
+    fill: #FF9CF5;
+  }
+
+  &_colors {
+    fill: #FFD600;
+  }
+
+  &_animals {
+    fill: #1F5DFE;
+  }
+
+  &_composition {
+    fill: #00F0FF;
+  }
+}
+
+.triangle-curve {
+  &_fonts {
+    fill: white;
+  }
+
+  &_colors {
+    &_white {
+      fill: $white;
+    }
+
+    &_darkred {
+      fill: $rage-darkred;
+    }
+
+    &_yellow {
+      fill: $rage-yellow;
+    }
+
+    &_green {
+      fill: $rage-green;
+    }
+
+    &_lightblue {
+      fill: $rage-lightblue;
+    }
+
+    &_darkgreen {
+      fill: $rage-darkgreen;
+    }
+
+    &_olive {
+      fill: $happiness-olive;
+    }
+
+    &_darkblue {
+      fill: $happiness-darkblue;
+    }
+
+    &_brown {
+      fill: $happiness-brown;
+    }
+
+    &_orange {
+      fill: $happiness-orange;
+    }
+
+    &_hackie {
+      fill: $happiness-darkgreen;
+    }
+
+    &_pink {
+      fill: $disgust-pink;
+    }
+
+    &_mudgreen {
+      fill:  $disgust-mudgreen;
+    }
+
+    &_grey {
+      fill: $disgust-grey;
+    }
+
+    &_sky {
+      fill: $disgust-sky;
+    }
+
+    &_blue {
+      fill: $disgust-blue;
+    }
+
+    &_fonk {
+      fill: $sadness-fonk;
+    }
+
+    &_darkbrown {
+      fill: $sadness-darkbrown;
+    }
+
+    &_lightyellow {
+      fill: $sadness-lightyellow;
+    }
+
+    &_lightgrey {
+      fill: $sadness-lightgrey;
+    }
+
+    &_acidorange {
+      fill: $sadness-acidorange;
+    }
+  }
+
+  &_composition {
+    fill: #48AFC6;
+  }
+
+
+  &_animals {
+    fill: #FFF27D;
+  }
+  @include animate(fill);
+}
+
+.cover {
+  overflow: hidden;
+}
+
+.cover-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  /*background-image: url('bg.png');*/
+  background-color: #FFF27D;
+  //background-color: #48afc6;
+  background-size: 100% auto;
+  background-position: center top;
+  /*filter: blur(3px);*/
+
+  &_fonts {
+    background-color: #FFF27D;
+  }
+
+  &_colors {
+    background-color: #48AFC6;
+  }
+
+  &_animals {
+    background-color: #00D254;
+  }
+
+  &_composition {
+    background-color: black;
+  }
+}
