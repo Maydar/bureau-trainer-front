@@ -8,6 +8,7 @@ import TG from "components/icons/ui/Social/TG";
 import Twitter from "components/icons/ui/Social/Twitter";
 import FB from "components/icons/ui/Social/FB";
 import VK from "components/icons/ui/Social/VK";
+import {ymReachGoal} from "utils/metrika";
 
 const Success: React.FC = () => {
   return (
@@ -26,26 +27,42 @@ const Success: React.FC = () => {
             <a
               target={'_blank'}
               href={`https://telegram.me/share/url?url=${SITE_LINK}`}
-              styleName={"share"}
+              styleName={'share'}
+              onClick={() => {
+                ymReachGoal('telegram-share');
+              }}
             >
-              <TG size="m" color={"colored"}/>
+              <TG size="m" color={'colored'} />
             </a>
             <a
               target={'_blank'}
               href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
-              styleName={"share"}
+              styleName={'share'}
+              onClick={() => {
+                ymReachGoal('tw-share');
+              }}
             >
-              <Twitter size="m" color={"colored"}/>
+              <Twitter size="m" color={'colored'} />
             </a>
             <a
               target={'_blank'}
               href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
-              styleName={"share"}
+              styleName={'share'}
+              onClick={() => {
+                ymReachGoal('fb-share');
+              }}
             >
-              <FB size="m" color={"colored"} />
+              <FB size="m" color={'colored'} />
             </a>
-            <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName={"share"}>
-              <VK size="m" color={"colored"} />
+            <a
+              target={'_blank'}
+              href={`https://vk.com/share.php?url=${SITE_LINK}`}
+              styleName={'share'}
+              onClick={() => {
+                ymReachGoal('vk-share');
+              }}
+            >
+              <VK size="m" color={'colored'} />
             </a>
           </div>
         </div>

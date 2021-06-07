@@ -5,11 +5,12 @@ import urls from 'config/urls';
 
 import './Greetings.modules.scss';
 import { shareText, SITE_LINK } from 'config/constants';
-import TG from "components/icons/ui/Social/TG/TG";
-import Twitter from "components/icons/ui/Social/Twitter";
-import FB from "components/icons/ui/Social/FB";
-import VK from "components/icons/ui/Social/VK";
-import FacebookBlack from "components/icons/ui/Social/FacebookBlack";
+import TG from 'components/icons/ui/Social/TG/TG';
+import Twitter from 'components/icons/ui/Social/Twitter';
+import FB from 'components/icons/ui/Social/FB';
+import VK from 'components/icons/ui/Social/VK';
+import FacebookBlack from 'components/icons/ui/Social/FacebookBlack';
+import {ymReachGoal} from "utils/metrika";
 
 const Greetings: React.FC = () => {
   return (
@@ -33,8 +34,8 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">Druk Wide</div>
                   <div styleName="section__item-text">
-                    Бёртон&nbsp;Хасебе • Юрий&nbsp;Остроменцкий • Илья&nbsp;Рудерман •
-                    Commercial Type
+                    Бёртон&nbsp;Хасебе • Юрий&nbsp;Остроменцкий •
+                    Илья&nbsp;Рудерман • Commercial Type
                   </div>
                 </div>
                 <div styleName="section__item">
@@ -46,7 +47,8 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">PILAR</div>
                   <div styleName="section__item-text">
-                    Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • CSTM&nbsp;Fonts
+                    Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий •
+                    CSTM&nbsp;Fonts
                   </div>
                 </div>
                 <div styleName="section__item">
@@ -64,7 +66,8 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">GIORGIO SANS</div>
                   <div styleName="section__item-text">
-                    Илья&nbsp;Рудерман • Винсент&nbsp;Чан • Кристиан&nbsp;Шварц • Commercial&nbsp;Type
+                    Илья&nbsp;Рудерман • Винсент&nbsp;Чан • Кристиан&nbsp;Шварц
+                    • Commercial&nbsp;Type
                   </div>
                 </div>
                 <div styleName="section__item">
@@ -72,38 +75,48 @@ const Greetings: React.FC = () => {
                     PARMIGIANO&nbsp;CAPTION&nbsp;PRO
                   </div>
                   <div styleName="section__item-text">
-                    Илья&nbsp;Рудерман • Рикардо&nbsp;Олоку • Джонатан&nbsp;Пьерини •
-                    Typotheque • Irina&nbsp;Smirnova&nbsp;(cyr) • Irene&nbsp;Vlachou&nbsp;(greek)
+                    Илья&nbsp;Рудерман • Рикардо&nbsp;Олоку •
+                    Джонатан&nbsp;Пьерини • Typotheque •
+                    Irina&nbsp;Smirnova&nbsp;(cyr) •
+                    Irene&nbsp;Vlachou&nbsp;(greek)
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">CSTM Xprmntl 01</div>
                   <div styleName="section__item-text">
-                    Илья&nbsp;Рудерман • CSTM&nbsp;Fonts • Юрий&nbsp;Остроменцкий
+                    Илья&nbsp;Рудерман • CSTM&nbsp;Fonts •
+                    Юрий&nbsp;Остроменцкий
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">NORMALIDAD EXTENDED</div>
                   <div styleName="section__item-text">
-                    CSTM&nbsp;Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
+                    CSTM&nbsp;Fonts • Илья&nbsp;Рудерман •
+                    Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
                   </div>
                 </div>
                 <div styleName="section__item">
-                  <div styleName="section__item-title">NORMALIDAD&nbsp;EXTENDED</div>
+                  <div styleName="section__item-title">
+                    NORMALIDAD&nbsp;EXTENDED
+                  </div>
                   <div styleName="section__item-text">
-                    CSTM&nbsp;Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
+                    CSTM&nbsp;Fonts • Илья&nbsp;Рудерман •
+                    Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">KARLOFF NEUTRAL</div>
                   <div styleName="section__item-text">
-                    Никола&nbsp;Джурек • Петер&nbsp;Билак • Петер&nbsp;ван&nbsp;Росмален •
-                    Typotheque • Maria&nbsp;Doreuli&nbsp;(cyr&greek)
+                    Никола&nbsp;Джурек • Петер&nbsp;Билак •
+                    Петер&nbsp;ван&nbsp;Росмален • Typotheque •
+                    Maria&nbsp;Doreuli&nbsp;(cyr&greek)
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">DISPLACE&nbsp;2.0</div>
-                  <div styleName="section__item-text">Денис&nbsp;Серебряков</div>
+                  <div styleName="section__item-text">
+                    Денис&nbsp;Серебряков
+                  </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">AMALTA</div>
@@ -126,7 +139,8 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">Kudryashev Display</div>
                   <div styleName="section__item-text">
-                    Ольга&nbsp;Умпелева • Изабелла&nbsp;Чаева • Александра&nbsp;Королькова
+                    Ольга&nbsp;Умпелева • Изабелла&nbsp;Чаева •
+                    Александра&nbsp;Королькова
                   </div>
                 </div>
                 <div styleName="section__item">
@@ -149,7 +163,9 @@ const Greetings: React.FC = () => {
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Fatum</div>
-                  <div styleName="section__item-text">Светлана&nbsp;Морозова</div>
+                  <div styleName="section__item-text">
+                    Светлана&nbsp;Морозова
+                  </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">Didona</div>
@@ -184,7 +200,9 @@ const Greetings: React.FC = () => {
                   >
                     Eldwin
                   </a>
-                  <div styleName="section__item-text">The&nbsp;Northern&nbsp;Block</div>
+                  <div styleName="section__item-text">
+                    The&nbsp;Northern&nbsp;Block
+                  </div>
                 </div>
                 <div styleName="section__item">
                   <a
@@ -207,65 +225,93 @@ const Greetings: React.FC = () => {
           </div>
         </div>
         <div styleName="shares shares_mob">
-          <div styleName="shares__text">
-            Поделиться упражнениями:
-          </div>
+          <div styleName="shares__text">Поделиться упражнениями:</div>
           <div styleName="shares__items">
             <a
               target={'_blank'}
               href={`https://telegram.me/share/url?url=${SITE_LINK}`}
               styleName="share"
+              onClick={() => {
+                ymReachGoal('telegram-share');
+              }}
             >
-              <TG size="mc" color={"colored"}/>
+              <TG size="mc" color={'colored'} />
             </a>
             <a
               target={'_blank'}
               href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
               styleName="share"
+              onClick={() => {
+                ymReachGoal('tw-share');
+              }}
             >
-              <Twitter size="mc" color={"colored"}/>
+              <Twitter size="mc" color={'colored'} />
             </a>
             <a
               target={'_blank'}
               href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
               styleName="share"
+              onClick={() => {
+                ymReachGoal('fb-share');
+              }}
             >
-              <FacebookBlack size="mc" color={"colored"}/>
+              <FacebookBlack size="mc" color={'colored'} />
             </a>
-            <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName="share">
-              <VK size="mc" color={"colored"}/>
+            <a
+              target={'_blank'}
+              href={`https://vk.com/share.php?url=${SITE_LINK}`}
+              styleName="share"
+              onClick={() => {
+                ymReachGoal('vk-share');
+              }}
+            >
+              <VK size="mc" color={'colored'} />
             </a>
           </div>
         </div>
       </div>
       <div styleName="shares shares_desktop">
-        <div styleName="shares__text">
-          Поделиться упражнениями:
-        </div>
+        <div styleName="shares__text">Поделиться упражнениями:</div>
         <div styleName="shares__items">
           <a
             target={'_blank'}
             href={`https://telegram.me/share/url?url=${SITE_LINK}`}
             styleName="share"
+            onClick={() => {
+              ymReachGoal('telegram-share');
+            }}
           >
-            <TG size="mc" color={"colored"}/>
+            <TG size="mc" color={'colored'} />
           </a>
           <a
             target={'_blank'}
             href={`http://twitter.com/share?url=${SITE_LINK}&text=${shareText}&image=${SITE_LINK}/static/train-image.png`}
             styleName="share"
+            onClick={() => {
+              ymReachGoal('tw-share');
+            }}
           >
-            <Twitter size="mc" color={"colored"}/>
+            <Twitter size="mc" color={'colored'} />
           </a>
           <a
             target={'_blank'}
             href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
             styleName="share"
+            onClick={() => {
+              ymReachGoal('fb-share');
+            }}
           >
-            <FacebookBlack size="mc" color={"colored"}/>
+            <FacebookBlack size="mc" color={'colored'} />
           </a>
-          <a target={'_blank'} href={`https://vk.com/share.php?url=${SITE_LINK}`} styleName="share">
-            <VK size="mc" color={"colored"}/>
+          <a
+            target={'_blank'}
+            href={`https://vk.com/share.php?url=${SITE_LINK}`}
+            styleName="share"
+            onClick={() => {
+              ymReachGoal('vk-share');
+            }}
+          >
+            <VK size="mc" color={'colored'} />
           </a>
         </div>
       </div>
