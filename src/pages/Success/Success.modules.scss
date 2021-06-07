@@ -25,10 +25,8 @@
 }
 
 .next-message {
-  min-height: 19.6vw;
-  min-width: 69.7vw;
-  //width: 70%;
-
+  min-height: 196px;
+  min-width: 697px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -36,31 +34,31 @@
 
   @include phone {
     //width: 100%;
-    min-width: 0;
+    min-width: 272px;
     max-width: 100%;
   }
 }
 
 .text {
   display: inline-block;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: $white;
   text-align: center;
-  margin-top: 5.2rem;
-  max-width: 35rem;
+  margin-top: 32px;
+  max-width: 350px;
 
   @include phone {
     max-width: 100%;
     font-size: 14px;
     line-height: 20px;
-    margin-top: 52px;
+    margin-top: 0;
   }
 
   &_bottom {
     position: absolute;
-    bottom: 7.2rem;
+    bottom: 72px;
 
     @media (max-height: 670px) {
       position: relative;
@@ -83,15 +81,13 @@
   width: 100%;
   flex-direction: row;
   justify-content: center;
-  margin-top: 2vw;
+  margin-top: 20px;
 
   @include phone {
     margin-top: 18px;
   }
 }
 .share {
-  //height: 5.6rem;
-  //width: 5.6rem;
 
   background-repeat: no-repeat;
   background-position: center center;
@@ -109,8 +105,6 @@
 
   @include phone {
     margin-left: 5px;
-    //height: 48px;
-    //width: 48px;
   }
 
   &:first-child {
@@ -131,6 +125,5 @@
 
   &_twitter {
     background-image: url("./img/twitter.svg");
-    //margin-left: 36px;
   }
 }

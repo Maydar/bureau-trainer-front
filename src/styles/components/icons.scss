@@ -66,7 +66,7 @@
         @include square(48px);
       }
 
-      @include tablet {
+      @include desktop-md-lg {
         height: 64px;
         width: 68px;
       }
