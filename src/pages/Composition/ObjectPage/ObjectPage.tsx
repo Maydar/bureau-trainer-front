@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 
-import {mapPositionText, Orientation, Position, Theme} from '../config';
-
+import { mapPositionText, Orientation, Position, Theme } from '../config';
 
 import cn from 'classnames';
 import { Direction, getTrackBackground, Range } from 'react-range';
-import {useLocal} from "utils/hooks";
-import CompositionStore from "pages/Composition/store";
+import { useLocal } from 'utils/hooks';
+import CompositionStore from 'pages/Composition/store';
+
+import Car from 'pages/Composition/ObjectPage/Car';
+import Rocket from 'pages/Composition/ObjectPage/Rocket';
+import Bomb from 'pages/Composition/ObjectPage/Bomb';
 
 import './ObjectPage.modules.scss';
 
@@ -17,8 +20,9 @@ type Props = {
   position?: number;
   objectHeight: number;
   objectWidth: number;
+  isNext: boolean;
+  isPrev: boolean;
 };
-
 
 const STEP = 1;
 const MIN = 0;
@@ -45,45 +49,53 @@ const ObjectPage: React.FC<Props> = ({
   theme,
   objectHeight,
   objectWidth,
+  isNext,
+  isPrev,
 }) => {
   const compositionStore = useLocal(() => new CompositionStore());
-  const position =
-    compositionStore.pages[theme].position;
-  const orientation =
-    compositionStore.pages[theme].orientation;
+  const position = compositionStore.pages[theme].position;
+  const orientation = compositionStore.pages[theme].orientation;
 
   const isVertical = orientation === Orientation.vertical;
   const positionPercentage = (position / 1000) * 100;
 
-  const text = getPositionText(
-    (position / 1000) * 100,
-    theme
-  );
+  const text = getPositionText((position / 1000) * 100, theme);
   const verticalStylePosition = {
     left: '50%',
-    top: `calc(${positionPercentage}% - ${(position / 1000) * objectHeight}px)`,
+    top: isNext
+      ? 0
+      : `calc(${positionPercentage}% - ${(position / 1000) * objectHeight}px)`,
     transform: 'translateX(-50%)',
   };
   const horizontalStylePosition = {
-    top: '50%',
+    top: isNext ? 0 : '50%',
     left: `calc(${positionPercentage}% - ${(position / 1000) * objectWidth}px)`,
-    transform: 'translateY(-50%)',
+    transform: isNext ? 'translateY(0%)' : 'translateY(-50%)',
   };
   // @ts-ignore
   return (
-    <div styleName="content">
+    <div styleName="content" className="composition-slide">
       <div styleName="content__wrapper">
         <div
-          styleName={`image image_${theme}`}
+          className="composition-slide__image"
+          styleName={cn(
+            `image image_${theme}`,
+            isNext ? 'image_blue' : 'image_white',
+            isPrev && 'image_hidden'
+          )}
           style={isVertical ? verticalStylePosition : horizontalStylePosition}
-        />
+        >
+          {theme === Theme.car && <Car />}
+          {theme === Theme.rocket && <Rocket />}
+          {theme === Theme.bomb && <Bomb />}
+        </div>
       </div>
       <div
         styleName={cn(
           `range-wrapper`,
           orientation === Orientation.vertical && 'range-wrapper_vertical'
         )}
-        className={"swiper-no-swiping"}
+        className={'swiper-no-swiping'}
       >
         <Range
           values={[position]}
@@ -96,10 +108,7 @@ const ObjectPage: React.FC<Props> = ({
               : Direction.Right
           }
           onChange={(values) => {
-            compositionStore.setPosition(
-              theme,
-              values[0]
-            );
+            compositionStore.setPosition(theme, values[0]);
           }}
           renderTrack={({ props, children }) => {
             return (
@@ -112,7 +121,7 @@ const ObjectPage: React.FC<Props> = ({
                     orientation === Orientation.vertical ? `100%` : `50px`,
                   width: orientation === Orientation.vertical ? `50px` : `100%`,
                   display: 'flex',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
                 }}
               >
                 <div
@@ -157,9 +166,7 @@ const ObjectPage: React.FC<Props> = ({
           )}
         />
       </div>
-      <p styleName="content__description">
-        {text}
-      </p>
+      <p styleName="content__description">{text}</p>
     </div>
   );
 };

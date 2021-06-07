@@ -17,6 +17,7 @@ type Props = {
   nextElClass?: string;
   beforeTransitionStart?: (swiper: any) => void;
   onSlideChange?: (swiper: any) => void;
+  loop?: boolean;
 };
 
 const switchNextClass = () => {
@@ -54,6 +55,7 @@ export const VerticalSlider: React.FC<Props> = ({
   className,
   onSlideChange: onSlideChangeTransitionStart,
   nextElClass,
+  loop
 }: Props) => {
   const onSlideChangeTransition = (swiper: any) => {
     slideChangeTransitionEnd(swiper);
@@ -70,8 +72,8 @@ export const VerticalSlider: React.FC<Props> = ({
       navigation={{
         nextEl: nextElClass,
       }}
-      //loop={true}
-      //loopedSlides={2}
+      loop={loop}
+      loopedSlides={loop ? 2 : null}
       speed={700}
       centeredSlides={true}
       keyboard={{
@@ -94,6 +96,7 @@ VerticalSlider.defaultProps = {
   beforeTransitionStart: () => {},
   onSlideChange: () => {},
   nextElClass: '.swiper-next-el-v',
+  loop: false
 };
 
 export default React.memo(VerticalSlider);

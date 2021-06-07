@@ -47,7 +47,6 @@ export const applyHorizontalShift = (themeClass: string) => {
     `.${themeClass} .swiper-slide-next .h-frame`
   );
 
-  console.log(themeClass, 'CALCULATING...');
   if (prevFrame) {
     const shift = calculateHorizontalShift(
       prevFrame,

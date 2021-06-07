@@ -44,6 +44,7 @@ const ColorMood: React.FC = () => {
           onSlideChange={(swiper) => {
             colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex]);
           }}
+          loop={true}
         >
           {colorMoodStore.pageOrder.map((theme) => (
             <SwiperSlide key={theme}>

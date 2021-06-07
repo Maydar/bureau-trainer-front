@@ -18,13 +18,13 @@ import CompositionStore from './store';
 
 import './Composition.modules.scss';
 
-const STEP = 1;
-const MIN = 0;
-const MAX = 1000;
+
 
 const Composition: React.FC = () => {
   const compositionStore = useLocal(() => new CompositionStore());
   const { isMobile } = useSize();
+
+
 
   return (
     <>
@@ -44,39 +44,54 @@ const Composition: React.FC = () => {
       >
         <div styleName="content">
           <VerticalSlider
-            className={'swiper-container-composition'}
             slideChangeTransitionEnd={(swiper) => {
+              const slideImage = document.querySelector('.composition-slide .composition-slide__image');
               compositionStore.setTheme(
                 compositionStore.order[swiper.realIndex]
               );
             }}
+            loop={true}
           >
             <SwiperSlide>
-              <ObjectPage
-                theme={Theme.car}
-                position={compositionStore.pages[Theme.car].position}
-                orientation={compositionStore.pages[Theme.car].orientation}
-                objectHeight={isMobile ? 121 : 163}
-                objectWidth={isMobile ? 270 : 364}
-              />
+              {({ isNext, isPrev }) => {
+                return <ObjectPage
+                  theme={Theme.car}
+                  position={compositionStore.pages[Theme.car].position}
+                  orientation={compositionStore.pages[Theme.car].orientation}
+                  objectHeight={isMobile ? 121 : 163}
+                  objectWidth={isMobile ? 270 : 364}
+                  isNext={isNext}
+                  isPrev={isPrev}
+                />
+              }}
             </SwiperSlide>
             <SwiperSlide>
-              <ObjectPage
-                theme={Theme.bomb}
-                position={compositionStore.pages[Theme.bomb].position}
-                orientation={compositionStore.pages[Theme.bomb].orientation}
-                objectHeight={isMobile ? 175 : 235}
-                objectWidth={isMobile ? 176 : 236}
-              />
+              {({ isNext, isPrev }) => {
+                return <ObjectPage
+                  theme={Theme.bomb}
+                  position={compositionStore.pages[Theme.bomb].position}
+                  orientation={compositionStore.pages[Theme.bomb].orientation}
+                  objectHeight={isMobile ? 175 : 235}
+                  objectWidth={isMobile ? 176 : 236}
+                  isNext={isNext}
+                  isPrev={isPrev}
+                />
+              }}
+
             </SwiperSlide>
             <SwiperSlide>
-              <ObjectPage
-                theme={Theme.rocket}
-                position={compositionStore.pages[Theme.rocket].position}
-                orientation={compositionStore.pages[Theme.rocket].orientation}
-                objectHeight={isMobile ? 200 : 270}
-                objectWidth={isMobile ? 100 : 150}
-              />
+              {({ isNext, isPrev }) => {
+                return <ObjectPage
+                  theme={Theme.rocket}
+                  position={compositionStore.pages[Theme.rocket].position}
+                  orientation={compositionStore.pages[Theme.rocket].orientation}
+                  objectHeight={isMobile ? 200 : 270}
+                  objectWidth={isMobile ? 100 : 150}
+                  isNext={isNext}
+                  isPrev={isPrev}
+                />
+              }}
+
             </SwiperSlide>
           </VerticalSlider>
         </div>
