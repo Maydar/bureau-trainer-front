@@ -27,7 +27,7 @@ const Greetings: React.FC = () => {
           <div styleName="column">
             <div styleName="section">
               <a href="https://type.today/" styleName="section__title">
-                Шрифты от TYPE TODAY
+                Шрифты от&nbsp;TYPE TODAY
               </a>
               <div styleName="section__items">
                 <div styleName="section__item">
@@ -46,13 +46,13 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">PILAR</div>
                   <div styleName="section__item-text">
-                    Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • CSTM Fonts
+                    Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • CSTM&nbsp;Fonts
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">AUSTIN</div>
                   <div styleName="section__item-text">
-                    Пол&nbsp;Барнс • Commercial Type • Илья&nbsp;Рудерман
+                    Пол&nbsp;Барнс • Commercial&nbsp;Type • Илья&nbsp;Рудерман
                   </div>
                 </div>
                 <div styleName="section__item">
@@ -64,13 +64,12 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">GIORGIO SANS</div>
                   <div styleName="section__item-text">
-                    Илья&nbsp;Рудерман • Винсент&nbsp;Чан • Кристиан&nbsp;Шварц • Commercial
-                    Type
+                    Илья&nbsp;Рудерман • Винсент&nbsp;Чан • Кристиан&nbsp;Шварц • Commercial&nbsp;Type
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">
-                    PARMIGIANO CAPTION PRO
+                    PARMIGIANO&nbsp;CAPTION&nbsp;PRO
                   </div>
                   <div styleName="section__item-text">
                     Илья&nbsp;Рудерман • Рикардо&nbsp;Олоку • Джонатан&nbsp;Пьерини •
@@ -80,19 +79,19 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">CSTM Xprmntl 01</div>
                   <div styleName="section__item-text">
-                    Илья&nbsp;Рудерман • CSTM Fonts • Юрий&nbsp;Остроменцкий
+                    Илья&nbsp;Рудерман • CSTM&nbsp;Fonts • Юрий&nbsp;Остроменцкий
                   </div>
                 </div>
                 <div styleName="section__item">
                   <div styleName="section__item-title">NORMALIDAD EXTENDED</div>
                   <div styleName="section__item-text">
-                    CSTM Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
+                    CSTM&nbsp;Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
                   </div>
                 </div>
                 <div styleName="section__item">
-                  <div styleName="section__item-title">NORMALIDAD EXTENDED</div>
+                  <div styleName="section__item-title">NORMALIDAD&nbsp;EXTENDED</div>
                   <div styleName="section__item-text">
-                    CSTM Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
+                    CSTM&nbsp;Fonts • Илья&nbsp;Рудерман • Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
                   </div>
                 </div>
                 <div styleName="section__item">
@@ -103,7 +102,7 @@ const Greetings: React.FC = () => {
                   </div>
                 </div>
                 <div styleName="section__item">
-                  <div styleName="section__item-title">DISPLACE 2.0</div>
+                  <div styleName="section__item-title">DISPLACE&nbsp;2.0</div>
                   <div styleName="section__item-text">Денис&nbsp;Серебряков</div>
                 </div>
                 <div styleName="section__item">
