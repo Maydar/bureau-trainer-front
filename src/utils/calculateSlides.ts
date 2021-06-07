@@ -4,8 +4,6 @@ const Breakpoint = {
   DESKTOP: 1024,
 };
 
-
-
 export const setPicWidth = (themeClass: string) => {
   const pics = document.querySelectorAll(`.${themeClass} .h-frame-pic`);
   const screenWidth = document.documentElement.clientWidth;
@@ -22,6 +20,7 @@ export const setPicWidth = (themeClass: string) => {
     });
   } else {
     pics.forEach((pic) => {
+
       // @ts-ignore
       pic.style.width = `${pic.dataset.widthMobile}px`;
     });
@@ -38,10 +37,17 @@ export const calculateHorizontalShift = (frame: any, pic: any) => {
 };
 
 export const applyHorizontalShift = (themeClass: string) => {
-  const prevFrame = document.querySelector(`.${themeClass} .swiper-slide-prev .h-frame`);
-  const currentFrame = document.querySelector(`.${themeClass} .swiper-slide-active .h-frame`);
-  const nextFrame = document.querySelector(`.${themeClass} .swiper-slide-next .h-frame`);
+  const prevFrame = document.querySelector(
+    `.${themeClass} .swiper-slide-prev .h-frame`
+  );
+  const currentFrame = document.querySelector(
+    `.${themeClass} .swiper-slide-active .h-frame`
+  );
+  const nextFrame = document.querySelector(
+    `.${themeClass} .swiper-slide-next .h-frame`
+  );
 
+  console.log(themeClass, 'CALCULATING...');
   if (prevFrame) {
     const shift = calculateHorizontalShift(
       prevFrame,
@@ -64,4 +70,6 @@ export const applyHorizontalShift = (themeClass: string) => {
     // @ts-ignore
     nextFrame.style.transform = `translateX(-${shift}px)`;
   }
+
+  console.log(themeClass, 'CALCULATING... DONE');
 };

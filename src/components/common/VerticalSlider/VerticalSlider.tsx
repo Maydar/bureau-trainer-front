@@ -70,6 +70,8 @@ export const VerticalSlider: React.FC<Props> = ({
       navigation={{
         nextEl: nextElClass,
       }}
+      //loop={true}
+      //loopedSlides={2}
       speed={700}
       centeredSlides={true}
       keyboard={{

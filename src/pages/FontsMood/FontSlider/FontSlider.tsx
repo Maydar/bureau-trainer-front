@@ -5,7 +5,7 @@ import cn from 'classnames';
 import Slide from '../Slide';
 import { Theme, mapToArrayWordData } from '../config';
 
-import { setPicWidth, applyHorizontalShift } from './utils';
+import { setPicWidth, applyHorizontalShift } from 'utils/calculateSlides';
 import './FontSlider.modules.scss';
 import HorizontalSlider from 'components/common/HorizontalSlider';
 
@@ -14,11 +14,10 @@ type Props = {
   isActive: boolean;
   isNext: boolean;
   isPrev: boolean;
-  currentIndex: number,
+  currentIndex: number;
   onChangeIndex: (idx: number) => void;
-  forwardRef?: any,
+  forwardRef?: any;
 };
-
 
 const FontSlider: React.FC<Props> = ({
   theme,
@@ -27,7 +26,7 @@ const FontSlider: React.FC<Props> = ({
   isPrev: isPrevSlider,
   currentIndex,
   onChangeIndex,
-  forwardRef
+  forwardRef,
 }: Props) => {
   const slides = React.useMemo(() => {
     return mapToArrayWordData[theme].map((wordData, index) => {
@@ -44,7 +43,7 @@ const FontSlider: React.FC<Props> = ({
                 slideStates={{
                   isActive,
                   isNext,
-                  isPrev
+                  isPrev,
                 }}
                 isPrevSlider={isPrevSlider}
                 isNextSlider={isNextSlider}
@@ -54,11 +53,17 @@ const FontSlider: React.FC<Props> = ({
           }}
         </SwiperSlide>
       );
-    })
+    });
   }, [isActiveSlider, currentIndex]);
 
   return (
-    <div styleName="content" className={cn(isActiveSlider && 'vertical-slide-active', isNextSlider && 'vertical-slide-next')}>
+    <div
+      styleName="content"
+      className={cn(
+        isActiveSlider && 'vertical-slide-active',
+        isNextSlider && 'vertical-slide-next'
+      )}
+    >
       <HorizontalSlider
         forwardRef={forwardRef}
         isActive={isActiveSlider}

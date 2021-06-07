@@ -23,8 +23,8 @@
     }
 
     @include phone {
-      font-size: 18px;
-      line-height: 25px;
+      font-size: 19px;
+      line-height: 23px;
     }
 
     @include animate(opacity);
@@ -41,6 +41,7 @@
 
     @include phone {
       @include body-sm-medium;
+      margin-top: 2px;
 
       max-width: 75%;
     }
