@@ -1,0 +1,15 @@
+.content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &_bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF27D;
+    //z-index: 1;
+  }
+}
