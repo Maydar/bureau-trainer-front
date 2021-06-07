@@ -106,7 +106,7 @@ $local-yellow: #FFD600;
   }
 
   &_mobile {
-    @include desktop {
+    @include tablet {
       display: none;
     }
   }
