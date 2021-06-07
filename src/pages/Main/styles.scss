@@ -342,10 +342,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 
-  &_fonts {
-    top: 0;
-  }
-
   @include phone {
     height: 10px;
     width: 10px;
