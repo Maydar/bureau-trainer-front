@@ -1,0 +1,66 @@
+.content {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+
+  &__font, &__color {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .content__font-default, .content__color-default {
+        opacity: 0;
+      }
+
+      .content__font-hovered, .content__color-hovered {
+        opacity: 1;
+      }
+    }
+
+    &-default {
+      opacity: 1;
+    }
+
+    &-hovered {
+      opacity: 0;
+    }
+  }
+
+  &__animals {
+    cursor: pointer;
+
+    .content__animals-bg {
+      fill: #FFCAC7;
+    }
+
+    .content__animals-image {
+      fill: #4048FF;
+    }
+
+    &:hover {
+      .content__animals-bg {
+        fill: #4048FF;
+      }
+
+      .content__animals-image {
+        fill: white;
+      }
+    }
+  }
+
+  &__composition {
+    cursor: pointer;
+
+    .content__composition-bg {
+      fill: #FF4F99;
+    }
+
+    &:hover {
+      .content__composition-bg {
+        fill: #9C4FFF;
+      }
+    }
+  }
+}
+
