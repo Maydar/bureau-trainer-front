@@ -21,30 +21,38 @@ type Props = {
 };
 
 const switchNextClass = () => {
-  const slideWrapperCurrent = document.querySelector(
-    `.swiper-container-v .swiper-slide-active .swiper-slide.swiper-slide-active .h-frame-wrapper`
+  const slideWrapperCurrent = document.querySelectorAll(
+    `.swiper-container-v .swiper-slide-active .swiper-slide.swiper-slide .h-frame-wrapper`
   );
-  const slidePicContainerCurrent = document.querySelector(
-    `.swiper-container-v .swiper-slide-active .swiper-slide.swiper-slide-active .h-frame-pic`
-  );
-
-  const slideWrapperNext = document.querySelector(
-    `.swiper-container-v .swiper-slide-next .swiper-slide.swiper-slide-active .h-frame-wrapper`
+  const slidePicContainerCurrent = document.querySelectorAll(
+    `.swiper-container-v .swiper-slide-active .swiper-slide.swiper-slide .h-frame-pic`
   );
 
+  const slideWrapperNext = document.querySelectorAll(
+    `.swiper-container-v .swiper-slide-next .swiper-slide.swiper-slide .h-frame-wrapper`
+  );
 
-  const slidePicContainerNext = document.querySelector(
-    `.swiper-container-v .swiper-slide-next .swiper-slide.swiper-slide-active .h-frame-pic`
+
+  const slidePicContainerNext = document.querySelectorAll(
+    `.swiper-container-v .swiper-slide-next .swiper-slide.swiper-slide .h-frame-pic`
   );
 
   if (slideWrapperNext && slidePicContainerNext) {
-    slideWrapperNext.classList.add('h-frame-wrapper-next-slide');
-    slidePicContainerNext.classList.add('h-frame-pic-next-slide');
+    slideWrapperNext.forEach(slide => {
+      slide.classList.add('h-frame-wrapper-next-slide')
+    });
+    slidePicContainerNext.forEach(slide => {
+      slide.classList.add('h-frame-pic-next-slide');
+    })
   }
 
   if (slideWrapperCurrent && slidePicContainerCurrent) {
-    slideWrapperCurrent.classList.remove('h-frame-wrapper-next-slide');
-    slidePicContainerCurrent.classList.remove('h-frame-pic-next-slide');
+    slideWrapperCurrent.forEach(slide => {
+      slide.classList.remove('h-frame-wrapper-next-slide');
+    });
+    slidePicContainerCurrent.forEach(slide => {
+      slide.classList.remove('h-frame-pic-next-slide');
+    });
   }
 };
 
