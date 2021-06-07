@@ -36,8 +36,8 @@ const Main: React.FC = () => {
         </p>
         <p className="page-copyright__school">
           <Link className={'bureau-school-link'} to={urls.greetings}>
-            Шрифты и&nbsp;иконки
-            <span className="bureau-school-link-icon" />
+            <span className="bureau-school-link-text">Шрифты и&nbsp;иконки</span>
+            <span className="bureau-school-link-icon bureau-school-link-icon_fonts" />
           </Link>
         </p>
       </div>

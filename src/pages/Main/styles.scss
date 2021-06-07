@@ -335,15 +335,21 @@ body {
   vertical-align: middle;
   width: 9px;
   height: 9px;
+  top: 1px;
   margin-left: 2px;
 
   background-image: url("./img/arrow-black.svg");
   background-repeat: no-repeat;
   background-size: contain;
 
+  &_fonts {
+    top: 0;
+  }
+
   @include phone {
     height: 10px;
     width: 10px;
+    top: 0;
   }
 }
 
