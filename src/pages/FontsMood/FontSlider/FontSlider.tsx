@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import cn from 'classnames';
 
 import Slide from '../Slide';
 import { Theme, mapToArrayWordData } from '../config';
@@ -57,7 +58,7 @@ const FontSlider: React.FC<Props> = ({
   }, [isActiveSlider, currentIndex]);
 
   return (
-    <div styleName="content">
+    <div styleName="content" className={cn(isActiveSlider && 'vertical-slide-active', isNextSlider && 'vertical-slide-next')}>
       <HorizontalSlider
         forwardRef={forwardRef}
         isActive={isActiveSlider}

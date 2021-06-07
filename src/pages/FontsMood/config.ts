@@ -45,7 +45,7 @@ export const mapWordData = {
       description: `Жирное начертание ассоциируется с${nbsp}гневом, но${nbsp}эту ассоциацию побеждает элегантность форм`,
       width: {
         default: 280,
-        mobile: 280,
+        mobile: 160,
         tablet: 280,
         desktop: 280
       }
@@ -56,7 +56,7 @@ export const mapWordData = {
       description: `Плотные темные буквы могли бы${nbsp}ассоциироваться с${nbsp}гневом, но${nbsp}из${hyphen}за${nbsp}забавных скруглений ощущение сходит на${nbsp}нет`,
       width: {
         default: 309,
-        mobile: 309,
+        mobile: 160,
         tablet: 309,
         desktop: 309
       }
@@ -67,7 +67,7 @@ export const mapWordData = {
       description: `Набранное супертонким шрифтом слово выглядит спокойным и${nbsp}расслабленным. Расслабься и${nbsp}ты,${nbsp}бро`,
       width: {
         default: 323,
-        mobile: 323,
+        mobile: 160,
         tablet: 323,
         desktop: 323
       }
@@ -79,7 +79,7 @@ export const mapWordData = {
       description: `Никто не${nbsp}злится. Как будто написанное от${nbsp}руки слово ассоциируется с${nbsp}пироженками, детскими книгами и${nbsp}праздником`,
       width: {
         default: 238,
-        mobile: 238,
+        mobile: 160,
         tablet: 238,
         desktop: 238
       }
@@ -90,7 +90,7 @@ export const mapWordData = {
       description: `О да!${nbsp}Слово выглядит массивным и${nbsp}насупленным, как${nbsp}очень разозлённый человек`,
       width: {
         default: 330,
-        mobile: 330,
+        mobile: 160,
         tablet: 330,
         desktop: 330
       }
@@ -102,7 +102,7 @@ export const mapWordData = {
       Какое слово мной ни${nbsp}набери, я${nbsp}ничего не${nbsp}буду выражать. Поэтому оставьте меня для${nbsp}Андроида, а${nbsp}для${nbsp}выразительности выберите что${hyphen}то${nbsp}другое`,
       width: {
         default: 203,
-        mobile: 203,
+        mobile: 160,
         tablet: 203,
         desktop: 203
       }
@@ -115,7 +115,7 @@ export const mapWordData = {
       description: `Привет! Это снова я,${nbsp}один из${nbsp}самых нейтральных и${nbsp}безликих шрифтов на${nbsp}свете`,
       width: {
         default: 203,
-        mobile: 203,
+        mobile: 250,
         tablet: 482,
         desktop: 482
       }
@@ -126,7 +126,7 @@ export const mapWordData = {
       description: `Не${hyphen}не,${nbsp}тут${nbsp}кто${hyphen}то${nbsp}наоборот переел`,
       width: {
         default: 203,
-        mobile: 203,
+        mobile: 220,
         tablet: 472,
         desktop: 472
       }
@@ -149,7 +149,7 @@ export const mapWordData = {
       description: `Толстенные буквы — это${nbsp}совсем не${nbsp}про${nbsp}худобу`,
       width: {
         default: 203,
-        mobile: 203,
+        mobile: 280,
         tablet: 703,
         desktop: 703
       }
@@ -171,7 +171,7 @@ export const mapWordData = {
       description: `Шрифт слишком правильный и${nbsp}обычный, чтобы${nbsp}напоминать анорексию. Тут у${nbsp}нас просто какой${hyphen}то средний в${nbsp}меру упитанный и${nbsp}аккуратно одетый человечек`,
       width: {
         default: 203,
-        mobile: 203,
+        mobile: 215,
         tablet: 528,
         desktop: 528
       }

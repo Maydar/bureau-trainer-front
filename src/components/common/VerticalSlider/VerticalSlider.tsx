@@ -19,14 +19,47 @@ type Props = {
   onSlideChange?: (swiper: any) => void;
 };
 
+const switchNextClass = () => {
+  const slideWrapperCurrent = document.querySelector(
+    `.swiper-container-v .swiper-slide-active .swiper-slide.swiper-slide-active .h-frame-wrapper`
+  );
+  const slidePicContainerCurrent = document.querySelector(
+    `.swiper-container-v .swiper-slide-active .swiper-slide.swiper-slide-active .h-frame-pic`
+  );
+
+  const slideWrapperNext = document.querySelector(
+    `.swiper-container-v .swiper-slide-next .swiper-slide.swiper-slide-active .h-frame-wrapper`
+  );
+
+
+  const slidePicContainerNext = document.querySelector(
+    `.swiper-container-v .swiper-slide-next .swiper-slide.swiper-slide-active .h-frame-pic`
+  );
+
+  if (slideWrapperNext && slidePicContainerNext) {
+    slideWrapperNext.classList.add('h-frame-wrapper-next-slide');
+    slidePicContainerNext.classList.add('h-frame-pic-next-slide');
+  }
+
+  if (slideWrapperCurrent && slidePicContainerCurrent) {
+    slideWrapperCurrent.classList.remove('h-frame-wrapper-next-slide');
+    slidePicContainerCurrent.classList.remove('h-frame-pic-next-slide');
+  }
+};
+
 export const VerticalSlider: React.FC<Props> = ({
   slideChangeTransitionEnd,
   children,
   beforeTransitionStart,
   className,
-  onSlideChange,
+  onSlideChange: onSlideChangeTransitionStart,
   nextElClass,
 }: Props) => {
+  const onSlideChangeTransition = (swiper: any) => {
+    slideChangeTransitionEnd(swiper);
+    switchNextClass();
+  };
+
   return (
     <Swiper
       direction={'vertical'}
@@ -41,11 +74,12 @@ export const VerticalSlider: React.FC<Props> = ({
       centeredSlides={true}
       keyboard={{
         enabled: true,
-        onlyInViewport: true
+        onlyInViewport: true,
       }}
       className={cn('swiper-container-v', className)}
-      onSlideChangeTransitionEnd={slideChangeTransitionEnd}
-      onSlideChangeTransitionStart={onSlideChange}
+      onSlideChangeTransitionEnd={onSlideChangeTransition}
+      onSlideChangeTransitionStart={onSlideChangeTransitionStart}
+      onAfterInit={switchNextClass}
       onBeforeTransitionStart={beforeTransitionStart}
     >
       {children}

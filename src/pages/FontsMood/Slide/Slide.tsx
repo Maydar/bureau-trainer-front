@@ -1,7 +1,7 @@
 import * as React from 'react';
 import cn from 'classnames';
 
-import {AnorexyFonts, mapWordData, RageFonts, RumbleFonts, Theme} from '../config';
+import { Theme } from '../config';
 
 import './Slide.modules.scss';
 
@@ -21,11 +21,11 @@ type Props = {
   name: string;
   text: string;
   width: {
-    default: number,
-    mobile: number,
-    tablet: number,
-    desktop: number
-  }
+    default: number;
+    mobile: number;
+    tablet: number;
+    desktop: number;
+  };
 };
 
 const Slide: React.FC<Props> = ({
@@ -37,19 +37,11 @@ const Slide: React.FC<Props> = ({
   isPrevSlider,
   name,
   text,
-  width
+  width,
 }: Props) => {
-
   return (
-    <div
-      className="h-frame"
-    >
-      <div
-        className="h-frame-wrapper"
-        styleName={cn(
-          'slide__content',
-        )}
-      >
+    <div className={cn('h-frame', slideStates.isActive && 'h-frame_active')}>
+      <div className="h-frame-wrapper" styleName={cn('slide__content')}>
         <div styleName={cn('slide__image')}>
           <div
             className={'h-frame-pic'}
@@ -58,23 +50,11 @@ const Slide: React.FC<Props> = ({
               `slide__image_${theme}_${font}`
             )}
             style={{
-              width: width.default
+              width: width.default,
             }}
             data-width-mobile={width.mobile}
             data-width-tablet={width.tablet}
             data-width-desktop={width.desktop}
-            // styleName={cn(
-            //   `slide__image_${theme}`,
-            //   `slide__image_${theme}_${font}`,
-            //   isNextSlider &&
-            //     horizontal &&
-            //     slideStates.isNext &&
-            //     `slide__hidden`,
-            //   isNextSlider &&
-            //     horizontal &&
-            //     slideStates.isPrev &&
-            //     `slide__hidden`
-            // )}
           />
         </div>
         <div

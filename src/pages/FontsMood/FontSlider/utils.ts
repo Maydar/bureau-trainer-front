@@ -29,7 +29,7 @@ export const setPicWidth = (themeClass: string) => {
 };
 
 export const calculateHorizontalShift = (frame: any, pic: any) => {
-  const GAP = 30;
+  const GAP = 20;
 
   const frameWidth = frame.clientWidth;
   const framePicWidth = pic.clientWidth;

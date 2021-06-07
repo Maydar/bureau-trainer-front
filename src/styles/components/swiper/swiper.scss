@@ -9,6 +9,22 @@
   .swiper-slide {
     height: calc(100% - 60px);
   }
+
+  .swiper-slide-next {
+    .swiper-slide {
+      .h-frame-wrapper-next-slide {
+        top: 0;
+      }
+
+      .h-frame-pic-next-slide {
+        background-position: center top;
+      }
+    }
+
+    .swiper-slide-next, .swiper-slide-prev {
+      opacity: 0;
+    }
+  }
 }
 
 .swiper-container-h {
@@ -34,11 +50,13 @@
 }
 
 .h-frame-wrapper {
+  transition: top .5s;
   /* Здесь можно задать мин. и макс. ширину блоку с содержимым */
 }
 
 .h-frame-pic {
   display: block;
+  transition: background-position .5s;
 }
 
 .h-frame-content {
@@ -63,3 +81,6 @@
   z-index: 1;
 }
 
+.swiper-slide {
+  @include animate(opacity);
+}
