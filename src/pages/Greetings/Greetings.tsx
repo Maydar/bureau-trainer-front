@@ -171,14 +171,6 @@ const Greetings: React.FC = () => {
                   <div styleName="section__item-title">Didona</div>
                   <div styleName="section__item-text">Владимир&nbsp;Ефимов</div>
                 </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Ambidexter</div>
-                  <div styleName="section__item-text">Егор&nbsp;Белозёров</div>
-                </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Harry plotter</div>
-                  <div styleName="section__item-text">Захар&nbsp;Ящин</div>
-                </div>
               </div>
             </div>
             <div styleName="section">
@@ -214,6 +206,14 @@ const Greetings: React.FC = () => {
                   <div styleName="section__item-text">
                     Katerina&nbsp;Korolevtseva
                   </div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Ambidexter</div>
+                  <div styleName="section__item-text">Егор&nbsp;Белозёров</div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Harry plotter</div>
+                  <div styleName="section__item-text">Захар&nbsp;Ящин</div>
                 </div>
               </div>
             </div>
