@@ -40,7 +40,11 @@ const Slide: React.FC<Props> = ({
   width,
 }: Props) => {
   return (
-    <div className={cn('h-frame', slideStates.isActive && 'h-frame_active')}>
+    <div className={cn(
+      'h-frame',
+      slideStates.isActive && 'h-frame_active',
+      isNextSlider && !slideStates.isActive && 'slide__hidden'
+    )}>
       <div className="h-frame-wrapper" styleName='slide__content'>
         <div styleName='slide__image'>
           <div

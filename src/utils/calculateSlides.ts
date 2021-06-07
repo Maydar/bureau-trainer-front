@@ -69,6 +69,4 @@ export const applyHorizontalShift = (themeClass: string) => {
     // @ts-ignore
     nextFrame.style.transform = `translateX(-${shift}px)`;
   }
-
-  console.log(themeClass, 'CALCULATING... DONE');
 };

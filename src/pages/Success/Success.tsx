@@ -2,13 +2,14 @@ import * as React from 'react';
 
 import TaskDescription from 'components/common/TaskDescription';
 
+import { shareText, SITE_LINK } from 'config/constants';
+import TG from 'components/icons/ui/Social/TG';
+import Twitter from 'components/icons/ui/Social/Twitter';
+import FB from 'components/icons/ui/Social/FB';
+import VK from 'components/icons/ui/Social/VK';
+import { ymReachGoal } from 'utils/metrika';
+
 import './Success.modules.scss';
-import {shareText, SITE_LINK} from 'config/constants';
-import TG from "components/icons/ui/Social/TG";
-import Twitter from "components/icons/ui/Social/Twitter";
-import FB from "components/icons/ui/Social/FB";
-import VK from "components/icons/ui/Social/VK";
-import {ymReachGoal} from "utils/metrika";
 
 const Success: React.FC = () => {
   return (

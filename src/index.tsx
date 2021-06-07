@@ -9,7 +9,6 @@ import stores from 'store';
 import App from './App';
 
 import './styles/styles.scss';
-import { markup } from "utils/markup";
 
 ReactDOM.render(
   <Provider {...stores}>

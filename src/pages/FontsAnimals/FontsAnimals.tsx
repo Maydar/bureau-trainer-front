@@ -15,12 +15,6 @@ import './FontsAnimals.modules.scss';
 const FontsAnimals: React.FC = () => {
   return (
     <>
-      <div className="task-description">
-        <TaskDescription
-          title={'Упражнение: животные'}
-          text={`Выберите шрифт, который подходит животному`}
-        />
-      </div>
       <Pager
         type={LessonType.animals}
         nextPage={urls.colors}
