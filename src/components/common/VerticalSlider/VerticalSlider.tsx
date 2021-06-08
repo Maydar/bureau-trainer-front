@@ -83,7 +83,6 @@ export const VerticalSlider: React.FC<Props> = ({
       loop={loop}
       loopedSlides={loop ? 2 : null}
       speed={700}
-      allowTouchMove={false}
       centeredSlides={true}
       keyboard={{
         enabled: true,
