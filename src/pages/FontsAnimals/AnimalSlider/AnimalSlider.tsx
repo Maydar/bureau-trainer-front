@@ -55,24 +55,18 @@ const AnimalSlider: React.FC<Props> = ({
         }}
         onSlideChangeTransitionStart={(swiper) => {
           applyHorizontalShift(theme, !isNeedAnimation);
-
+          setNeedAnimation(true);
+        }}
+        onSlideChangeTransitionEnd={(swiper) => {
           if (swiper.isBeginning) {
-            console.log('BEGIN');
-            setTimeout(() => {
-              setNeedAnimation(false);
-              swiper.slideToLoop(theme === Theme.tarakan ? 4 : 5, 0);
-            }, 800);
+            setNeedAnimation(false);
+            swiper.slideToLoop(theme === Theme.tarakan ? 4 : 5, 0);
           }
 
           if (swiper.isEnd) {
-            setTimeout(() => {
-              setNeedAnimation(false);
-              swiper.slideToLoop(0, 0);
-            }, 800);
+            setNeedAnimation(false);
+            swiper.slideToLoop(0, 0);
           }
-        }}
-        onSlideChangeTransitionEnd={(swiper) => {
-          setNeedAnimation(true);
         }}
         className={theme}
       >

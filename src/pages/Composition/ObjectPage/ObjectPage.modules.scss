@@ -129,3 +129,20 @@ $transition-animating: top 0.7s ease-in-out, left 0.7s ease-in-out,
 .hidden {
   opacity: 0;
 }
+
+.thumb {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: #48AFC6;
+  border-style: solid;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_first-render {
+    transform: translate(117.5px, -17.5px);
+  }
+}

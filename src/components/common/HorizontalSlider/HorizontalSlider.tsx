@@ -45,10 +45,15 @@ export const HorizontalSlider: React.FC<Props> = ({
         )}
         slidesPerView={1}
         speed={700}
-        //grabCursor={true}
-        followFinger={isMobile}
+        mousewheel={{
+          sensitivity: 0.1,
+          thresholdDelta: 10,
+          forceToAxis: true
+        }}
+        grabCursor={true}
+        followFinger={true}
         preventInteractionOnTransition={true}
-        allowTouchMove={isMobile}
+        allowTouchMove={true}
         centeredSlides={true}
         loop={true}
         loopedSlides={1}

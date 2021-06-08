@@ -75,6 +75,8 @@ export const VerticalSlider: React.FC<Props> = ({
       direction={'vertical'}
       mousewheel={{
         sensitivity: 0.1,
+        thresholdDelta: 10,
+        forceToAxis: true
       }}
       slidesPerView={'auto'}
       navigation={{

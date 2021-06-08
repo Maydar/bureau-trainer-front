@@ -72,7 +72,7 @@ const ObjectPage: React.FC<Props> = ({
     left: `calc(${positionPercentage}% - ${(position / 1000) * objectWidth}px)`,
     transform: isNext ? 'translateY(0%)' : 'translateY(-50%)',
   };
-  // @ts-ignore
+
   return (
     <div styleName="content" className="composition-slide">
       <div styleName="content__wrapper">
@@ -127,19 +127,19 @@ const ObjectPage: React.FC<Props> = ({
                 <div
                   ref={props.ref}
                   style={{
+                    position: 'relative',
+                    alignSelf: 'center',
+                    borderRadius: '1px',
                     height:
                       orientation === Orientation.vertical ? `100%` : `1px`,
                     width:
                       orientation === Orientation.vertical ? `1px` : `100%`,
-                    borderRadius: '1px',
                     background: getTrackBackground({
-                      values: [position], //objectPageStore.currentPosition],
+                      values: [position],
                       colors: ['#fff', '#fff'],
                       min: MIN,
                       max: MAX,
                     }),
-                    position: 'relative',
-                    alignSelf: 'center',
                   }}
                 >
                   {children}
@@ -147,28 +147,18 @@ const ObjectPage: React.FC<Props> = ({
               </div>
             );
           }}
-          renderThumb={({ props, isDragged }) => (
-            <div
+          renderThumb={({ props}) => {
+            return <div
               {...props}
-              style={{
-                ...props.style,
-                height: '35px',
-                width: '35px',
-                borderRadius: '50%',
-                borderWidth: '2px',
-                borderColor: '#48AFC6',
-                borderStyle: 'solid',
-                backgroundColor: '#FFF',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                transform: 'translate(117.5px, -17.5px)'
-              }}
+              styleName="thumb"
+              style={{ ...props.style }}
             />
-          )}
+          }}
         />
       </div>
-      <p styleName={cn('content__description', (isPrev || isNext) && 'hidden')}>{text}</p>
+      <p styleName={cn('content__description', (isPrev || isNext) && 'hidden')}>
+        {text}
+      </p>
     </div>
   );
 };

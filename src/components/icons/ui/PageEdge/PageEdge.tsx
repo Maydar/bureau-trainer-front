@@ -1,15 +1,15 @@
 import * as React from 'react';
 import cn from 'classnames';
 
-import {LessonType} from 'config/constants';
-import {useSize} from 'utils/hooks';
+import { LessonType } from 'config/constants';
+import { useSize } from 'utils/hooks';
 import urls from 'config/urls';
 
-import Animals from "pages/FontsAnimals/Content";
-import Fonts from "pages/FontsMood/Content";
-import Composition from "pages/Composition/Content";
-import Success from "pages/Success";
-import Colors from "pages/ColorMood/Content";
+import Animals from 'pages/FontsAnimals/Content';
+import Fonts from 'pages/FontsMood/Content';
+import Composition from 'pages/Composition/Content';
+import Success from 'pages/Success';
+import Colors from 'pages/ColorMood/Content';
 
 import './PageEdge.modules.scss';
 
@@ -23,13 +23,17 @@ type Props = {
   nextPage: string;
 };
 
-const PageEdge: React.FC<Props> = ({onClick, type, curveClass, nextPage}: Props) => {
+const PageEdge: React.FC<Props> = ({
+  onClick,
+  type,
+  curveClass,
+  nextPage,
+}: Props) => {
   const cornerRef = React.useRef();
-  const [hidden, setHidden] = React.useState(true);
-  const {isMobile} = useSize();
+  const { isMobile } = useSize();
 
   const turnPage = React.useCallback((e) => {
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('overflow-hidden');
 
     // @ts-ignore
     cornerRef.current.style.width = isMobile ? '350vw' : '200vw';
@@ -40,32 +44,18 @@ const PageEdge: React.FC<Props> = ({onClick, type, curveClass, nextPage}: Props)
     onClick();
   }, []);
 
-  React.useEffect(() => {
-    let showTimer = setTimeout(() => setHidden(false), 500);
-    return () => {
-      clearTimeout(showTimer);
-    };
-  }, []);
-
   return (
-    <div className={cn('next', hidden && 'hidden')} ref={cornerRef}>
+    <div className={cn('next')} ref={cornerRef}>
       <div className="cover">
-        <div
-          style={{
-            pointerEvents: 'none',
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
-            zIndex: -1,
-          }}
-        >
-          {nextPage === urls.fonts && <Fonts/>}
-          {nextPage === urls.animals && <Animals/>}
-          {nextPage === urls.colors && <Colors/>}
+        <div styleName="cover__inner" style={{
+          height: window.innerHeight,
+          width: window.innerWidth,
+        }}>
+          {nextPage === urls.fonts && <Fonts />}
+          {nextPage === urls.animals && <Animals />}
+          {nextPage === urls.colors && <Colors />}
           {nextPage === urls.composition && <Composition/>}
-          {nextPage === urls.success && <Success/>}
+          {nextPage === urls.success && <Success />}
         </div>
       </div>
       <svg className="triangle" viewBox="0 0 10 10" onClick={turnPage}>

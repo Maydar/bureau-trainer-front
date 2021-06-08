@@ -27,6 +27,7 @@ const Pager: React.FC<Props> = ({
   const turnPage = () => {
     setHidden(true);
     setTimeout(() => {
+      document.body.classList.remove('overflow-hidden');
       history.push(nextPage);
     }, 1000);
   };
