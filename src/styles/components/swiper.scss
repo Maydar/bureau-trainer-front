@@ -108,10 +108,18 @@
   left: 0;
   //background: red;
 
+  @include phone {
+    pointer-events: none;
+  }
+
 }
 
 .swiper-next-el {
   top: 0;
   right: 0;
   //background: green;
+
+  @include phone {
+    pointer-events: none;
+  }
 }
