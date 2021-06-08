@@ -16,6 +16,24 @@
     width: 64px;
     height: 64px;
   }
+
+  @include hover {
+    .triangle-body_fonts {
+      fill: #FE2EE9;
+    }
+
+    .triangle-body_colors {
+      fill: #80FF00;
+    }
+
+    .triangle-body_animals {
+      fill: #2400FF;
+    }
+
+    .triangle-body_composition {
+      fill: #0094FF;
+    }
+  }
 }
 
 .next.hidden {
@@ -47,6 +65,8 @@
   &_composition {
     fill: #00F0FF;
   }
+
+  @include animate(fill);
 }
 
 .triangle-curve {

@@ -30,7 +30,7 @@ const Success: React.FC = () => {
               href={`https://telegram.me/share/url?url=${SITE_LINK}`}
               styleName={'share'}
               onClick={() => {
-                ymReachGoal('telegram-share');
+                ymReachGoal('tg-share');
               }}
             >
               <TG size="m" color={'colored'} />
