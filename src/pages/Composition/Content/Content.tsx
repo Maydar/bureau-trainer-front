@@ -28,9 +28,6 @@ const Content: React.FC = () => {
       <div styleName="content">
         <VerticalSlider
           slideChangeTransitionEnd={(swiper) => {
-            const slideImage = document.querySelector(
-              '.composition-slide .composition-slide__image'
-            );
             compositionStore.setTheme(compositionStore.order[swiper.realIndex]);
           }}
           loop={true}
