@@ -1,14 +1,15 @@
 import * as React from 'react';
-import { observer } from 'mobx-react';
+import {useState} from 'react';
+import {observer} from 'mobx-react';
 import cn from 'classnames';
-import { SwiperSlide } from 'swiper/react';
+import {SwiperSlide} from 'swiper/react';
 
-import { useLocal } from 'utils/hooks';
+import {useLocal} from 'utils/hooks';
 import HorizontalSlider from 'components/common/HorizontalSlider';
-import { applyHorizontalShift, setPicWidth } from 'utils/calculateSlides';
+import {applyHorizontalShift, setPicWidth} from 'utils/calculateSlides';
 
 import Slide from '../Slide';
-import { Theme, mapToArrayWordData } from '../config';
+import {mapToArrayWordData, Theme} from '../config';
 
 import './AnimalSlider.modules.scss';
 
@@ -28,6 +29,8 @@ const AnimalSlider: React.FC<Props> = ({
   isNext: isNextSlider,
 }: Props) => {
   const fontsAnimalsStore = useLocal(() => new FontsAnimalStore());
+  const [isNeedAnimation, setNeedAnimation] = useState(true);
+
   return (
     <div
       styleName={cn(
@@ -50,14 +53,32 @@ const AnimalSlider: React.FC<Props> = ({
           setPicWidth(theme);
           applyHorizontalShift(theme);
         }}
-        onSlideChangeTransitionStart={() => {
-          applyHorizontalShift(theme);
+        onSlideChangeTransitionStart={(swiper) => {
+          applyHorizontalShift(theme, !isNeedAnimation);
+
+          if (swiper.isBeginning) {
+            console.log('BEGIN');
+            setTimeout(() => {
+              setNeedAnimation(false);
+              swiper.slideToLoop(theme === Theme.tarakan ? 4 : 5, 0);
+            }, 800);
+          }
+
+          if (swiper.isEnd) {
+            setTimeout(() => {
+              setNeedAnimation(false);
+              swiper.slideToLoop(0, 0);
+            }, 800);
+          }
+        }}
+        onSlideChangeTransitionEnd={(swiper) => {
+          setNeedAnimation(true);
         }}
         className={theme}
       >
-        {mapToArrayWordData[theme].map((wordData) => {
+        {mapToArrayWordData[theme].map((wordData, index) => {
           return (
-            <SwiperSlide key={wordData.key}>
+            <SwiperSlide key={`${wordData.key}_${index}`}>
               {({ isActive, isNext, isPrev }) => (
                 <Slide
                   key={wordData.key}

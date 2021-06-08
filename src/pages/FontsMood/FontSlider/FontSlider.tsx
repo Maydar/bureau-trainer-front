@@ -8,6 +8,7 @@ import { Theme, mapToArrayWordData } from '../config';
 import { setPicWidth, applyHorizontalShift } from 'utils/calculateSlides';
 import './FontSlider.modules.scss';
 import HorizontalSlider from 'components/common/HorizontalSlider';
+import {useState} from "react";
 
 type Props = {
   theme: Theme;
@@ -28,10 +29,12 @@ const FontSlider: React.FC<Props> = ({
   onChangeIndex,
   forwardRef,
 }: Props) => {
+  const [isNeedAnimation, setNeedAnimation] = useState(true);
+
   const slides = React.useMemo(() => {
     return mapToArrayWordData[theme].map((wordData, index) => {
       return (
-        <SwiperSlide key={wordData.key}>
+        <SwiperSlide key={`${wordData.key}_${index}`}>
           {({ isActive, isNext, isPrev }) => {
             return (
               <Slide
@@ -54,7 +57,7 @@ const FontSlider: React.FC<Props> = ({
         </SwiperSlide>
       );
     });
-  }, [isActiveSlider, currentIndex]);
+  }, [isActiveSlider, isNextSlider, currentIndex]);
 
   return (
     <div
@@ -80,8 +83,25 @@ const FontSlider: React.FC<Props> = ({
           setPicWidth(theme);
           applyHorizontalShift(theme);
         }}
-        onSlideChangeTransitionStart={() => {
-          applyHorizontalShift(theme);
+        onSlideChangeTransitionStart={(swiper) => {
+          applyHorizontalShift(theme, !isNeedAnimation);
+
+          if (swiper.isBeginning) {
+            setTimeout(() => {
+              setNeedAnimation(false);
+              swiper.slideToLoop(5, 0);
+            }, 710);
+          }
+
+          if (swiper.isEnd) {
+            setTimeout(() => {
+              setNeedAnimation(false);
+              swiper.slideToLoop(0, 0);
+            }, 710);
+          }
+        }}
+        onSlideChangeTransitionEnd={(swiper) => {
+          setNeedAnimation(true);
         }}
         className={theme}
       >

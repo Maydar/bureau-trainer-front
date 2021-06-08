@@ -31,18 +31,6 @@
       top: 45%;
     }
 
-    &_horizontal {
-      &_next {
-        left: 0;
-        transform: translateX(0) translateZ(0);
-       // background: red;
-      }
-      &_prev {
-        left: calc(100%);
-       // background: blue;
-        transform: translateX(-100%) translateZ(0);
-      }
-    }
 
     &_next-active {
       transform: translate(-50%, calc(-40vh + 30px));
@@ -71,7 +59,7 @@
     //transition: left $time ease-in-out, transform .7s ease-in-out, opacity $time ease-in-out;
   }
 
-  &__hidden {
+  &_hidden {
     opacity: 0;
   }
 

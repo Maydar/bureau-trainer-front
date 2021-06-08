@@ -365,7 +365,6 @@ export const mapToArrayWordData = {
     mapWordData[Theme.tarakan][TarakanFonts.displace],
     mapWordData[Theme.tarakan][TarakanFonts.norbert],
     mapWordData[Theme.tarakan][TarakanFonts.vast],
-   // mapWordData[Theme.tarakan][TarakanFonts.cstm],
   ],
   [Theme.elephant]: [
     mapWordData[Theme.elephant][ElephantFonts.roboto],

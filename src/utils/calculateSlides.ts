@@ -4,6 +4,8 @@ const Breakpoint = {
   DESKTOP: 1024,
 };
 
+const transitionClass = 'h-frame_without-transition';
+
 export const setPicWidth = (themeClass: string) => {
   const pics = document.querySelectorAll(`.${themeClass} .h-frame-pic`);
   const screenWidth = document.documentElement.clientWidth;
@@ -36,7 +38,7 @@ export const calculateHorizontalShift = (frame: any, pic: any) => {
   return frameWidth / 2 - framePicWidth / 2 + GAP;
 };
 
-export const applyHorizontalShift = (themeClass: string) => {
+export const applyHorizontalShift = (themeClass: string, withoutTransition: boolean = false) => {
   const prevFrame = document.querySelector(
     `.${themeClass} .swiper-slide-prev .h-frame`
   );
@@ -52,11 +54,23 @@ export const applyHorizontalShift = (themeClass: string) => {
       prevFrame,
       prevFrame.querySelector('.h-frame-pic')
     );
+
+    if (withoutTransition) {
+      prevFrame.classList.add(transitionClass)
+    } else {
+      prevFrame.classList.remove(transitionClass);
+    }
+
     // @ts-ignore
     prevFrame.style.transform = `translateX(${shift}px)`;
   }
 
   if (currentFrame) {
+    if (withoutTransition) {
+      currentFrame.classList.add(transitionClass)
+    } else {
+      currentFrame.classList.remove(transitionClass);
+    }
     // @ts-ignore
     currentFrame.style.transform = `translateX(0px)`;
   }
@@ -66,6 +80,13 @@ export const applyHorizontalShift = (themeClass: string) => {
       nextFrame,
       nextFrame.querySelector('.h-frame-pic')
     );
+
+    if (withoutTransition) {
+      nextFrame.classList.add(transitionClass)
+    } else {
+      nextFrame.classList.remove(transitionClass);
+    }
+
     // @ts-ignore
     nextFrame.style.transform = `translateX(-${shift}px)`;
   }
