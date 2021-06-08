@@ -92,14 +92,14 @@ const FontSlider: React.FC<Props> = ({
             setTimeout(() => {
               setNeedAnimation(false);
               swiper.slideToLoop(5, 0);
-            }, 710);
+            }, 800);
           }
 
           if (swiper.isEnd) {
             setTimeout(() => {
               setNeedAnimation(false);
               swiper.slideToLoop(0, 0);
-            }, 710);
+            }, 800);
           }
         }}
         onSlideChangeTransitionEnd={(swiper) => {

@@ -30,7 +30,9 @@ export const setPicWidth = (themeClass: string) => {
 };
 
 export const calculateHorizontalShift = (frame: any, pic: any) => {
-  const GAP = 20;
+  const screenWidth = document.documentElement.clientWidth;
+  const GAP = screenWidth > Breakpoint.TABLET ? 50 : 20;
+
 
   const frameWidth = frame.clientWidth;
   const framePicWidth = pic.clientWidth;
