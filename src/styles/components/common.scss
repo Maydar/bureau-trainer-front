@@ -99,3 +99,10 @@ transform 0.7s ease, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: $transition-animating;
 }
 
+.vertical-slide {
+  @include animate(opacity);
+}
+
+.vertical-slide-prev {
+  opacity: 0;
+}

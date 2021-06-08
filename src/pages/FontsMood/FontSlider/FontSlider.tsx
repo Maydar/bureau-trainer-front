@@ -63,8 +63,10 @@ const FontSlider: React.FC<Props> = ({
     <div
       styleName="content"
       className={cn(
+        'vertical-slide',
         isActiveSlider && 'vertical-slide-active',
-        isNextSlider && 'vertical-slide-next'
+        isNextSlider && 'vertical-slide-next',
+        isPrevSlider && 'vertical-slide-prev'
       )}
     >
       <HorizontalSlider
