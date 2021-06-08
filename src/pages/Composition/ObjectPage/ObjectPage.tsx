@@ -12,6 +12,8 @@ import Car from 'pages/Composition/ObjectPage/Car';
 import Rocket from 'pages/Composition/ObjectPage/Rocket';
 import Bomb from 'pages/Composition/ObjectPage/Bomb';
 
+import { getPositionText, MAX, MIN, STEP } from './utils';
+
 import './ObjectPage.modules.scss';
 
 type Props = {
@@ -22,27 +24,8 @@ type Props = {
   objectWidth: number;
   isNext: boolean;
   isPrev: boolean;
-};
-
-const STEP = 1;
-const MIN = 0;
-const MAX = 1000;
-
-//todo вынести отсюда
-const getPositionText = (percentage: number, theme: Theme) => {
-  if (percentage <= 35) {
-    return mapPositionText[theme][Position.topLeft];
-  }
-
-  if (percentage > 30 && percentage <= 65) {
-    return mapPositionText[theme][Position.middle];
-  }
-
-  if (percentage > 65) {
-    return mapPositionText[theme][Position.rightBottom];
-  }
-
-  return mapPositionText[theme][Position.topLeft];
+  isDuplicate: boolean;
+  compositionStore: CompositionStore;
 };
 
 const ObjectPage: React.FC<Props> = ({
@@ -51,27 +34,45 @@ const ObjectPage: React.FC<Props> = ({
   objectWidth,
   isNext,
   isPrev,
+  isDuplicate,
+  compositionStore
 }) => {
-  const compositionStore = useLocal(() => new CompositionStore());
+  console.log(isDuplicate);
+
   const position = compositionStore.pages[theme].position;
   const orientation = compositionStore.pages[theme].orientation;
 
   const isVertical = orientation === Orientation.vertical;
-  const positionPercentage = (position / 1000) * 100;
+  const positionPercentage = React.useMemo(() => (position / 1000) * 100, [
+    position
+  ]);
 
-  const text = getPositionText((position / 1000) * 100, theme);
-  const verticalStylePosition = {
-    left: '50%',
-    top: isNext
-      ? 0
-      : `calc(${positionPercentage}% - ${(position / 1000) * objectHeight}px)`,
-    transform: 'translateX(-50%)',
-  };
-  const horizontalStylePosition = {
-    top: isNext ? 0 : '50%',
-    left: `calc(${positionPercentage}% - ${(position / 1000) * objectWidth}px)`,
-    transform: isNext ? 'translateY(0%)' : 'translateY(-50%)',
-  };
+  const text = React.useMemo(
+    () => getPositionText((position / 1000) * 100, theme),
+    [position]
+  );
+  const verticalStylePosition = React.useMemo(
+    () => ({
+      left: '50%',
+      top: isNext
+        ? 0
+        : `calc(${positionPercentage}% - ${
+            (position / 1000) * objectHeight
+          }px)`,
+      transform: 'translateX(-50%)',
+    }),
+    [positionPercentage, isNext]
+  );
+  const horizontalStylePosition = React.useMemo(
+    () => ({
+      top: isNext ? 0 : '50%',
+      left: `calc(${positionPercentage}% - ${
+        (position / 1000) * objectWidth
+      }px)`,
+      transform: isNext ? 'translateY(0%)' : 'translateY(-50%)',
+    }),
+    [positionPercentage, isNext]
+  );
 
   return (
     <div styleName="content" className="composition-slide">
@@ -147,12 +148,10 @@ const ObjectPage: React.FC<Props> = ({
               </div>
             );
           }}
-          renderThumb={({ props}) => {
-            return <div
-              {...props}
-              styleName="thumb"
-              style={{ ...props.style }}
-            />
+          renderThumb={({ props }) => {
+            return (
+              <div {...props} styleName="thumb" style={{ ...props.style }} />
+            );
           }}
         />
       </div>
