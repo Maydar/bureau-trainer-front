@@ -138,6 +138,7 @@ const ObjectPage: React.FC<Props> = ({
                       min: MIN,
                       max: MAX,
                     }),
+                    position: 'relative',
                     alignSelf: 'center',
                   }}
                 >
@@ -161,12 +162,13 @@ const ObjectPage: React.FC<Props> = ({
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                transform: 'translate(117.5px, -17.5px)'
               }}
             />
           )}
         />
       </div>
-      <p styleName="content__description">{text}</p>
+      <p styleName={cn('content__description', (isPrev || isNext) && 'hidden')}>{text}</p>
     </div>
   );
 };

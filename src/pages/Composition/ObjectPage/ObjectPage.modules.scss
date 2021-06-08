@@ -38,6 +38,8 @@ $transition-animating: top 0.7s ease-in-out, left 0.7s ease-in-out,
 
       @include body-sm-medium;
     }
+
+    @include animate(opacity);
   }
 }
 
@@ -122,4 +124,8 @@ $transition-animating: top 0.7s ease-in-out, left 0.7s ease-in-out,
       top: 50%;
     }
   }
+}
+
+.hidden {
+  opacity: 0;
 }
