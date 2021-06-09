@@ -129,6 +129,28 @@ const Greetings: React.FC = () => {
                 Иконки Сергея&nbsp;Чикина
               </a>
             </div>
+            <div styleName="section section_authors section_desktop">
+              <div styleName="section__item-title section__item-title_authors">Авторы проекта</div>
+              <div styleName="section__items">
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Арт-директор</div>
+                  <div styleName="section__item-text">Михаил&nbsp;Нозик</div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Дизайнер</div>
+                  <div styleName="section__item-text">Наталия&nbsp;Порохина</div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Редактор</div>
+                  <div styleName="section__item-text">Ксения&nbsp;Павлова</div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Код</div>
+                  <div styleName="section__item-text">Майдар&nbsp;Эрдынеев • Александр&nbsp;Сушко
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div styleName="column">
             <div styleName="section">
@@ -222,6 +244,28 @@ const Greetings: React.FC = () => {
                 Иконки Сергея&nbsp;Чикина
               </a>
             </section>
+            <div styleName="section section_authors section_mobile">
+              <div styleName="section__item-title section__item-title_authors">Авторы проекта</div>
+              <div styleName="section__items">
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Арт-директор</div>
+                  <div styleName="section__item-text">Михаил&nbsp;Нозик</div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Дизайнер</div>
+                  <div styleName="section__item-text">Наталия&nbsp;Порохина</div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Редактор</div>
+                  <div styleName="section__item-text">Ксения&nbsp;Павлова</div>
+                </div>
+                <div styleName="section__item">
+                  <div styleName="section__item-title">Код</div>
+                  <div styleName="section__item-text">Майдар&nbsp;Эрдынеев • Александр&nbsp;Сушко
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div styleName="shares shares_mob">

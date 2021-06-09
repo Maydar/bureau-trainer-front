@@ -6,6 +6,8 @@ import urls from 'config/urls';
 import './styles.scss';
 
 import CommonCover from 'components/icons/covers/CommonCover';
+import BureauLogo from "components/icons/ui/BureauLogo";
+import FontsCopyright from "components/icons/ui/FontsCopyright";
 
 const Main: React.FC = () => {
   return (
@@ -30,14 +32,12 @@ const Main: React.FC = () => {
       <div className="page-copyright">
         <p className="page-copyright__school">
           <a href="https://bureau.ru/school" className="bureau-school-link">
-            <span className="bureau-school-link-text">Сделано в&nbsp;Школе&nbsp;Бюро&nbsp;Горбунова</span>
-            <span className="bureau-school-link-icon" />
+            <BureauLogo/>
           </a>
         </p>
         <p className="page-copyright__school">
           <Link className={'bureau-school-link'} to={urls.greetings}>
-            <span className="bureau-school-link-text">Шрифты и&nbsp;иконки</span>
-            <span className="bureau-school-link-icon bureau-school-link-icon_fonts" />
+            <FontsCopyright/>
           </Link>
         </p>
       </div>
