@@ -30,7 +30,6 @@ const Content: React.FC = () => {
         if (swiper.isBeginning) {
           swiper.slideToLoop(2, 0);
         }
-
         if (swiper.isEnd) {
           swiper.slideToLoop(0, 0);
         }

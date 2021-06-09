@@ -99,15 +99,15 @@ const FontSlider: React.FC<Props> = ({
           setNeedAnimation(true);
         }}
         onSlideChangeTransitionEnd={(swiper) => {
-          // if (swiper.isBeginning) {
-          //   setNeedAnimation(false);
-          //   swiper.slideToLoop(5, 0);
-          // }
-          //
-          // if (swiper.isEnd) {
-          //   setNeedAnimation(false);
-          //   swiper.slideToLoop(0, 0);
-          // }
+          if (swiper.isBeginning) {
+            setNeedAnimation(false);
+            swiper.slideToLoop(5, 0);
+          }
+
+          if (swiper.isEnd) {
+            setNeedAnimation(false);
+            swiper.slideToLoop(0, 0);
+          }
 
           onChangeIndex(swiper.realIndex);
         }}
