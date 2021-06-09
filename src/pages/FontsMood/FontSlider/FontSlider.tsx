@@ -1,20 +1,21 @@
 import * as React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {useState} from 'react';
+import {SwiperSlide} from 'swiper/react';
 import cn from 'classnames';
 
 import Slide from '../Slide';
-import { Theme, mapToArrayWordData } from '../config';
+import {mapToArrayWordData, Theme} from '../config';
 
-import { setPicWidth, applyHorizontalShift } from 'utils/calculateSlides';
+import {applyHorizontalShift, setPicWidth} from 'utils/calculateSlides';
 import './FontSlider.modules.scss';
 import HorizontalSlider from 'components/common/HorizontalSlider';
-import {useState} from "react";
 
 type Props = {
   theme: Theme;
   isActive: boolean;
   isNext: boolean;
   isPrev: boolean;
+  isDuplicate: boolean;
   currentIndex: number;
   onChangeIndex: (idx: number) => void;
   forwardRef?: any;
@@ -27,9 +28,20 @@ const FontSlider: React.FC<Props> = ({
   isPrev: isPrevSlider,
   currentIndex,
   onChangeIndex,
-  forwardRef,
 }: Props) => {
-  const [isNeedAnimation, setNeedAnimation] = useState(true);
+  const [isNeedAnimation, setNeedAnimation] = useState(false);
+  const sliderRef = React.useRef(null);
+  let isIncorrectIndex = false;
+
+  React.useEffect(() => {
+    if (sliderRef.current) {
+      const currentRealIndex = sliderRef.current.swiper.realIndex;
+      if (currentRealIndex !== currentIndex) {
+        isIncorrectIndex = true;
+        sliderRef.current.swiper.slideToLoop(currentIndex, 0);
+      }
+    }
+  }, [currentIndex]);
 
   const slides = React.useMemo(() => {
     return mapToArrayWordData[theme].map((wordData, index) => {
@@ -70,35 +82,34 @@ const FontSlider: React.FC<Props> = ({
       )}
     >
       <HorizontalSlider
-        forwardRef={forwardRef}
+        forwardRef={sliderRef}
         isActive={isActiveSlider}
         initialSlide={currentIndex}
-        onSlideChange={(swiper) => {
-          onChangeIndex(swiper.realIndex);
-        }}
         navKey={theme}
-        onInit={() => {
+        onInit={(swiper) => {
           setPicWidth(theme);
-          applyHorizontalShift(theme);
+          applyHorizontalShift(theme, true);
         }}
         onResize={() => {
           setPicWidth(theme);
           applyHorizontalShift(theme);
         }}
         onSlideChangeTransitionStart={(swiper) => {
-          applyHorizontalShift(theme, !isNeedAnimation);
+          applyHorizontalShift(theme, !isNeedAnimation || isIncorrectIndex);
           setNeedAnimation(true);
         }}
         onSlideChangeTransitionEnd={(swiper) => {
-          if (swiper.isBeginning) {
-            setNeedAnimation(false);
-            swiper.slideToLoop(5, 0);
-          }
+          // if (swiper.isBeginning) {
+          //   setNeedAnimation(false);
+          //   swiper.slideToLoop(5, 0);
+          // }
+          //
+          // if (swiper.isEnd) {
+          //   setNeedAnimation(false);
+          //   swiper.slideToLoop(0, 0);
+          // }
 
-          if (swiper.isEnd) {
-            setNeedAnimation(false);
-            swiper.slideToLoop(0, 0);
-          }
+          onChangeIndex(swiper.realIndex);
         }}
         className={theme}
       >

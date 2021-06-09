@@ -1,25 +1,25 @@
 import * as React from 'react';
-import {useState} from 'react';
-import {observer} from 'mobx-react';
+import { useState } from 'react';
+import { observer } from 'mobx-react';
 import cn from 'classnames';
-import {SwiperSlide} from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 
-import {useLocal} from 'utils/hooks';
+import { useLocal } from 'utils/hooks';
 import HorizontalSlider from 'components/common/HorizontalSlider';
-import {applyHorizontalShift, setPicWidth} from 'utils/calculateSlides';
+import { applyHorizontalShift, setPicWidth } from 'utils/calculateSlides';
 
 import Slide from '../Slide';
-import {mapToArrayWordData, Theme} from '../config';
+import { mapToArrayWordData, Theme } from '../config';
 
 import './AnimalSlider.modules.scss';
-
-import FontsAnimalStore from '../store';
 
 type Props = {
   theme: Theme;
   isActive: boolean;
   isPrev: boolean;
   isNext: boolean;
+  currentIndex: number;
+  setIndex: (idx: number) => void;
 };
 
 const AnimalSlider: React.FC<Props> = ({
@@ -27,9 +27,22 @@ const AnimalSlider: React.FC<Props> = ({
   isActive,
   isPrev: isPrevSlider,
   isNext: isNextSlider,
+  currentIndex,
+  setIndex,
 }: Props) => {
-  const fontsAnimalsStore = useLocal(() => new FontsAnimalStore());
   const [isNeedAnimation, setNeedAnimation] = useState(true);
+  const sliderRef = React.useRef(null);
+  let isIncorrectIndex = false;
+
+  React.useEffect(() => {
+    if (sliderRef.current) {
+      const currentRealIndex = sliderRef.current.swiper.realIndex;
+      if (currentRealIndex !== currentIndex) {
+        isIncorrectIndex = true;
+        sliderRef.current.swiper.slideToLoop(currentIndex, 0);
+      }
+    }
+  }, [currentIndex]);
 
   return (
     <div
@@ -39,10 +52,11 @@ const AnimalSlider: React.FC<Props> = ({
       )}
     >
       <HorizontalSlider
-        initialSlide={fontsAnimalsStore.currentIndex}
+        forwardRef={sliderRef}
+        initialSlide={currentIndex}
         isActive={isActive}
         onSlideChange={(swiper) => {
-          fontsAnimalsStore.setIndex(swiper.realIndex);
+          setIndex(swiper.realIndex);
         }}
         navKey={theme}
         onInit={() => {
@@ -54,7 +68,7 @@ const AnimalSlider: React.FC<Props> = ({
           applyHorizontalShift(theme);
         }}
         onSlideChangeTransitionStart={(swiper) => {
-          applyHorizontalShift(theme, !isNeedAnimation);
+          applyHorizontalShift(theme, !isNeedAnimation || isIncorrectIndex);
           setNeedAnimation(true);
         }}
         onSlideChangeTransitionEnd={(swiper) => {

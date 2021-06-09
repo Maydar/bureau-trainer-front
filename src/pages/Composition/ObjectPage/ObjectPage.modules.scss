@@ -1,8 +1,8 @@
 @import 'mixins';
 @import 'colors';
 
-$transition-animating: top 0.28s ease-out, left 0s ease-in-out,
-  transform 0.28s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+$transition-animating: top 0.5s ease-out, left 0s ease-in-out,
+  transform 0.5s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
 $transition-static: top 0s ease-out, left 0s ease-in-out,
   transform 0s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;

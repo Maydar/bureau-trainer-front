@@ -41,55 +41,61 @@ export const calculateHorizontalShift = (frame: any, pic: any) => {
 };
 
 export const applyHorizontalShift = (themeClass: string, withoutTransition: boolean = false) => {
-  const prevFrame = document.querySelector(
+  const prevFrames = document.querySelectorAll(
     `.${themeClass} .swiper-slide-prev .h-frame`
   );
-  const currentFrame = document.querySelector(
+  const currentFrames = document.querySelectorAll(
     `.${themeClass} .swiper-slide-active .h-frame`
   );
-  const nextFrame = document.querySelector(
+  const nextFrames = document.querySelectorAll(
     `.${themeClass} .swiper-slide-next .h-frame`
   );
 
-  if (prevFrame) {
-    const shift = calculateHorizontalShift(
-      prevFrame,
-      prevFrame.querySelector('.h-frame-pic')
-    );
+  if (prevFrames) {
+    prevFrames.forEach((prevFrame) => {
+      const shift = calculateHorizontalShift(
+        prevFrame,
+        prevFrame.querySelector('.h-frame-pic')
+      );
 
-    if (withoutTransition) {
-      prevFrame.classList.add(transitionClass)
-    } else {
-      prevFrame.classList.remove(transitionClass);
-    }
+      if (withoutTransition) {
+        prevFrame.classList.add(transitionClass)
+      } else {
+        prevFrame.classList.remove(transitionClass);
+      }
 
-    // @ts-ignore
-    prevFrame.style.transform = `translateX(${shift}px)`;
+      // @ts-ignore
+      prevFrame.style.transform = `translateX(${shift}px)`;
+    })
   }
 
-  if (currentFrame) {
-    if (withoutTransition) {
-      currentFrame.classList.add(transitionClass)
-    } else {
-      currentFrame.classList.remove(transitionClass);
-    }
-    // @ts-ignore
-    currentFrame.style.transform = `translateX(0px)`;
+  if (currentFrames) {
+    currentFrames.forEach((currentFrame) => {
+      if (withoutTransition) {
+        currentFrame.classList.add(transitionClass)
+      } else {
+        currentFrame.classList.remove(transitionClass);
+      }
+      // @ts-ignore
+      currentFrame.style.transform = `translateX(0px)`;
+    })
   }
 
-  if (nextFrame) {
-    const shift = calculateHorizontalShift(
-      nextFrame,
-      nextFrame.querySelector('.h-frame-pic')
-    );
+  if (nextFrames) {
+    nextFrames.forEach((nextFrame) => {
+      const shift = calculateHorizontalShift(
+        nextFrame,
+        nextFrame.querySelector('.h-frame-pic')
+      );
 
-    if (withoutTransition) {
-      nextFrame.classList.add(transitionClass)
-    } else {
-      nextFrame.classList.remove(transitionClass);
-    }
+      if (withoutTransition) {
+        nextFrame.classList.add(transitionClass)
+      } else {
+        nextFrame.classList.remove(transitionClass);
+      }
 
-    // @ts-ignore
-    nextFrame.style.transform = `translateX(-${shift}px)`;
+      // @ts-ignore
+      nextFrame.style.transform = `translateX(-${shift}px)`;
+    })
   }
 };

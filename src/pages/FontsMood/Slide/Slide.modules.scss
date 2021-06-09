@@ -13,22 +13,22 @@
   &__content {
     display: block;
     position: absolute;
-    top: 40%;
+    //top: 40%;
     left: 50%;
 
-    transform: translateX(-50%) translateZ(0);
+    transform: translate(-50%, calc(40vh - 30px)) translateZ(0);
 
     @include desktop-xs {
-      top: 25%;
+      transform: translate(-50%, calc(25vh - 30px)) translateZ(0);
     }
 
     @include phone {
-      top: 35%;
+      transform: translate(-50%, calc(35vh - 30px)) translateZ(0);
     }
 
 
     @include desktop-lg {
-      top: 45%;
+      transform: translate(-50%, calc(45vh - 30px)) translateZ(0);
     }
 
 

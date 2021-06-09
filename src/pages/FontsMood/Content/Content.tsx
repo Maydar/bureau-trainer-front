@@ -17,11 +17,6 @@ import './Content.modules.scss';
 
 const Content: React.FC = () => {
   const store = useLocal(() => new FontsMoodStore());
-  const refs = {
-    [Theme.rage]: React.useRef(),
-    [Theme.anorexy]: React.useRef(),
-    [Theme.rumble]: React.useRef(),
-  };
   return (
     <>
       <div className="task-description">
@@ -31,9 +26,17 @@ const Content: React.FC = () => {
         />
       </div>
       <div styleName="bg" />
-      <VerticalSlider>
+      <VerticalSlider loop={true} slideChangeTransitionEnd={(swiper => {
+        if (swiper.isBeginning) {
+          swiper.slideToLoop(2, 0);
+        }
+
+        if (swiper.isEnd) {
+          swiper.slideToLoop(0, 0);
+        }
+      })}>
         <SwiperSlide>
-          {({ isActive, isNext, isPrev }) => (
+          {({ isActive, isNext, isPrev, isDuplicate }) => (
             <FontSlider
               theme={Theme.rage}
               isActive={isActive}
@@ -41,12 +44,12 @@ const Content: React.FC = () => {
               isNext={isNext}
               currentIndex={store.rageIndex}
               onChangeIndex={store.setRageIndex}
-              forwardRef={refs[Theme.rage]}
+              isDuplicate={isDuplicate}
             />
           )}
         </SwiperSlide>
         <SwiperSlide>
-          {({ isActive, isNext, isPrev }) => (
+          {({ isActive, isNext, isPrev, isDuplicate }) => (
             <FontSlider
               theme={Theme.anorexy}
               isActive={isActive}
@@ -54,12 +57,12 @@ const Content: React.FC = () => {
               isNext={isNext}
               currentIndex={store.anorexyIndex}
               onChangeIndex={store.setAnorexyIndex}
-              forwardRef={refs[Theme.anorexy]}
+              isDuplicate={isDuplicate}
             />
           )}
         </SwiperSlide>
         <SwiperSlide>
-          {({ isActive, isNext, isPrev }) => (
+          {({ isActive, isNext, isPrev, isDuplicate }) => (
             <FontSlider
               theme={Theme.rumble}
               isActive={isActive}
@@ -67,7 +70,7 @@ const Content: React.FC = () => {
               isNext={isNext}
               currentIndex={store.rumbleIndex}
               onChangeIndex={store.setRumbleIndex}
-              forwardRef={refs[Theme.rumble]}
+              isDuplicate={isDuplicate}
             />
           )}
         </SwiperSlide>

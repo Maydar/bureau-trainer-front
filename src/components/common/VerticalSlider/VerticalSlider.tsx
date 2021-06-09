@@ -67,6 +67,10 @@ export const VerticalSlider: React.FC<Props> = ({
 }: Props) => {
   const onSlideChangeTransition = (swiper: any) => {
     slideChangeTransitionEnd(swiper);
+  };
+
+  const slideChangeTransitionStart = (swiper: any) => {
+    onSlideChangeTransitionStart(swiper);
     switchNextClass();
   };
 
@@ -83,7 +87,7 @@ export const VerticalSlider: React.FC<Props> = ({
         nextEl: nextElClass,
       }}
       loop={loop}
-      loopedSlides={loop ? 2 : null}
+      loopedSlides={loop ? 1 : null}
       speed={700}
       centeredSlides={true}
       keyboard={{
@@ -92,8 +96,7 @@ export const VerticalSlider: React.FC<Props> = ({
       }}
       className={cn('swiper-container-v', className)}
       onSlideChangeTransitionEnd={onSlideChangeTransition}
-      onSlideChangeTransitionStart={onSlideChangeTransitionStart}
-      onAfterInit={switchNextClass}
+      onSlideChangeTransitionStart={slideChangeTransitionStart}
       onBeforeTransitionStart={beforeTransitionStart}
     >
       {children}
