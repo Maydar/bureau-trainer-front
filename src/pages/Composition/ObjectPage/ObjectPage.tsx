@@ -25,6 +25,7 @@ type Props = {
   isNext: boolean;
   isPrev: boolean;
   isDuplicate: boolean;
+  isVisible: boolean;
   compositionStore: CompositionStore;
 };
 
@@ -34,14 +35,11 @@ const ObjectPage: React.FC<Props> = ({
   objectWidth,
   isNext,
   isPrev,
-  isDuplicate,
+  isVisible,
   compositionStore
 }) => {
-  console.log(isDuplicate);
-
   const position = compositionStore.pages[theme].position;
   const orientation = compositionStore.pages[theme].orientation;
-
   const isVertical = orientation === Orientation.vertical;
   const positionPercentage = React.useMemo(() => (position / 1000) * 100, [
     position
@@ -78,7 +76,7 @@ const ObjectPage: React.FC<Props> = ({
     <div styleName="content" className="composition-slide">
       <div styleName="content__wrapper">
         <div
-          className="composition-slide__image"
+          className={isNext && 'image-animating'}
           styleName={cn(
             `image image_${theme}`,
             isNext ? 'image_blue' : 'image_white',

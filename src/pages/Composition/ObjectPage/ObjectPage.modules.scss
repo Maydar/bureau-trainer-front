@@ -4,6 +4,9 @@
 $transition-animating: top 0.28s ease-out, left 0s ease-in-out,
   transform 0.28s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
+$transition-static: top 0s ease-out, left 0s ease-in-out,
+  transform 0s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
 .content {
   position: relative;
   height: 100%;
@@ -91,7 +94,8 @@ $transition-animating: top 0.28s ease-out, left 0s ease-in-out,
   will-change: top, left, transform;
 
   transform: translateZ(0);
-  transition: $transition-animating;
+
+  transition: $transition-static;
 }
 
 .range-wrapper {
@@ -135,9 +139,9 @@ $transition-animating: top 0.28s ease-out, left 0s ease-in-out,
   width: 35px;
   border-radius: 50%;
   border-width: 2px;
-  border-color: #48AFC6;
+  border-color: #48afc6;
   border-style: solid;
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;

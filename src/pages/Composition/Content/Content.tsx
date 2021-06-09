@@ -33,7 +33,7 @@ const Content: React.FC = () => {
           loop={true}
         >
           <SwiperSlide>
-            {({ isNext, isPrev, isDuplicate }) => {
+            {({ isNext, isPrev, isDuplicate, isVisible }) => {
               return (
                 <ObjectPage
                   theme={Theme.car}
@@ -44,13 +44,14 @@ const Content: React.FC = () => {
                   isNext={isNext}
                   isPrev={isPrev}
                   isDuplicate={isDuplicate}
+                  isVisible={isVisible}
                   compositionStore={compositionStore}
                 />
               );
             }}
           </SwiperSlide>
           <SwiperSlide>
-            {({ isNext, isPrev, isDuplicate }) => {
+            {({ isNext, isPrev, isDuplicate, isVisible }) => {
               return (
                 <ObjectPage
                   theme={Theme.bomb}
@@ -61,13 +62,14 @@ const Content: React.FC = () => {
                   isNext={isNext}
                   isPrev={isPrev}
                   isDuplicate={isDuplicate}
+                  isVisible={isVisible}
                   compositionStore={compositionStore}
                 />
               );
             }}
           </SwiperSlide>
           <SwiperSlide>
-            {({ isNext, isPrev, isDuplicate }) => {
+            {({ isNext, isPrev, isDuplicate, isVisible }) => {
               return (
                 <ObjectPage
                   theme={Theme.rocket}
@@ -78,6 +80,7 @@ const Content: React.FC = () => {
                   isNext={isNext}
                   isPrev={isPrev}
                   isDuplicate={isDuplicate}
+                  isVisible={isVisible}
                   compositionStore={compositionStore}
                 />
               );

@@ -1,4 +1,4 @@
-@import "mixins";
+@import 'mixins';
 
 .page-edge {
   position: absolute;
@@ -28,15 +28,15 @@
   @include animateSlow(background-color);
 
   &_green {
-    background-color: #00D254;
+    background-color: #00d254;
   }
 
   &_yellow {
-    background-color: #FFF174;
+    background-color: #fff174;
   }
 
   &_blue {
-    background-color: #48AFC6;
+    background-color: #48afc6;
   }
 
   &_black {
@@ -51,7 +51,6 @@
   background-repeat: no-repeat;
 }
 
-
 .fade-appear,
 .fade-enter {
   opacity: 0;
@@ -59,12 +58,12 @@
 
 .fade-appear-active,
 .fade-enter-active {
-  transition: opacity .3s linear;
+  transition: opacity 0.3s linear;
   opacity: 1;
 }
 
 .fade-exit {
-  transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
   opacity: 1;
 }
 
@@ -77,25 +76,23 @@
   width: 100%;
 }
 
-#magazine{
+#magazine {
   width: 800px;
   height: 400px;
 }
 
-#magazine .turn-page{
-  background-color:#ccc;
+#magazine .turn-page {
+  background-color: #ccc;
 }
 
 .hidden {
   opacity: 0;
 }
 
+$transition-animating: top 0.28s ease-out, left 0s ease-in-out,
+  transform 0.28s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
-$transition-animating: top 0.7s ease, left 0.7s ease,
-transform 0.7s ease, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-
-
-.image_animating {
+.image-animating {
   transition: $transition-animating;
 }
 
