@@ -65,6 +65,7 @@ $transition-static: top 0s ease-out, left 0s ease-in-out,
   &_car {
     height: 121px;
     width: 270px;
+
     @include desktop {
       height: 163px;
       width: 364px;
@@ -72,22 +73,22 @@ $transition-static: top 0s ease-out, left 0s ease-in-out,
   }
 
   &_bomb {
-    height: 235px;
-    width: 236px;
+    height: 175px;
+    width: 176px;
 
-    @include phone {
-      height: 175px;
-      width: 176px;
+    @include desktop {
+      height: 235px;
+      width: 236px;
     }
   }
 
   &_rocket {
-    height: 270px;
-    width: 150px;
+    height: 200px;
+    width: 110px;
 
-    @include phone {
-      height: 200px;
-      width: 110px;
+    @include desktop {
+      height: 270px;
+      width: 150px;
     }
   }
 
