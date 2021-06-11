@@ -20,7 +20,7 @@ const Greetings: React.FC = () => {
           Упражнения для дизайнеров
         </NavLink>
         <h1 styleName="header">
-          Авторы, шрифты и&nbsp;иконки
+          Авторы, шрифты и&nbsp;иконки
         </h1>
         <div styleName="authors">
           <p styleName="authors__site">
