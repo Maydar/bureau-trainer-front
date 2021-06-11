@@ -26,6 +26,7 @@ type Props = {
   isPrev: boolean;
   isDuplicate: boolean;
   isVisible: boolean;
+  visibleControls: boolean;
   compositionStore: CompositionStore;
 };
 
@@ -36,6 +37,7 @@ const ObjectPage: React.FC<Props> = ({
   isNext,
   isPrev,
   isVisible,
+  visibleControls,
   compositionStore
 }) => {
   const position = compositionStore.pages[theme].position;
@@ -92,7 +94,8 @@ const ObjectPage: React.FC<Props> = ({
       <div
         styleName={cn(
           `range-wrapper`,
-          orientation === Orientation.vertical && 'range-wrapper_vertical'
+          orientation === Orientation.vertical && 'range-wrapper_vertical',
+          //!visibleControls && 'range-wrapper_hidden'
         )}
         className={'swiper-no-swiping'}
       >

@@ -6,6 +6,7 @@ import Pager from 'components/common/Pager';
 import { useLocal } from 'utils/hooks';
 import { LessonType } from 'config/constants';
 import Content from 'pages/ColorMood/Content';
+import rootStore from 'store/RootStore';
 
 import ColorMoodStore from './store';
 
@@ -18,12 +19,14 @@ const ColorMood: React.FC = () => {
   const pageColor =
     colorMoodStore.pages[colorMoodStore.currentTheme].currentColor;
 
+  rootStore.visitColors();
+
   return (
     <div styleName={`content`}>
       <Pager
         type={LessonType.colors}
         previewColor="blue"
-        nextPage={urls.composition}
+        nextPage={rootStore.isAllPagesVisited ? urls.success : urls.composition}
         curveClass={`triangle-curve_colors_${pageColor}`}
       >
         <Content store={colorMoodStore}/>

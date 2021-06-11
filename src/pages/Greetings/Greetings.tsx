@@ -24,7 +24,7 @@ const Greetings: React.FC = () => {
         </h1>
         <div styleName="authors">
           <p styleName="authors__site">
-            Арт-директор проекта&nbsp;— Михаил&nbsp;Нозик, дизайнер&nbsp;— Наталия&nbsp;Порохина, редактор&nbsp;— Ксения&nbsp;Павлова, разработчики — Майдар&nbsp;Эрдынеев и&nbsp;Александр&nbsp;Сушко.
+            Арт-директор проекта&nbsp;Михаил&nbsp;Нозик, дизайнер&nbsp;Наталия&nbsp;Порохина, редактор&nbsp;Ксения&nbsp;Павлова, разработчики&nbsp;Майдар&nbsp;Эрдынеев и&nbsp;Александр&nbsp;Сушко.
           </p>
           <a href="http://sergeychikin.ru/365/" target="_blank" styleName="authors__icons authors__icons_link">
             Иконки Сергея&nbsp;Чикина.

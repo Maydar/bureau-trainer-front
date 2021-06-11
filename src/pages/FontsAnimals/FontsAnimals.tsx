@@ -6,6 +6,7 @@ import Pager from 'components/common/Pager';
 import TaskDescription from 'components/common/TaskDescription/TaskDescription';
 import { LessonType } from 'config/constants';
 import urls from 'config/urls';
+import rootStore from 'store/RootStore';
 
 import Content from "./Content";
 
@@ -13,11 +14,12 @@ import './FontsAnimals.modules.scss';
 
 
 const FontsAnimals: React.FC = () => {
+  rootStore.visitAnimals();
   return (
     <>
       <Pager
         type={LessonType.animals}
-        nextPage={urls.colors}
+        nextPage={rootStore.isAllPagesVisited ? urls.success : urls.colors}
         previewColor="green"
         curveClass="triangle-curve_animals"
       >

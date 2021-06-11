@@ -4,18 +4,21 @@ import Content from 'pages/Composition/Content';
 import Pager from 'components/common/Pager';
 import { LessonType, nbsp } from 'config/constants';
 import urls from 'config/urls';
+import rootStore from 'store/RootStore';
 
 import './Composition.modules.scss';
 
 const Composition: React.FC = () => {
+  rootStore.visitComposition();
+
   return (
     <Pager
-      nextPage={urls.success}
+      nextPage={rootStore.isAllPagesVisited ? urls.success : urls.fonts}
       type={LessonType.composition}
       previewColor="black"
       curveClass="triangle-curve_composition"
     >
-      <Content />
+      <Content visibleControls={true}/>
     </Pager>
   );
 };

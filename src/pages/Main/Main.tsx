@@ -8,8 +8,10 @@ import './styles.scss';
 import CommonCover from 'components/icons/covers/CommonCover';
 import BureauLogo from "components/icons/ui/BureauLogo";
 import FontsCopyright from "components/icons/ui/FontsCopyright";
+import rootStore from 'store/RootStore';
 
 const Main: React.FC = () => {
+  rootStore.flush();
   return (
     <div className="main-page">
       <div className="page-header">
@@ -31,7 +33,7 @@ const Main: React.FC = () => {
       </div>
       <div className="page-copyright">
         <p className="page-copyright__school">
-          <a href="https://bureau.ru/school" className="bureau-school-link">
+          <a href="https://bureau.ru" className="bureau-school-link">
             <BureauLogo/>
           </a>
         </p>

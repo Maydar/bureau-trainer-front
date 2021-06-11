@@ -1,6 +1,12 @@
 @import "mixins";
 @import "colors";
 
+
+@keyframes scale-triangle {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .next {
   position: absolute;
   top: 0;
@@ -10,6 +16,11 @@
   transform: scale(1);
   transition: width ease-in-out 800ms, height ease-in-out 800ms, transform ease-in-out 400ms;
   transform-origin: top right;
+
+  animation-name: scale-triangle;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+
   cursor: pointer;
 
   @include phone {

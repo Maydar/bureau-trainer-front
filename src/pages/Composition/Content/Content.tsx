@@ -11,7 +11,11 @@ import CompositionStore from 'pages/Composition/store';
 
 import './Content.modules.scss';
 
-const Content: React.FC = () => {
+type Props = {
+  visibleControls?: boolean;
+}
+
+const Content: React.FC<Props> = ({ visibleControls} : Props) => {
   const compositionStore = useLocal(() => new CompositionStore());
   const { isMobile } = useSize();
 
@@ -45,6 +49,7 @@ const Content: React.FC = () => {
                   isPrev={isPrev}
                   isDuplicate={isDuplicate}
                   isVisible={isVisible}
+                  visibleControls={visibleControls}
                   compositionStore={compositionStore}
                 />
               );
@@ -63,6 +68,7 @@ const Content: React.FC = () => {
                   isPrev={isPrev}
                   isDuplicate={isDuplicate}
                   isVisible={isVisible}
+                  visibleControls={visibleControls}
                   compositionStore={compositionStore}
                 />
               );
@@ -81,6 +87,7 @@ const Content: React.FC = () => {
                   isPrev={isPrev}
                   isDuplicate={isDuplicate}
                   isVisible={isVisible}
+                  visibleControls={visibleControls}
                   compositionStore={compositionStore}
                 />
               );
@@ -90,6 +97,10 @@ const Content: React.FC = () => {
       </div>
     </>
   );
+};
+
+Content.defaultProps = {
+  visibleControls: false
 };
 
 export default observer(Content);
