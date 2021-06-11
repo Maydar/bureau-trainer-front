@@ -61,7 +61,7 @@ const AnimalSlider: React.FC<Props> = ({
         navKey={theme}
         onInit={() => {
           setPicWidth(theme);
-          applyHorizontalShift(theme);
+          applyHorizontalShift(theme, true);
         }}
         onResize={() => {
           setPicWidth(theme);
