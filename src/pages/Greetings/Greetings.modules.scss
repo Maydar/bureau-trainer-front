@@ -14,7 +14,7 @@ $local-yellow: #FFD600;
   background-color: $black;
 
   &__inner {
-    margin-top: 20px;
+    margin-top: 31px;
     margin-bottom: 85px;
     @include phone {
       margin-bottom: 24px;
@@ -315,4 +315,39 @@ $local-yellow: #FFD600;
   &:first-child {
     margin-left: 0;
   }
+}
+
+.authors {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  max-width: 800px;
+
+  color: $white;
+
+  &__site {
+    position: relative;
+  }
+
+  &__icons {
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+
+    &_link {
+      &::before {
+        display: block;
+        position: absolute;
+        content: " ";
+        height: 1px;
+        width: 100%;
+        background-color: $white;
+        opacity: .5;
+        bottom: 0;
+      }
+    }
+  }
+
+
 }

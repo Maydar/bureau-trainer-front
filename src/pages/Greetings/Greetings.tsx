@@ -20,10 +20,16 @@ const Greetings: React.FC = () => {
           Упражнения для дизайнеров
         </NavLink>
         <h1 styleName="header">
-          Благодарим компании
-          <br />
-          и&nbsp;дизайнеров
+          Авторы, шрифты и&nbsp;иконки
         </h1>
+        <div styleName="authors">
+          <p styleName="authors__site">
+            Арт-директор проекта&nbsp;— Михаил&nbsp;Нозик, дизайнер&nbsp;— Наталия&nbsp;Порохина, редактор&nbsp;— Ксения&nbsp;Павлова, разработчики — Майдар&nbsp;Эрдынеев и&nbsp;Александр&nbsp;Сушко.
+          </p>
+          <a href="http://sergeychikin.ru/365/" target="_blank" styleName="authors__icons authors__icons_link">
+            Иконки Сергея&nbsp;Чикина.
+          </a>
+        </div>
         <div styleName="content__inner columns">
           <div styleName="column">
             <div styleName="section">
@@ -96,15 +102,6 @@ const Greetings: React.FC = () => {
                   </div>
                 </div>
                 <div styleName="section__item">
-                  <div styleName="section__item-title">
-                    NORMALIDAD&nbsp;EXTENDED
-                  </div>
-                  <div styleName="section__item-text">
-                    CSTM&nbsp;Fonts • Илья&nbsp;Рудерман •
-                    Юрий&nbsp;Остроменцкий • Анна&nbsp;Данилова
-                  </div>
-                </div>
-                <div styleName="section__item">
                   <div styleName="section__item-title">KARLOFF NEUTRAL</div>
                   <div styleName="section__item-text">
                     Никола&nbsp;Джурек • Петер&nbsp;Билак •
@@ -121,33 +118,6 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">AMALTA</div>
                   <div styleName="section__item-text">Вера&nbsp;Евстафьева</div>
-                </div>
-              </div>
-            </div>
-            <div styleName="section section_desktop">
-              <a href="http://sergeychikin.ru/365/" styleName="section__title">
-                Иконки Сергея&nbsp;Чикина
-              </a>
-            </div>
-            <div styleName="section section_authors section_desktop">
-              <div styleName="section__item-title section__item-title_authors">Авторы проекта</div>
-              <div styleName="section__items">
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Арт-директор</div>
-                  <div styleName="section__item-text">Михаил&nbsp;Нозик</div>
-                </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Дизайнер</div>
-                  <div styleName="section__item-text">Наталия&nbsp;Порохина</div>
-                </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Редактор</div>
-                  <div styleName="section__item-text">Ксения&nbsp;Павлова</div>
-                </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Код</div>
-                  <div styleName="section__item-text">Майдар&nbsp;Эрдынеев • Александр&nbsp;Сушко
-                  </div>
                 </div>
               </div>
             </div>
@@ -236,33 +206,6 @@ const Greetings: React.FC = () => {
                 <div styleName="section__item">
                   <div styleName="section__item-title">Harry plotter</div>
                   <div styleName="section__item-text">Захар&nbsp;Ящин</div>
-                </div>
-              </div>
-            </div>
-            <section styleName="section section_mobile">
-              <a href="http://sergeychikin.ru/365/" styleName="section__title">
-                Иконки Сергея&nbsp;Чикина
-              </a>
-            </section>
-            <div styleName="section section_authors section_mobile">
-              <div styleName="section__item-title section__item-title_authors">Авторы проекта</div>
-              <div styleName="section__items">
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Арт-директор</div>
-                  <div styleName="section__item-text">Михаил&nbsp;Нозик</div>
-                </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Дизайнер</div>
-                  <div styleName="section__item-text">Наталия&nbsp;Порохина</div>
-                </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Редактор</div>
-                  <div styleName="section__item-text">Ксения&nbsp;Павлова</div>
-                </div>
-                <div styleName="section__item">
-                  <div styleName="section__item-title">Код</div>
-                  <div styleName="section__item-text">Майдар&nbsp;Эрдынеев • Александр&nbsp;Сушко
-                  </div>
                 </div>
               </div>
             </div>

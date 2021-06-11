@@ -5,7 +5,6 @@ $time: 0.3s;
 .slide {
   display: flex;
   align-items: flex-start;
-  //justify-content: center;
   position: relative;
   height: 100%;
   width: 100%;
@@ -239,7 +238,7 @@ $time: 0.3s;
       opacity: 0;
       height: 0;
     }
-    transition: height $time ease-in-out, opacity $time .5s ease-in-out;
+    transition: height .2s ease-in-out, opacity $time ease-in-out;
   }
 }
 
