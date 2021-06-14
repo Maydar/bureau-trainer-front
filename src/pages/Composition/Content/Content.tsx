@@ -33,6 +33,13 @@ const Content: React.FC<Props> = ({ visibleControls} : Props) => {
         <VerticalSlider
           slideChangeTransitionEnd={(swiper) => {
             compositionStore.setTheme(compositionStore.order[swiper.realIndex]);
+            if (swiper.isBeginning) {
+              swiper.slideToLoop(2, 0);
+            }
+
+            if (swiper.isEnd) {
+              swiper.slideToLoop(0, 0);
+            }
           }}
           loop={true}
         >

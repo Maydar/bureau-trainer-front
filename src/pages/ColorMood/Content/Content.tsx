@@ -41,6 +41,15 @@ const Content: React.FC<Props> = ({ store }: Props) => {
         onSlideChange={(swiper) => {
           colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex]);
         }}
+        slideChangeTransitionEnd={(swiper) => {
+          if (swiper.isBeginning) {
+            swiper.slideToLoop(3, 0);
+          }
+
+          if (swiper.isEnd) {
+            swiper.slideToLoop(0, 0);
+          }
+        }}
         loop={true}
       >
         {colorMoodStore.pageOrder.map((theme: ColorThemes) => (
