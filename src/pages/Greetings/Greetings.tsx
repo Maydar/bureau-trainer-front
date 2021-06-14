@@ -10,7 +10,7 @@ import Twitter from 'components/icons/ui/Social/Twitter';
 import FB from 'components/icons/ui/Social/FB';
 import VK from 'components/icons/ui/Social/VK';
 import FacebookBlack from 'components/icons/ui/Social/FacebookBlack';
-import {ymReachGoal} from "utils/metrika";
+import { ymReachGoal } from 'utils/metrika';
 
 const Greetings: React.FC = () => {
   return (
@@ -19,14 +19,19 @@ const Greetings: React.FC = () => {
         <NavLink to={urls.root} styleName="root-link">
           Упражнения для дизайнеров
         </NavLink>
-        <h1 styleName="header">
-          Авторы, шрифты и&nbsp;иконки
-        </h1>
+        <h1 styleName="header">Авторы, шрифты и&nbsp;иконки</h1>
         <div styleName="authors">
           <p styleName="authors__site">
-            Арт-директор проекта&nbsp;Михаил&nbsp;Нозик, дизайнер&nbsp;Наталия&nbsp;Порохина, редактор&nbsp;Ксения&nbsp;Павлова, разработчики&nbsp;Майдар&nbsp;Эрдынеев и&nbsp;Александр&nbsp;Сушко
+            Арт-директор проекта&nbsp;Михаил&nbsp;Нозик,
+            дизайнер&nbsp;Наталия&nbsp;Порохина,
+            редактор&nbsp;Ксения&nbsp;Павлова,
+            разработчики&nbsp;Майдар&nbsp;Эрдынеев и&nbsp;Александр&nbsp;Сушко
           </p>
-          <a href="http://sergeychikin.ru/365/" target="_blank" styleName="authors__icons authors__icons_link">
+          <a
+            href="http://sergeychikin.ru/365/"
+            target="_blank"
+            styleName="authors__icons authors__icons_link"
+          >
             Иконки Сергея&nbsp;Чикина
           </a>
         </div>
