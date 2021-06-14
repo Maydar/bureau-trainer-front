@@ -165,9 +165,6 @@ $time: 0.3s;
   height: 114px;
   width: 586px;
 
-
-  background-size: contain;
-
   @include phone {
     width: 250px;
     height: 56px;
@@ -175,33 +172,41 @@ $time: 0.3s;
 
   &_rage {
     background: url('./words_img/rage.svg') no-repeat center;
+    background-size: contain;
 
     &_white {
       background: url('./words_img/rage_white.svg') no-repeat center;
+      background-size: contain;
     }
   }
 
   &_happiness {
     background: url('./words_img/happiness.svg') no-repeat center;
+    background-size: contain;
 
     &_white {
       background: url('./words_img/happiness_white.svg') no-repeat center;
+      background-size: contain;
     }
   }
 
   &_sadness {
     background: url('./words_img/sadness.svg') no-repeat center;
+    background-size: contain;
 
     &_white {
       background: url('./words_img/sadness_white.svg') no-repeat center;
+      background-size: contain;
     }
   }
 
   &_disgust {
     background: url('./words_img/disgust.svg') no-repeat center;
+    background-size: contain;
 
     &_white {
       background: url('./words_img/disgust_white.svg') no-repeat center;
+      background-size: contain;
     }
   }
 }
