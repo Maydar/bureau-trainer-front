@@ -165,8 +165,7 @@ $time: 0.3s;
   height: 114px;
   width: 586px;
 
-  background-repeat: no-repeat;
-  background-position: center center;
+
   background-size: contain;
 
   @include phone {
@@ -175,34 +174,34 @@ $time: 0.3s;
   }
 
   &_rage {
-    background-image: url('./words_img/rage.svg');
+    background: url('./words_img/rage.svg') no-repeat center;
 
     &_white {
-      background-image: url('./words_img/rage_white.svg');
+      background: url('./words_img/rage_white.svg') no-repeat center;
     }
   }
 
   &_happiness {
-    background-image: url('./words_img/happiness.svg');
+    background: url('./words_img/happiness.svg') no-repeat center;
 
     &_white {
-      background-image: url('./words_img/happiness_white.svg');
+      background: url('./words_img/happiness_white.svg') no-repeat center;
     }
   }
 
   &_sadness {
-    background-image: url('./words_img/sadness.svg');
+    background: url('./words_img/sadness.svg') no-repeat center;
 
     &_white {
-      background-image: url('./words_img/sadness_white.svg');
+      background: url('./words_img/sadness_white.svg') no-repeat center;
     }
   }
 
   &_disgust {
-    background-image: url('./words_img/disgust.svg');
+    background: url('./words_img/disgust.svg') no-repeat center;
 
     &_white {
-      background-image: url('./words_img/disgust_white.svg');
+      background: url('./words_img/disgust_white.svg') no-repeat center;
     }
   }
 }

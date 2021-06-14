@@ -33,10 +33,8 @@ $time: 0.3s;
   &__girafe {
     width: 80px;
     height: 95px;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url("./img/girafe_img.svg") no-repeat center;
     background-size: contain;
-    background-image: url("./img/girafe_img.svg");
 
     @include phone {
       width: 46px;
@@ -46,8 +44,6 @@ $time: 0.3s;
     &_word {
       height: 115px;
       width: 429px;
-      background-repeat: no-repeat;
-      background-position: center bottom;
       background-size: contain;
 
       @include phone {
@@ -56,27 +52,27 @@ $time: 0.3s;
       }
 
       &_roboto {
-        background-image: url("./img/giraffe_roboto.svg");
+        background: url("./img/giraffe_roboto.svg") no-repeat center bottom;
       }
 
       &_austin {
-        background-image: url("./img/giraffe_austin.svg");
+        background: url("./img/giraffe_austin.svg") no-repeat center bottom;
       }
 
       &_circe {
-        background-image: url("./img/giraffe_circe.svg");
+        background: url("./img/giraffe_circe.svg") no-repeat center bottom;
       }
 
       &_fence {
-        background-image: url("./img/giraffe_fence.svg");
+        background: url("./img/giraffe_fence.svg") no-repeat center bottom;
       }
 
       &_norbert {
-        background-image: url("./img/giraffe_norbert.svg");
+        background: url("./img/giraffe_norbert.svg") no-repeat center bottom;
       }
 
       &_vast {
-        background-image: url("./img/giraffe_vast.svg");
+        background: url("./img/giraffe_vast.svg") no-repeat center bottom;
       }
 
     }
@@ -85,10 +81,8 @@ $time: 0.3s;
   &__tarakan {
     width: 80px;
     height: 95px;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url("./img/tarakan.svg") no-repeat center;
     background-size: contain;
-    background-image: url("./img/tarakan.svg");
 
     @include phone {
       width: 46px;
@@ -98,8 +92,6 @@ $time: 0.3s;
     &_word {
       width: 482px;
       height: 115px;
-      background-repeat: no-repeat;
-      background-position: center bottom;
       background-size: contain;
 
       @include phone {
@@ -108,37 +100,35 @@ $time: 0.3s;
       }
 
       &_roboto {
-        background-image: url("./img/tarakan_roboto.svg");
+        background: url("./img/tarakan_roboto.svg") no-repeat center bottom;
       }
 
       &_didona {
-        background-image: url("./img/tarakan_didona.svg");
+        background: url("./img/tarakan_didona.svg") no-repeat center bottom;
       }
 
       &_displace {
-        background-image: url("./img/tarakan_displace.svg");
+        background: url("./img/tarakan_displace.svg") no-repeat center bottom;
       }
 
       &_cstm {
-        background-image: url("./img/tarakan_cstm.svg");
+        background: url("./img/tarakan_cstm.svg") no-repeat center bottom;
       }
 
       &_norbert {
-        background-image: url("./img/tarakan_norbert.svg");
+        background: url("./img/tarakan_norbert.svg") no-repeat center bottom;
       }
 
       &_vast {
-        background-image: url("./img/tarakan_vast.svg");
+        background: url("./img/tarakan_vast.svg") no-repeat center bottom;
       }
     }
   }
   &__elephant {
     width: 80px;
     height: 95px;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url("./img/elephant.svg") no-repeat center;
     background-size: contain;
-    background-image: url("./img/elephant.svg");
 
     @include phone {
       width: 46px;
@@ -148,8 +138,6 @@ $time: 0.3s;
     &_word {
       width: 330px;
       height: 100px;
-      background-repeat: no-repeat;
-      background-position: center bottom;
       background-size: contain;
 
       @include phone {
@@ -158,37 +146,35 @@ $time: 0.3s;
       }
 
       &_roboto {
-        background-image: url("./img/elephant_roboto.svg");
+        background: url("./img/elephant_roboto.svg") no-repeat center bottom;
       }
 
       &_harry {
-        background-image: url("./img/elephant_harry.svg");
+        background: url("./img/elephant_harry.svg") no-repeat center bottom;
       }
 
       &_norbert {
-        background-image: url("./img/elephant_norbert.svg");
+        background: url("./img/elephant_norbert.svg") no-repeat center bottom;
       }
 
       &_normalidad {
-        background-image: url("./img/elephant_normalidad.svg");
+        background: url("./img/elephant_normalidad.svg") no-repeat center bottom;
       }
 
       &_parmigiano {
-        background-image: url("./img/elephant_parmigiano.svg");
+        background: url("./img/elephant_parmigiano.svg") no-repeat center bottom;
       }
 
       &_peace {
-        background-image: url("./img/elephant_peace.svg");
+        background: url("./img/elephant_peace.svg") no-repeat center bottom;
       }
     }
   }
   &__bear {
     width: 80px;
     height: 95px;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url("./img/bear_img.svg") no-repeat center;
     background-size: contain;
-    background-image: url("./img/bear_img.svg");
 
     @include phone {
       width: 46px;
@@ -208,27 +194,27 @@ $time: 0.3s;
       }
 
       &_roboto {
-        background-image: url("./img/bear_roboto.svg");
+        background: url("./img/bear_roboto.svg") no-repeat center bottom;
       }
 
       &_vast {
-        background-image: url("./img/bear_vast.svg");
+        background: url("./img/bear_vast.svg") no-repeat center bottom;
       }
 
       &_kudryashev {
-        background-image: url("./img/bear_kudryashev.svg");
+        background: url("./img/bear_kudryashev.svg") no-repeat center bottom;
       }
 
       &_misto {
-        background-image: url("./img/bear_misto.svg");
+        background: url("./img/bear_misto.svg") no-repeat center bottom;
       }
 
       &_playfair {
-        background-image: url("./img/bear_playfair.svg");
+        background: url("./img/bear_playfair.svg") no-repeat center bottom;
       }
 
       &_amalta {
-        background-image: url("./img/bear_amalta.svg");
+        background: url("./img/bear_amalta.svg") no-repeat center bottom;
       }
     }
   }
