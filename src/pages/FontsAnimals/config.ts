@@ -128,7 +128,7 @@ export const mapWordData = {
 
       width: {
         default: 226,
-        mobile: 250,
+        mobile: 150,
         tablet: 226,
         desktop: 226
       }
@@ -140,7 +140,7 @@ export const mapWordData = {
 
       width: {
         default: 330,
-        mobile: 250,
+        mobile: 159,
         tablet: 330,
         desktop: 330
       }
@@ -151,7 +151,7 @@ export const mapWordData = {
       description: `Жирное начертание — это${nbsp}хорошо, но${nbsp}элегантые засечки и${nbsp}контраст штрихов сводит ощущения слона на${nbsp}нет`,
       width: {
         default: 245,
-        mobile: 245,
+        mobile: 150,
         tablet: 245,
         desktop: 245
       }
@@ -163,7 +163,7 @@ export const mapWordData = {
 
       width: {
         default: 263,
-        mobile: 250,
+        mobile: 150,
         tablet: 263,
         desktop: 263
       }
@@ -176,7 +176,7 @@ export const mapWordData = {
 
       width: {
         default: 101,
-        mobile: 230,
+        mobile: 75,
         tablet: 101,
         desktop: 101
       }
@@ -187,7 +187,7 @@ export const mapWordData = {
       description: `Широкие буквы — это${nbsp}хорошо, но${nbsp}для${nbsp}слоновьести им${nbsp}нужно быть жирнее раза в${nbsp}три`,
       width: {
         default: 296,
-        mobile: 240,
+        mobile: 150,
         tablet: 296,
         desktop: 296
       }
@@ -202,7 +202,7 @@ export const mapWordData = {
 
       width: {
         default: 366,
-        mobile: 240,
+        mobile: 200,
         tablet: 366,
         desktop: 366
       }
@@ -215,7 +215,7 @@ export const mapWordData = {
 
       width: {
         default: 439,
-        mobile: 240,
+        mobile: 200,
         tablet: 439,
         desktop: 439
       }
@@ -227,7 +227,7 @@ export const mapWordData = {
 
       width: {
         default: 363,
-        mobile: 240,
+        mobile: 200,
         tablet: 363,
         desktop: 363
       }
@@ -240,7 +240,7 @@ export const mapWordData = {
 
       width: {
         default: 166,
-        mobile: 200,
+        mobile: 120,
         tablet: 166,
         desktop: 166
       }
@@ -272,7 +272,7 @@ export const mapWordData = {
 
       width: {
         default: 315,
-        mobile: 230,
+        mobile: 193,
         tablet: 315,
         desktop: 315
       }
@@ -284,7 +284,7 @@ export const mapWordData = {
 
       width: {
         default: 169,
-        mobile: 230,
+        mobile: 125,
         tablet: 169,
         desktop: 169
       }
@@ -297,7 +297,7 @@ export const mapWordData = {
 
       width: {
         default: 323,
-        mobile: 230,
+        mobile: 193,
         tablet: 323,
         desktop: 323
       }
@@ -309,7 +309,7 @@ export const mapWordData = {
 
       width: {
         default: 369,
-        mobile: 230,
+        mobile: 193,
         tablet: 369,
         desktop: 369
       }
@@ -321,7 +321,7 @@ export const mapWordData = {
 
       width: {
         default: 440,
-        mobile: 230,
+        mobile: 200,
         tablet: 440,
         desktop: 440
       }
@@ -333,7 +333,7 @@ export const mapWordData = {
 
       width: {
         default: 429,
-        mobile: 230,
+        mobile: 200,
         tablet: 429,
         desktop: 429
       }

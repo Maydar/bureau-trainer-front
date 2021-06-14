@@ -16,35 +16,35 @@
     //top: 40%;
     left: 50%;
 
-    transform: translate(-50%, calc(40vh - 30px)) translateZ(0);
+    transform: translate(-50%, calc(31.7vh - 30px)) translateZ(0);
 
     @include desktop-xs {
-      transform: translate(-50%, calc(25vh - 30px)) translateZ(0);
+      transform: translate(-50%, calc(30vh - 24px)) translateZ(0);
     }
 
     @include phone {
-      transform: translate(-50%, calc(35vh - 30px)) translateZ(0);
+      transform: translate(-50%, calc(30vh - 24px)) translateZ(0);
     }
 
 
     @include desktop-lg {
-      transform: translate(-50%, calc(45vh - 30px)) translateZ(0);
+      transform: translate(-50%, calc(31.7vh - 30px)) translateZ(0);
     }
 
 
     &_next-active {
-      transform: translate(-50%, calc(-40vh + 30px));
+      transform: translate(-50%, calc(-31.7vh + 30px));
 
       @include desktop-xs {
-        transform: translate(-50%, calc(-25vh + 30px));
+        transform: translate(-50%, calc(-30vh + 24px));
       }
 
       @include phone {
-        transform: translate(-50%, calc(-35vh + 30px));
+        transform: translate(-50%, calc(-30vh + 24px));
       }
 
       @include desktop-lg {
-        transform: translate(-50%, calc(-45vh + 30px));
+        transform: translate(-50%, calc(-31.7vh + 30px));
       }
     }
 
@@ -208,11 +208,12 @@
   @include phone {
     width: 100%;
     min-width: 280px;
-    padding: 0 8px;
+    margin: 30px auto 0;
   }
 
   @include tablet {
     width: 450px;
+    margin: 68px auto 0;
   }
 
 

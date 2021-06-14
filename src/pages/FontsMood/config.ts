@@ -45,7 +45,7 @@ export const mapWordData = {
       description: `Жирное начертание ассоциируется с${nbsp}гневом, но${nbsp}эту ассоциацию побеждает элегантность форм`,
       width: {
         default: 280,
-        mobile: 160,
+        mobile: 130,
         tablet: 280,
         desktop: 280
       }
@@ -56,7 +56,7 @@ export const mapWordData = {
       description: `Плотные темные буквы могли бы${nbsp}ассоциироваться с${nbsp}гневом, но${nbsp}из${hyphen}за${nbsp}забавных скруглений ощущение сходит на${nbsp}нет`,
       width: {
         default: 309,
-        mobile: 160,
+        mobile: 130,
         tablet: 309,
         desktop: 309
       }
@@ -67,7 +67,7 @@ export const mapWordData = {
       description: `Набранное супертонким шрифтом слово выглядит спокойным и${nbsp}расслабленным. Расслабься и${nbsp}ты,${nbsp}бро`,
       width: {
         default: 323,
-        mobile: 160,
+        mobile: 130,
         tablet: 323,
         desktop: 323
       }
@@ -79,7 +79,7 @@ export const mapWordData = {
       description: `Никто не${nbsp}злится. Как будто написанное от${nbsp}руки слово ассоциируется с${nbsp}пироженками, детскими книгами и${nbsp}праздником`,
       width: {
         default: 238,
-        mobile: 160,
+        mobile: 130,
         tablet: 238,
         desktop: 238
       }
@@ -90,7 +90,7 @@ export const mapWordData = {
       description: `О да!${nbsp}Слово выглядит массивным и${nbsp}насупленным, как${nbsp}очень разозлённый человек`,
       width: {
         default: 330,
-        mobile: 160,
+        mobile: 130,
         tablet: 330,
         desktop: 330
       }
@@ -102,7 +102,7 @@ export const mapWordData = {
       Какое слово мной ни${nbsp}набери, я${nbsp}ничего не${nbsp}буду выражать. Поэтому оставьте меня для${nbsp}Андроида, а${nbsp}для${nbsp}выразительности выберите что${hyphen}то${nbsp}другое`,
       width: {
         default: 203,
-        mobile: 160,
+        mobile: 130,
         tablet: 203,
         desktop: 203
       }
@@ -115,7 +115,7 @@ export const mapWordData = {
       description: `Привет! Это снова я,${nbsp}один из${nbsp}самых нейтральных и${nbsp}безликих шрифтов на${nbsp}свете`,
       width: {
         default: 203,
-        mobile: 250,
+        mobile: 214,
         tablet: 482,
         desktop: 482
       }
@@ -126,7 +126,7 @@ export const mapWordData = {
       description: `Не${hyphen}не,${nbsp}тут${nbsp}кто${hyphen}то${nbsp}наоборот переел`,
       width: {
         default: 203,
-        mobile: 220,
+        mobile: 226,
         tablet: 472,
         desktop: 472
       }
@@ -138,7 +138,7 @@ export const mapWordData = {
       description: `О${nbsp}да! Скорее дайте${nbsp}ему${nbsp}бургер`,
       width: {
         default: 203,
-        mobile: 203,
+        mobile: 124,
         tablet: 270,
         desktop: 270
       }
@@ -149,7 +149,7 @@ export const mapWordData = {
       description: `Толстенные буквы — это${nbsp}совсем не${nbsp}про${nbsp}худобу`,
       width: {
         default: 203,
-        mobile: 280,
+        mobile: 230,
         tablet: 703,
         desktop: 703
       }
@@ -160,7 +160,7 @@ export const mapWordData = {
       description: `Да, узкие буквы напоминают об${nbsp}очень худом человеке, но${nbsp}штрихи могли бы${nbsp}быть и${nbsp}тоньше`,
       width: {
         default: 203,
-        mobile: 203,
+        mobile: 158,
         tablet: 237,
         desktop: 237
       }
@@ -183,8 +183,8 @@ export const mapWordData = {
       name: 'CSTM Xprmntl 01',
       description: `У${nbsp}букв разная ширина и${nbsp}они стараются выглядеть разнообразно, будто хаотично разбросанные в${nbsp}комнате вещи. Барда${hyphen}а${hyphen}ак`,
       width: {
-        default: 203,
-        mobile: 203,
+        default: 180,
+        mobile: 180,
         tablet: 439,
         desktop: 439
       }
@@ -195,8 +195,8 @@ export const mapWordData = {
       name: 'Roboto',
       description: `Привет!... Ну вы поняли`,
       width: {
-        default: 203,
-        mobile: 203,
+        default: 180,
+        mobile: 180,
         tablet: 324,
         desktop: 324
       }
@@ -207,8 +207,8 @@ export const mapWordData = {
       name: 'Didona',
       description: `Слишком аккуратно и${nbsp}элегантно. Выглядит${nbsp}как${nbsp}название дома моды «Бардак»`,
       width: {
-        default: 203,
-        mobile: 203,
+        default: 180,
+        mobile: 180,
         tablet: 408,
         desktop: 408
       }
@@ -219,8 +219,8 @@ export const mapWordData = {
       name: 'DRUK',
       description: `Всё слишком стройно, ровно и${nbsp}упорядоченно. Порядок, а${nbsp}не${nbsp}бардак`,
       width: {
-        default: 203,
-        mobile: 203,
+        default: 180,
+        mobile: 180,
         tablet: 514,
         desktop: 514
       }
@@ -231,8 +231,8 @@ export const mapWordData = {
       name: 'KARLOFF NEUTRAL',
       description: `Шрифт как${nbsp}у${nbsp}пишущей машинки выглядит немного старомодно и${nbsp}небардачно`,
       width: {
-        default: 203,
-        mobile: 203,
+        default: 180,
+        mobile: 180,
         tablet: 405,
         desktop: 405
       }
@@ -243,7 +243,7 @@ export const mapWordData = {
       name: 'STAG',
       description: `Массивно и${nbsp}не${nbsp}слишком строго, но${nbsp}всё${hyphen}таки чересчур аккуратно для${nbsp}бардака`,
       width: {
-        default: 203,
+        default: 180,
         mobile: 203,
         tablet: 435,
         desktop: 435

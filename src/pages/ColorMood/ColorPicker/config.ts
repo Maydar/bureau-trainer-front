@@ -68,34 +68,34 @@ export const mapTypeColors = {
 export const mapTypeToFont = {
   [ColorThemes.rage]: 'AMALTA',
   [ColorThemes.happiness]: 'DISPLACE 2.0',
-  [ColorThemes.sadness]: 'Ambidexter',
-  [ColorThemes.disgust]: 'NORMALIDAD EXTENDED',
+  [ColorThemes.sadness]: 'NORMALIDAD EXTENDED',
+  [ColorThemes.disgust]: 'Ambidexter',
 };
 
 export const mapColorToDescription = {
-  [Color.white]: `Можно позеленеть от злости, но этот цвет ассоциируется с мятной свежестью`,
-  [Color.darkred]: `Насыщенный и${nbsp}агрессивный красный хорошо передаёт сильную эмоцию и${nbsp}подходит для${nbsp}злости`,
+  [Color.white]: `Можно позеленеть от${nbsp}злости, но${nbsp}этот цвет ассоциируется с${nbsp}мятной свежестью`,
+  [Color.darkred]: `Вот${nbsp}яркий красный, который ассоциируется со${nbsp}взрывом эмоций и${nbsp}лицом злого человека`,
   [Color.yellow]: `Тёплый и${nbsp}дружелюбный жёлтый не${nbsp}дружит со${nbsp}злостью`,
-  [Color.green]: `Недостаточно злой. Это цвет волшебной маски Стэнли Ипкиса`,
+  [Color.green]: `Можно позеленеть от${nbsp}злости, но${nbsp}этот цвет ассоциируется с${nbsp}мятной свежестью`,
   [Color.darkgreen]: `Изумрудный цвет — это${nbsp}роскошь, а${nbsp}не${nbsp}злость`,
-  [Color.lightblue]: `Цвет открытки на${nbsp}день рождения младенца. Только замените шрифт`,
+  [Color.lightblue]: `Тут${nbsp}чистое безоблачное небо, которое совсем не${nbsp}про${nbsp}злость`,
 
   [Color.olive]: `Цвет засохшей жвачки на${nbsp}парте`,
   [Color.darkblue]: `Цвет спокойный и${nbsp}холодный, а${nbsp}не${nbsp}теплый и${nbsp}радостный`,
   [Color.brown]: `Загадочный цвет. Какое${hyphen}то колдунство`,
-  [Color.orange]: `Вот это${nbsp}радость и${nbsp}веселье!`,
+  [Color.orange]: `Солнышко, ромашки, радость!`,
   [Color.hackie]: `Подойдет для${nbsp}болотной Кикиморы. В${nbsp}любом настроении`,
 
-  [Color.pink]: `Нежный ягодный цвет — слишком мило для${nbsp}отвращения`,
-  [Color.mudgreen]: `Отталкивающий цвет — ассоциируется с${nbsp}болотом и${nbsp}грязью`,
+  [Color.pink]: `Это цвет умиления и${nbsp}розовых соплей, но${nbsp}не${nbsp}отвращения`,
+  [Color.mudgreen]: ` У${nbsp}вас${nbsp}из${nbsp}крана течёт болотная жижа. Вы${nbsp}испытываете отвращение!`,
   [Color.grey]: `Бетон и${nbsp}пыль. Мрачно, но${nbsp}не${nbsp}противно`,
   [Color.sky]: `Лёгкий и${nbsp}наивный цвет — не${nbsp}про отвращение`,
   [Color.blue]: `Кажется, это${nbsp}цвет платья диснеевской принцессы`,
 
-  [Color.fonk]: `Лазурный, как${nbsp}цвет чистой морской воды, выглядит безупречным и${nbsp}жизнеутверждающим`,
+  [Color.fonk]: `Цвет идеального моря в${nbsp}идеальный солнечный день. Тут не${nbsp}до${nbsp}печали`,
   [Color.darkbrown]: `Шоколадка! От${nbsp}неё${nbsp}всегда теплей на${nbsp}душе`,
   [Color.lightyellow]: `Это${nbsp}цвет серединки ромашек в${nbsp}солнечный денёк`,
-  [Color.lightgrey]: `Цвет пасмурного неба, меланхолии. Как${hyphen}то печально сразу стало...`,
+  [Color.lightgrey]: `Пасмурное небо, дождь, плохое настроение, печаль`,
   [Color.acidorange]: `Если${nbsp}бы${nbsp}у${nbsp}меня был гоночный болид, он${nbsp}был${nbsp}бы${nbsp}такого энергичного цвета!`,
 };
 

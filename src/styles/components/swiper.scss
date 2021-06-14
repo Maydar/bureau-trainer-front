@@ -8,6 +8,10 @@
 .swiper-container-v {
   .swiper-slide {
     height: calc(100% - 60px);
+
+    @include mobile {
+      height: calc(100% - 48px);
+    }
   }
 
   .swiper-slide-active {

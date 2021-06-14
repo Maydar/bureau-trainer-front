@@ -23,7 +23,7 @@ $time: 0.3s;
     min-height: 25rem;
 
     left: 50%;
-    transform: translate(-50%, calc(37vh - 30px));
+    transform: translate(-50%, calc(26vh - 30px));
   }
 
   &__hidden {
@@ -147,7 +147,7 @@ $time: 0.3s;
 
     &_word {
       width: 330px;
-      height: 140px;
+      height: 100px;
       background-repeat: no-repeat;
       background-position: center bottom;
       background-size: contain;
