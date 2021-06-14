@@ -33,7 +33,7 @@ const Main: React.FC = () => {
       </div>
       <div className="page-copyright">
         <p className="page-copyright__school">
-          <a href="https://bureau.ru" className="bureau-school-link">
+          <a href="https://bureau.ru/school/designers/12/" className="bureau-school-link">
             <BureauLogo/>
           </a>
         </p>
