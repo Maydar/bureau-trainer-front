@@ -285,16 +285,27 @@ const Greetings: React.FC = () => {
           >
             <Twitter size="mc" color={'colored'} />
           </a>
-          <a
-            target={'_blank'}
-            href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
+          <div
+            //target={'_blank'}
+            //href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
             styleName="share"
             onClick={() => {
+              if (FB) {
+                //@ts-ignore
+                FB.ui({
+                  display: 'popup',
+                  method: 'share_open_graph',
+                  action_type: 'og.likes',
+                  action_properties: JSON.stringify({
+                    object:SITE_LINK,
+                  })
+                }, function(response:any){});
+              }
               ymReachGoal('fb-share');
             }}
           >
             <FacebookBlack size="mc" color={'colored'} />
-          </a>
+          </div>
           <a
             target={'_blank'}
             href={`https://vk.com/share.php?url=${SITE_LINK}`}
