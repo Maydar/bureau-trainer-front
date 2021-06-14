@@ -10,7 +10,7 @@ import Twitter from 'components/icons/ui/Social/Twitter';
 import FB from 'components/icons/ui/Social/FB';
 import VK from 'components/icons/ui/Social/VK';
 import FacebookBlack from 'components/icons/ui/Social/FacebookBlack';
-import { ymReachGoal } from 'utils/metrika';
+import { shareFB, ymReachGoal } from 'utils/metrika';
 
 const Greetings: React.FC = () => {
   return (
@@ -244,6 +244,7 @@ const Greetings: React.FC = () => {
               href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
               styleName="share"
               onClick={() => {
+                shareFB();
                 ymReachGoal('fb-share');
               }}
             >
@@ -290,17 +291,7 @@ const Greetings: React.FC = () => {
             //href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
             styleName="share"
             onClick={() => {
-              if (FB) {
-                //@ts-ignore
-                FB.ui({
-                  display: 'popup',
-                  method: 'share_open_graph',
-                  action_type: 'og.likes',
-                  action_properties: JSON.stringify({
-                    object:SITE_LINK,
-                  })
-                }, function(response:any){});
-              }
+              shareFB();
               ymReachGoal('fb-share');
             }}
           >

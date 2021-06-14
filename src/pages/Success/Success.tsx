@@ -7,7 +7,7 @@ import TG from 'components/icons/ui/Social/TG';
 import Twitter from 'components/icons/ui/Social/Twitter';
 import FBIcon from 'components/icons/ui/Social/FB';
 import VK from 'components/icons/ui/Social/VK';
-import { ymReachGoal } from 'utils/metrika';
+import {shareFB, ymReachGoal} from 'utils/metrika';
 
 import './Success.modules.scss';
 
@@ -50,17 +50,7 @@ const Success: React.FC = () => {
               // href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
               styleName={'share'}
               onClick={() => {//@ts-ignore
-                if (FB) {
-                  //@ts-ignore
-                  FB.ui({
-                    display: 'popup',
-                    method: 'share_open_graph',
-                    action_type: 'og.likes',
-                    action_properties: JSON.stringify({
-                      object:SITE_LINK,
-                    })
-                  }, function(response:any){});
-                }
+                shareFB();
                 ymReachGoal('fb-share');
               }}
             >
