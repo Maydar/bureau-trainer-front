@@ -25,7 +25,7 @@ const CommonCover: React.FC<Props> = ({ urls }: Props) => {
     >
       <Link to={urls.fonts}>
         <g styleName="content__font" clipPath="url(#clip0)">
-          <g clipPath="url(#clip1)" styleName="content__font-default">
+          <g clipPath="url(#clip1)" styleName="content__font-hovered" >
             <rect
               x="28.163"
               y="0.0996094"
@@ -55,7 +55,7 @@ const CommonCover: React.FC<Props> = ({ urls }: Props) => {
               fill="white"
             />
           </g>
-          <g clipPath="url(#clip2)" styleName="content__font-hovered">
+          <g clipPath="url(#clip2)" styleName="content__font-default" >
             <rect
               x="28.163"
               y="0.0996094"
