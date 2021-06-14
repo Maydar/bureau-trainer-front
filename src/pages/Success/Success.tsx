@@ -5,7 +5,7 @@ import TaskDescription from 'components/common/TaskDescription';
 import { shareText, SITE_LINK } from 'config/constants';
 import TG from 'components/icons/ui/Social/TG';
 import Twitter from 'components/icons/ui/Social/Twitter';
-import FB from 'components/icons/ui/Social/FB';
+import FBIcon from 'components/icons/ui/Social/FB';
 import VK from 'components/icons/ui/Social/VK';
 import { ymReachGoal } from 'utils/metrika';
 
@@ -45,16 +45,27 @@ const Success: React.FC = () => {
             >
               <Twitter size="m" color={'colored'} />
             </a>
-            <a
-              target={'_blank'}
-              href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
+            <div
+              // target={'_blank'}
+              // href={`https://www.facebook.com/sharer/sharer.php?u=#${SITE_LINK}`}
               styleName={'share'}
-              onClick={() => {
+              onClick={() => {//@ts-ignore
+                if (FB) {
+                  //@ts-ignore
+                  FB.ui({
+                    display: 'popup',
+                    method: 'share_open_graph',
+                    action_type: 'og.likes',
+                    action_properties: JSON.stringify({
+                      object:SITE_LINK,
+                    })
+                  }, function(response:any){});
+                }
                 ymReachGoal('fb-share');
               }}
             >
-              <FB size="m" color={'colored'} />
-            </a>
+              <FBIcon size="m" color={'colored'} />
+            </div>
             <a
               target={'_blank'}
               href={`https://vk.com/share.php?url=${SITE_LINK}`}
