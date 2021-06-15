@@ -14,6 +14,7 @@ const Main: React.FC = () => {
   rootStore.flush();
   React.useEffect(() => {
     const body = document.querySelector('body');
+    body.classList.remove('overflow-hidden');
     body.classList.add('overflow-auto');
   });
 
