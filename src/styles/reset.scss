@@ -9,11 +9,12 @@
   outline: none;
   overscroll-behavior: none;
   backface-visibility: hidden;
-  font-family: 'Atyp Text', sans-serif;
-  font-weight: 500;
 }
 
-html {
+html, body {
+  font-family: 'Atyp Text', sans-serif;
+  font-weight: 500;
+
   font-size: 6px;
 
   @include phone {

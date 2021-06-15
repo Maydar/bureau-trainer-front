@@ -1,24 +1,17 @@
 @font-face {
     font-family: 'Atyp Text';
-    src: url('./AtypText-Bold.eot');
-    src: local('Atyp Text Bold'), local('./AtypText-Bold'),
-        url('./AtypText-Bold.eot?#iefix') format('embedded-opentype'),
-        url('./AtypText-Bold.woff2') format('woff2'),
-        url('./AtypText-Bold.woff') format('woff'),
-        url('./AtypText-Bold.ttf') format('truetype');
+    src: url('./AtypText-Bold.woff2') format('woff2'),
+    url('./AtypText-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Atyp Text';
-    src: url('./AtypText-Medium.eot');
-    src: local('Atyp Text Medium'), local('./AtypText-Medium'),
-        url('./AtypText-Medium.eot?#iefix') format('embedded-opentype'),
-        url('./AtypText-Medium.woff2') format('woff2'),
-        url('./AtypText-Medium.woff') format('woff'),
-        url('./AtypText-Medium.ttf') format('truetype');
+    src: url('./AtypText-Medium.woff2') format('woff2'),
+    url('./AtypText-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
-
