@@ -21,6 +21,12 @@ const ColorMood: React.FC = () => {
 
   rootStore.visitColors();
 
+  React.useEffect(() => {
+    const body = document.querySelector('body');
+    body.classList.add('overflow-hidden');
+    body.classList.remove('overflow-auto');
+  });
+
   return (
     <div styleName={`content`}>
       <Pager

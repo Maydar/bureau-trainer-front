@@ -15,6 +15,13 @@ import './FontsAnimals.modules.scss';
 
 const FontsAnimals: React.FC = () => {
   rootStore.visitAnimals();
+
+  React.useEffect(() => {
+    const body = document.querySelector('body');
+    body.classList.add('overflow-hidden');
+    body.classList.remove('overflow-auto');
+  });
+
   return (
     <>
       <Pager

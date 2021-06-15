@@ -103,3 +103,11 @@ $transition-animating: top 0.28s ease-out, left 0s ease-in-out,
 .vertical-slide-prev {
   opacity: 0;
 }
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

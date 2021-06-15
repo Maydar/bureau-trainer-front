@@ -12,6 +12,12 @@ import rootStore from 'store/RootStore';
 
 const Main: React.FC = () => {
   rootStore.flush();
+  React.useEffect(() => {
+    const body = document.querySelector('body');
+    body.classList.add('overflow-auto');
+  });
+
+
   return (
     <div className="main-page">
       <div className="page-header">

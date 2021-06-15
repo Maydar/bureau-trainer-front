@@ -10,6 +10,11 @@ import './Composition.modules.scss';
 
 const Composition: React.FC = () => {
   rootStore.visitComposition();
+  React.useEffect(() => {
+    const body = document.querySelector('body');
+    body.classList.add('overflow-hidden');
+    body.classList.remove('overflow-auto');
+  });
 
   return (
     <Pager
