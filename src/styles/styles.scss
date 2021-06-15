@@ -1,5 +1,4 @@
 @import "./fonts/atyp/stylesheet.css";
-@import "./fonts/montserrat/stylesheet.css";
 @import 'colors';
 @import 'vars';
 @import 'mixins';
@@ -25,7 +24,7 @@ body {
   height: 100%;
   position: relative;
   line-height: 1.2;
-  font-family: 'Atyp Text', sans-serif;
+ // font-family: 'Atyp Text', sans-serif;
 }
 
 ::-webkit-scrollbar {
