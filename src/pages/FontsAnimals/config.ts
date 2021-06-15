@@ -139,10 +139,10 @@ export const mapWordData = {
       description: `Засечки напоминают ноги слона, а${nbsp}ножка у${nbsp}буквы «л» — хобот, но${nbsp}шрифту не${nbsp}хватает массы, ведь слон толстый и${nbsp}большой`,
 
       width: {
-        default: 330,
+        default: 235,
         mobile: 159,
-        tablet: 330,
-        desktop: 330
+        tablet: 235,
+        desktop: 235
       }
     },
     [ElephantFonts.parmigiano]: {
