@@ -57,10 +57,11 @@ const Slide: React.FC<Props> = ({
             className={'h-frame-pic'}
             styleName={cn(
               `slide__image_${theme}`,
-              `slide__image_${theme}_${font}`
             )}
             style={{
               width: width.default,
+              background: `url("/static/img/${theme}_${font}.${font === 'palkerson' ? 'png' : 'svg'}") no-repeat center bottom`,
+              backgroundSize: 'contain'
             }}
             data-width-mobile={width.mobile}
             data-width-tablet={width.tablet}
