@@ -34,7 +34,7 @@ $time: 0.3s;
     width: 80px;
     height: 95px;
     background: url("./img/girafe_img.svg") no-repeat center;
-    background-size: contain;
+    background-size: contain !important;
 
     @include phone {
       width: 46px;
@@ -87,8 +87,8 @@ $time: 0.3s;
   &__tarakan {
     width: 80px;
     height: 95px;
-    background: url("./img/tarakan.svg") no-repeat center;
-    background-size: contain;
+    background: url("./img/tarakan_img.svg") no-repeat center;
+    background-size: contain !important;
 
     @include phone {
       width: 46px;
@@ -139,8 +139,8 @@ $time: 0.3s;
   &__elephant {
     width: 80px;
     height: 95px;
-    background: url("./img/elephant.svg") no-repeat center;
-    background-size: contain;
+    background: url("./img/elephant_img.svg") no-repeat center;
+    background-size: contain !important;
 
     @include phone {
       width: 46px;
@@ -191,7 +191,7 @@ $time: 0.3s;
     width: 80px;
     height: 95px;
     background: url("./img/bear_img.svg") no-repeat center;
-    background-size: contain;
+    background-size: contain !important;
 
     @include phone {
       width: 46px;

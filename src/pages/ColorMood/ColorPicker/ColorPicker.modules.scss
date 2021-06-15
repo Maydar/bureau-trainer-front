@@ -165,6 +165,8 @@ $time: 0.3s;
   height: 114px;
   width: 586px;
 
+  background-size: contain !important;
+
   @include phone {
     width: 250px;
     height: 56px;

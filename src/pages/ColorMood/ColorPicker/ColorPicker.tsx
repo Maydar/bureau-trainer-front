@@ -46,10 +46,10 @@ const ColorPicker: React.FC<Props> = ({
         )}
       >
         <div
-          styleName={cn(
-            `word-image word-image_${type}`,
-            textColor === 'white' && `word-image_${type}_white`
-          )}
+          styleName={'word-image'}
+          style={{
+            background: `url('/static/img/${textColor === 'white' ? `${type}_white` : type}.svg') no-repeat center`,
+          }}
         />
         <div styleName={cn('ui-elements', isPrev && 'ui-elements_hidden')}>
           <p styleName="description__font">{mapTypeToFont[type]}</p>

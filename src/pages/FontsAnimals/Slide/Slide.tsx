@@ -50,17 +50,22 @@ const Slide: React.FC<Props> = ({
             `slide__theme slide__${theme}`,
             isNextSliderCurrentSlide && 'slide__theme_hidden'
           )}
+          style={{
+            background: `url("/static/img/${theme}_img.svg") no-repeat center`
+          }}
         />
         <div
           className="h-frame-pic"
           styleName={cn(
-            `slide__word slide__${theme}_word slide__${theme}_word_${font}`,
+            `slide__word slide__${theme}_word`,
             isNextSlider && horizontal && slideStates.isNext && `slide__hidden`,
             isNextSlider && horizontal && slideStates.isPrev && `slide__hidden`
           )}
 
           style={{
             width: width.default,
+            background: `url("/static/img/${theme}_${font}.svg") no-repeat center bottom`,
+            backgroundSize: 'contain'
           }}
           data-width-mobile={width.mobile}
           data-width-tablet={width.tablet}
