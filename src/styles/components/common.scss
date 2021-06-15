@@ -110,4 +110,5 @@ $transition-animating: top 0.28s ease-out, left 0s ease-in-out,
 
 .overflow-hidden {
   overflow: hidden;
+  touch-action: none;
 }
