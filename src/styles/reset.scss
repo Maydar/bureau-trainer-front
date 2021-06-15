@@ -28,6 +28,8 @@ html, body {
   @include desktop-lg {
     font-size: 16px;
   }
+
+  -webkit-user-drag: none;
 }
 
 a {
