@@ -39,7 +39,7 @@ const Content: React.FC<Props> = ({ store, keyboardEnabled }: Props) => {
         />
       </div>
       <VerticalSlider
-        keyboardEnabled={true}
+        keyboardEnabled={keyboardEnabled}
         onSlideChange={(swiper) => {
           colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex]);
         }}

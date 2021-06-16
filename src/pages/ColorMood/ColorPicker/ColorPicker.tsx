@@ -53,11 +53,10 @@ const ColorPicker: React.FC<Props> = ({
         />
         <div styleName={cn('ui-elements', isPrev && 'ui-elements_hidden')}>
           <p styleName="description__font">{mapTypeToFont[type]}</p>
-          <div styleName="pickers">
+          <div styleName="pickers" className="swiper-no-swiping">
             {mapTypeColors[type].map((mapColor) => {
               return (
                 <div
-                  className="swiper-no-swiping"
                   key={`${type}_${mapColor}`}
                   styleName="pickers__item"
                 >
