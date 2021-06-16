@@ -66,7 +66,7 @@
   transition: transform .5s;
 
   @include mobile {
-    transition: transform .4s;
+    transition: transform .34s ease-in-out;
   }
   /* Здесь можно задать мин. и макс. ширину блоку с содержимым */
 }
@@ -76,7 +76,7 @@
   transition: background-position .5s;
 
   @include mobile {
-    transition: background-position .4s;
+    transition: background-position .34s ease-in-out;
   }
 }
 
