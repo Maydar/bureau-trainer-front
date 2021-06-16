@@ -3,8 +3,8 @@
 
 
 @keyframes scale-triangle {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% { transform: scale(0); }
+  100% {  transform: scale(1); }
 }
 
 .next {
@@ -17,9 +17,9 @@
   transition: width ease-in-out 800ms, height ease-in-out 800ms, transform ease-in-out 400ms;
   transform-origin: top right;
 
-  //animation-name: scale-triangle;
-  //animation-duration: .4s;
-  //animation-timing-function: ease-in-out;
+  animation-name: scale-triangle;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
 
   cursor: pointer;
 

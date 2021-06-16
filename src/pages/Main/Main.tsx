@@ -18,7 +18,6 @@ const Main: React.FC = () => {
     body.classList.add('overflow-auto');
   });
 
-
   return (
     <div className="main-page">
       <div className="page-header">

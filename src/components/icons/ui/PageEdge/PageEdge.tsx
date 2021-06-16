@@ -54,7 +54,7 @@ const PageEdge: React.FC<Props> = ({
           {nextPage === urls.fonts && <Fonts />}
           {nextPage === urls.animals && <Animals />}
           {nextPage === urls.colors && <Colors />}
-          {nextPage === urls.composition && <Composition/>}
+          {nextPage === urls.composition && <Composition visibleControls={false}/>}
           {nextPage === urls.success && <Success />}
         </div>
       </div>

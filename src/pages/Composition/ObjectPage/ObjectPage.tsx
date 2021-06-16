@@ -95,7 +95,7 @@ const ObjectPage: React.FC<Props> = ({
         styleName={cn(
           `range-wrapper`,
           orientation === Orientation.vertical && 'range-wrapper_vertical',
-          //!visibleControls && 'range-wrapper_hidden'
+          !visibleControls && 'range-wrapper_hidden'
         )}
         className={'swiper-no-swiping'}
       >

@@ -29,7 +29,7 @@ const Pager: React.FC<Props> = ({
     setTimeout(() => {
       document.body.classList.remove('overflow-hidden');
       history.push(nextPage);
-    }, 1000);
+    }, 800);
   };
 
   return (
