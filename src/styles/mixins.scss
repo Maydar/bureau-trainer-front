@@ -466,3 +466,12 @@ $sizes: 'desktop', 'tablet', 'phone', 'iphoneX';
     #{$property}: $interactive-active;
   }
 }
+
+@mixin font-default {
+  font-family: "AtypText-Medium", sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-bold {
+  font-family: "AtypText-Bold", sans-serif;
+}

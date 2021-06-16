@@ -1,17 +1,12 @@
-@font-face {
-    font-family: 'Atyp Text';
-    src: url('./AtypText-Bold.woff2') format('woff2'),
-    url('./AtypText-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
+@import url("//hello.myfonts.net/count/3ea052");
+
 
 @font-face {
-    font-family: 'Atyp Text';
-    src: url('./AtypText-Medium.woff2') format('woff2'),
-    url('./AtypText-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+    font-family: "AtypText-Medium";
+    src: url('./AtypTextMedium/font.woff2') format('woff2'), url('./AtypTextMedium/font.woff') format('woff');
 }
+@font-face {
+    font-family: "AtypText-Bold";
+    src: url('./AtypTextBold/font.woff2') format('woff2'), url('./AtypTextBold/font.woff') format('woff');
+}
+
