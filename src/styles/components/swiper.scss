@@ -64,12 +64,20 @@
 
 .h-frame-wrapper {
   transition: transform .5s;
+
+  @include mobile {
+    transition: transform .4s;
+  }
   /* Здесь можно задать мин. и макс. ширину блоку с содержимым */
 }
 
 .h-frame-pic {
   display: block;
   transition: background-position .5s;
+
+  @include mobile {
+    transition: background-position .4s;
+  }
 }
 
 .h-frame-content {
