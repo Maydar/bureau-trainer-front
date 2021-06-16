@@ -47,7 +47,7 @@ export const HorizontalSlider: React.FC<Props> = ({
         speed={700}
         mousewheel={{
           sensitivity: 0.1,
-          thresholdDelta: 10,
+          //thresholdDelta: 10,
           forceToAxis: true
         }}
         grabCursor={true}
