@@ -2,11 +2,14 @@
 
 
 @font-face {
-    font-family: "AtypText-Medium";
+    font-family: 'Atyp Text';
+    font-weight: 500;
     src: url('./AtypTextMedium/font.woff2') format('woff2'), url('./AtypTextMedium/font.woff') format('woff');
 }
 @font-face {
-    font-family: "AtypText-Bold";
-    src: url('./AtypTextBold/font.woff2') format('woff2'), url('./AtypTextBold/font.woff') format('woff');
+    font-family: 'Atyp Text';
+    font-weight: 700;
+    src: url('AtypTextBold/font-bold.woff2') format('woff2'),
+    url('AtypTextBold/font-bold.woff') format('woff');
 }
 

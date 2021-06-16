@@ -86,6 +86,7 @@ export const VerticalSlider: React.FC<Props> = ({
       navigation={{
         nextEl: nextElClass,
       }}
+      followFinger={false}
       loop={loop}
       loopedSlides={loop ? 1 : null}
       speed={700}

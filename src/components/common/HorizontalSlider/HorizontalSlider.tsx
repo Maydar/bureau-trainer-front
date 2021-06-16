@@ -51,7 +51,7 @@ export const HorizontalSlider: React.FC<Props> = ({
           forceToAxis: true
         }}
         grabCursor={true}
-        followFinger={true}
+        followFinger={!isMobile}
         preventInteractionOnTransition={true}
         allowTouchMove={true}
         centeredSlides={true}

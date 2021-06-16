@@ -121,7 +121,7 @@
   //background: red;
 
   @include phone {
-    pointer-events: none;
+    width: 15%;
   }
 
 }
@@ -132,6 +132,6 @@
   //background: green;
 
   @include phone {
-    pointer-events: none;
+    width: 15%;
   }
 }
