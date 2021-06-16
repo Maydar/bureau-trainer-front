@@ -175,15 +175,6 @@ const Greetings: React.FC = () => {
               <div styleName="section__items">
                 <div styleName="section__item">
                   <a
-                    href="https://yurigordon.com/ru/shop/fonts/mr-palkerson"
-                    styleName="section__item-title section__item-title_link"
-                  >
-                    Mr&nbsp;Palkerson
-                  </a>
-                  <div styleName="section__item-text">Юрий&nbsp;Гордон</div>
-                </div>
-                <div styleName="section__item">
-                  <a
                     href="https://thenorthernblock.co.uk/fonts/p/eldwin"
                     styleName="section__item-title section__item-title_link"
                   >

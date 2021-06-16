@@ -60,7 +60,7 @@ const Slide: React.FC<Props> = ({
             )}
             style={{
               width: width.default,
-              background: `url("/static/img/${theme}_${font}.${font === 'palkerson' ? 'png' : 'svg'}") no-repeat center bottom`,
+              background: `url("/static/img/${theme}_${font}.svg") no-repeat center bottom`,
               backgroundSize: 'contain'
             }}
             data-width-mobile={width.mobile}

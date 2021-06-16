@@ -134,7 +134,7 @@ export const mapWordData = {
     },
     [AnorexyFonts.palkerson]: {
       key: 'palkerson',
-      name: 'Mr Palkerson',
+      name: 'TT Bluescreens',
       description: `О${nbsp}да! Скорее дайте${nbsp}ему${nbsp}бургер`,
       width: {
         default: 203,
