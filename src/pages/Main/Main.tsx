@@ -44,7 +44,7 @@ const Main: React.FC = () => {
           </a>
         </p>
         <p className="page-copyright__school">
-          <Link className={'bureau-school-link'} to={urls.greetings}>
+          <Link className={'bureau-school-link'} to={urls.greetings} target="_blank">
             <FontsCopyright/>
           </Link>
         </p>
