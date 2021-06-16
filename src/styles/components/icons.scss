@@ -73,7 +73,7 @@
     }
 
     &_mc {
-      @include desktop-xs {
+      @include mobile {
         @include square(48px);
       }
 
