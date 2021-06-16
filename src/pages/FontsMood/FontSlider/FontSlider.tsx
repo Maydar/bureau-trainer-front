@@ -19,6 +19,7 @@ type Props = {
   currentIndex: number;
   onChangeIndex: (idx: number) => void;
   forwardRef?: any;
+  keyboardEnabled: boolean
 };
 
 const FontSlider: React.FC<Props> = ({
@@ -28,6 +29,7 @@ const FontSlider: React.FC<Props> = ({
   isPrev: isPrevSlider,
   currentIndex,
   onChangeIndex,
+  keyboardEnabled
 }: Props) => {
   const [isNeedAnimation, setNeedAnimation] = useState(false);
   const sliderRef = React.useRef(null);
@@ -82,6 +84,7 @@ const FontSlider: React.FC<Props> = ({
       )}
     >
       <HorizontalSlider
+        keyboardEnabled={keyboardEnabled}
         forwardRef={sliderRef}
         isActive={isActiveSlider}
         initialSlide={currentIndex}

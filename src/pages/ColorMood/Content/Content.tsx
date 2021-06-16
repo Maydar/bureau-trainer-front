@@ -17,9 +17,10 @@ import './Content.modules.scss';
 
 type Props = {
   store?: any;
+  keyboardEnabled: boolean
 };
 
-const Content: React.FC<Props> = ({ store }: Props) => {
+const Content: React.FC<Props> = ({ store, keyboardEnabled }: Props) => {
   const colorMoodStore = !store ? useLocal(() => new ColorMoodStore()) : store;
 
   const pageColor =
@@ -38,6 +39,7 @@ const Content: React.FC<Props> = ({ store }: Props) => {
         />
       </div>
       <VerticalSlider
+        keyboardEnabled={true}
         onSlideChange={(swiper) => {
           colorMoodStore.setTheme(colorMoodStore.pageOrder[swiper.realIndex]);
         }}
@@ -73,6 +75,10 @@ const Content: React.FC<Props> = ({ store }: Props) => {
       </VerticalSlider>
     </>
   );
+};
+
+Content.defaultProps = {
+  keyboardEnabled: false
 };
 
 export default observer(Content);

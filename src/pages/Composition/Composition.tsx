@@ -23,7 +23,7 @@ const Composition: React.FC = () => {
       previewColor="black"
       curveClass="triangle-curve_composition"
     >
-      <Content visibleControls={true}/>
+      <Content visibleControls={true} keyboardEnabled={true} />
     </Pager>
   );
 };

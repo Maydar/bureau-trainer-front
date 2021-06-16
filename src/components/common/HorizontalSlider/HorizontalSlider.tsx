@@ -11,6 +11,7 @@ type Props = {
   onResize?: (swiper: any) => void;
   onSlideChangeTransitionStart?: (swiper: any) => void;
   onSlideChangeTransitionEnd?: (swiper: any) => void;
+  keyboardEnabled: boolean;
   onInit?: (swiper: any) => void;
   children: React.ReactNode;
   navKey: string;
@@ -32,6 +33,7 @@ export const HorizontalSlider: React.FC<Props> = ({
   children,
   forwardRef,
   className,
+  keyboardEnabled
 }) => {
   const { isMobile } = useSize();
   return (
@@ -68,7 +70,7 @@ export const HorizontalSlider: React.FC<Props> = ({
         onSlideChangeTransitionStart={onSlideChangeTransitionStart}
         onResize={onResize}
         keyboard={{
-          enabled: true,
+          enabled: keyboardEnabled,
           onlyInViewport: true,
         }}
         // @ts-ignore
@@ -86,6 +88,7 @@ HorizontalSlider.defaultProps = {
   onSlideChange: () => {},
   onSlideChangeTransitionEnd: () => {},
   onInit: () => {},
+  keyboardEnabled: false,
   className: null,
 };
 

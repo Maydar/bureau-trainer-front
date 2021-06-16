@@ -11,7 +11,12 @@ import { useLocal } from 'utils/hooks';
 import FontsAnimalStore from 'pages/FontsAnimals/store/FontsAnimalsStore';
 import { observer } from 'mobx-react';
 
-const Content: React.FC = () => {
+type Props = {
+  keyboardEnabled: boolean
+}
+
+
+const Content: React.FC<Props> = ({ keyboardEnabled}: Props) => {
   const fontsAnimalsStore = useLocal(() => new FontsAnimalStore());
 
   return (
@@ -24,7 +29,7 @@ const Content: React.FC = () => {
       </div>
       <div styleName="content_bg" />
       <div styleName="content">
-        <VerticalSlider loop={true} slideChangeTransitionEnd={(swiper) => {
+        <VerticalSlider keyboardEnabled={keyboardEnabled} loop={true} slideChangeTransitionEnd={(swiper) => {
           if (swiper.isBeginning) {
             swiper.slideToLoop(3, 0);
           }
@@ -36,6 +41,7 @@ const Content: React.FC = () => {
           <SwiperSlide>
             {({ isActive, isNext, isPrev }) => (
               <AnimalSlider
+                keyboardEnabled={keyboardEnabled}
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
@@ -48,6 +54,7 @@ const Content: React.FC = () => {
           <SwiperSlide>
             {({ isActive, isNext, isPrev }) => (
               <AnimalSlider
+                keyboardEnabled={keyboardEnabled}
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
@@ -60,6 +67,7 @@ const Content: React.FC = () => {
           <SwiperSlide>
             {({ isActive, isNext, isPrev }) => (
               <AnimalSlider
+                keyboardEnabled={keyboardEnabled}
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
@@ -72,6 +80,7 @@ const Content: React.FC = () => {
           <SwiperSlide>
             {({ isActive, isNext, isPrev }) => (
               <AnimalSlider
+                keyboardEnabled={keyboardEnabled}
                 isActive={isActive}
                 isPrev={isPrev}
                 isNext={isNext}
@@ -86,5 +95,10 @@ const Content: React.FC = () => {
     </>
   );
 };
+
+Content.defaultProps = {
+  keyboardEnabled: false
+}
+
 
 export default observer(Content);

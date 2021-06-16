@@ -51,10 +51,10 @@ const PageEdge: React.FC<Props> = ({
           height: window.innerHeight,
           width: window.innerWidth,
         }}>
-          {nextPage === urls.fonts && <Fonts />}
-          {nextPage === urls.animals && <Animals />}
-          {nextPage === urls.colors && <Colors />}
-          {nextPage === urls.composition && <Composition visibleControls={false}/>}
+          {nextPage === urls.fonts && <Fonts keyboardEnabled={false}/>}
+          {nextPage === urls.animals && <Animals keyboardEnabled={false}/>}
+          {nextPage === urls.colors && <Colors keyboardEnabled={false}/>}
+          {nextPage === urls.composition && <Composition visibleControls={false} keyboardEnabled={false}/>}
           {nextPage === urls.success && <Success />}
         </div>
       </div>

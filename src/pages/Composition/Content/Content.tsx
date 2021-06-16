@@ -13,9 +13,10 @@ import './Content.modules.scss';
 
 type Props = {
   visibleControls?: boolean;
+  keyboardEnabled: boolean
 }
 
-const Content: React.FC<Props> = ({ visibleControls} : Props) => {
+const Content: React.FC<Props> = ({ visibleControls, keyboardEnabled } : Props) => {
   const compositionStore = useLocal(() => new CompositionStore());
   const { isMobile } = useSize();
 
@@ -31,6 +32,7 @@ const Content: React.FC<Props> = ({ visibleControls} : Props) => {
       <div styleName="content_bg" />
       <div styleName="content">
         <VerticalSlider
+          keyboardEnabled={keyboardEnabled}
           slideChangeTransitionEnd={(swiper) => {
             compositionStore.setTheme(compositionStore.order[swiper.realIndex]);
             if (swiper.isBeginning) {
@@ -107,7 +109,8 @@ const Content: React.FC<Props> = ({ visibleControls} : Props) => {
 };
 
 Content.defaultProps = {
-  visibleControls: false
+  visibleControls: false,
+  keyboardEnabled: false
 };
 
 export default observer(Content);

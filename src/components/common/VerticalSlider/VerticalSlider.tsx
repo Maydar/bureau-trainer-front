@@ -15,6 +15,7 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   nextElClass?: string;
+  keyboardEnabled: boolean;
   beforeTransitionStart?: (swiper: any) => void;
   onSlideChange?: (swiper: any) => void;
   loop?: boolean;
@@ -63,7 +64,8 @@ export const VerticalSlider: React.FC<Props> = ({
   className,
   onSlideChange: onSlideChangeTransitionStart,
   nextElClass,
-  loop
+  loop,
+  keyboardEnabled
 }: Props) => {
   const onSlideChangeTransition = (swiper: any) => {
     slideChangeTransitionEnd(swiper);
@@ -92,7 +94,7 @@ export const VerticalSlider: React.FC<Props> = ({
       speed={700}
       centeredSlides={true}
       keyboard={{
-        enabled: true,
+        enabled: keyboardEnabled,
         onlyInViewport: true,
       }}
       className={cn('swiper-container-v', className)}

@@ -15,7 +15,10 @@ import FontsMoodStore from 'pages/FontsMood/store';
 
 import './Content.modules.scss';
 
-const Content: React.FC = () => {
+type Props = {
+  keyboardEnabled: boolean;
+}
+const Content: React.FC<Props> = ({ keyboardEnabled }: Props) => {
   const store = useLocal(() => new FontsMoodStore());
   return (
     <>
@@ -26,7 +29,7 @@ const Content: React.FC = () => {
         />
       </div>
       <div styleName="bg" />
-      <VerticalSlider loop={true} slideChangeTransitionEnd={(swiper => {
+      <VerticalSlider keyboardEnabled={keyboardEnabled} loop={true} slideChangeTransitionEnd={(swiper => {
         if (swiper.isBeginning) {
           swiper.slideToLoop(2, 0);
         }
@@ -37,6 +40,7 @@ const Content: React.FC = () => {
         <SwiperSlide>
           {({ isActive, isNext, isPrev, isDuplicate }) => (
             <FontSlider
+              keyboardEnabled={keyboardEnabled}
               theme={Theme.rage}
               isActive={isActive}
               isPrev={isPrev}
@@ -50,6 +54,7 @@ const Content: React.FC = () => {
         <SwiperSlide>
           {({ isActive, isNext, isPrev, isDuplicate }) => (
             <FontSlider
+              keyboardEnabled={keyboardEnabled}
               theme={Theme.anorexy}
               isActive={isActive}
               isPrev={isPrev}
@@ -63,6 +68,7 @@ const Content: React.FC = () => {
         <SwiperSlide>
           {({ isActive, isNext, isPrev, isDuplicate }) => (
             <FontSlider
+              keyboardEnabled={keyboardEnabled}
               theme={Theme.rumble}
               isActive={isActive}
               isPrev={isPrev}
@@ -76,6 +82,10 @@ const Content: React.FC = () => {
       </VerticalSlider>
     </>
   );
+};
+
+Content.defaultProps = {
+  keyboardEnabled: false
 };
 
 export default observer(Content);

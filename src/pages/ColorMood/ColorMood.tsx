@@ -35,7 +35,7 @@ const ColorMood: React.FC = () => {
         nextPage={rootStore.isAllPagesVisited ? urls.success : urls.composition}
         curveClass={`triangle-curve_colors_${pageColor}`}
       >
-        <Content store={colorMoodStore}/>
+        <Content store={colorMoodStore} keyboardEnabled={true} />
       </Pager>
     </div>
   );

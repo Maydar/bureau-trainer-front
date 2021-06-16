@@ -20,6 +20,7 @@ type Props = {
   isNext: boolean;
   currentIndex: number;
   setIndex: (idx: number) => void;
+  keyboardEnabled: boolean;
 };
 
 const AnimalSlider: React.FC<Props> = ({
@@ -29,6 +30,7 @@ const AnimalSlider: React.FC<Props> = ({
   isNext: isNextSlider,
   currentIndex,
   setIndex,
+  keyboardEnabled
 }: Props) => {
   const [isNeedAnimation, setNeedAnimation] = useState(true);
   const sliderRef = React.useRef(null);
@@ -52,6 +54,7 @@ const AnimalSlider: React.FC<Props> = ({
       )}
     >
       <HorizontalSlider
+        keyboardEnabled={keyboardEnabled}
         forwardRef={sliderRef}
         initialSlide={currentIndex}
         isActive={isActive}

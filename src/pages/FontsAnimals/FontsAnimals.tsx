@@ -30,7 +30,7 @@ const FontsAnimals: React.FC = () => {
         previewColor="green"
         curveClass="triangle-curve_animals"
       >
-        <Content/>
+        <Content keyboardEnabled={true} />
       </Pager>
     </>
   );

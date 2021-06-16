@@ -27,7 +27,7 @@ const FontsMood: React.FC = () => {
         previewColor="yellow"
         curveClass="triangle-curve_fonts"
       >
-        <Content />
+        <Content keyboardEnabled={true}/>
       </Pager>
     </>
   );
