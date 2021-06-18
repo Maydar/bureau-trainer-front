@@ -82,7 +82,7 @@ export const mapColorToDescription = {
 
   [Color.olive]: `Цвет засохшей жвачки на${nbsp}парте`,
   [Color.darkblue]: `Цвет спокойный и${nbsp}холодный, а${nbsp}не${nbsp}теплый и${nbsp}радостный`,
-  [Color.brown]: `Загадочный цвет. Какое${hyphen}то колдунство`,
+  [Color.brown]: `Радость — это${nbsp}яркая и${nbsp}светлая эмоция, а${nbsp}этот цвет совсем не${nbsp}такой`,
   [Color.orange]: `Солнышко, ромашки, радость!`,
   [Color.hackie]: `Подойдет для${nbsp}болотной Кикиморы. В${nbsp}любом настроении`,
 
@@ -90,13 +90,13 @@ export const mapColorToDescription = {
   [Color.mudgreen]: ` У${nbsp}вас${nbsp}из${nbsp}крана течёт болотная жижа. Вы${nbsp}испытываете отвращение!`,
   [Color.grey]: `Бетон и${nbsp}пыль. Мрачно, но${nbsp}не${nbsp}противно`,
   [Color.sky]: `Лёгкий и${nbsp}наивный цвет — не${nbsp}про отвращение`,
-  [Color.blue]: `Кажется, это${nbsp}цвет платья диснеевской принцессы`,
+  [Color.blue]: `Цвет чистоты и${nbsp}неба не${nbsp}совпадает с${nbsp}отвращением`,
 
   [Color.fonk]: `Цвет идеального моря в${nbsp}идеальный солнечный день. Тут не${nbsp}до${nbsp}печали`,
   [Color.darkbrown]: `Шоколадка! От${nbsp}неё${nbsp}всегда теплей на${nbsp}душе`,
   [Color.lightyellow]: `Это${nbsp}цвет серединки ромашек в${nbsp}солнечный денёк`,
   [Color.lightgrey]: `Пасмурное небо, дождь, плохое настроение, печаль`,
-  [Color.acidorange]: `Если${nbsp}бы${nbsp}у${nbsp}меня был гоночный болид, он${nbsp}был${nbsp}бы${nbsp}такого энергичного цвета!`,
+  [Color.acidorange]: `Оранжевый противоположен печали. Это цвет апельсинов и${nbsp}веселья`,
 };
 
 export const whiteColors = [
