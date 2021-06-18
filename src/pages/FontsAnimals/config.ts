@@ -48,7 +48,7 @@ export const mapWordData = {
     [BearFonts.vast]: {
       key: 'vast',
       name: 'VAST',
-      description: `Медведь большой, толстый и${nbsp}злой, а${nbsp}тут тоненькие${nbsp}буквы. Какая${hyphen}то цапля, а${nbsp}не${nbsp}медведь`,
+      description: `Медведь большой, толстый и${nbsp}злой, а${nbsp}тут${nbsp}тоненькие${nbsp}буквы. Какая${hyphen}то цапля, а${nbsp}не${nbsp}медведь`,
 
       width: {
         default: 438,

@@ -23,7 +23,7 @@ $time: 0.3s;
     min-height: 25rem;
 
     left: 50%;
-    transform: translate(-50%, calc(26vh - 30px));
+    transform: translate(-50%, calc(30vh - 30px));
   }
 
   &__hidden {
@@ -260,7 +260,7 @@ $time: 0.3s;
 
   @include phone {
     width: 100%;
-    min-width: 280px;
+    min-width: 300px;
     margin: 32px auto 0;
     padding: 0 8px;
   }
